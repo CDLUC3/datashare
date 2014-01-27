@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<links xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://titanium.dstc.edu.au/xml/xs3p http://titanium.dstc.edu.au/xml/xs3p/links.xsd" xmlns="http://titanium.dstc.edu.au/xml/xs3p">
+    <schema file-location="XSD_SCHEMA_FILE" docfile-location="HTML_FILE"/>
+</links>

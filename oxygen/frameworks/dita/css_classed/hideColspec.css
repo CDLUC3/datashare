@@ -1,0 +1,5 @@
+@import "dita.css";
+
+*[class~="topic/colspec"] {
+    display: none;
+}

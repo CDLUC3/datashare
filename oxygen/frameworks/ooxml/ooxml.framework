@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <map>
+    <entry>
+      <String xml:space="preserve">document.types</String>
+      <documentTypeDescriptor-array>
+        <documentTypeDescriptor>
+          <field name="name">
+            <String xml:space="preserve">OOXML</String>
+          </field>
+          <field name="schemaDescriptor">
+            <docTypeSchema>
+              <field name="type">
+                <Integer xml:space="preserve">9</Integer>
+              </field>
+              <field name="uri">
+                <String xml:space="preserve">${frameworks}/ooxml/schemas/main.nvdl</String>
+              </field>
+            </docTypeSchema>
+          </field>
+          <field name="classpath">
+            <String-array></String-array>
+          </field>
+          <field name="authorExtensionDescriptor">
+            <authorExtension>
+              <field name="cssDescriptors">
+                <cssFile-array></cssFile-array>
+              </field>
+              <field name="mergeCSSsFromDocument">
+                <Boolean xml:space="preserve">false</Boolean>
+              </field>
+              <field name="actionDescriptors">
+                <action-array></action-array>
+              </field>
+              <field name="menubarDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">Menu</String>
+                  </field>
+                  <field name="accessKey">
+                    <null></null>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array></menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="popupMenuDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">Contextual menu</String>
+                  </field>
+                  <field name="accessKey">
+                    <null></null>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array></menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="toolbarDescriptor">
+                <toolbar>
+                  <field name="id">
+                    <String xml:space="preserve">Toolbar</String>
+                  </field>
+                  <field name="type">
+                    <Integer xml:space="preserve">2</Integer>
+                  </field>
+                  <field name="largeIconPath">
+                    <null></null>
+                  </field>
+                  <field name="smallIconPath">
+                    <null></null>
+                  </field>
+                  <field name="toolbarEntriesDescriptorList">
+                    <toolbarEntry-array></toolbarEntry-array>
+                  </field>
+                </toolbar>
+              </field>
+              <field name="tableSupportClassName">
+                <null></null>
+              </field>
+              <field name="customReferencesResolver">
+                <null></null>
+              </field>
+            </authorExtension>
+          </field>
+          <field name="templatesLocations">
+            <String-array>
+              <String xml:space="preserve">${frameworksDir}/ooxml/templates</String>
+            </String-array>
+          </field>
+          <field name="xmlCatalogs">
+            <String-array></String-array>
+          </field>
+          <field name="description">
+            <String xml:space="preserve">MIcrosoft Office OOXML Documents</String>
+          </field>
+          <field name="doctypeRules">
+            <documentTypeRule-array>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/wordprocessingml/2006/main</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/package/2006/content-types</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/drawingml/2006/main</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/package/2006/metadata/core-properties</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/package/2006/relationships</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/presentationml/2006/main</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/officeDocument/2006/custom-properties</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/officeDocument/2006/extended-properties</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/spreadsheetml/2006/main</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://schemas.openxmlformats.org/drawingml/2006/chart</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+            </documentTypeRule-array>
+          </field>
+          <field name="scenarios">
+            <scenario-array></scenario-array>
+          </field>
+          <field name="elementLocatorExtension">
+            <null></null>
+          </field>
+        </documentTypeDescriptor>
+      </documentTypeDescriptor-array>
+    </entry>
+  </map>
+</serialized>

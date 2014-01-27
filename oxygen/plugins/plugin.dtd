@@ -1,0 +1,12 @@
+<!ELEMENT extension (#PCDATA)>
+<!ATTLIST extension type CDATA #IMPLIED>
+<!ATTLIST extension class CDATA #IMPLIED>
+<!ELEMENT runtime (#PCDATA | library)*>
+<!ELEMENT library (#PCDATA)>
+<!ATTLIST library name CDATA #IMPLIED>
+<!ELEMENT plugin (#PCDATA | runtime | extension)*>
+<!ATTLIST plugin name CDATA #IMPLIED>
+<!ATTLIST plugin description CDATA #IMPLIED>
+<!ATTLIST plugin version CDATA #IMPLIED>
+<!ATTLIST plugin vendor CDATA #IMPLIED>
+<!ATTLIST plugin class CDATA #IMPLIED>

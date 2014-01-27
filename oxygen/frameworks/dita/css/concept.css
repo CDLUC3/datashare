@@ -1,0 +1,47 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/*
+====================================
+    Concept elements. [concept]
+====================================
+*/
+
+concept{
+	display: block;
+	margin: 0.5em 0;
+	padding-left: 0.5em;
+}
+
+conbody{
+    display: block;
+}
+
+
+/*
+    Reduce the font size.
+*/
+concept > title{
+	font-size: 1.8em;
+    color:#660000;
+    background-color:inherit;
+	border-bottom:1px solid #660000;
+}
+
+* concept > title{
+	font-size: 1.6em;
+	border-bottom:1px solid;
+}
+
+* * concept > title{
+	font-size: 1.4em;
+	border-bottom:none;
+}
+
+* * * concept > title{
+	font-size: 1.2em;
+}
+
+* * * * concept > title{
+	font-size: 1em;
+}

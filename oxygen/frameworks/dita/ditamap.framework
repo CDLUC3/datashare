@@ -1,0 +1,1301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <map>
+    <entry>
+      <String xml:space="preserve">document.types</String>
+      <documentTypeDescriptor-array>
+        <documentTypeDescriptor>
+          <field name="name">
+            <String xml:space="preserve">DITA Map</String>
+          </field>
+          <field name="schemaDescriptor">
+            <docTypeSchema>
+              <field name="type">
+                <Integer xml:space="preserve">1</Integer>
+              </field>
+              <field name="uri">
+                <String xml:space="preserve">${frameworks}/dita/DITA-OT/dtd/map.dtd</String>
+              </field>
+            </docTypeSchema>
+          </field>
+          <field name="classpath">
+            <String-array>
+              <String xml:space="preserve">${frameworks}/dita/dita.jar</String>
+            </String-array>
+          </field>
+          <field name="authorExtensionDescriptor">
+            <authorExtension>
+              <field name="cssDescriptors">
+                <cssFile-array>
+                  <cssFile>
+                    <field name="href">
+                      <String xml:space="preserve">${frameworks}/dita/css_classed/dita.css</String>
+                    </field>
+                    <field name="title">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="alternate">
+                      <Boolean xml:space="preserve">false</Boolean>
+                    </field>
+                  </cssFile>
+                </cssFile-array>
+              </field>
+              <field name="mergeCSSsFromDocument">
+                <Boolean xml:space="preserve">false</Boolean>
+              </field>
+              <field name="actionDescriptors">
+                <action-array>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Table</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a DITA reltable</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Table20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Table16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.InsertTableOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table.row</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Row</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a table row(relrow)</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableRow20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableRow16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*[contains(@class," map/reltable ")]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relheader ") or contains(@class," map/relrow ")]][1][self::*[contains(@class," map/relrow ")]]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*[contains(@class," map/relrow ")][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relheader ") or contains(@class," map/relrow ")]][1][self::*[contains(@class," map/relheader ")]]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*[contains(@class," map/relheader ")][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table.entry</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Cell</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a table cell(relcell)</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableCell20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableCell16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*[contains(@class," map/relrow ")]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;relcell/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*[contains(@class," map/relheader ")]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;relcolspec/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*[contains(@class," map/reltable ")]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;relrow>&lt;relcell/>&lt;/relrow></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relcolspec ")]][1][self::*[contains(@class," map/relcolspec ")]]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;relcolspec/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*[contains(@class," map/relcolspec ")][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relcell ")]][1][self::*[contains(@class," map/relcell ")]]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;relcell/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*[contains(@class," map/relcell ")][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.join.row.cells</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Join Row Cells</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Join the content of the selected cells. The operation is available only if the selected cells are from the same row and they have the same column span.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableJoinRowCells20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableJoinRowCells16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*[contains(@class," map/relrow ") or contains(@class," map/relheader ")]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.JoinRowCellsOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.left</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell To The Left</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple columns</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellLeft20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellLeft16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relcell ")]][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;relcell/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*[contains(@class," map/relcell ")][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Before</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relcolspec ")]][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;relcolspec/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*[contains(@class," map/relcolspec ")][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Before</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.right</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell To The Right</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple columns</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellRight20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellRight16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relcell ")]][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;relcell/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*[contains(@class," map/relcell ")][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relcolspec ")]][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;relcolspec/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*[contains(@class," map/relcolspec ")][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.join.cell.above</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Join Cell Above</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Join the content of the selected cell with the content of the cell above. The operation is available only if there is an above cell and both cells have the same column span.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellUp20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellUp16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relcell ")]][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Join direction</String>
+                                <String xml:space="preserve">Above</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.JoinCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.join.cell.below</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Join Cell Below</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Join the content of the selected cell with the content of the cell below. The operation is available only if there is an below cell and both cells have the same column span.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellDown20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellDown16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relcell ")]][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Join direction</String>
+                                <String xml:space="preserve">Below</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.JoinCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table.column</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Column</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a table column</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableColumn20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableColumn16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relrow ") or contains(@class," map/relheader ")]][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.InsertColumnOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">delete.table.column</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Delete Column</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Delete a table column</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/DeleteColumn20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/DeleteColumn16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relrow ") or contains(@class," map/relcell ") or contains(@class," map/relheader ") or contains(@class," map/relcolspec ")]][1][self::*[contains(@class," map/relcell ") or contains(@class," map/relcolspec ")]]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.DeleteColumnOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">delete.table.row</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Delete Row</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Delete a table row</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/DeleteRow20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/DeleteRow16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*[contains(@class," map/relrow ") or contains(@class," map/relheader ")]][1][self::*[contains(@class," map/relrow ") or contains(@class," map/relheader ")]]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.table.DeleteRowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.conref</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Content Reference</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a DITA Content Reference</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Conref20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Conref16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">C</String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.conref.InsertConrefOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.topicref</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Topic Reference</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a DITA Topic Reference</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Topicref20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Topicref16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">C</String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*[contains(@class, " map/map ") or contains(@class, " map/topicref ") or contains(@class, " map/relcell ")]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.topicref.InsertTopicrefOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.topichead</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Topic Heading</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a DITA Topic Heading</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Topichead20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Topichead16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">C</String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*[contains(@class, " map/map ") or contains(@class, " map/topicref ") or contains(@class, " map/relcell ")]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.topichead.InsertTopicheadOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.topicgroup</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Topic Group</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a DITA Topic Group</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Topicgroup20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Topicgroup16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">G</String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*[contains(@class, " map/map ") or contains(@class, " map/topicref ") or contains(@class, " map/relcell ")]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.topicgroup.InsertTopicgroupOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                </action-array>
+              </field>
+              <field name="menubarDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">DITA</String>
+                  </field>
+                  <field name="accessKey">
+                    <String xml:space="preserve"></String>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Insert</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.topicref</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.topichead</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.topicgroup</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.conref</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Table</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Table16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.entry</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.row.cells</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.below</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.left</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.right</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                    </menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="popupMenuDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">Contextual Menu</String>
+                  </field>
+                  <field name="accessKey">
+                    <null></null>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Insert</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.topicref</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.topichead</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.topicgroup</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.conref</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Table</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Table16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.entry</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.row.cells</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.below</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.left</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.right</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                    </menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="toolbarDescriptor">
+                <toolbar>
+                  <field name="id">
+                    <String xml:space="preserve">Toolbar</String>
+                  </field>
+                  <field name="type">
+                    <Integer xml:space="preserve">2</Integer>
+                  </field>
+                  <field name="largeIconPath">
+                    <null></null>
+                  </field>
+                  <field name="smallIconPath">
+                    <null></null>
+                  </field>
+                  <field name="toolbarEntriesDescriptorList">
+                    <toolbarEntry-array>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.topicref</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.topichead</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.topicgroup</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.conref</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table.row</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table.column</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table.entry</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">delete.table.column</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">delete.table.row</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.join.row.cells</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.join.cell.above</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.join.cell.below</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.left</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.right</String>
+                        </field>
+                      </toolbarItem>
+                    </toolbarEntry-array>
+                  </field>
+                </toolbar>
+              </field>
+              <field name="tableSupportClassName">
+                <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.spansupport.CALSTableCellSpanProvider</String>
+              </field>
+              <field name="customReferencesResolver">
+                <String xml:space="preserve">ro.sync.ecss.extensions.dita.conref.DITAConRefResolver</String>
+              </field>
+            </authorExtension>
+          </field>
+          <field name="templatesLocations">
+            <String-array>
+              <String xml:space="preserve">${frameworksDir}/dita/templates/map</String>
+            </String-array>
+          </field>
+          <field name="xmlCatalogs">
+            <String-array>
+              <String xml:space="preserve">${frameworks}/dita/catalog.xml</String>
+            </String-array>
+          </field>
+          <field name="description">
+            <String xml:space="preserve">Darwin Information Typing Architecture</String>
+          </field>
+          <field name="doctypeRules">
+            <documentTypeRule-array>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">map</String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <null></null>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">bookmap</String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">-//OASIS//DTD DITA Map</String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">-//OASIS//DTD DITA BookMap</String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve">ro.sync.ecss.extensions.dita.map.DITAMapCustomRuleMatcher</String>
+                </field>
+              </documentTypeRule>
+            </documentTypeRule-array>
+          </field>
+          <field name="scenarios">
+            <scenario-array></scenario-array>
+          </field>
+          <field name="elementLocatorExtension">
+            <null></null>
+          </field>
+        </documentTypeDescriptor>
+      </documentTypeDescriptor-array>
+    </entry>
+  </map>
+</serialized>

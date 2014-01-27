@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.w3.org/2001/XInclude" xmlns:xinclude="http://www.w3.org/2001/XInclude" xmlns:ns1="http://www.tei-c.org/ns/1.0">
+  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei_xinclude.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:element name="include">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="xinclude:fallback"/>
+      </xs:sequence>
+      <xs:attribute name="href" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>pointer to the resource being included</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="parse" default="xml">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="xml"/>
+            <xs:enumeration value="text"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="xpointer"/>
+      <xs:attribute name="encoding"/>
+      <xs:attribute name="accept"/>
+      <xs:attribute name="accept-charset"/>
+      <xs:attribute name="accept-language"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fallback" type="ns1:AnyThing"/>
+</xs:schema>

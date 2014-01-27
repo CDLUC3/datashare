@@ -1,0 +1,3324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/Examples" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:ns1="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples">
+  <xs:import namespace="http://relaxng.org/ns/compatibility/annotations/1.0" schemaLocation="a.xsd"/>
+  <xs:import namespace="http://relaxng.org/ns/structure/1.0" schemaLocation="rng.xsd"/>
+  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="ns1.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2004/10/xml.xsd"/>
+  <!-- Schema generated from ODD source 2008-07-08T18:05:36Z. -->
+  <!--
+    
+    This template file is freely available and you are
+              hereby authorised to copy, modify, and redistribute it in
+              any way without further reference or permissions.
+    When making such modifications, you are strongly
+              recommended to change the present text to include an
+              accurate statement of the licencing conditions applicable
+              to your modified text.
+  -->
+  <xs:group name="extrapattern">
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="teix:anyDoc"/>
+      <xs:group ref="teix:pattern"/>
+      <xs:group minOccurs="0" ref="teix:anyDoc"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="pattern">
+    <xs:choice>
+      <xs:group ref="rng:element"/>
+      <xs:group ref="rng:element1"/>
+      <xs:group ref="rng:attribute"/>
+      <xs:group ref="rng:attribute1"/>
+      <xs:element ref="rng:group"/>
+      <xs:element ref="rng:interleave"/>
+      <xs:group ref="rng:choice"/>
+      <xs:element ref="rng:optional"/>
+      <xs:element ref="rng:zeroOrMore"/>
+      <xs:element ref="rng:oneOrMore"/>
+      <xs:element ref="rng:list"/>
+      <xs:element ref="rng:mixed"/>
+      <xs:element ref="rng:ref"/>
+      <xs:element ref="rng:parentRef"/>
+      <xs:element ref="rng:empty"/>
+      <xs:element ref="rng:text"/>
+      <xs:element ref="rng:value"/>
+      <xs:element ref="rng:data"/>
+      <xs:element ref="rng:notAllowed"/>
+      <xs:element ref="rng:externalRef"/>
+      <xs:element ref="rng:grammar"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="anyDoc">
+    <xs:sequence>
+      <xs:any namespace="http://relaxng.org/ns/compatibility/annotations/1.0" processContents="skip"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="anyAttDoc">
+    <xs:attribute ref="a:defaultValue" use="required"/>
+  </xs:attributeGroup>
+  <xs:group name="exceptExtrapattern">
+    <xs:sequence>
+      <xs:group ref="rng:except"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="grammarContent">
+    <xs:choice>
+      <xs:element ref="rng:start"/>
+      <xs:element ref="rng:define"/>
+      <xs:group ref="rng:div"/>
+      <xs:element ref="rng:include"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="includeContent">
+    <xs:choice>
+      <xs:element ref="rng:start"/>
+      <xs:element ref="rng:define"/>
+      <xs:group ref="rng:div1"/>
+    </xs:choice>
+  </xs:group>
+  <xs:simpleType name="method">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="choice"/>
+      <xs:enumeration value="interleave"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="nameClass">
+    <xs:choice>
+      <xs:element ref="rng:name"/>
+      <xs:element ref="rng:anyName"/>
+      <xs:element ref="rng:nsName"/>
+      <xs:group ref="rng:choice1"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="exceptNameClass">
+    <xs:sequence>
+      <xs:group ref="rng:except1"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="macro.paraContent" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="teix:model.gLike"/>
+      <xs:group ref="teix:model.phrase"/>
+      <xs:group ref="teix:model.inter"/>
+      <xs:group ref="teix:model.global"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="macro.limitedContent" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="teix:model.limitedPhrase"/>
+      <xs:group ref="teix:model.inter"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="macro.phraseSeq" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="teix:model.gLike"/>
+      <xs:group ref="teix:model.phrase"/>
+      <xs:group ref="teix:model.global"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="macro.phraseSeq.limited" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="teix:model.limitedPhrase"/>
+      <xs:group ref="teix:model.global"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="macro.specialPara" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="teix:model.gLike"/>
+      <xs:group ref="teix:model.phrase"/>
+      <xs:group ref="teix:model.inter"/>
+      <xs:group ref="teix:model.divPart"/>
+      <xs:group ref="teix:model.global"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="macro.xtext" mixed="true">
+    <xs:group minOccurs="0" maxOccurs="unbounded" ref="teix:model.gLike"/>
+  </xs:complexType>
+  <xs:group name="macro.schemaPattern">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="teix:pattern"/>
+        <xs:element ref="rng:define"/>
+      </xs:choice>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="teix:anySchematron"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="anySchematron">
+    <xs:sequence>
+      <xs:any namespace="http://www.ascc.net/xml/schematron" processContents="skip"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="anyTEI" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="teix:anyTEI"/>
+      <xs:group ref="teix:macro.schemaPattern"/>
+    </xs:choice>
+    <xs:attributeGroup ref="teix:att.global.attribute.xmlid"/>
+    <xs:attributeGroup ref="teix:att.global.attribute.xmllang"/>
+    <xs:anyAttribute processContents="skip"/>
+  </xs:complexType>
+  <xs:group name="anyTEI">
+    <xs:choice>
+      <xs:element ref="teix:TEI"/>
+      <xs:element ref="teix:ab"/>
+      <xs:element ref="teix:abbr"/>
+      <xs:element ref="teix:accMat"/>
+      <xs:element ref="teix:acquisition"/>
+      <xs:element ref="teix:activity"/>
+      <xs:element ref="teix:actor"/>
+      <xs:element ref="teix:add"/>
+      <xs:element ref="teix:addName"/>
+      <xs:element ref="teix:addSpan"/>
+      <xs:element ref="teix:additional"/>
+      <xs:element ref="teix:additions"/>
+      <xs:element ref="teix:addrLine"/>
+      <xs:element ref="teix:address"/>
+      <xs:element ref="teix:adminInfo"/>
+      <xs:element ref="teix:affiliation"/>
+      <xs:element ref="teix:age"/>
+      <xs:element ref="teix:alt"/>
+      <xs:element ref="teix:altGrp"/>
+      <xs:element ref="teix:altIdent"/>
+      <xs:element ref="teix:altIdentifier"/>
+      <xs:element ref="teix:am"/>
+      <xs:element ref="teix:analytic"/>
+      <xs:element ref="teix:anchor"/>
+      <xs:element ref="teix:app"/>
+      <xs:element ref="teix:appInfo"/>
+      <xs:element ref="teix:application"/>
+      <xs:element ref="teix:arc"/>
+      <xs:element ref="teix:argument"/>
+      <xs:element ref="teix:att"/>
+      <xs:element ref="teix:attDef"/>
+      <xs:element ref="teix:attList"/>
+      <xs:element ref="teix:attRef"/>
+      <xs:element ref="teix:author"/>
+      <xs:element ref="teix:authority"/>
+      <xs:element ref="teix:availability"/>
+      <xs:element ref="teix:back"/>
+      <xs:element ref="teix:bibl"/>
+      <xs:element ref="teix:biblFull"/>
+      <xs:element ref="teix:biblScope"/>
+      <xs:element ref="teix:biblStruct"/>
+      <xs:element ref="teix:bicond"/>
+      <xs:element ref="teix:binary"/>
+      <xs:element ref="teix:binaryObject"/>
+      <xs:element ref="teix:binding"/>
+      <xs:element ref="teix:bindingDesc"/>
+      <xs:element ref="teix:birth"/>
+      <xs:element ref="teix:bloc"/>
+      <xs:element ref="teix:body"/>
+      <xs:element ref="teix:broadcast"/>
+      <xs:element ref="teix:byline"/>
+      <xs:element ref="teix:c"/>
+      <xs:element ref="teix:cRefPattern"/>
+      <xs:element ref="teix:caesura"/>
+      <xs:element ref="teix:camera"/>
+      <xs:element ref="teix:caption"/>
+      <xs:element ref="teix:case"/>
+      <xs:element ref="teix:castGroup"/>
+      <xs:element ref="teix:castItem"/>
+      <xs:element ref="teix:castList"/>
+      <xs:element ref="teix:catDesc"/>
+      <xs:element ref="teix:catRef"/>
+      <xs:element ref="teix:catchwords"/>
+      <xs:element ref="teix:category"/>
+      <xs:element ref="teix:cb"/>
+      <xs:element ref="teix:cell"/>
+      <xs:element ref="teix:certainty"/>
+      <xs:element ref="teix:change"/>
+      <xs:element ref="teix:channel"/>
+      <xs:element ref="teix:char"/>
+      <xs:element ref="teix:charDecl"/>
+      <xs:element ref="teix:charName"/>
+      <xs:element ref="teix:charProp"/>
+      <xs:element ref="teix:choice"/>
+      <xs:element ref="teix:cit"/>
+      <xs:element ref="teix:cl"/>
+      <xs:element ref="teix:classCode"/>
+      <xs:element ref="teix:classDecl"/>
+      <xs:element ref="teix:classSpec"/>
+      <xs:element ref="teix:classes"/>
+      <xs:element ref="teix:climate"/>
+      <xs:element ref="teix:closer"/>
+      <xs:element ref="teix:code"/>
+      <xs:element ref="teix:collation"/>
+      <xs:element ref="teix:collection"/>
+      <xs:element ref="teix:colloc"/>
+      <xs:element ref="teix:colophon"/>
+      <xs:element ref="teix:cond"/>
+      <xs:element ref="teix:condition"/>
+      <xs:element ref="teix:constitution"/>
+      <xs:element ref="teix:content"/>
+      <xs:element ref="teix:corr"/>
+      <xs:element ref="teix:correction"/>
+      <xs:element ref="teix:country"/>
+      <xs:element ref="teix:creation"/>
+      <xs:element ref="teix:custEvent"/>
+      <xs:element ref="teix:custodialHist"/>
+      <xs:element ref="teix:damage"/>
+      <xs:element ref="teix:damageSpan"/>
+      <xs:element ref="teix:datatype"/>
+      <xs:element ref="teix:date"/>
+      <xs:element ref="teix:dateline"/>
+      <xs:element ref="teix:death"/>
+      <xs:element ref="teix:decoDesc"/>
+      <xs:element ref="teix:decoNote"/>
+      <xs:element ref="teix:def"/>
+      <xs:element ref="teix:default"/>
+      <xs:element ref="teix:defaultVal"/>
+      <xs:element ref="teix:del"/>
+      <xs:element ref="teix:delSpan"/>
+      <xs:element ref="teix:depth"/>
+      <xs:element ref="teix:derivation"/>
+      <xs:element ref="teix:desc"/>
+      <xs:element ref="teix:dictScrap"/>
+      <xs:element ref="teix:dimensions"/>
+      <xs:element ref="teix:distinct"/>
+      <xs:element ref="teix:distributor"/>
+      <xs:element ref="teix:district"/>
+      <xs:element ref="teix:div"/>
+      <xs:element ref="teix:div1"/>
+      <xs:element ref="teix:div2"/>
+      <xs:element ref="teix:div3"/>
+      <xs:element ref="teix:div4"/>
+      <xs:element ref="teix:div5"/>
+      <xs:element ref="teix:div6"/>
+      <xs:element ref="teix:div7"/>
+      <xs:element ref="teix:divGen"/>
+      <xs:element ref="teix:docAuthor"/>
+      <xs:element ref="teix:docDate"/>
+      <xs:element ref="teix:docEdition"/>
+      <xs:element ref="teix:docImprint"/>
+      <xs:element ref="teix:docTitle"/>
+      <xs:element ref="teix:domain"/>
+      <xs:element ref="teix:eLeaf"/>
+      <xs:element ref="teix:eTree"/>
+      <xs:element ref="teix:edition"/>
+      <xs:element ref="teix:editionStmt"/>
+      <xs:element ref="teix:editor"/>
+      <xs:element ref="teix:editorialDecl"/>
+      <xs:element ref="teix:education"/>
+      <xs:element ref="teix:eg"/>
+      <xs:element name="egXML" type="anyTEI"/>
+      <xs:element ref="teix:elementSpec"/>
+      <xs:element ref="teix:email"/>
+      <xs:element ref="teix:emph"/>
+      <xs:element ref="teix:encodingDesc"/>
+      <xs:element ref="teix:entry"/>
+      <xs:element ref="teix:entryFree"/>
+      <xs:element ref="teix:epigraph"/>
+      <xs:element ref="teix:epilogue"/>
+      <xs:element ref="teix:equipment"/>
+      <xs:element ref="teix:equiv"/>
+      <xs:element ref="teix:etym"/>
+      <xs:element ref="teix:event"/>
+      <xs:element ref="teix:ex"/>
+      <xs:element ref="teix:exemplum"/>
+      <xs:element ref="teix:expan"/>
+      <xs:element ref="teix:explicit"/>
+      <xs:element ref="teix:extent"/>
+      <xs:element ref="teix:f"/>
+      <xs:element ref="teix:fDecl"/>
+      <xs:element ref="teix:fDescr"/>
+      <xs:element ref="teix:fLib"/>
+      <xs:element ref="teix:facsimile"/>
+      <xs:element ref="teix:factuality"/>
+      <xs:element ref="teix:faith"/>
+      <xs:element ref="teix:figDesc"/>
+      <xs:element ref="teix:figure"/>
+      <xs:element ref="teix:fileDesc"/>
+      <xs:element ref="teix:filiation"/>
+      <xs:element ref="teix:finalRubric"/>
+      <xs:element ref="teix:floatingText"/>
+      <xs:element ref="teix:floruit"/>
+      <xs:element ref="teix:foliation"/>
+      <xs:element ref="teix:foreign"/>
+      <xs:element ref="teix:forename"/>
+      <xs:element ref="teix:forest"/>
+      <xs:element ref="teix:forestGrp"/>
+      <xs:element ref="teix:form"/>
+      <xs:element ref="teix:formula"/>
+      <xs:element ref="teix:front"/>
+      <xs:element ref="teix:fs"/>
+      <xs:element ref="teix:fsConstraints"/>
+      <xs:element ref="teix:fsDecl"/>
+      <xs:element ref="teix:fsDescr"/>
+      <xs:element ref="teix:fsdDecl"/>
+      <xs:element ref="teix:fsdLink"/>
+      <xs:element ref="teix:funder"/>
+      <xs:element ref="teix:fvLib"/>
+      <xs:element ref="teix:fw"/>
+      <xs:element ref="teix:g"/>
+      <xs:element ref="teix:gap"/>
+      <xs:element ref="teix:gen"/>
+      <xs:element ref="teix:genName"/>
+      <xs:element ref="teix:geo"/>
+      <xs:element ref="teix:geoDecl"/>
+      <xs:element ref="teix:geogFeat"/>
+      <xs:element ref="teix:geogName"/>
+      <xs:element ref="teix:gi"/>
+      <xs:element ref="teix:gloss"/>
+      <xs:element ref="teix:glyph"/>
+      <xs:element ref="teix:glyphName"/>
+      <xs:element ref="teix:gram"/>
+      <xs:element ref="teix:gramGrp"/>
+      <xs:element ref="teix:graph"/>
+      <xs:element ref="teix:graphic"/>
+      <xs:element ref="teix:group"/>
+      <xs:element ref="teix:handDesc"/>
+      <xs:element ref="teix:handNote"/>
+      <xs:element ref="teix:handNotes"/>
+      <xs:element ref="teix:handShift"/>
+      <xs:element ref="teix:head"/>
+      <xs:element ref="teix:headItem"/>
+      <xs:element ref="teix:headLabel"/>
+      <xs:element ref="teix:height"/>
+      <xs:element ref="teix:heraldry"/>
+      <xs:element ref="teix:hi"/>
+      <xs:element ref="teix:history"/>
+      <xs:element ref="teix:hom"/>
+      <xs:element ref="teix:hyph"/>
+      <xs:element ref="teix:hyphenation"/>
+      <xs:element ref="teix:iNode"/>
+      <xs:element ref="teix:iType"/>
+      <xs:element ref="teix:ident"/>
+      <xs:element ref="teix:idno"/>
+      <xs:element ref="teix:if"/>
+      <xs:element ref="teix:iff"/>
+      <xs:element ref="teix:imprimatur"/>
+      <xs:element ref="teix:imprint"/>
+      <xs:element ref="teix:incident"/>
+      <xs:element ref="teix:incipit"/>
+      <xs:element ref="teix:index"/>
+      <xs:element ref="teix:institution"/>
+      <xs:element ref="teix:interaction"/>
+      <xs:element ref="teix:interp"/>
+      <xs:element ref="teix:interpGrp"/>
+      <xs:element ref="teix:interpretation"/>
+      <xs:element ref="teix:item"/>
+      <xs:element ref="teix:join"/>
+      <xs:element ref="teix:joinGrp"/>
+      <xs:element ref="teix:keywords"/>
+      <xs:element ref="teix:kinesic"/>
+      <xs:element ref="teix:l"/>
+      <xs:element ref="teix:label"/>
+      <xs:element ref="teix:lacunaEnd"/>
+      <xs:element ref="teix:lacunaStart"/>
+      <xs:element ref="teix:lang"/>
+      <xs:element ref="teix:langKnowledge"/>
+      <xs:element ref="teix:langKnown"/>
+      <xs:element ref="teix:langUsage"/>
+      <xs:element ref="teix:language"/>
+      <xs:element ref="teix:layout"/>
+      <xs:element ref="teix:layoutDesc"/>
+      <xs:element ref="teix:lb"/>
+      <xs:element ref="teix:lbl"/>
+      <xs:element ref="teix:leaf"/>
+      <xs:element ref="teix:lem"/>
+      <xs:element ref="teix:lg"/>
+      <xs:element ref="teix:link"/>
+      <xs:element ref="teix:linkGrp"/>
+      <xs:element ref="teix:list"/>
+      <xs:element ref="teix:listBibl"/>
+      <xs:element ref="teix:listNym"/>
+      <xs:element ref="teix:listOrg"/>
+      <xs:element ref="teix:listPerson"/>
+      <xs:element ref="teix:listPlace"/>
+      <xs:element ref="teix:listRef"/>
+      <xs:element ref="teix:listWit"/>
+      <xs:element ref="teix:localName"/>
+      <xs:element ref="teix:locale"/>
+      <xs:element ref="teix:location"/>
+      <xs:element ref="teix:locus"/>
+      <xs:element ref="teix:m"/>
+      <xs:element ref="teix:macroSpec"/>
+      <xs:element ref="teix:mapping"/>
+      <xs:element ref="teix:material"/>
+      <xs:element ref="teix:measure"/>
+      <xs:element ref="teix:measureGrp"/>
+      <xs:element ref="teix:meeting"/>
+      <xs:element ref="teix:memberOf"/>
+      <xs:element ref="teix:mentioned"/>
+      <xs:element ref="teix:metDecl"/>
+      <xs:element ref="teix:metSym"/>
+      <xs:element ref="teix:milestone"/>
+      <xs:element ref="teix:moduleRef"/>
+      <xs:element ref="teix:moduleSpec"/>
+      <xs:element ref="teix:monogr"/>
+      <xs:element ref="teix:mood"/>
+      <xs:element ref="teix:move"/>
+      <xs:element ref="teix:msContents"/>
+      <xs:element ref="teix:msDesc"/>
+      <xs:element ref="teix:msIdentifier"/>
+      <xs:element ref="teix:msItem"/>
+      <xs:element ref="teix:msItemStruct"/>
+      <xs:element ref="teix:msName"/>
+      <xs:element ref="teix:msPart"/>
+      <xs:element ref="teix:musicNotation"/>
+      <xs:element ref="teix:name"/>
+      <xs:element ref="teix:nameLink"/>
+      <xs:element ref="teix:namespace"/>
+      <xs:element ref="teix:nationality"/>
+      <xs:element ref="teix:node"/>
+      <xs:element ref="teix:normalization"/>
+      <xs:element ref="teix:note"/>
+      <xs:element ref="teix:notesStmt"/>
+      <xs:element ref="teix:num"/>
+      <xs:element ref="teix:number"/>
+      <xs:element ref="teix:numeric"/>
+      <xs:element ref="teix:nym"/>
+      <xs:element ref="teix:oRef"/>
+      <xs:element ref="teix:oVar"/>
+      <xs:element ref="teix:objectDesc"/>
+      <xs:element ref="teix:occupation"/>
+      <xs:element ref="teix:offset"/>
+      <xs:element ref="teix:opener"/>
+      <xs:element ref="teix:org"/>
+      <xs:element ref="teix:orgName"/>
+      <xs:element ref="teix:orig"/>
+      <xs:element ref="teix:origDate"/>
+      <xs:element ref="teix:origPlace"/>
+      <xs:element ref="teix:origin"/>
+      <xs:element ref="teix:orth"/>
+      <xs:element ref="teix:p"/>
+      <xs:element ref="teix:pRef"/>
+      <xs:element ref="teix:pVar"/>
+      <xs:element ref="teix:particDesc"/>
+      <xs:element ref="teix:pause"/>
+      <xs:element ref="teix:pb"/>
+      <xs:element ref="teix:per"/>
+      <xs:element ref="teix:performance"/>
+      <xs:element ref="teix:persName"/>
+      <xs:element ref="teix:person"/>
+      <xs:element ref="teix:personGrp"/>
+      <xs:element ref="teix:phr"/>
+      <xs:element ref="teix:physDesc"/>
+      <xs:element ref="teix:place"/>
+      <xs:element ref="teix:placeName"/>
+      <xs:element ref="teix:population"/>
+      <xs:element ref="teix:pos"/>
+      <xs:element ref="teix:postBox"/>
+      <xs:element ref="teix:postCode"/>
+      <xs:element ref="teix:postscript"/>
+      <xs:element ref="teix:preparedness"/>
+      <xs:element ref="teix:principal"/>
+      <xs:element ref="teix:profileDesc"/>
+      <xs:element ref="teix:projectDesc"/>
+      <xs:element ref="teix:prologue"/>
+      <xs:element ref="teix:pron"/>
+      <xs:element ref="teix:provenance"/>
+      <xs:element ref="teix:ptr"/>
+      <xs:element ref="teix:pubPlace"/>
+      <xs:element ref="teix:publicationStmt"/>
+      <xs:element ref="teix:publisher"/>
+      <xs:element ref="teix:purpose"/>
+      <xs:element ref="teix:q"/>
+      <xs:element ref="teix:quotation"/>
+      <xs:element ref="teix:quote"/>
+      <xs:element ref="teix:rdg"/>
+      <xs:element ref="teix:rdgGrp"/>
+      <xs:element ref="teix:re"/>
+      <xs:element ref="teix:recordHist"/>
+      <xs:element ref="teix:recording"/>
+      <xs:element ref="teix:recordingStmt"/>
+      <xs:element ref="teix:ref"/>
+      <xs:element ref="teix:refState"/>
+      <xs:element ref="teix:refsDecl"/>
+      <xs:element ref="teix:reg"/>
+      <xs:element ref="teix:region"/>
+      <xs:element ref="teix:relatedItem"/>
+      <xs:element ref="teix:relation"/>
+      <xs:element ref="teix:relationGrp"/>
+      <xs:element ref="teix:remarks"/>
+      <xs:element ref="teix:rendition"/>
+      <xs:element ref="teix:repository"/>
+      <xs:element ref="teix:residence"/>
+      <xs:element ref="teix:resp"/>
+      <xs:element ref="teix:respStmt"/>
+      <xs:element ref="teix:respons"/>
+      <xs:element ref="teix:restore"/>
+      <xs:element ref="teix:revisionDesc"/>
+      <xs:element ref="teix:rhyme"/>
+      <xs:element ref="teix:role"/>
+      <xs:element ref="teix:roleDesc"/>
+      <xs:element ref="teix:roleName"/>
+      <xs:element ref="teix:root"/>
+      <xs:element ref="teix:row"/>
+      <xs:element ref="teix:rs"/>
+      <xs:element ref="teix:rubric"/>
+      <xs:element ref="teix:s"/>
+      <xs:element ref="teix:said"/>
+      <xs:element ref="teix:salute"/>
+      <xs:element ref="teix:samplingDecl"/>
+      <xs:element ref="teix:schemaSpec"/>
+      <xs:element ref="teix:scriptStmt"/>
+      <xs:element ref="teix:seal"/>
+      <xs:element ref="teix:sealDesc"/>
+      <xs:element ref="teix:secFol"/>
+      <xs:element ref="teix:seg"/>
+      <xs:element ref="teix:segmentation"/>
+      <xs:element ref="teix:sense"/>
+      <xs:element ref="teix:series"/>
+      <xs:element ref="teix:seriesStmt"/>
+      <xs:element ref="teix:set"/>
+      <xs:element ref="teix:setting"/>
+      <xs:element ref="teix:settingDesc"/>
+      <xs:element ref="teix:settlement"/>
+      <xs:element ref="teix:sex"/>
+      <xs:element ref="teix:shift"/>
+      <xs:element ref="teix:sic"/>
+      <xs:element ref="teix:signatures"/>
+      <xs:element ref="teix:signed"/>
+      <xs:element ref="teix:soCalled"/>
+      <xs:element ref="teix:socecStatus"/>
+      <xs:element ref="teix:sound"/>
+      <xs:element ref="teix:source"/>
+      <xs:element ref="teix:sourceDesc"/>
+      <xs:element ref="teix:sp"/>
+      <xs:element ref="teix:space"/>
+      <xs:element ref="teix:span"/>
+      <xs:element ref="teix:spanGrp"/>
+      <xs:element ref="teix:speaker"/>
+      <xs:element ref="teix:specDesc"/>
+      <xs:element ref="teix:specGrp"/>
+      <xs:element ref="teix:specGrpRef"/>
+      <xs:element ref="teix:specList"/>
+      <xs:element ref="teix:sponsor"/>
+      <xs:element ref="teix:stage"/>
+      <xs:element ref="teix:stamp"/>
+      <xs:element ref="teix:state"/>
+      <xs:element ref="teix:stdVals"/>
+      <xs:element ref="teix:street"/>
+      <xs:element ref="teix:stress"/>
+      <xs:element ref="teix:string"/>
+      <xs:element ref="teix:stringVal"/>
+      <xs:element ref="teix:subc"/>
+      <xs:element ref="teix:subst"/>
+      <xs:element ref="teix:summary"/>
+      <xs:element ref="teix:superEntry"/>
+      <xs:element ref="teix:supplied"/>
+      <xs:element ref="teix:support"/>
+      <xs:element ref="teix:supportDesc"/>
+      <xs:element ref="teix:surface"/>
+      <xs:element ref="teix:surname"/>
+      <xs:element ref="teix:surrogates"/>
+      <xs:element ref="teix:syll"/>
+      <xs:element ref="teix:symbol"/>
+      <xs:element ref="teix:table"/>
+      <xs:element ref="teix:tag"/>
+      <xs:element ref="teix:tagUsage"/>
+      <xs:element ref="teix:tagsDecl"/>
+      <xs:element ref="teix:taxonomy"/>
+      <xs:element ref="teix:tech"/>
+      <xs:element ref="teix:teiCorpus"/>
+      <xs:element ref="teix:teiHeader"/>
+      <xs:element ref="teix:term"/>
+      <xs:element ref="teix:terrain"/>
+      <xs:element ref="teix:text"/>
+      <xs:element ref="teix:textClass"/>
+      <xs:element ref="teix:textDesc"/>
+      <xs:element ref="teix:textLang"/>
+      <xs:element ref="teix:then"/>
+      <xs:element ref="teix:time"/>
+      <xs:element ref="teix:timeline"/>
+      <xs:element ref="teix:title"/>
+      <xs:element ref="teix:titlePage"/>
+      <xs:element ref="teix:titlePart"/>
+      <xs:element ref="teix:titleStmt"/>
+      <xs:element ref="teix:tns"/>
+      <xs:element ref="teix:trailer"/>
+      <xs:element ref="teix:trait"/>
+      <xs:element ref="teix:tree"/>
+      <xs:element ref="teix:triangle"/>
+      <xs:element ref="teix:u"/>
+      <xs:element ref="teix:unclear"/>
+      <xs:element ref="teix:unicodeName"/>
+      <xs:element ref="teix:usg"/>
+      <xs:element ref="teix:vAlt"/>
+      <xs:element ref="teix:vColl"/>
+      <xs:element ref="teix:vDefault"/>
+      <xs:element ref="teix:vLabel"/>
+      <xs:element ref="teix:vMerge"/>
+      <xs:element ref="teix:vNot"/>
+      <xs:element ref="teix:vRange"/>
+      <xs:element ref="teix:val"/>
+      <xs:element ref="teix:valDesc"/>
+      <xs:element ref="teix:valItem"/>
+      <xs:element ref="teix:valList"/>
+      <xs:element ref="teix:value"/>
+      <xs:element ref="teix:variantEncoding"/>
+      <xs:element ref="teix:view"/>
+      <xs:element ref="teix:vocal"/>
+      <xs:element ref="teix:w"/>
+      <xs:element ref="teix:watermark"/>
+      <xs:element ref="teix:when"/>
+      <xs:element ref="teix:width"/>
+      <xs:element ref="teix:wit"/>
+      <xs:element ref="teix:witDetail"/>
+      <xs:element ref="teix:witEnd"/>
+      <xs:element ref="teix:witStart"/>
+      <xs:element ref="teix:witness"/>
+      <xs:element ref="teix:writing"/>
+      <xs:element ref="teix:xr"/>
+      <xs:element ref="teix:zone"/>
+    </xs:choice>
+  </xs:group>
+  <xs:element name="TEI" type="anyTEI"/>
+  <xs:element name="ab" type="anyTEI"/>
+  <xs:element name="abbr" type="anyTEI"/>
+  <xs:element name="accMat" type="anyTEI"/>
+  <xs:element name="acquisition" type="anyTEI"/>
+  <xs:element name="activity" type="anyTEI"/>
+  <xs:element name="actor" type="anyTEI"/>
+  <xs:element name="add" type="anyTEI"/>
+  <xs:element name="addName" type="anyTEI"/>
+  <xs:element name="addSpan" type="anyTEI"/>
+  <xs:element name="additional" type="anyTEI"/>
+  <xs:element name="additions" type="anyTEI"/>
+  <xs:element name="addrLine" type="anyTEI"/>
+  <xs:element name="address" type="anyTEI"/>
+  <xs:element name="adminInfo" type="anyTEI"/>
+  <xs:element name="affiliation" type="anyTEI"/>
+  <xs:element name="age" type="anyTEI"/>
+  <xs:element name="alt" type="anyTEI"/>
+  <xs:element name="altGrp" type="anyTEI"/>
+  <xs:element name="altIdent" type="anyTEI"/>
+  <xs:element name="altIdentifier" type="anyTEI"/>
+  <xs:element name="am" type="anyTEI"/>
+  <xs:element name="analytic" type="anyTEI"/>
+  <xs:element name="anchor" type="anyTEI"/>
+  <xs:element name="app" type="anyTEI"/>
+  <xs:element name="appInfo" type="anyTEI"/>
+  <xs:element name="application" type="anyTEI"/>
+  <xs:element name="arc" type="anyTEI"/>
+  <xs:element name="argument" type="anyTEI"/>
+  <xs:element name="att" type="anyTEI"/>
+  <xs:element name="attDef" type="anyTEI"/>
+  <xs:element name="attList" type="anyTEI"/>
+  <xs:element name="attRef" type="anyTEI"/>
+  <xs:element name="author" type="anyTEI"/>
+  <xs:element name="authority" type="anyTEI"/>
+  <xs:element name="availability" type="anyTEI"/>
+  <xs:element name="back" type="anyTEI"/>
+  <xs:element name="bibl" type="anyTEI"/>
+  <xs:element name="biblFull" type="anyTEI"/>
+  <xs:element name="biblScope" type="anyTEI"/>
+  <xs:element name="biblStruct" type="anyTEI"/>
+  <xs:element name="bicond" type="anyTEI"/>
+  <xs:element name="binary" type="anyTEI"/>
+  <xs:element name="binaryObject" type="anyTEI"/>
+  <xs:element name="binding" type="anyTEI"/>
+  <xs:element name="bindingDesc" type="anyTEI"/>
+  <xs:element name="birth" type="anyTEI"/>
+  <xs:element name="bloc" type="anyTEI"/>
+  <xs:element name="body" type="anyTEI"/>
+  <xs:element name="broadcast" type="anyTEI"/>
+  <xs:element name="byline" type="anyTEI"/>
+  <xs:element name="c" type="anyTEI"/>
+  <xs:element name="cRefPattern" type="anyTEI"/>
+  <xs:element name="caesura" type="anyTEI"/>
+  <xs:element name="camera" type="anyTEI"/>
+  <xs:element name="caption" type="anyTEI"/>
+  <xs:element name="case" type="anyTEI"/>
+  <xs:element name="castGroup" type="anyTEI"/>
+  <xs:element name="castItem" type="anyTEI"/>
+  <xs:element name="castList" type="anyTEI"/>
+  <xs:element name="catDesc" type="anyTEI"/>
+  <xs:element name="catRef" type="anyTEI"/>
+  <xs:element name="catchwords" type="anyTEI"/>
+  <xs:element name="category" type="anyTEI"/>
+  <xs:element name="cb" type="anyTEI"/>
+  <xs:element name="cell" type="anyTEI"/>
+  <xs:element name="certainty" type="anyTEI"/>
+  <xs:element name="change" type="anyTEI"/>
+  <xs:element name="channel" type="anyTEI"/>
+  <xs:element name="char" type="anyTEI"/>
+  <xs:element name="charDecl" type="anyTEI"/>
+  <xs:element name="charName" type="anyTEI"/>
+  <xs:element name="charProp" type="anyTEI"/>
+  <xs:element name="choice" type="anyTEI"/>
+  <xs:element name="cit" type="anyTEI"/>
+  <xs:element name="cl" type="anyTEI"/>
+  <xs:element name="classCode" type="anyTEI"/>
+  <xs:element name="classDecl" type="anyTEI"/>
+  <xs:element name="classSpec" type="anyTEI"/>
+  <xs:element name="classes" type="anyTEI"/>
+  <xs:element name="climate" type="anyTEI"/>
+  <xs:element name="closer" type="anyTEI"/>
+  <xs:element name="code" type="anyTEI"/>
+  <xs:element name="collation" type="anyTEI"/>
+  <xs:element name="collection" type="anyTEI"/>
+  <xs:element name="colloc" type="anyTEI"/>
+  <xs:element name="colophon" type="anyTEI"/>
+  <xs:element name="cond" type="anyTEI"/>
+  <xs:element name="condition" type="anyTEI"/>
+  <xs:element name="constitution" type="anyTEI"/>
+  <xs:element name="content" type="anyTEI"/>
+  <xs:element name="corr" type="anyTEI"/>
+  <xs:element name="correction" type="anyTEI"/>
+  <xs:element name="country" type="anyTEI"/>
+  <xs:element name="creation" type="anyTEI"/>
+  <xs:element name="custEvent" type="anyTEI"/>
+  <xs:element name="custodialHist" type="anyTEI"/>
+  <xs:element name="damage" type="anyTEI"/>
+  <xs:element name="damageSpan" type="anyTEI"/>
+  <xs:element name="datatype" type="anyTEI"/>
+  <xs:element name="date" type="anyTEI"/>
+  <xs:element name="dateline" type="anyTEI"/>
+  <xs:element name="death" type="anyTEI"/>
+  <xs:element name="decoDesc" type="anyTEI"/>
+  <xs:element name="decoNote" type="anyTEI"/>
+  <xs:element name="def" type="anyTEI"/>
+  <xs:element name="default" type="anyTEI"/>
+  <xs:element name="defaultVal" type="anyTEI"/>
+  <xs:element name="del" type="anyTEI"/>
+  <xs:element name="delSpan" type="anyTEI"/>
+  <xs:element name="depth" type="anyTEI"/>
+  <xs:element name="derivation" type="anyTEI"/>
+  <xs:element name="desc" type="anyTEI"/>
+  <xs:element name="dictScrap" type="anyTEI"/>
+  <xs:element name="dimensions" type="anyTEI"/>
+  <xs:element name="distinct" type="anyTEI"/>
+  <xs:element name="distributor" type="anyTEI"/>
+  <xs:element name="district" type="anyTEI"/>
+  <xs:element name="div" type="anyTEI"/>
+  <xs:element name="div1" type="anyTEI"/>
+  <xs:element name="div2" type="anyTEI"/>
+  <xs:element name="div3" type="anyTEI"/>
+  <xs:element name="div4" type="anyTEI"/>
+  <xs:element name="div5" type="anyTEI"/>
+  <xs:element name="div6" type="anyTEI"/>
+  <xs:element name="div7" type="anyTEI"/>
+  <xs:element name="divGen" type="anyTEI"/>
+  <xs:element name="docAuthor" type="anyTEI"/>
+  <xs:element name="docDate" type="anyTEI"/>
+  <xs:element name="docEdition" type="anyTEI"/>
+  <xs:element name="docImprint" type="anyTEI"/>
+  <xs:element name="docTitle" type="anyTEI"/>
+  <xs:element name="domain" type="anyTEI"/>
+  <xs:element name="eLeaf" type="anyTEI"/>
+  <xs:element name="eTree" type="anyTEI"/>
+  <xs:element name="edition" type="anyTEI"/>
+  <xs:element name="editionStmt" type="anyTEI"/>
+  <xs:element name="editor" type="anyTEI"/>
+  <xs:element name="editorialDecl" type="anyTEI"/>
+  <xs:element name="education" type="anyTEI"/>
+  <xs:element name="eg" type="anyTEI"/>
+  <xs:element name="elementSpec" type="anyTEI"/>
+  <xs:element name="email" type="anyTEI"/>
+  <xs:element name="emph" type="anyTEI"/>
+  <xs:element name="encodingDesc" type="anyTEI"/>
+  <xs:element name="entry" type="anyTEI"/>
+  <xs:element name="entryFree" type="anyTEI"/>
+  <xs:element name="epigraph" type="anyTEI"/>
+  <xs:element name="epilogue" type="anyTEI"/>
+  <xs:element name="equipment" type="anyTEI"/>
+  <xs:element name="equiv" type="anyTEI"/>
+  <xs:element name="etym" type="anyTEI"/>
+  <xs:element name="event" type="anyTEI"/>
+  <xs:element name="ex" type="anyTEI"/>
+  <xs:element name="exemplum" type="anyTEI"/>
+  <xs:element name="expan" type="anyTEI"/>
+  <xs:element name="explicit" type="anyTEI"/>
+  <xs:element name="extent" type="anyTEI"/>
+  <xs:element name="f" type="anyTEI"/>
+  <xs:element name="fDecl" type="anyTEI"/>
+  <xs:element name="fDescr" type="anyTEI"/>
+  <xs:element name="fLib" type="anyTEI"/>
+  <xs:element name="facsimile" type="anyTEI"/>
+  <xs:element name="factuality" type="anyTEI"/>
+  <xs:element name="faith" type="anyTEI"/>
+  <xs:element name="figDesc" type="anyTEI"/>
+  <xs:element name="figure" type="anyTEI"/>
+  <xs:element name="fileDesc" type="anyTEI"/>
+  <xs:element name="filiation" type="anyTEI"/>
+  <xs:element name="finalRubric" type="anyTEI"/>
+  <xs:element name="floatingText" type="anyTEI"/>
+  <xs:element name="floruit" type="anyTEI"/>
+  <xs:element name="foliation" type="anyTEI"/>
+  <xs:element name="foreign" type="anyTEI"/>
+  <xs:element name="forename" type="anyTEI"/>
+  <xs:element name="forest" type="anyTEI"/>
+  <xs:element name="forestGrp" type="anyTEI"/>
+  <xs:element name="form" type="anyTEI"/>
+  <xs:element name="formula" type="anyTEI"/>
+  <xs:element name="front" type="anyTEI"/>
+  <xs:element name="fs" type="anyTEI"/>
+  <xs:element name="fsConstraints" type="anyTEI"/>
+  <xs:element name="fsDecl" type="anyTEI"/>
+  <xs:element name="fsDescr" type="anyTEI"/>
+  <xs:element name="fsdDecl" type="anyTEI"/>
+  <xs:element name="fsdLink" type="anyTEI"/>
+  <xs:element name="funder" type="anyTEI"/>
+  <xs:element name="fvLib" type="anyTEI"/>
+  <xs:element name="fw" type="anyTEI"/>
+  <xs:element name="g" type="anyTEI"/>
+  <xs:element name="gap" type="anyTEI"/>
+  <xs:element name="gen" type="anyTEI"/>
+  <xs:element name="genName" type="anyTEI"/>
+  <xs:element name="geo" type="anyTEI"/>
+  <xs:element name="geoDecl" type="anyTEI"/>
+  <xs:element name="geogFeat" type="anyTEI"/>
+  <xs:element name="geogName" type="anyTEI"/>
+  <xs:element name="gi" type="anyTEI"/>
+  <xs:element name="gloss" type="anyTEI"/>
+  <xs:element name="glyph" type="anyTEI"/>
+  <xs:element name="glyphName" type="anyTEI"/>
+  <xs:element name="gram" type="anyTEI"/>
+  <xs:element name="gramGrp" type="anyTEI"/>
+  <xs:element name="graph" type="anyTEI"/>
+  <xs:element name="graphic" type="anyTEI"/>
+  <xs:element name="group" type="anyTEI"/>
+  <xs:element name="handDesc" type="anyTEI"/>
+  <xs:element name="handNote" type="anyTEI"/>
+  <xs:element name="handNotes" type="anyTEI"/>
+  <xs:element name="handShift" type="anyTEI"/>
+  <xs:element name="head" type="anyTEI"/>
+  <xs:element name="headItem" type="anyTEI"/>
+  <xs:element name="headLabel" type="anyTEI"/>
+  <xs:element name="height" type="anyTEI"/>
+  <xs:element name="heraldry" type="anyTEI"/>
+  <xs:element name="hi" type="anyTEI"/>
+  <xs:element name="history" type="anyTEI"/>
+  <xs:element name="hom" type="anyTEI"/>
+  <xs:element name="hyph" type="anyTEI"/>
+  <xs:element name="hyphenation" type="anyTEI"/>
+  <xs:element name="iNode" type="anyTEI"/>
+  <xs:element name="iType" type="anyTEI"/>
+  <xs:element name="ident" type="anyTEI"/>
+  <xs:element name="idno" type="anyTEI"/>
+  <xs:element name="if" type="anyTEI"/>
+  <xs:element name="iff" type="anyTEI"/>
+  <xs:element name="imprimatur" type="anyTEI"/>
+  <xs:element name="imprint" type="anyTEI"/>
+  <xs:element name="incident" type="anyTEI"/>
+  <xs:element name="incipit" type="anyTEI"/>
+  <xs:element name="index" type="anyTEI"/>
+  <xs:element name="institution" type="anyTEI"/>
+  <xs:element name="interaction" type="anyTEI"/>
+  <xs:element name="interp" type="anyTEI"/>
+  <xs:element name="interpGrp" type="anyTEI"/>
+  <xs:element name="interpretation" type="anyTEI"/>
+  <xs:element name="item" type="anyTEI"/>
+  <xs:element name="join" type="anyTEI"/>
+  <xs:element name="joinGrp" type="anyTEI"/>
+  <xs:element name="keywords" type="anyTEI"/>
+  <xs:element name="kinesic" type="anyTEI"/>
+  <xs:element name="l" type="anyTEI"/>
+  <xs:element name="label" type="anyTEI"/>
+  <xs:element name="lacunaEnd" type="anyTEI"/>
+  <xs:element name="lacunaStart" type="anyTEI"/>
+  <xs:element name="lang" type="anyTEI"/>
+  <xs:element name="langKnowledge" type="anyTEI"/>
+  <xs:element name="langKnown" type="anyTEI"/>
+  <xs:element name="langUsage" type="anyTEI"/>
+  <xs:element name="language" type="anyTEI"/>
+  <xs:element name="layout" type="anyTEI"/>
+  <xs:element name="layoutDesc" type="anyTEI"/>
+  <xs:element name="lb" type="anyTEI"/>
+  <xs:element name="lbl" type="anyTEI"/>
+  <xs:element name="leaf" type="anyTEI"/>
+  <xs:element name="lem" type="anyTEI"/>
+  <xs:element name="lg" type="anyTEI"/>
+  <xs:element name="link" type="anyTEI"/>
+  <xs:element name="linkGrp" type="anyTEI"/>
+  <xs:element name="list" type="anyTEI"/>
+  <xs:element name="listBibl" type="anyTEI"/>
+  <xs:element name="listNym" type="anyTEI"/>
+  <xs:element name="listOrg" type="anyTEI"/>
+  <xs:element name="listPerson" type="anyTEI"/>
+  <xs:element name="listPlace" type="anyTEI"/>
+  <xs:element name="listRef" type="anyTEI"/>
+  <xs:element name="listWit" type="anyTEI"/>
+  <xs:element name="localName" type="anyTEI"/>
+  <xs:element name="locale" type="anyTEI"/>
+  <xs:element name="location" type="anyTEI"/>
+  <xs:element name="locus" type="anyTEI"/>
+  <xs:element name="m" type="anyTEI"/>
+  <xs:element name="macroSpec" type="anyTEI"/>
+  <xs:element name="mapping" type="anyTEI"/>
+  <xs:element name="material" type="anyTEI"/>
+  <xs:element name="measure" type="anyTEI"/>
+  <xs:element name="measureGrp" type="anyTEI"/>
+  <xs:element name="meeting" type="anyTEI"/>
+  <xs:element name="memberOf" type="anyTEI"/>
+  <xs:element name="mentioned" type="anyTEI"/>
+  <xs:element name="metDecl" type="anyTEI"/>
+  <xs:element name="metSym" type="anyTEI"/>
+  <xs:element name="milestone" type="anyTEI"/>
+  <xs:element name="moduleRef" type="anyTEI"/>
+  <xs:element name="moduleSpec" type="anyTEI"/>
+  <xs:element name="monogr" type="anyTEI"/>
+  <xs:element name="mood" type="anyTEI"/>
+  <xs:element name="move" type="anyTEI"/>
+  <xs:element name="msContents" type="anyTEI"/>
+  <xs:element name="msDesc" type="anyTEI"/>
+  <xs:element name="msIdentifier" type="anyTEI"/>
+  <xs:element name="msItem" type="anyTEI"/>
+  <xs:element name="msItemStruct" type="anyTEI"/>
+  <xs:element name="msName" type="anyTEI"/>
+  <xs:element name="msPart" type="anyTEI"/>
+  <xs:element name="musicNotation" type="anyTEI"/>
+  <xs:element name="name" type="anyTEI"/>
+  <xs:element name="nameLink" type="anyTEI"/>
+  <xs:element name="namespace" type="anyTEI"/>
+  <xs:element name="nationality" type="anyTEI"/>
+  <xs:element name="node" type="anyTEI"/>
+  <xs:element name="normalization" type="anyTEI"/>
+  <xs:element name="note" type="anyTEI"/>
+  <xs:element name="notesStmt" type="anyTEI"/>
+  <xs:element name="num" type="anyTEI"/>
+  <xs:element name="number" type="anyTEI"/>
+  <xs:element name="numeric" type="anyTEI"/>
+  <xs:element name="nym" type="anyTEI"/>
+  <xs:element name="oRef" type="anyTEI"/>
+  <xs:element name="oVar" type="anyTEI"/>
+  <xs:element name="objectDesc" type="anyTEI"/>
+  <xs:element name="occupation" type="anyTEI"/>
+  <xs:element name="offset" type="anyTEI"/>
+  <xs:element name="opener" type="anyTEI"/>
+  <xs:element name="org" type="anyTEI"/>
+  <xs:element name="orgName" type="anyTEI"/>
+  <xs:element name="orig" type="anyTEI"/>
+  <xs:element name="origDate" type="anyTEI"/>
+  <xs:element name="origPlace" type="anyTEI"/>
+  <xs:element name="origin" type="anyTEI"/>
+  <xs:element name="orth" type="anyTEI"/>
+  <xs:element name="p" type="anyTEI"/>
+  <xs:element name="pRef" type="anyTEI"/>
+  <xs:element name="pVar" type="anyTEI"/>
+  <xs:element name="particDesc" type="anyTEI"/>
+  <xs:element name="pause" type="anyTEI"/>
+  <xs:element name="pb" type="anyTEI"/>
+  <xs:element name="per" type="anyTEI"/>
+  <xs:element name="performance" type="anyTEI"/>
+  <xs:element name="persName" type="anyTEI"/>
+  <xs:element name="person" type="anyTEI"/>
+  <xs:element name="personGrp" type="anyTEI"/>
+  <xs:element name="phr" type="anyTEI"/>
+  <xs:element name="physDesc" type="anyTEI"/>
+  <xs:element name="place" type="anyTEI"/>
+  <xs:element name="placeName" type="anyTEI"/>
+  <xs:element name="population" type="anyTEI"/>
+  <xs:element name="pos" type="anyTEI"/>
+  <xs:element name="postBox" type="anyTEI"/>
+  <xs:element name="postCode" type="anyTEI"/>
+  <xs:element name="postscript" type="anyTEI"/>
+  <xs:element name="preparedness" type="anyTEI"/>
+  <xs:element name="principal" type="anyTEI"/>
+  <xs:element name="profileDesc" type="anyTEI"/>
+  <xs:element name="projectDesc" type="anyTEI"/>
+  <xs:element name="prologue" type="anyTEI"/>
+  <xs:element name="pron" type="anyTEI"/>
+  <xs:element name="provenance" type="anyTEI"/>
+  <xs:element name="ptr" type="anyTEI"/>
+  <xs:element name="pubPlace" type="anyTEI"/>
+  <xs:element name="publicationStmt" type="anyTEI"/>
+  <xs:element name="publisher" type="anyTEI"/>
+  <xs:element name="purpose" type="anyTEI"/>
+  <xs:element name="q" type="anyTEI"/>
+  <xs:element name="quotation" type="anyTEI"/>
+  <xs:element name="quote" type="anyTEI"/>
+  <xs:element name="rdg" type="anyTEI"/>
+  <xs:element name="rdgGrp" type="anyTEI"/>
+  <xs:element name="re" type="anyTEI"/>
+  <xs:element name="recordHist" type="anyTEI"/>
+  <xs:element name="recording" type="anyTEI"/>
+  <xs:element name="recordingStmt" type="anyTEI"/>
+  <xs:element name="ref" type="anyTEI"/>
+  <xs:element name="refState" type="anyTEI"/>
+  <xs:element name="refsDecl" type="anyTEI"/>
+  <xs:element name="reg" type="anyTEI"/>
+  <xs:element name="region" type="anyTEI"/>
+  <xs:element name="relatedItem" type="anyTEI"/>
+  <xs:element name="relation" type="anyTEI"/>
+  <xs:element name="relationGrp" type="anyTEI"/>
+  <xs:element name="remarks" type="anyTEI"/>
+  <xs:element name="rendition" type="anyTEI"/>
+  <xs:element name="repository" type="anyTEI"/>
+  <xs:element name="residence" type="anyTEI"/>
+  <xs:element name="resp" type="anyTEI"/>
+  <xs:element name="respStmt" type="anyTEI"/>
+  <xs:element name="respons" type="anyTEI"/>
+  <xs:element name="restore" type="anyTEI"/>
+  <xs:element name="revisionDesc" type="anyTEI"/>
+  <xs:element name="rhyme" type="anyTEI"/>
+  <xs:element name="role" type="anyTEI"/>
+  <xs:element name="roleDesc" type="anyTEI"/>
+  <xs:element name="roleName" type="anyTEI"/>
+  <xs:element name="root" type="anyTEI"/>
+  <xs:element name="row" type="anyTEI"/>
+  <xs:element name="rs" type="anyTEI"/>
+  <xs:element name="rubric" type="anyTEI"/>
+  <xs:element name="s" type="anyTEI"/>
+  <xs:element name="said" type="anyTEI"/>
+  <xs:element name="salute" type="anyTEI"/>
+  <xs:element name="samplingDecl" type="anyTEI"/>
+  <xs:element name="schemaSpec" type="anyTEI"/>
+  <xs:element name="scriptStmt" type="anyTEI"/>
+  <xs:element name="seal" type="anyTEI"/>
+  <xs:element name="sealDesc" type="anyTEI"/>
+  <xs:element name="secFol" type="anyTEI"/>
+  <xs:element name="seg" type="anyTEI"/>
+  <xs:element name="segmentation" type="anyTEI"/>
+  <xs:element name="sense" type="anyTEI"/>
+  <xs:element name="series" type="anyTEI"/>
+  <xs:element name="seriesStmt" type="anyTEI"/>
+  <xs:element name="set" type="anyTEI"/>
+  <xs:element name="setting" type="anyTEI"/>
+  <xs:element name="settingDesc" type="anyTEI"/>
+  <xs:element name="settlement" type="anyTEI"/>
+  <xs:element name="sex" type="anyTEI"/>
+  <xs:element name="shift" type="anyTEI"/>
+  <xs:element name="sic" type="anyTEI"/>
+  <xs:element name="signatures" type="anyTEI"/>
+  <xs:element name="signed" type="anyTEI"/>
+  <xs:element name="soCalled" type="anyTEI"/>
+  <xs:element name="socecStatus" type="anyTEI"/>
+  <xs:element name="sound" type="anyTEI"/>
+  <xs:element name="source" type="anyTEI"/>
+  <xs:element name="sourceDesc" type="anyTEI"/>
+  <xs:element name="sp" type="anyTEI"/>
+  <xs:element name="space" type="anyTEI"/>
+  <xs:element name="span" type="anyTEI"/>
+  <xs:element name="spanGrp" type="anyTEI"/>
+  <xs:element name="speaker" type="anyTEI"/>
+  <xs:element name="specDesc" type="anyTEI"/>
+  <xs:element name="specGrp" type="anyTEI"/>
+  <xs:element name="specGrpRef" type="anyTEI"/>
+  <xs:element name="specList" type="anyTEI"/>
+  <xs:element name="sponsor" type="anyTEI"/>
+  <xs:element name="stage" type="anyTEI"/>
+  <xs:element name="stamp" type="anyTEI"/>
+  <xs:element name="state" type="anyTEI"/>
+  <xs:element name="stdVals" type="anyTEI"/>
+  <xs:element name="street" type="anyTEI"/>
+  <xs:element name="stress" type="anyTEI"/>
+  <xs:element name="string" type="anyTEI"/>
+  <xs:element name="stringVal" type="anyTEI"/>
+  <xs:element name="subc" type="anyTEI"/>
+  <xs:element name="subst" type="anyTEI"/>
+  <xs:element name="summary" type="anyTEI"/>
+  <xs:element name="superEntry" type="anyTEI"/>
+  <xs:element name="supplied" type="anyTEI"/>
+  <xs:element name="support" type="anyTEI"/>
+  <xs:element name="supportDesc" type="anyTEI"/>
+  <xs:element name="surface" type="anyTEI"/>
+  <xs:element name="surname" type="anyTEI"/>
+  <xs:element name="surrogates" type="anyTEI"/>
+  <xs:element name="syll" type="anyTEI"/>
+  <xs:element name="symbol" type="anyTEI"/>
+  <xs:element name="table" type="anyTEI"/>
+  <xs:element name="tag" type="anyTEI"/>
+  <xs:element name="tagUsage" type="anyTEI"/>
+  <xs:element name="tagsDecl" type="anyTEI"/>
+  <xs:element name="taxonomy" type="anyTEI"/>
+  <xs:element name="tech" type="anyTEI"/>
+  <xs:element name="teiCorpus" type="anyTEI"/>
+  <xs:element name="teiHeader" type="anyTEI"/>
+  <xs:element name="term" type="anyTEI"/>
+  <xs:element name="terrain" type="anyTEI"/>
+  <xs:element name="text" type="anyTEI"/>
+  <xs:element name="textClass" type="anyTEI"/>
+  <xs:element name="textDesc" type="anyTEI"/>
+  <xs:element name="textLang" type="anyTEI"/>
+  <xs:element name="then" type="anyTEI"/>
+  <xs:element name="time" type="anyTEI"/>
+  <xs:element name="timeline" type="anyTEI"/>
+  <xs:element name="title" type="anyTEI"/>
+  <xs:element name="titlePage" type="anyTEI"/>
+  <xs:element name="titlePart" type="anyTEI"/>
+  <xs:element name="titleStmt" type="anyTEI"/>
+  <xs:element name="tns" type="anyTEI"/>
+  <xs:element name="trailer" type="anyTEI"/>
+  <xs:element name="trait" type="anyTEI"/>
+  <xs:element name="tree" type="anyTEI"/>
+  <xs:element name="triangle" type="anyTEI"/>
+  <xs:element name="u" type="anyTEI"/>
+  <xs:element name="unclear" type="anyTEI"/>
+  <xs:element name="unicodeName" type="anyTEI"/>
+  <xs:element name="usg" type="anyTEI"/>
+  <xs:element name="vAlt" type="anyTEI"/>
+  <xs:element name="vColl" type="anyTEI"/>
+  <xs:element name="vDefault" type="anyTEI"/>
+  <xs:element name="vLabel" type="anyTEI"/>
+  <xs:element name="vMerge" type="anyTEI"/>
+  <xs:element name="vNot" type="anyTEI"/>
+  <xs:element name="vRange" type="anyTEI"/>
+  <xs:element name="val" type="anyTEI"/>
+  <xs:element name="valDesc" type="anyTEI"/>
+  <xs:element name="valItem" type="anyTEI"/>
+  <xs:element name="valList" type="anyTEI"/>
+  <xs:element name="value" type="anyTEI"/>
+  <xs:element name="variantEncoding" type="anyTEI"/>
+  <xs:element name="view" type="anyTEI"/>
+  <xs:element name="vocal" type="anyTEI"/>
+  <xs:element name="w" type="anyTEI"/>
+  <xs:element name="watermark" type="anyTEI"/>
+  <xs:element name="when" type="anyTEI"/>
+  <xs:element name="width" type="anyTEI"/>
+  <xs:element name="wit" type="anyTEI"/>
+  <xs:element name="witDetail" type="anyTEI"/>
+  <xs:element name="witEnd" type="anyTEI"/>
+  <xs:element name="witStart" type="anyTEI"/>
+  <xs:element name="witness" type="anyTEI"/>
+  <xs:element name="writing" type="anyTEI"/>
+  <xs:element name="xr" type="anyTEI"/>
+  <xs:element name="zone" type="anyTEI"/>
+  <xs:attributeGroup name="att.ascribed.attributes">
+    <xs:attributeGroup ref="teix:att.ascribed.attribute.who"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.ascribed.attribute.who">
+    <xs:attribute name="who">
+      <xs:annotation>
+        <xs:documentation>indicates the person, or group of
+	people, to whom the element content is ascribed.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attributes">
+    <xs:attributeGroup ref="teix:att.datable.w3c.attribute.period"/>
+    <xs:attributeGroup ref="teix:att.datable.w3c.attribute.when"/>
+    <xs:attributeGroup ref="teix:att.datable.w3c.attribute.notBefore"/>
+    <xs:attributeGroup ref="teix:att.datable.w3c.attribute.notAfter"/>
+    <xs:attributeGroup ref="teix:att.datable.w3c.attribute.from"/>
+    <xs:attributeGroup ref="teix:att.datable.w3c.attribute.to"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.period">
+    <xs:attribute name="period" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>supplies a pointer to some location defining a named
+      period of time within which the datable item is understood to
+      have occurred.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.when">
+    <xs:attribute name="when">
+      <xs:annotation>
+        <xs:documentation>supplies the value of a date or time in a standard form,
+      e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.notBefore">
+    <xs:attribute name="notBefore">
+      <xs:annotation>
+        <xs:documentation>specifies the earliest possible date for the event in
+	  standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.notAfter">
+    <xs:attribute name="notAfter">
+      <xs:annotation>
+        <xs:documentation>specifies the latest possible date for the event in
+	  standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.from">
+    <xs:attribute name="from">
+      <xs:annotation>
+        <xs:documentation>indicates the starting point of the period in standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.to">
+    <xs:attribute name="to">
+      <xs:annotation>
+        <xs:documentation>indicates the ending point of the period in standard
+	  form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.declarable.attributes">
+    <xs:attributeGroup ref="teix:att.declarable.attribute.default"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.declarable.attribute.default">
+    <xs:attribute name="default" default="false">
+      <xs:annotation>
+        <xs:documentation>indicates whether or not this element is selected by default when
+its parent is selected.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="true">
+            <xs:annotation>
+              <xs:documentation>This element is selected if its parent is selected</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="false">
+            <xs:annotation>
+              <xs:documentation>This element can only be selected explicitly, unless it is the
+only one of its kind, in which case it is selected if its parent is selected.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.declaring.attributes">
+    <xs:attributeGroup ref="teix:att.declaring.attribute.decls"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.declaring.attribute.decls">
+    <xs:attribute name="decls">
+      <xs:annotation>
+        <xs:documentation>identifies one or more declarable elements within the
+header, which are understood to apply to the element bearing this
+attribute and its content.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.divLike.attributes">
+    <xs:attributeGroup ref="teix:att.divLike.attribute.org"/>
+    <xs:attributeGroup ref="teix:att.divLike.attribute.sample"/>
+    <xs:attributeGroup ref="teix:att.divLike.attribute.part"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.divLike.attribute.org">
+    <xs:attribute name="org" default="uniform">
+      <xs:annotation>
+        <xs:documentation>(organization) specifies how the content of the division is organized.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="composite">
+            <xs:annotation>
+              <xs:documentation>composite content: i.e. no claim is made about the
+		  sequence in which the immediate contents of this division
+		  are to be processed, or their inter-relationships.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="uniform">
+            <xs:annotation>
+              <xs:documentation>uniform content: i.e. the immediate contents of this
+		  element are regarded as forming a logical unit, to be
+		  processed in sequence.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.divLike.attribute.sample">
+    <xs:attribute name="sample" default="complete">
+      <xs:annotation>
+        <xs:documentation>indicates whether this division is a sample of the
+		original source and if so, from which part.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="initial">
+            <xs:annotation>
+              <xs:documentation>division lacks material present at end in source.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="medial">
+            <xs:annotation>
+              <xs:documentation>division lacks material at start and end.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="final">
+            <xs:annotation>
+              <xs:documentation>division lacks material at start.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="unknown">
+            <xs:annotation>
+              <xs:documentation>position of sampled material within original unknown.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="complete">
+            <xs:annotation>
+              <xs:documentation>division is not a sample.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.divLike.attribute.part">
+    <xs:attribute name="part" default="N">
+      <xs:annotation>
+        <xs:documentation>specifies whether or not the division is fragmented by
+		some other structural element, for example a speech which is
+		divided between two or more verse stanzas.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="Y">
+            <xs:annotation>
+              <xs:documentation>(yes) the division is incomplete in some respect</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="N">
+            <xs:annotation>
+              <xs:documentation>(no) either the division is complete, or no claim is made as to its completeness.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="I">
+            <xs:annotation>
+              <xs:documentation>(initial) the initial part of an incomplete division</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="M">
+            <xs:annotation>
+              <xs:documentation>(medial) a medial part of an incomplete division</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="F">
+            <xs:annotation>
+              <xs:documentation>(final) the final part of an incomplete division</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.duration.w3c.attributes">
+    <xs:attributeGroup ref="teix:att.duration.w3c.attribute.dur"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.duration.w3c.attribute.dur">
+    <xs:attribute name="dur" type="xs:duration">
+      <xs:annotation>
+        <xs:documentation>(duration) indicates the length of this element in time.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.editLike.attributes">
+    <xs:attributeGroup ref="teix:att.editLike.attribute.cert"/>
+    <xs:attributeGroup ref="teix:att.editLike.attribute.resp"/>
+    <xs:attributeGroup ref="teix:att.editLike.attribute.evidence"/>
+    <xs:attributeGroup ref="teix:att.editLike.attribute.source"/>
+    <xs:attributeGroup ref="teix:att.editLike.attribute.precision"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.editLike.attribute.cert">
+    <xs:attribute name="cert">
+      <xs:annotation>
+        <xs:documentation>(certainty) signifies the degree of certainty associated with the
+	intervention or interpretation.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="high"/>
+          <xs:enumeration value="medium"/>
+          <xs:enumeration value="low"/>
+          <xs:enumeration value="unknown"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.editLike.attribute.resp">
+    <xs:attribute name="resp">
+      <xs:annotation>
+        <xs:documentation>(responsible party) indicates the agency responsible for the
+	intervention or interpretation, for example an editor or transcriber.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.editLike.attribute.evidence">
+    <xs:attribute name="evidence">
+      <xs:annotation>
+        <xs:documentation>indicates the nature of the evidence supporting the reliability or
+  accuracy of the intervention or interpretation.
+Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:Name">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="internal">
+                <xs:annotation>
+                  <xs:documentation>there is internal evidence to support the intervention.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="external">
+                <xs:annotation>
+                  <xs:documentation>there is external evidence to support the intervention.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="conjecture">
+                <xs:annotation>
+                  <xs:documentation>the intervention or interpretation has been made by
+	    the editor, cataloguer, or scholar on the basis of their
+	    expertise.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.editLike.attribute.source">
+    <xs:attribute name="source">
+      <xs:annotation>
+        <xs:documentation>contains a list of one or more pointers indicating the
+      sources which support the given reading.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.editLike.attribute.precision">
+    <xs:attribute name="precision">
+      <xs:annotation>
+        <xs:documentation>characterizes the precision of the specified intervention
+      or dating.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="high"/>
+          <xs:enumeration value="medium"/>
+          <xs:enumeration value="low"/>
+          <xs:enumeration value="unknown"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attributes">
+    <xs:attributeGroup ref="teix:att.global.attribute.xmlid"/>
+    <xs:attributeGroup ref="teix:att.global.attribute.n"/>
+    <xs:attributeGroup ref="teix:att.global.attribute.xmllang"/>
+    <xs:attributeGroup ref="teix:att.global.attribute.rend"/>
+    <xs:attributeGroup ref="teix:att.global.attribute.rendition"/>
+    <xs:attributeGroup ref="teix:att.global.attribute.xmlbase"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.xmlid">
+    <xs:attribute ref="xml:id"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.n">
+    <xs:attribute name="n">
+      <xs:annotation>
+        <xs:documentation>(number) gives a number (or other label) for an element, which is
+      not necessarily unique within the document.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list>
+              <xs:simpleType>
+                <xs:restriction base="xs:token">
+                  <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:list>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.xmllang">
+    <xs:attribute ref="xml:lang"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.rend">
+    <xs:attribute name="rend">
+      <xs:annotation>
+        <xs:documentation>(rendition) indicates how the element in question was rendered or
+	presented in the source text.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list>
+              <xs:simpleType>
+                <xs:restriction base="xs:token">
+                  <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:list>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.rendition">
+    <xs:attribute name="rendition">
+      <xs:annotation>
+        <xs:documentation>points to a description of the rendering  or
+	presentation used for this element in the source text.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.xmlbase">
+    <xs:attribute ref="xml:base"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.internetMedia.attributes">
+    <xs:attributeGroup ref="teix:att.internetMedia.attribute.mimeType"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.internetMedia.attribute.mimeType">
+    <xs:attribute name="mimeType">
+      <xs:annotation>
+        <xs:documentation>(MIME media type) specifies the applicable multimedia internet mail extension (MIME) media type</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.measurement.attributes">
+    <xs:attributeGroup ref="teix:att.measurement.attribute.unit"/>
+    <xs:attributeGroup ref="teix:att.measurement.attribute.quantity"/>
+    <xs:attributeGroup ref="teix:att.measurement.attribute.commodity"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.measurement.attribute.unit">
+    <xs:attribute name="unit">
+      <xs:annotation>
+        <xs:documentation>indicates the units used for the measurement, usually
+      using the standard symbol for the desired units.
+Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (hertz); 5] Pa (pascal); 6] Ω (ohm); 7] L (litre); 8] t (tonne); 9] ha (hectare); 10] Å (ångström); 11] mL (millilitre); 12] cm (centimetre); 13] dB (decibel); 14] kbit (kilobit); 15] Kibit (kibibit); 16] kB (kilobyte); 17] KiB (kibibyte); 18] MB (megabyte); 19] MiB (mebibyte)</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:Name">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="m">
+                <xs:annotation>
+                  <xs:documentation>(metre) SI base unit of length</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="kg">
+                <xs:annotation>
+                  <xs:documentation>(kilogram) SI base unit of mass</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="s">
+                <xs:annotation>
+                  <xs:documentation>(second) SI base unit of time</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="Hz">
+                <xs:annotation>
+                  <xs:documentation>(hertz) SI unit of frequency</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="Pa">
+                <xs:annotation>
+                  <xs:documentation>(pascal) SI unit of pressure or stress</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="Ω">
+                <xs:annotation>
+                  <xs:documentation>(ohm) SI unit of electric resistance</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="L">
+                <xs:annotation>
+                  <xs:documentation>(litre) 1 dm³</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="t">
+                <xs:annotation>
+                  <xs:documentation>(tonne) 10³ kg</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="ha">
+                <xs:annotation>
+                  <xs:documentation>(hectare) 1 hm²</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="Å">
+                <xs:annotation>
+                  <xs:documentation>(ångström) 10⁻¹⁰ m</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="mL">
+                <xs:annotation>
+                  <xs:documentation>(millilitre) </xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="cm">
+                <xs:annotation>
+                  <xs:documentation>(centimetre) </xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="dB">
+                <xs:annotation>
+                  <xs:documentation>(decibel) see remarks, below</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="kbit">
+                <xs:annotation>
+                  <xs:documentation> (kilobit) 10³ or 1000 bits</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="Kibit">
+                <xs:annotation>
+                  <xs:documentation> (kibibit) 2¹⁰ or 1024 bits</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="kB">
+                <xs:annotation>
+                  <xs:documentation> (kilobyte) 10³ or 1000 bytes</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="KiB">
+                <xs:annotation>
+                  <xs:documentation> (kibibyte) 2¹⁰ or 1024 bytes</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="MB">
+                <xs:annotation>
+                  <xs:documentation> (megabyte) 10⁶ or 1 000 000 bytes</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="MiB">
+                <xs:annotation>
+                  <xs:documentation> (mebibyte) 2²⁰ or 1 048 576 bytes</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.measurement.attribute.quantity">
+    <xs:attribute name="quantity">
+      <xs:annotation>
+        <xs:documentation>specifies the number of the specified units that
+      comprise the measurement</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:double xs:decimal"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.measurement.attribute.commodity">
+    <xs:attribute name="commodity">
+      <xs:annotation>
+        <xs:documentation>indicates the substance that is being measured</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list>
+              <xs:simpleType>
+                <xs:restriction base="xs:token">
+                  <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:list>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.naming.attributes">
+    <xs:attributeGroup ref="teix:att.naming.attribute.key"/>
+    <xs:attributeGroup ref="teix:att.naming.attribute.ref"/>
+    <xs:attributeGroup ref="teix:att.naming.attribute.nymRef"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.naming.attribute.key">
+    <xs:attribute name="key" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>provides an external means
+ of locating a full definition for the entity (or entities) being named, such as a database record key
+      or other token.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.naming.attribute.ref">
+    <xs:attribute name="ref">
+      <xs:annotation>
+        <xs:documentation>(reference) provides an explicit means
+ of locating a full definition for the entity being named by means of
+ a URI.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.naming.attribute.nymRef">
+    <xs:attribute name="nymRef">
+      <xs:annotation>
+        <xs:documentation>(reference to the canonical name) provides a means of locating the canonical form
+      (nym) of the names associated with the object
+       named by
+      the element bearing it.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.placement.attributes">
+    <xs:attributeGroup ref="teix:att.placement.attribute.place"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.placement.attribute.place">
+    <xs:attribute name="place">
+      <xs:annotation>
+        <xs:documentation>
+Suggested values include: 1] infralinear; 2] margin-bot (bottom margin); 3] margin-left (left margin); 4] margin-right (right margin); 5] margin-top (top margin); 6] opposite; 7] overleaf; 8] supralinear; 9] verso; 10] app (apparatus); 11] end; 12] foot; 13] inline; 14] interlinear; 15] inline; 16] mixed</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:Name">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="infralinear">
+                <xs:annotation>
+                  <xs:documentation>below the line</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="margin-bot">
+                <xs:annotation>
+                  <xs:documentation>(bottom margin) in the bottom margin</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="margin-left">
+                <xs:annotation>
+                  <xs:documentation>(left margin) in the left margin</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="margin-right">
+                <xs:annotation>
+                  <xs:documentation>(right margin) in the right margin</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="margin-top">
+                <xs:annotation>
+                  <xs:documentation>(top margin) in the top margin</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="opposite">
+                <xs:annotation>
+                  <xs:documentation>on the opposite, i.e. facing, page</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="overleaf">
+                <xs:annotation>
+                  <xs:documentation>on the other side of the leaf</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="supralinear">
+                <xs:annotation>
+                  <xs:documentation>above the line</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="verso">
+                <xs:annotation>
+                  <xs:documentation>on verso of the sheet or page</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="app">
+                <xs:annotation>
+                  <xs:documentation>(apparatus) note appears in the apparatus at the foot of the page.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="end">
+                <xs:annotation>
+                  <xs:documentation>note appears at end of chapter or volume.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="foot">
+                <xs:annotation>
+                  <xs:documentation>note appears at foot of page.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="inline">
+                <xs:annotation>
+                  <xs:documentation>note appears as a marked paragraph in the body of the text.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="interlinear">
+                <xs:annotation>
+                  <xs:documentation>note appears between lines of the text; a less precise form of either infralinear or supralinear.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="inline">
+                <xs:annotation>
+                  <xs:documentation>addition is made in a space left in the witness by an earlier scribe.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="mixed">
+                <xs:annotation>
+                  <xs:documentation>one or more of the other values</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.segLike.attributes">
+    <xs:attributeGroup ref="teix:att.segLike.attribute.type"/>
+    <xs:attributeGroup ref="teix:att.segLike.attribute.function"/>
+    <xs:attributeGroup ref="teix:att.segLike.attribute.part"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.segLike.attribute.type">
+    <xs:attribute name="type" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>characterizes the type of segment.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.segLike.attribute.function">
+    <xs:attribute name="function" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>characterizes the function of the segment.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.segLike.attribute.part">
+    <xs:attribute name="part" default="N">
+      <xs:annotation>
+        <xs:documentation>specifies whether or not the segment is fragmented by some other
+structural element, for example a clause which is divided between two
+or more sentences.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="Y">
+            <xs:annotation>
+              <xs:documentation>(yes) the segment is incomplete in some respect</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="N">
+            <xs:annotation>
+              <xs:documentation>(no) either the segment is complete, or no claim is made as to
+its completeness</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="I">
+            <xs:annotation>
+              <xs:documentation>(initial) the initial part of an incomplete segment</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="M">
+            <xs:annotation>
+              <xs:documentation>(medial) a medial part of an incomplete segment</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="F">
+            <xs:annotation>
+              <xs:documentation>(final) the final part of an incomplete segment</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.spanning.attributes">
+    <xs:attributeGroup ref="teix:att.spanning.attribute.spanTo"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.spanning.attribute.spanTo">
+    <xs:attribute name="spanTo" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>indicates the end of a span initiated by the element
+	bearing this attribute.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.tableDecoration.attributes">
+    <xs:attributeGroup ref="teix:att.tableDecoration.attribute.role"/>
+    <xs:attributeGroup ref="teix:att.tableDecoration.attribute.rows"/>
+    <xs:attributeGroup ref="teix:att.tableDecoration.attribute.cols"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.tableDecoration.attribute.role">
+    <xs:attribute name="role" default="data">
+      <xs:annotation>
+        <xs:documentation>indicates the kind of information held in this cell or
+in each cell of this row.
+Suggested values include: 1] label; 2] data</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:Name">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="label">
+                <xs:annotation>
+                  <xs:documentation>labelling or descriptive information only.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="data">
+                <xs:annotation>
+                  <xs:documentation>data values.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.tableDecoration.attribute.rows">
+    <xs:attribute name="rows" default="1" type="xs:nonNegativeInteger">
+      <xs:annotation>
+        <xs:documentation>indicates the number of rows occupied by this cell or row.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.tableDecoration.attribute.cols">
+    <xs:attribute name="cols" default="1" type="xs:nonNegativeInteger">
+      <xs:annotation>
+        <xs:documentation>(columns) indicates the number of columns occupied by this cell or
+	row.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.transcriptional.attributes">
+    <xs:attributeGroup ref="teix:att.transcriptional.attribute.hand"/>
+    <xs:attributeGroup ref="teix:att.transcriptional.attribute.status"/>
+    <xs:attributeGroup ref="teix:att.transcriptional.attribute.seq"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.transcriptional.attribute.hand">
+    <xs:attribute name="hand" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>signifies the hand of the agent which made the intervention.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.transcriptional.attribute.status">
+    <xs:attribute name="status" default="unremarkable" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>indicates the effect of the intervention, for example in
+      the case of a deletion, strikeouts
+      which include too much or too little text, or in the case of an
+      addition, an insertion which duplicates some of the text
+      already present.
+Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] excessEnd; 5] shortStart; 6] shortEnd; 7] partial; 8] unremarkable</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.transcriptional.attribute.seq">
+    <xs:attribute name="seq" type="xs:nonNegativeInteger">
+      <xs:annotation>
+        <xs:documentation>(sequence) assigns a sequence number related to the order in which
+      the encoded features carrying this attribute are believed to have occurred.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.translatable.attributes">
+    <xs:attributeGroup ref="teix:att.translatable.attribute.version"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.translatable.attribute.version">
+    <xs:attribute name="version">
+      <xs:annotation>
+        <xs:documentation>specifies the version name or number of the source from
+	which the translated version was derived</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.typed.attributes">
+    <xs:attributeGroup ref="teix:att.typed.attribute.type"/>
+    <xs:attributeGroup ref="teix:att.typed.attribute.subtype"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.typed.attribute.type">
+    <xs:attribute name="type" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>characterizes the element in some sense, using any convenient
+ classification scheme or typology.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.typed.attribute.subtype">
+    <xs:attribute name="subtype" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>provides a sub-categorization of the element, if needed</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.xmlspace.attributes">
+    <xs:attributeGroup ref="teix:att.xmlspace.attribute.xmlspace"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.xmlspace.attribute.xmlspace">
+    <xs:attribute ref="xml:space"/>
+  </xs:attributeGroup>
+  <xs:group name="model.nameLike.agent">
+    <xs:sequence>
+      <xs:element ref="ns1:name"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.segLike">
+    <xs:sequence>
+      <xs:element ref="ns1:seg"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.hiLike">
+    <xs:sequence>
+      <xs:element ref="ns1:hi"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.emphLike">
+    <xs:choice>
+      <xs:element ref="ns1:foreign"/>
+      <xs:element ref="ns1:emph"/>
+      <xs:element ref="ns1:distinct"/>
+      <xs:element ref="ns1:mentioned"/>
+      <xs:element ref="ns1:soCalled"/>
+      <xs:element ref="ns1:gloss"/>
+      <xs:element ref="ns1:term"/>
+      <xs:element ref="ns1:title"/>
+      <xs:element ref="ns1:code"/>
+      <xs:element ref="ns1:ident"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.highlighted">
+    <xs:choice>
+      <xs:group ref="teix:model.hiLike"/>
+      <xs:group ref="teix:model.emphLike"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.dateLike">
+    <xs:choice>
+      <xs:element ref="ns1:date"/>
+      <xs:element ref="ns1:time"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.measureLike">
+    <xs:choice>
+      <xs:element ref="ns1:num"/>
+      <xs:element ref="ns1:measure"/>
+      <xs:element ref="ns1:measureGrp"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.egLike">
+    <xs:choice>
+      <xs:element ref="ns1:eg"/>
+      <xs:group ref="teix:egXML"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.graphicLike">
+    <xs:choice>
+      <xs:element ref="ns1:graphic"/>
+      <xs:element ref="ns1:binaryObject"/>
+      <xs:element ref="ns1:formula"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.pPart.editorial">
+    <xs:choice>
+      <xs:element ref="ns1:choice"/>
+      <xs:element ref="ns1:abbr"/>
+      <xs:element ref="ns1:expan"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.pPart.transcriptional">
+    <xs:choice>
+      <xs:element ref="ns1:sic"/>
+      <xs:element ref="ns1:corr"/>
+      <xs:element ref="ns1:reg"/>
+      <xs:element ref="ns1:orig"/>
+      <xs:element ref="ns1:add"/>
+      <xs:element ref="ns1:del"/>
+      <xs:element ref="ns1:unclear"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.pPart.edit">
+    <xs:choice>
+      <xs:group ref="teix:model.pPart.editorial"/>
+      <xs:group ref="teix:model.pPart.transcriptional"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.ptrLike">
+    <xs:choice>
+      <xs:element ref="ns1:ptr"/>
+      <xs:element ref="ns1:ref"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.global.meta">
+    <xs:choice>
+      <xs:element ref="ns1:index"/>
+      <xs:element ref="ns1:link"/>
+      <xs:element ref="ns1:linkGrp"/>
+      <xs:element ref="ns1:timeline"/>
+      <xs:element ref="ns1:join"/>
+      <xs:element ref="ns1:joinGrp"/>
+      <xs:element ref="ns1:alt"/>
+      <xs:element ref="ns1:altGrp"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.milestoneLike">
+    <xs:choice>
+      <xs:element ref="ns1:milestone"/>
+      <xs:element ref="ns1:pb"/>
+      <xs:element ref="ns1:lb"/>
+      <xs:element ref="ns1:cb"/>
+      <xs:element ref="ns1:anchor"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.gLike">
+    <xs:sequence>
+      <xs:element ref="ns1:g"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.oddDecl">
+    <xs:choice>
+      <xs:element ref="ns1:moduleSpec"/>
+      <xs:element ref="ns1:specGrp"/>
+      <xs:element ref="ns1:elementSpec"/>
+      <xs:element ref="ns1:classSpec"/>
+      <xs:element ref="ns1:macroSpec"/>
+      <xs:element ref="ns1:listRef"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.oddRef">
+    <xs:choice>
+      <xs:element ref="ns1:moduleRef"/>
+      <xs:element ref="ns1:specGrpRef"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.phrase.xml">
+    <xs:choice>
+      <xs:element ref="ns1:att"/>
+      <xs:element ref="ns1:gi"/>
+      <xs:element ref="ns1:tag"/>
+      <xs:element ref="ns1:val"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.specDescLike">
+    <xs:choice>
+      <xs:element ref="ns1:specList"/>
+      <xs:element ref="ns1:specDesc"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.biblLike">
+    <xs:choice>
+      <xs:element ref="ns1:bibl"/>
+      <xs:element ref="ns1:biblStruct"/>
+      <xs:element ref="ns1:biblFull"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.headLike">
+    <xs:sequence>
+      <xs:element ref="ns1:head"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.labelLike">
+    <xs:choice>
+      <xs:element ref="ns1:desc"/>
+      <xs:element ref="ns1:label"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.listLike">
+    <xs:choice>
+      <xs:element ref="ns1:list"/>
+      <xs:element ref="ns1:listBibl"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.noteLike">
+    <xs:sequence>
+      <xs:element ref="ns1:note"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.lLike">
+    <xs:sequence>
+      <xs:element ref="ns1:l"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pLike">
+    <xs:choice>
+      <xs:element ref="ns1:p"/>
+      <xs:element ref="ns1:ab"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.stageLike">
+    <xs:sequence>
+      <xs:element ref="ns1:stage"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.entryPart">
+    <xs:choice>
+      <xs:element ref="ns1:superEntry"/>
+      <xs:element ref="ns1:hom"/>
+      <xs:element ref="ns1:sense"/>
+      <xs:element ref="ns1:form"/>
+      <xs:element ref="ns1:orth"/>
+      <xs:element ref="ns1:pron"/>
+      <xs:element ref="ns1:hyph"/>
+      <xs:element ref="ns1:syll"/>
+      <xs:element ref="ns1:stress"/>
+      <xs:element ref="ns1:gen"/>
+      <xs:element ref="ns1:number"/>
+      <xs:element ref="ns1:case"/>
+      <xs:element ref="ns1:per"/>
+      <xs:element ref="ns1:tns"/>
+      <xs:element ref="ns1:mood"/>
+      <xs:element ref="ns1:iType"/>
+      <xs:element ref="ns1:gramGrp"/>
+      <xs:element ref="ns1:pos"/>
+      <xs:element ref="ns1:subc"/>
+      <xs:element ref="ns1:colloc"/>
+      <xs:element ref="ns1:def"/>
+      <xs:element ref="ns1:etym"/>
+      <xs:element ref="ns1:usg"/>
+      <xs:element ref="ns1:lbl"/>
+      <xs:element ref="ns1:xr"/>
+      <xs:element ref="ns1:re"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.entryPart.top">
+    <xs:choice>
+      <xs:element ref="ns1:cit"/>
+      <xs:element ref="ns1:dictScrap"/>
+      <xs:element ref="ns1:form"/>
+      <xs:element ref="ns1:gramGrp"/>
+      <xs:element ref="ns1:def"/>
+      <xs:element ref="ns1:etym"/>
+      <xs:element ref="ns1:usg"/>
+      <xs:element ref="ns1:xr"/>
+      <xs:element ref="ns1:re"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.global.edit">
+    <xs:sequence>
+      <xs:element ref="ns1:gap"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.divPart">
+    <xs:choice>
+      <xs:group ref="teix:model.lLike"/>
+      <xs:group ref="teix:model.pLike"/>
+      <xs:element ref="ns1:lg"/>
+      <xs:element ref="ns1:sp"/>
+      <xs:element ref="ns1:floatingText"/>
+      <xs:element ref="ns1:schemaSpec"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.publicationStmtPart">
+    <xs:choice>
+      <xs:element ref="ns1:address"/>
+      <xs:element ref="ns1:date"/>
+      <xs:element ref="ns1:publisher"/>
+      <xs:element ref="ns1:pubPlace"/>
+      <xs:element ref="ns1:distributor"/>
+      <xs:element ref="ns1:authority"/>
+      <xs:element ref="ns1:idno"/>
+      <xs:element ref="ns1:availability"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.glossLike">
+    <xs:choice>
+      <xs:element ref="ns1:desc"/>
+      <xs:element ref="ns1:gloss"/>
+      <xs:element ref="ns1:equiv"/>
+      <xs:element ref="ns1:altIdent"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.quoteLike">
+    <xs:choice>
+      <xs:element ref="ns1:quote"/>
+      <xs:element ref="ns1:cit"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.qLike">
+    <xs:choice>
+      <xs:group ref="teix:model.quoteLike"/>
+      <xs:element ref="ns1:said"/>
+      <xs:element ref="ns1:q"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.respLike">
+    <xs:choice>
+      <xs:element ref="ns1:author"/>
+      <xs:element ref="ns1:editor"/>
+      <xs:element ref="ns1:respStmt"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.divWrapper">
+    <xs:choice>
+      <xs:element ref="ns1:meeting"/>
+      <xs:element ref="ns1:byline"/>
+      <xs:element ref="ns1:dateline"/>
+      <xs:element ref="ns1:argument"/>
+      <xs:element ref="ns1:epigraph"/>
+      <xs:element ref="ns1:docAuthor"/>
+      <xs:element ref="ns1:docDate"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.divTopPart">
+    <xs:choice>
+      <xs:group ref="teix:model.headLike"/>
+      <xs:element ref="ns1:opener"/>
+      <xs:element ref="ns1:salute"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.divTop">
+    <xs:choice>
+      <xs:group ref="teix:model.divWrapper"/>
+      <xs:group ref="teix:model.divTopPart"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.pLike.front">
+    <xs:choice>
+      <xs:element ref="ns1:head"/>
+      <xs:element ref="ns1:byline"/>
+      <xs:element ref="ns1:argument"/>
+      <xs:element ref="ns1:epigraph"/>
+      <xs:element ref="ns1:docTitle"/>
+      <xs:element ref="ns1:titlePart"/>
+      <xs:element ref="ns1:docAuthor"/>
+      <xs:element ref="ns1:docEdition"/>
+      <xs:element ref="ns1:docImprint"/>
+      <xs:element ref="ns1:docDate"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.divBottomPart">
+    <xs:choice>
+      <xs:element ref="ns1:trailer"/>
+      <xs:element ref="ns1:closer"/>
+      <xs:element ref="ns1:signed"/>
+      <xs:element ref="ns1:postscript"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.divBottom">
+    <xs:choice>
+      <xs:group ref="teix:model.divWrapper"/>
+      <xs:group ref="teix:model.divBottomPart"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.titlepagePart">
+    <xs:choice>
+      <xs:element ref="ns1:graphic"/>
+      <xs:element ref="ns1:binaryObject"/>
+      <xs:element ref="ns1:byline"/>
+      <xs:element ref="ns1:epigraph"/>
+      <xs:element ref="ns1:docTitle"/>
+      <xs:element ref="ns1:titlePart"/>
+      <xs:element ref="ns1:docAuthor"/>
+      <xs:element ref="ns1:imprimatur"/>
+      <xs:element ref="ns1:docEdition"/>
+      <xs:element ref="ns1:docImprint"/>
+      <xs:element ref="ns1:docDate"/>
+      <xs:element ref="ns1:figure"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.choicePart">
+    <xs:choice>
+      <xs:element ref="ns1:sic"/>
+      <xs:element ref="ns1:corr"/>
+      <xs:element ref="ns1:reg"/>
+      <xs:element ref="ns1:orig"/>
+      <xs:element ref="ns1:unclear"/>
+      <xs:element ref="ns1:abbr"/>
+      <xs:element ref="ns1:expan"/>
+      <xs:element ref="ns1:seg"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.imprintPart">
+    <xs:choice>
+      <xs:element ref="ns1:publisher"/>
+      <xs:element ref="ns1:biblScope"/>
+      <xs:element ref="ns1:pubPlace"/>
+      <xs:element ref="ns1:distributor"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.addressLike">
+    <xs:choice>
+      <xs:element ref="ns1:email"/>
+      <xs:element ref="ns1:address"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.nameLike">
+    <xs:choice>
+      <xs:group ref="teix:model.nameLike.agent"/>
+      <xs:element ref="ns1:rs"/>
+      <xs:element ref="ns1:lang"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.global">
+    <xs:choice>
+      <xs:group ref="teix:model.global.meta"/>
+      <xs:group ref="teix:model.milestoneLike"/>
+      <xs:group ref="teix:model.noteLike"/>
+      <xs:group ref="teix:model.global.edit"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.biblPart">
+    <xs:choice>
+      <xs:group ref="teix:model.respLike"/>
+      <xs:group ref="teix:model.imprintPart"/>
+      <xs:element ref="ns1:series"/>
+      <xs:element ref="ns1:meeting"/>
+      <xs:element ref="ns1:relatedItem"/>
+      <xs:element ref="ns1:edition"/>
+      <xs:element ref="ns1:extent"/>
+      <xs:element ref="ns1:idno"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.frontPart">
+    <xs:choice>
+      <xs:element ref="ns1:divGen"/>
+      <xs:element ref="ns1:titlePage"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.addrPart">
+    <xs:choice>
+      <xs:group ref="teix:model.nameLike"/>
+      <xs:element ref="ns1:addrLine"/>
+      <xs:element ref="ns1:street"/>
+      <xs:element ref="ns1:postCode"/>
+      <xs:element ref="ns1:postBox"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.pPart.data">
+    <xs:choice>
+      <xs:group ref="teix:model.dateLike"/>
+      <xs:group ref="teix:model.measureLike"/>
+      <xs:group ref="teix:model.addressLike"/>
+      <xs:group ref="teix:model.nameLike"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.inter">
+    <xs:choice>
+      <xs:group ref="teix:model.egLike"/>
+      <xs:group ref="teix:model.oddDecl"/>
+      <xs:group ref="teix:model.oddRef"/>
+      <xs:group ref="teix:model.biblLike"/>
+      <xs:group ref="teix:model.labelLike"/>
+      <xs:group ref="teix:model.listLike"/>
+      <xs:group ref="teix:model.stageLike"/>
+      <xs:group ref="teix:model.qLike"/>
+      <xs:element ref="ns1:table"/>
+      <xs:element ref="ns1:figure"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.common">
+    <xs:choice>
+      <xs:group ref="teix:model.divPart"/>
+      <xs:group ref="teix:model.inter"/>
+      <xs:group ref="teix:model.entryLike"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.phrase">
+    <xs:choice>
+      <xs:group ref="teix:model.segLike"/>
+      <xs:group ref="teix:model.highlighted"/>
+      <xs:group ref="teix:model.graphicLike"/>
+      <xs:group ref="teix:model.pPart.edit"/>
+      <xs:group ref="teix:model.ptrLike"/>
+      <xs:group ref="teix:model.phrase.xml"/>
+      <xs:group ref="teix:model.specDescLike"/>
+      <xs:group ref="teix:model.pPart.data"/>
+      <xs:group ref="teix:model.ptrLike.form"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.limitedPhrase">
+    <xs:choice>
+      <xs:group ref="teix:model.emphLike"/>
+      <xs:group ref="teix:model.pPart.editorial"/>
+      <xs:group ref="teix:model.ptrLike"/>
+      <xs:group ref="teix:model.phrase.xml"/>
+      <xs:group ref="teix:model.pPart.data"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.divLike">
+    <xs:sequence>
+      <xs:element ref="ns1:div"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.divGenLike">
+    <xs:sequence>
+      <xs:element ref="ns1:divGen"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.div1Like">
+    <xs:sequence>
+      <xs:element ref="ns1:div1"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.div2Like">
+    <xs:sequence>
+      <xs:element ref="ns1:div2"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.div3Like">
+    <xs:sequence>
+      <xs:element ref="ns1:div3"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.div4Like">
+    <xs:sequence>
+      <xs:element ref="ns1:div4"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.div5Like">
+    <xs:sequence>
+      <xs:element ref="ns1:div5"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.div6Like">
+    <xs:sequence>
+      <xs:element ref="ns1:div6"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.div7Like">
+    <xs:sequence>
+      <xs:element ref="ns1:div7"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.headerPart">
+    <xs:choice>
+      <xs:element ref="ns1:encodingDesc"/>
+      <xs:element ref="ns1:profileDesc"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.encodingPart">
+    <xs:choice>
+      <xs:element ref="ns1:projectDesc"/>
+      <xs:element ref="ns1:samplingDecl"/>
+      <xs:element ref="ns1:editorialDecl"/>
+      <xs:element ref="ns1:tagsDecl"/>
+      <xs:element ref="ns1:refsDecl"/>
+      <xs:element ref="ns1:classDecl"/>
+      <xs:element ref="ns1:appInfo"/>
+      <xs:element ref="ns1:geoDecl"/>
+      <xs:element ref="ns1:charDecl"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.editorialDeclPart">
+    <xs:choice>
+      <xs:element ref="ns1:correction"/>
+      <xs:element ref="ns1:normalization"/>
+      <xs:element ref="ns1:quotation"/>
+      <xs:element ref="ns1:hyphenation"/>
+      <xs:element ref="ns1:segmentation"/>
+      <xs:element ref="ns1:stdVals"/>
+      <xs:element ref="ns1:interpretation"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.applicationLike">
+    <xs:sequence>
+      <xs:element ref="ns1:application"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.profileDescPart">
+    <xs:choice>
+      <xs:element ref="ns1:langUsage"/>
+      <xs:element ref="ns1:textClass"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="egXML">
+    <xs:sequence>
+      <xs:element name="egXML">
+        <xs:annotation>
+          <xs:documentation>(example of XML) contains a single well-formed XML fragment demonstrating the
+  use of some XML element or attribute, in which the egXML
+  element itself functions as the root element. </xs:documentation>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="teix:anyTEI"/>
+          <xs:attributeGroup ref="teix:att.global.attribute.xmlid"/>
+          <xs:attributeGroup ref="teix:att.global.attribute.n"/>
+          <xs:attributeGroup ref="teix:att.global.attribute.xmllang"/>
+          <xs:attributeGroup ref="teix:att.global.attribute.rend"/>
+          <xs:attributeGroup ref="teix:att.global.attribute.rendition"/>
+          <xs:attributeGroup ref="teix:att.global.attribute.xmlbase"/>
+          <xs:attributeGroup ref="teix:att.global.linking.attribute.corresp"/>
+          <xs:attributeGroup ref="teix:att.global.linking.attribute.synch"/>
+          <xs:attributeGroup ref="teix:att.global.linking.attribute.sameAs"/>
+          <xs:attributeGroup ref="teix:att.global.linking.attribute.copyOf"/>
+          <xs:attributeGroup ref="teix:att.global.linking.attribute.next"/>
+          <xs:attributeGroup ref="teix:att.global.linking.attribute.prev"/>
+          <xs:attributeGroup ref="teix:att.global.linking.attribute.exclude"/>
+          <xs:attributeGroup ref="teix:att.global.linking.attribute.select"/>
+          <xs:attributeGroup ref="teix:att.xmlspace.attribute.xmlspace"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="att.identified.attributes">
+    <xs:attributeGroup ref="teix:att.identified.attribute.ident"/>
+    <xs:attributeGroup ref="teix:att.identified.attribute.predeclare"/>
+    <xs:attributeGroup ref="teix:att.identified.attribute.module"/>
+    <xs:attributeGroup ref="teix:att.identified.attribute.mode"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.identified.attribute.ident">
+    <xs:attribute name="ident" use="required" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>Supplies the identifier by which this element is referenced.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.identified.attribute.predeclare">
+    <xs:attribute name="predeclare" default="false" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>Says whether this object should be predeclared in the
+      tei infrastructure module.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.identified.attribute.module">
+    <xs:attribute name="module" type="xs:NCName">
+      <xs:annotation>
+        <xs:documentation>Supplies the name of the module in which this object is to
+      be defined.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.identified.attribute.mode">
+    <xs:attribute name="mode" default="add">
+      <xs:annotation>
+        <xs:documentation>specifies the effect of this declaration on its parent
+    module.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="add">
+            <xs:annotation>
+              <xs:documentation>this declaration is added to the current definitions</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="delete">
+            <xs:annotation>
+              <xs:documentation>this declaration and all of its children are removed from the current setup</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="change">
+            <xs:annotation>
+              <xs:documentation>this declaration changes the declaration of the same
+    name in the current definition</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="replace">
+            <xs:annotation>
+              <xs:documentation>this declaration replaces the declaration of the same
+    name in the current definition</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:group name="model.entryLike">
+    <xs:choice>
+      <xs:element ref="ns1:superEntry"/>
+      <xs:element ref="ns1:entry"/>
+      <xs:element ref="ns1:entryFree"/>
+    </xs:choice>
+  </xs:group>
+  <xs:attributeGroup name="att.entryLike.attributes">
+    <xs:attributeGroup ref="teix:att.entryLike.attribute.type"/>
+    <xs:attributeGroup ref="teix:att.entryLike.attribute.sortKey"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.entryLike.attribute.type">
+    <xs:attribute name="type" default="main">
+      <xs:annotation>
+        <xs:documentation>indicates type of entry, in dictionaries with multiple types.
+Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference); 4] affix; 5] abbr (abbreviation); 6] supplemental; 7] foreign</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:Name">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="main">
+                <xs:annotation>
+                  <xs:documentation>a main entry (default).</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="hom">
+                <xs:annotation>
+                  <xs:documentation>(homograph) groups information relating to one homograph within an entry.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="xref">
+                <xs:annotation>
+                  <xs:documentation>(cross reference) a reduced entry whose only function is to
+point to another main entry (e.g. for forms of an irregular verb or
+for variant spellings: was pointing to
+be, or esthete to
+aesthete).</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="affix">
+                <xs:annotation>
+                  <xs:documentation>an entry for a prefix, infix, or suffix.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="abbr">
+                <xs:annotation>
+                  <xs:documentation>(abbreviation) an entry for an abbreviation.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="supplemental">
+                <xs:annotation>
+                  <xs:documentation>a supplemental entry (for use in dictionaries which
+          issue supplements to their main work in which they include
+          updated information about entries).</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="foreign">
+                <xs:annotation>
+                  <xs:documentation>an entry for a foreign word in a monolingual dictionary.</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.entryLike.attribute.sortKey">
+    <xs:attribute name="sortKey">
+      <xs:annotation>
+        <xs:documentation>contains a (sortable) character sequence reflecting the
+      entry's alphabetical position in the printed dictionary.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.lexicographic.attributes">
+    <xs:attributeGroup ref="teix:att.lexicographic.attribute.expand"/>
+    <xs:attributeGroup ref="teix:att.lexicographic.attribute.norm"/>
+    <xs:attributeGroup ref="teix:att.lexicographic.attribute.split"/>
+    <xs:attributeGroup ref="teix:att.lexicographic.attribute.value"/>
+    <xs:attributeGroup ref="teix:att.lexicographic.attribute.orig"/>
+    <xs:attributeGroup ref="teix:att.lexicographic.attribute.location"/>
+    <xs:attributeGroup ref="teix:att.lexicographic.attribute.mergedIn"/>
+    <xs:attributeGroup ref="teix:att.lexicographic.attribute.opt"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.lexicographic.attribute.expand">
+    <xs:attribute name="expand">
+      <xs:annotation>
+        <xs:documentation>gives an expanded form of information presented more concisely in the dictionary</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.lexicographic.attribute.norm">
+    <xs:attribute name="norm">
+      <xs:annotation>
+        <xs:documentation>(normalized) gives a normalized form of information given by the source text in a
+                non-normalized form</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.lexicographic.attribute.split">
+    <xs:attribute name="split">
+      <xs:annotation>
+        <xs:documentation>gives the list of split values for a merged form</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.lexicographic.attribute.value">
+    <xs:attribute name="value">
+      <xs:annotation>
+        <xs:documentation>gives a value which lacks any realization in the printed source text.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.lexicographic.attribute.orig">
+    <xs:attribute name="orig">
+      <xs:annotation>
+        <xs:documentation>(original) gives the original string or is the empty string when the element does not appear
+                in the source text.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.lexicographic.attribute.location">
+    <xs:attribute name="location" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>provides a reference to an anchor element elsewhere in the document
+                indicating the original location of this component.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.lexicographic.attribute.mergedIn">
+    <xs:attribute name="mergedIn" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>gives a reference to another element, where the original appears as a merged form.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.lexicographic.attribute.opt">
+    <xs:attribute name="opt" default="false" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>(optional) indicates whether the element is optional or not</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:group name="model.morphLike">
+    <xs:choice>
+      <xs:element ref="ns1:gram"/>
+      <xs:element ref="ns1:gen"/>
+      <xs:element ref="ns1:number"/>
+      <xs:element ref="ns1:case"/>
+      <xs:element ref="ns1:per"/>
+      <xs:element ref="ns1:tns"/>
+      <xs:element ref="ns1:mood"/>
+      <xs:element ref="ns1:iType"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.gramPart">
+    <xs:choice>
+      <xs:element ref="ns1:gramGrp"/>
+      <xs:element ref="ns1:pos"/>
+      <xs:element ref="ns1:subc"/>
+      <xs:element ref="ns1:colloc"/>
+      <xs:element ref="ns1:usg"/>
+      <xs:element ref="ns1:lbl"/>
+      <xs:group ref="teix:model.morphLike"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.formPart">
+    <xs:choice>
+      <xs:element ref="ns1:form"/>
+      <xs:element ref="ns1:orth"/>
+      <xs:element ref="ns1:pron"/>
+      <xs:element ref="ns1:hyph"/>
+      <xs:element ref="ns1:syll"/>
+      <xs:group ref="teix:model.gramPart"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.ptrLike.form">
+    <xs:choice>
+      <xs:element ref="ns1:oRef"/>
+      <xs:element ref="ns1:oVar"/>
+      <xs:element ref="ns1:pRef"/>
+      <xs:element ref="ns1:pVar"/>
+    </xs:choice>
+  </xs:group>
+  <xs:attributeGroup name="att.ptrLike.form.attributes">
+    <xs:attributeGroup ref="teix:att.ptrLike.form.attribute.target"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.ptrLike.form.attribute.target">
+    <xs:attribute name="target" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>identifies the orthographic form or pronunciation referred to.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attributes">
+    <xs:attributeGroup ref="teix:att.global.linking.attribute.corresp"/>
+    <xs:attributeGroup ref="teix:att.global.linking.attribute.synch"/>
+    <xs:attributeGroup ref="teix:att.global.linking.attribute.sameAs"/>
+    <xs:attributeGroup ref="teix:att.global.linking.attribute.copyOf"/>
+    <xs:attributeGroup ref="teix:att.global.linking.attribute.next"/>
+    <xs:attributeGroup ref="teix:att.global.linking.attribute.prev"/>
+    <xs:attributeGroup ref="teix:att.global.linking.attribute.exclude"/>
+    <xs:attributeGroup ref="teix:att.global.linking.attribute.select"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.corresp">
+    <xs:attribute name="corresp">
+      <xs:annotation>
+        <xs:documentation>(corresponds) points to elements that correspond to the current
+      element in some way.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.synch">
+    <xs:attribute name="synch">
+      <xs:annotation>
+        <xs:documentation>(synchronous) points to elements that are synchronous with the current
+      element.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.sameAs">
+    <xs:attribute name="sameAs" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>points to an element that is the same as the current
+      element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.copyOf">
+    <xs:attribute name="copyOf" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>points to an element of which the current element is a
+	copy.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.next">
+    <xs:attribute name="next" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>points to the next element of a virtual aggregate of which
+      the current element is part.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.prev">
+    <xs:attribute name="prev" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>(previous) points to the previous element of a virtual aggregate of
+      which the current element is part.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.exclude">
+    <xs:attribute name="exclude">
+      <xs:annotation>
+        <xs:documentation>points to elements that are in exclusive alternation
+      with the current element.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.select">
+    <xs:attribute name="select">
+      <xs:annotation>
+        <xs:documentation>selects one or more alternants; if one alternant is
+      selected, the ambiguity or uncertainty is marked as resolved. If
+      more than one alternant is selected, the degree of ambiguity or
+      uncertainty is marked as reduced by the number of alternants not
+      selected.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:anyURI"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.attributes">
+    <xs:attributeGroup ref="teix:att.pointing.attribute.type"/>
+    <xs:attributeGroup ref="teix:att.pointing.attribute.evaluate"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.attribute.type">
+    <xs:attribute name="type" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>categorizes the pointer in some respect, using any
+      convenient set of categories.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.attribute.evaluate">
+    <xs:attribute name="evaluate">
+      <xs:annotation>
+        <xs:documentation>specifies the intended meaning when the target of a
+      pointer is itself a pointer.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="all">
+            <xs:annotation>
+              <xs:documentation>if the element pointed to is itself a pointer, then
+	  the target of that pointer will be taken, and so on, until
+	  an element is found which is not a pointer.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="one">
+            <xs:annotation>
+              <xs:documentation>if the element pointed to is itself a pointer, then
+	  its target (whether a pointer or not) is taken as the target
+	  of this pointer.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="none">
+            <xs:annotation>
+              <xs:documentation>no further evaluation of targets is carried out
+	  beyond that needed to find the element specified in the
+	  pointer's target.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.group.attributes">
+    <xs:attributeGroup ref="teix:att.pointing.group.attribute.domains"/>
+    <xs:attributeGroup ref="teix:att.pointing.group.attribute.targFunc"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.group.attribute.domains">
+    <xs:attribute name="domains">
+      <xs:annotation>
+        <xs:documentation>optionally specifies the identifiers of the elements
+      within which all elements indicated by the contents of this
+      element lie.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="xs:Name"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.group.attribute.targFunc">
+    <xs:attribute name="targFunc">
+      <xs:annotation>
+        <xs:documentation>(target function) describes the function of each of the values of the
+      targets attribute of the enclosed link,
+      join, or alt tags.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list>
+              <xs:simpleType>
+                <xs:restriction base="xs:token">
+                  <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:list>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+</xs:schema>

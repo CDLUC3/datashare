@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE dita PUBLIC "-//OASIS//DTD DITA Composite//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/ditabase.dtd">
+<dita>
+  <topic id="topic">
+    <title>Topic title</title>
+    <body>
+      <p/>
+    </body>
+  </topic>
+  <task id="task">
+    <title>Task title</title>
+    <taskbody>
+      <steps>
+        <step>
+          <cmd/>
+        </step>
+      </steps>
+    </taskbody>
+  </task>
+  <concept id="concept">
+    <title>Concept title</title>
+    <conbody>
+      <p/>
+    </conbody>
+  </concept>
+  <reference id="reference">
+    <title>Reference title</title>
+    <refbody>
+      <properties>
+        <prophead>
+          <proptypehd>Type</proptypehd>
+          <propvaluehd>Value</propvaluehd>
+          <propdeschd>Description</propdeschd>
+        </prophead>
+        <property/>
+      </properties>
+    </refbody>
+  </reference>
+</dita>

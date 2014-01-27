@@ -1,0 +1,2402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <map>
+    <entry>
+      <String xml:space="preserve">document.types</String>
+      <documentTypeDescriptor-array>
+        <documentTypeDescriptor>
+          <field name="name">
+            <String xml:space="preserve">XHTML</String>
+          </field>
+          <field name="schemaDescriptor">
+            <docTypeSchema>
+              <field name="type">
+                <Integer xml:space="preserve">1</Integer>
+              </field>
+              <field name="uri">
+                <String xml:space="preserve">${frameworks}/xhtml/dtd/xhtml1-strict.dtd</String>
+              </field>
+            </docTypeSchema>
+          </field>
+          <field name="classpath">
+            <String-array>
+              <String xml:space="preserve">${frameworks}/xhtml/xhtml.jar</String>
+            </String-array>
+          </field>
+          <field name="authorExtensionDescriptor">
+            <authorExtension>
+              <field name="cssDescriptors">
+                <cssFile-array>
+                  <cssFile>
+                    <field name="href">
+                      <String xml:space="preserve">${frameworks}/xhtml/css/xhtml.css</String>
+                    </field>
+                    <field name="title">
+                      <null></null>
+                    </field>
+                    <field name="alternate">
+                      <Boolean xml:space="preserve">false</Boolean>
+                    </field>
+                  </cssFile>
+                </cssFile-array>
+              </field>
+              <field name="mergeCSSsFromDocument">
+                <Boolean xml:space="preserve">true</Boolean>
+              </field>
+              <field name="actionDescriptors">
+                <action-array>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">bold</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Bold</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Inserts the 'b' element</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Bold20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Bold16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">B</String>
+                    </field>
+                    <field name="accelerator">
+                      <String xml:space="preserve">ctrl shift B</String>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;b xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">italic</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Italic</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Inserts the 'i' element</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Italic20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Italic16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">I</String>
+                    </field>
+                    <field name="accelerator">
+                      <String xml:space="preserve">ctrl shift I</String>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;i xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">underline</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Underline</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Inserts the 'u' element</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Underline20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Underline16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">U</String>
+                    </field>
+                    <field name="accelerator">
+                      <String xml:space="preserve">ctrl shift U</String>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;u xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">paragraph</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Paragraph</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a new paragraph</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Paragraph20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Paragraph16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">P</String>
+                    </field>
+                    <field name="accelerator">
+                      <String xml:space="preserve">ctrl shift P</String>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;p xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()='http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;p xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">unorderedList</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert unordered list</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert an unordered list at the caret position</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/UnorderedList20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/UnorderedList16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:ol[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | self::*:ul[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;li xmlns="http://www.w3.org/1999/xhtml">&lt;ul>&lt;li/>&lt;/ul>&lt;/li></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:dl[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;dt xmlns="http://www.w3.org/1999/xhtml"/>&lt;dd xmlns="http://www.w3.org/1999/xhtml">&lt;ul>&lt;li/>&lt;/ul>&lt;/dd></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;ul xmlns="http://www.w3.org/1999/xhtml">&lt;li/>&lt;/ul></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">orderedList</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert ordered list</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert an ordered list at the caret position</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/OrderedList20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/OrderedList16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:ol[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | self::*:ul[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;li xmlns="http://www.w3.org/1999/xhtml">&lt;ol>&lt;li/>&lt;/ol>&lt;/li></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:dl[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;dt xmlns="http://www.w3.org/1999/xhtml"/>&lt;dd xmlns="http://www.w3.org/1999/xhtml">&lt;ol>&lt;li/>&lt;/ol>&lt;/dd></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;ol xmlns="http://www.w3.org/1999/xhtml">&lt;li/>&lt;/ol></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">listitem</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert List Item</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a list item</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/ListItem20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/ListItem16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:ul[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | self::*:ol[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;li xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:li[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;li xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:li[namespace-uri()='http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:dl[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;dt xmlns="http://www.w3.org/1999/xhtml"/>&lt;dd xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*:dt | self::*:dd][namespace-uri()='http://www.w3.org/1999/xhtml'][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;dt xmlns="http://www.w3.org/1999/xhtml"/>&lt;dd xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::node()[self::*:dt | self::*:dd][namespace-uri()='http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Table</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert an XHTML table</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Table20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Table16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertTableOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table.row</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Row</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a table row</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableRow20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableRow16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:thead[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">header row</String>
+                                <String xml:space="preserve">yes</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://www.w3.org/1999/xhtml</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:tbody[namespace-uri()='http://www.w3.org/1999/xhtml'] | self::*:tfoot[namespace-uri()='http://www.w3.org/1999/xhtml'] | self::*:table[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">header row</String>
+                                <String xml:space="preserve">no</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://www.w3.org/1999/xhtml</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri()='http://www.w3.org/1999/xhtml'][1][parent::*:thead]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">header row</String>
+                                <String xml:space="preserve">yes</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri()='http://www.w3.org/1999/xhtml'][1][parent::*:thead]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://www.w3.org/1999/xhtml</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">header row</String>
+                                <String xml:space="preserve">no</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri()='http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://www.w3.org/1999/xhtml</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table.entry</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Cell</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a table cell</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableCell20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableCell16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:tr[namespace-uri()='http://www.w3.org/1999/xhtml'][parent::*:thead]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;th xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:tr[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;td xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:thead[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;tr xmlns="http://www.w3.org/1999/xhtml">&lt;th/>&lt;/tr></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">(self::*:tbody | self::*:tfoot | self::*:table)[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;tr xmlns="http://www.w3.org/1999/xhtml">&lt;td/>&lt;/tr></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri()='http://www.w3.org/1999/xhtml'][self::*:th | self::*:td][1][self::*:th]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;th xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:th[namespace-uri()='http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:td[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;td xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:td[namespace-uri()='http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.image</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Image</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert XHTML image</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Image20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Image16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.xhtml.InsertImgOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.join.row.cells</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Join Row Cells</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Join the content of the selected cells. The operation is available only if the selected cells are from the same row and they have the same column span.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableJoinRowCells20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableJoinRowCells16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.JoinRowCellsOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.left</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell To The Left</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple columns</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellLeft20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellLeft16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:td[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | ancestor-or-self::*:th[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Left</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.SplitLeftRightOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.right</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell To The Right</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple columns</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellRight20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellRight16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:td[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | ancestor-or-self::*:th[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Right</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.SplitLeftRightOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.join.cell.above</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Join Cell Above</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Join the content of the selected cell with the content of the cell above. The operation is available only if there is an above cell and both cells have the same column span.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellUp20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellUp16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:td[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | ancestor-or-self::*:th[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Join direction</String>
+                                <String xml:space="preserve">Above</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.JoinCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.join.cell.below</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Join Cell Below</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Join the content of the selected cell with the content of the cell below. The operation is available only if there is an below cell and both cells have the same column span.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellDown20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellDown16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:td[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | ancestor-or-self::*:th[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Join direction</String>
+                                <String xml:space="preserve">Below</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.JoinCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.below</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell Below</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple rows</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellDown20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellDown16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:td[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | ancestor-or-self::*:th[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Below</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.SplitCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.above</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell Above</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple rows</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellUp20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellUp16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:td[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | ancestor-or-self::*:th[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Above</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.SplitCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table.column</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Column</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a table column</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableColumn20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableColumn16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://www.w3.org/1999/xhtml</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertColumnOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">delete.table.column</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Delete Column</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Delete a table column</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/DeleteColumn20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/DeleteColumn16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">(ancestor-or-self::*:th | ancestor-or-self::*:td)[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.DeleteColumnOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">delete.table.row</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Delete Row</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Delete a table row</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/DeleteRow20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/DeleteRow16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri()='http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.DeleteRowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">heading.h1</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">H1</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert H1 heading</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h1 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h1 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">heading.h2</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">H2</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert H2 heading</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml'][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h2 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h2 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">heading.h3</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">H3</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert H3 heading</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h3 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h3 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">heading.h4</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">H4</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert H4 heading</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h4 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h4 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">heading.h5</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">H5</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert H5 heading</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h5 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h5 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">heading.h6</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">H6</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert H6 heading</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h6 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:p[namespace-uri()= 'http://www.w3.org/1999/xhtml'][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;h6 xmlns="http://www.w3.org/1999/xhtml"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">definitionList</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Definition List</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a definition list at the caret position</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/VariableList16.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/VariableList16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:ol[namespace-uri()= 'http://www.w3.org/1999/xhtml'] | self::*:ul[namespace-uri()= 'http://www.w3.org/1999/xhtml']</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;li xmlns="http://www.w3.org/1999/xhtml">&lt;dl>&lt;dt/>&lt;dd/>&lt;/dl>&lt;/li></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;dl xmlns="http://www.w3.org/1999/xhtml">&lt;dt/>&lt;dd/>&lt;/dl></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                </action-array>
+              </field>
+              <field name="menubarDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">XHTML</String>
+                  </field>
+                  <field name="accessKey">
+                    <String xml:space="preserve"></String>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">bold</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">italic</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">underline</String>
+                        </field>
+                      </menuItem>
+                      <menuSeparator></menuSeparator>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Headings</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Heading16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h1</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h2</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h3</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h4</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h5</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h6</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">paragraph</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.image</String>
+                        </field>
+                      </menuItem>
+                      <menuSeparator></menuSeparator>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">List</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/UnorderedList16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">listitem</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">unorderedList</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">orderedList</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">definitionList</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Table</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Table16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.entry</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.row.cells</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.below</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.left</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.right</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.below</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                    </menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="popupMenuDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">Contextual Menu</String>
+                  </field>
+                  <field name="accessKey">
+                    <null></null>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">bold</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">italic</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">underline</String>
+                        </field>
+                      </menuItem>
+                      <menuSeparator></menuSeparator>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Headings</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Heading16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h1</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h2</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h3</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h4</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h5</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h6</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">paragraph</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.image</String>
+                        </field>
+                      </menuItem>
+                      <menuSeparator></menuSeparator>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">List</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/UnorderedList16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">listitem</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">unorderedList</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">orderedList</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">definitionList</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Table</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Table16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.entry</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.row.cells</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.below</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.left</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.right</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.below</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                    </menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="toolbarDescriptor">
+                <toolbar>
+                  <field name="id">
+                    <String xml:space="preserve">Toolbar</String>
+                  </field>
+                  <field name="type">
+                    <Integer xml:space="preserve">2</Integer>
+                  </field>
+                  <field name="largeIconPath">
+                    <null></null>
+                  </field>
+                  <field name="smallIconPath">
+                    <null></null>
+                  </field>
+                  <field name="toolbarEntriesDescriptorList">
+                    <toolbarEntry-array>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">bold</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">italic</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">underline</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbar>
+                        <field name="id">
+                          <String xml:space="preserve">Headings</String>
+                        </field>
+                        <field name="type">
+                          <Integer xml:space="preserve">3</Integer>
+                        </field>
+                        <field name="largeIconPath">
+                          <String xml:space="preserve">/images/Heading20.gif</String>
+                        </field>
+                        <field name="smallIconPath">
+                          <String xml:space="preserve">/images/Heading16.gif</String>
+                        </field>
+                        <field name="toolbarEntriesDescriptorList">
+                          <toolbarEntry-array>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h1</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h2</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h3</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h4</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h5</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">heading.h6</String>
+                              </field>
+                            </toolbarItem>
+                          </toolbarEntry-array>
+                        </field>
+                      </toolbar>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">paragraph</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.image</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">listitem</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">unorderedList</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">orderedList</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">definitionList</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table.row</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table.column</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table.entry</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">delete.table.column</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">delete.table.row</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.join.row.cells</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.join.cell.above</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.join.cell.below</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.left</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.right</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.above</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.below</String>
+                        </field>
+                      </toolbarItem>
+                    </toolbarEntry-array>
+                  </field>
+                </toolbar>
+              </field>
+              <field name="tableSupportClassName">
+                <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.spansupport.HTMLTableCellSpanProvider</String>
+              </field>
+              <field name="customReferencesResolver">
+                <null></null>
+              </field>
+            </authorExtension>
+          </field>
+          <field name="templatesLocations">
+            <String-array>
+              <String xml:space="preserve">${frameworksDir}/xhtml/templates</String>
+            </String-array>
+          </field>
+          <field name="xmlCatalogs">
+            <String-array>
+              <String xml:space="preserve">${frameworks}/xhtml/dtd/xhtmlcatalog.xml</String>
+              <String xml:space="preserve">${frameworks}/xhtml11/dtd/xhtmlcatalog.xml</String>
+              <String xml:space="preserve">${frameworks}/xhtml11/schema/xhtmlcatalog.xml</String>
+            </String-array>
+          </field>
+          <field name="description">
+            <String xml:space="preserve">An extension of HTML as an XML language.</String>
+          </field>
+          <field name="doctypeRules">
+            <documentTypeRule-array>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">html</String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <null></null>
+                </field>
+              </documentTypeRule>
+            </documentTypeRule-array>
+          </field>
+          <field name="scenarios">
+            <scenario-array></scenario-array>
+          </field>
+          <field name="elementLocatorExtension">
+            <String xml:space="preserve">ro.sync.ecss.extensions.xhtml.XHTMLElementLocatorProvider</String>
+          </field>
+        </documentTypeDescriptor>
+      </documentTypeDescriptor-array>
+    </entry>
+  </map>
+</serialized>

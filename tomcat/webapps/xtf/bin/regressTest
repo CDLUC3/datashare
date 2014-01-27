@@ -1,0 +1,8 @@
+#!/usr/bin/env perl
+
+require "classpath.pl";
+
+chdir "$home/regress/CrossQuery";
+system "java -classpath $classpath -Xms50m -Xmx500m -enableassertions org.cdlib.xtf.test.RegressTest $args";
+system $cmd;
+print "\n";

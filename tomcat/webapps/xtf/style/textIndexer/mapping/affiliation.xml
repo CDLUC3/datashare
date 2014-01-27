@@ -1,0 +1,20 @@
+<orgs>
+<organization>
+<institution>The Ohio State University</institution>
+<laboratory><abbr>OSU::Nisonger</abbr><dirname>osu-nc</dirname><name>Nisonger Center</name><tokenized>The Ohio State University::Nisonger Center</tokenized></laboratory>
+<laboratory><abbr>OSU::Wexner</abbr><dirname>osu-wexner</dirname><name>Wexner Medical Center</name><tokenized>The Ohio State University::Wexner Medical Center</tokenized></laboratory>
+</organization>
+<organization>
+<institution>University of California, Davis</institution>
+<laboratory><abbr>UCD::CBD</abbr><dirname>ucd-cbd</dirname><name>Center for Biodemographics</name><tokenized>University of California, Davis::Center for Biodemographics</tokenized></laboratory>
+</organization>
+<organization>
+<institution>University of California, San Francisco</institution>
+<laboratory><abbr>UCSF::CIND</abbr><dirname>ucsf-cind</dirname><name>Center for Imaging of Neurodegenerative Diseases</name><tokenized>University of California, San Francisco::Center for Imaging of Neurdegenerative Diseases</tokenized></laboratory>
+</organization>
+<organization>
+<institution>University of Michigan, Ann Arbor</institution>
+<laboratory><abbr>MICH::ABCD</abbr><dirname>mich-abcd</dirname><name>Center for Sleep Disorders</name><tokenized>University of Michigan, Ann Arbor::Center Sleep Disorders</tokenized></laboratory>
+</organization>
+</orgs>
+

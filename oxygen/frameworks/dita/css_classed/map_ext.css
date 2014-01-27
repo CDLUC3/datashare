@@ -1,0 +1,45 @@
+/*
+====================================
+    Map elements. [map] with extension methods.
+====================================
+*/
+
+
+*[class~="map/anchor"]:before{
+    display:inline;
+    content: url("../img/anchor.png") capitalize(local-name()) " [" attr(id, string, 'No id attribute specified') "]";
+    color:#222222;
+    background-color:inherit;    
+}
+
+*[class~="map/navref"]:before{
+    display:inline;
+    content: url("../img/link.png") capitalize(local-name()) " [" attr(mapref, string, 'No mapref attribute specified') "]";
+    color:#222222;
+    background-color:inherit;    
+}
+
+
+*[class~="map/map"]:before{
+    display:inline;
+    content: capitalize(local-name()) " [" attr(title, string, 'No title attribute specified') "]";
+    color:#222222;
+    background-color:inherit;
+}
+
+*[class~="map/topicref"]:before{
+    display:inline;
+    content: url("../img/topic.png") capitalize(local-name()) " [" attr(href, string, 'No href attribute specified') "]";
+    color:#222222;
+    background-color:inherit;    
+}
+*[class~="mapgroup-d/topicgroup"]:before{
+    display:inline;
+    content: url("../img/topicgroup.png")capitalize(local-name()) " ["attr(collection-type, string, 'No collection-type attribute specified') "]";
+    color:#222222;
+    background-color:inherit;    
+}
+
+*[class~="mapgroup-d/topichead"]:before{
+    content: url("../img/topichead.png") capitalize(local-name()) " ["attr(navtitle, string, 'No navtitle attribute specified') "]";
+}

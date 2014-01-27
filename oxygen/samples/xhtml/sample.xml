@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head xml:lang="en">
+        <title dir="ltr" lang="en">XHTML Sample File</title>
+    </head>
+    <body>
+        <h1>Welcome to XHTML</h1>
+        <p>
+            <b>XHTML</b>
+            stands for
+            <b>W3C</b>
+            <i>Extensible HyperText Markup Language</i>.
+            <b>XHTML</b>
+            is aimed to replace
+            <b>HTML</b>. While almost identical to
+            <b>HTML</b>
+            4.01,
+            <b>XHTML</b>
+            is a stricter and cleaner version of
+            <b>HTML</b>.
+            <b>XHTML</b>
+            is
+            <b>HTML</b>
+            defined as an
+            <b>XML</b>
+            application.</p>
+        <p>This is a sample showing that &lt;oXygen/&gt; can be used to edit
+            <b>XHTML</b>
+            documents.
+            <b>XHTML</b>
+            is a
+            <b>W3C</b>
+            standard.
+        </p>
+        <p>
+            <img src="W3C.png" alt=""/>
+        </p>
+        <p>Here are some useful links, regarding
+            <i>XML</i>:</p>
+        <ul>
+            <li>
+                <a href="http://www.xml.com/">www.xml.com</a>
+            </li>
+            <li>
+                <a href="http://www.xml.org/">www.xml.org</a>
+            </li>
+            <li>
+                <a href="http://www.w3c.org/">www.w3c.org</a>
+            </li>
+        </ul>
+        <p>And here is the &lt;oXygen/&gt; home site:<font color="red">
+                <a href="http://oxygen.sync.ro/">http://www.oxygenxml.com/</a>
+            </font>
+        </p>
+        <h2>XHTML Table sample</h2>
+        <table frame="void" bgcolor="" border="1px" align="center">
+            <caption>A table with merged cells.</caption>
+            <thead>
+                <tr>
+                    <th>x</th>
+                    <th>y</th>
+                    <th colspan="3">Spans
+                        <b>Horizontally</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Spans
+                        <b>Vertically</b>
+                    </td>
+                    <td colspan="4">b</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" colspan="2">Spans
+                        <b>Both</b>
+                    </td>
+                    <td colspan="2">d</td>
+                </tr>
+                <tr>
+                    <td>e</td>
+                    <td>f</td>
+                </tr>
+                <tr>
+                    <td>g</td>
+                    <td>h</td>
+                    <td colspan="3">k</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

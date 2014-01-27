@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.DS_Store|**/.cdl/**|**/.sf/**|**/CVS/**" kind="src" path="WEB-INF/src"/>
+	<classpathentry excluding="**/.DS_Store|**/.cdl/**|**/.sf/**|**/CVS/**" kind="src" path="WEB-INF/contrib/xtf-lucene/test/java"/>
+	<classpathentry excluding="**/.DS_Store|**/.cdl/**|**/.sf/**|**/CVS/**" kind="src" path="WEB-INF/contrib/xtf-lucene/src/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/cql-java.jar" sourcepath="WEB-INF/lib/source/cql-java-0.7"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/marc4j.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/lucene-core-2.1.0.jar" sourcepath="/Users/mhaye/Projects/ext-source/lucene-trunk/java/trunk/src/java"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/saxonb-8.9.jar" sourcepath="/Users/mhaye/Projects/saxonb8-9/"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3.8.1"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/mail.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/activation.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/Tidy.jar" sourcepath="WEB-INF/lib/source/jtidy-20060730"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/tm-extractors-1.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/poi-3.0.2-FINAL.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/fop-core-0.94.jar" sourcepath="WEB-INF/lib/src/fop-src"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/fop-libs-0.94.jar" sourcepath="WEB-INF/lib/src/fop-src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Tomcat 6"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/iText.jar" sourcepath="/Users/mhaye/Projects/ext-source/iText-2.1.7"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/fontBox.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/pdfBox.jar"/>
+	<classpathentry kind="output" path="WEB-INF/classes"/>
+</classpath>

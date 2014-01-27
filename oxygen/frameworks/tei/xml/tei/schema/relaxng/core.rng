@@ -1,0 +1,2208 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!--Schema generated 2008-07-08T17:38:26Z..
+Copyright 2008 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+For general (non-technical) enquiries, contact the TEI
+	  Consortium at info@tei-c.org; 
+for membership enquiries contact membership@tei-c.org; for
+technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C, contact editors@tei-c.org.
+For up to date information, consult the TEI web
+	      site at http://www.tei-c.org/P5/. 
+		Elements common to all TEI documents-->
+  <!--Definitions from module core-->
+  <!--Set global predeclared macros-->
+  <!--Set predeclared macros-->
+  <!--0. predeclared macros-->
+  <!--1. classes-->
+  <!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="abbr">
+    <element name="abbr">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(abbreviation) contains an abbreviation of any sort.</a:documentation>
+      <ref name="abbr.content"/>
+      <ref name="abbr.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="abbr.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="abbr.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">allows the encoder to classify the abbreviation according to
+some convenient typology.
+Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscription; 5] acronym; 6] title; 7] organization; 8] geographic</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="add">
+    <element name="add">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(addition) contains letters, words, or phrases inserted in the text by an
+author, scribe, annotator, or corrector.</a:documentation>
+      <ref name="add.content"/>
+      <ref name="add.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="add.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="add.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.transcriptional.attributes"/>
+    <ref name="att.placement.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="addrLine">
+    <element name="addrLine">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(address line) contains one line of a postal address.</a:documentation>
+      <ref name="addrLine.content"/>
+      <ref name="addrLine.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="addrLine.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="addrLine.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="address">
+    <element name="address">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a postal  address, for example of a
+publisher, an organization, or an individual.</a:documentation>
+      <ref name="address.content"/>
+      <ref name="address.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="address.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+      <rng:oneOrMore>
+        <rng:group>
+          <rng:ref name="model.addrPart"/>
+        </rng:group>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:oneOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="address.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="analytic">
+    <element name="analytic">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analytic level) contains bibliographic elements describing an item (e.g. an
+article or poem) published within a monograph or journal and not as an
+independent publication.</a:documentation>
+      <ref name="analytic.content"/>
+      <ref name="analytic.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="analytic.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:ref name="author"/>
+        <rng:ref name="editor"/>
+        <rng:ref name="respStmt"/>
+        <rng:ref name="title"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="analytic.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="author">
+    <element name="author">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in a bibliographic reference, contains the name of the author(s),
+personal or corporate,
+of a work; the primary statement of responsibility for any
+bibliographic item. </a:documentation>
+      <ref name="author.content"/>
+      <ref name="author.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="author.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="author.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="bibl">
+    <element name="bibl">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bibliographic citation) contains a loosely-structured bibliographic citation of which
+the sub-components may or may not be explicitly tagged. </a:documentation>
+      <ref name="bibl.content"/>
+      <ref name="bibl.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="bibl.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.highlighted"/>
+        <rng:ref name="model.pPart.data"/>
+        <rng:ref name="model.pPart.edit"/>
+        <rng:ref name="model.segLike"/>
+        <rng:ref name="model.ptrLike"/>
+        <rng:ref name="model.biblPart"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="bibl.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.declarable.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="biblScope">
+    <element name="biblScope">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(scope of citation) defines the scope of a bibliographic reference, for example as a
+list of page numbers, or a named subdivision of a larger work.</a:documentation>
+      <ref name="biblScope.content"/>
+      <ref name="biblScope.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="biblScope.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="biblScope.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the type of information conveyed by the element, e.g.
+pages, volume.
+Suggested values include: 1] vol (volume); 2] issue; 3] pp (pages); 4] chap (chapter); 5] part</a:documentation>
+        <rng:choice>
+          <rng:value>vol</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(volume) the element contains a volume number.</a:documentation>
+          <rng:value>issue</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element contains an issue number, or volume and
+issue numbers.</a:documentation>
+          <rng:value>pp</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pages) the element contains a page number or page range.</a:documentation>
+          <rng:value>chap</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(chapter) the element contains a chapter indication (number
+and/or title)</a:documentation>
+          <rng:value>part</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element identifies a part of a book or collection.</a:documentation>
+          <rng:data type="Name"/>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="biblStruct">
+    <element name="biblStruct">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structured bibliographic citation) contains a structured bibliographic citation, in which only
+bibliographic sub-elements appear and in a specified order. </a:documentation>
+      <ref name="biblStruct.content"/>
+      <ref name="biblStruct.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="biblStruct.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:ref name="analytic"/>
+      </rng:zeroOrMore>
+      <rng:oneOrMore>
+        <rng:ref name="monogr"/>
+        <rng:zeroOrMore>
+          <rng:ref name="series"/>
+        </rng:zeroOrMore>
+      </rng:oneOrMore>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.noteLike"/>
+          <rng:ref name="idno"/>
+          <rng:ref name="relatedItem"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="biblStruct.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.declarable.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="binaryObject">
+    <element name="binaryObject">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides encoded binary data representing an inline graphic or other object.</a:documentation>
+      <ref name="binaryObject.content"/>
+      <ref name="binaryObject.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="binaryObject.content">
+    <rng:text/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="binaryObject.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.internetMedia.attributes"/>
+    <rng:optional>
+      <rng:attribute name="width">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The display width of the object</a:documentation>
+        <ref name="data.outputMeasurement"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="height">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The display height of the object</a:documentation>
+        <ref name="data.outputMeasurement"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="scale">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A scale factor to be applied to the object to make it the desired display size</a:documentation>
+        <ref name="data.numeric"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="encoding">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The encoding used to encode the binary data. If not
+      specified, this is assumed to be Base64.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.word"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cb">
+    <element name="cb">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(column break) marks the boundary between one column of a text and the next
+in a standard reference system.</a:documentation>
+      <ref name="cb.content"/>
+      <ref name="cb.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cb.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cb.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="ed">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition) indicates the edition or version in which the column break is located
+at this point</a:documentation>
+        <ref name="data.code"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="choice">
+    <element name="choice">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups a number of alternative encodings for the same point in
+  a text.</a:documentation>
+      <ref name="choice.content"/>
+      <ref name="choice.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="choice.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:ref name="model.choicePart"/>
+        <rng:ref name="choice"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="choice.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cit">
+    <element name="cit">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cited quotation) contains a quotation from some other document, together with a
+  bibliographic reference to its source.  In a dictionary it may
+  contain an example text with at least one occurrence of the word
+  form, used in the sense being described, or a translation of the
+  headword, or an example. </a:documentation>
+      <ref name="cit.content"/>
+      <ref name="cit.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cit.content">
+    <rng:oneOrMore>
+      <rng:choice>
+        <rng:ref name="model.qLike"/>
+        <rng:ref name="model.biblLike"/>
+        <rng:ref name="model.ptrLike"/>
+        <rng:ref name="model.global"/>
+        <rng:ref name="model.entryPart"/>
+      </rng:choice>
+    </rng:oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cit.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="corr">
+    <element name="corr">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(correction) contains the correct form of a passage apparently erroneous in the copy text.</a:documentation>
+      <ref name="corr.content"/>
+      <ref name="corr.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="corr.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="corr.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="date">
+    <element name="date">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a date in any format.</a:documentation>
+      <ref name="date.content"/>
+      <ref name="date.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="date.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.phrase"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="date.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.datable.attributes"/>
+    <ref name="att.duration.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <rng:optional>
+      <rng:attribute name="calendar">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the system or calendar to which the date belongs.
+Suggested values include: 1] Gregorian; 2] Julian; 3] Islamic; 4] Hebrew; 5] Revolutionary; 6] Iranian; 7] Coptic; 8] Chinese</a:documentation>
+        <rng:choice>
+          <rng:value>Gregorian</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gregorian calendar</a:documentation>
+          <rng:value>Julian</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Julian calendar</a:documentation>
+          <rng:value>Islamic</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Islamic or Muslim (hijri) lunar calendar</a:documentation>
+          <rng:value>Hebrew</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hebrew or Jewish lunisolar calendar</a:documentation>
+          <rng:value>Revolutionary</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French Revolutionary calendar</a:documentation>
+          <rng:value>Iranian</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Iranian or Persian (Jalaali) solar calendar</a:documentation>
+          <rng:value>Coptic</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Coptic or Alexandrian calendar</a:documentation>
+          <rng:value>Chinese</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Chinese lunisolar calendar</a:documentation>
+          <rng:data type="Name"/>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="del">
+    <element name="del">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(deletion) contains a letter, word, or passage deleted, marked as deleted,
+or otherwise indicated as superfluous or spurious in the copy text by an
+author, scribe, annotator, or corrector.</a:documentation>
+      <ref name="del.content"/>
+      <ref name="del.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="del.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="del.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.transcriptional.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="desc">
+    <element name="desc">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description) contains a brief description of the intended usage, purpose,
+  or application of its parent element.</a:documentation>
+      <ref name="desc.content"/>
+      <ref name="desc.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="desc.content">
+    <rng:ref name="macro.limitedContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="desc.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.translatable.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="distinct">
+    <element name="distinct">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies any word or phrase which is regarded as linguistically
+distinct, for example as archaic, technical, dialectal, non-preferred,
+etc., or as forming part of a sublanguage. </a:documentation>
+      <ref name="distinct.content"/>
+      <ref name="distinct.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="distinct.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="distinct.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the sublanguage or register to which the word or phrase
+is being assigned</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="time">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies how the phrase is distinct diachronically</a:documentation>
+        <ref name="data.code"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="space">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies how the phrase is distinct diatopically</a:documentation>
+        <ref name="data.code"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="social">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies how the phrase is distinct diastatically</a:documentation>
+        <ref name="data.code"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="divGen">
+    <element name="divGen">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(automatically generated text division) indicates the location at which a textual division generated
+automatically by a text-processing application is to appear.</a:documentation>
+      <ref name="divGen.content"/>
+      <ref name="divGen.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="divGen.content">
+    <rng:zeroOrMore>
+      <rng:ref name="model.headLike"/>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="divGen.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies what type of generated text division (e.g. index,
+table of contents, etc.) is to appear.
+Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="editor">
+    <element name="editor">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">secondary statement of responsibility for a
+bibliographic item, for example the name of an individual, institution
+or organization, (or of several such) acting as editor, compiler,
+translator, etc. </a:documentation>
+      <ref name="editor.content"/>
+      <ref name="editor.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="editor.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="editor.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="role" a:defaultValue="editor">
+        <a:documentation>specifies the nature of the intellectual responsibility</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="email">
+    <element name="email">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(electronic mail address) contains an e-mail address identifying a location to which
+e-mail messages can be delivered.
+		</a:documentation>
+      <ref name="email.content"/>
+      <ref name="email.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="email.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="email.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="emph">
+    <element name="emph">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(emphasized) marks words or phrases which are stressed or emphasized for
+linguistic or rhetorical effect.</a:documentation>
+      <ref name="emph.content"/>
+      <ref name="emph.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="emph.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="emph.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="expan">
+    <element name="expan">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(expansion) contains the expansion of an abbreviation.</a:documentation>
+      <ref name="expan.content"/>
+      <ref name="expan.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="expan.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="expan.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="foreign">
+    <element name="foreign">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(foreign) identifies a word or phrase as belonging to some language other
+than that of the surrounding text. </a:documentation>
+      <ref name="foreign.content"/>
+      <ref name="foreign.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="foreign.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="foreign.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="gap">
+    <element name="gap">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates a point where material has been omitted in a
+transcription, whether for editorial reasons described in the TEI
+header, as part of sampling practice, or because the material is
+illegible, invisible, or inaudible.</a:documentation>
+      <ref name="gap.content"/>
+      <ref name="gap.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="gap.content">
+    <rng:zeroOrMore>
+      <rng:ref name="model.glossLike"/>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="gap.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.duration.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <rng:optional>
+      <rng:attribute name="reason">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the reason for omission. Sample values include
+      sampling, illegible, inaudible,
+      irrelevant, cancelled, illegible.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.word"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="hand">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in the case of text omitted from the transcription because of
+deliberate deletion by an identifiable hand, signifies the hand which
+made the deletion.</a:documentation>
+        <ref name="data.pointer"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="agent">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">In the case of text omitted because of damage, categorizes the cause of the damage, if it can be identified.
+Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="extent">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates approximately how much text has been omitted
+      from the transcription (using the unit specified on the
+      unit attribute), either because of editorial policy
+      or because a deletion, damage, or other cause has rendered
+      transcription impossible.</a:documentation>
+        <ref name="data.numeric"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="unit">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">names the unit used for describing the extent of the gap
+Suggested values include: 1] lines; 2] chars (characters); 3] pages; 4] cm (centimetres); 5] mm (millimetres); 6] in (inches)</a:documentation>
+        <rng:choice>
+          <rng:value>lines</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lines of text</a:documentation>
+          <rng:value>chars</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(characters) characters of text</a:documentation>
+          <rng:value>pages</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">pages, i.e. one side of a leaf</a:documentation>
+          <rng:value>cm</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(centimetres) </a:documentation>
+          <rng:value>mm</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(millimetres) </a:documentation>
+          <rng:value>in</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(inches) </a:documentation>
+          <rng:data type="Name"/>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="gloss">
+    <element name="gloss">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies a phrase or word used to provide a gloss or
+  definition for some other word or phrase.</a:documentation>
+      <ref name="gloss.content"/>
+      <ref name="gloss.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="gloss.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="gloss.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <ref name="att.translatable.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <rng:choice>
+      <rng:optional>
+        <rng:attribute name="target">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the associated term element by an
+      absolute or relative URI reference</a:documentation>
+          <ref name="data.pointer"/>
+        </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+        <rng:attribute name="cRef">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(canonical reference) identifies the associated term element using a canonical
+      reference from a scheme defined in a refsDecl element
+      in the TEI header</a:documentation>
+          <ref name="data.pointer"/>
+        </rng:attribute>
+      </rng:optional>
+    </rng:choice>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="graphic">
+    <element name="graphic">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the location of an inline graphic, illustration, or figure.</a:documentation>
+      <ref name="graphic.content"/>
+      <ref name="graphic.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="graphic.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="graphic.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.internetMedia.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <rng:optional>
+      <rng:attribute name="width">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The display width of the image</a:documentation>
+        <ref name="data.outputMeasurement"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="height">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The display height of the image</a:documentation>
+        <ref name="data.outputMeasurement"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="scale">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A scale factor to be applied to the image to make it the desired display size</a:documentation>
+        <ref name="data.numeric"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="url">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(uniform resource locator) A URL which refers to the image itself.</a:documentation>
+        <ref name="data.pointer"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="head">
+    <element name="head">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(heading) contains any type of heading, for example the title of a section,
+or the heading of a list, glossary, manuscript description, etc.</a:documentation>
+      <ref name="head.content"/>
+      <ref name="head.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="head.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="head.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="headItem">
+    <element name="headItem">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(heading for list items) contains the heading for the item or gloss column in a
+glossary list or similar structured list.</a:documentation>
+      <ref name="headItem.content"/>
+      <ref name="headItem.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="headItem.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="headItem.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="headLabel">
+    <element name="headLabel">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(heading for list labels) contains the heading for the label or term column in a
+glossary list or similar structured list.</a:documentation>
+      <ref name="headLabel.content"/>
+      <ref name="headLabel.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="headLabel.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="headLabel.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="hi">
+    <element name="hi">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(highlighted) marks a word or phrase as graphically distinct from the
+surrounding text, for reasons concerning which no claim is
+made. </a:documentation>
+      <ref name="hi.content"/>
+      <ref name="hi.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="hi.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="hi.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="imprint">
+    <element name="imprint">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups information relating to the publication or distribution
+  of a bibliographic item.</a:documentation>
+      <ref name="imprint.content"/>
+      <ref name="imprint.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="imprint.content">
+    <rng:oneOrMore>
+      <rng:choice>
+        <rng:group>
+          <rng:ref name="model.imprintPart"/>
+        </rng:group>
+        <rng:group>
+          <rng:ref name="model.dateLike"/>
+        </rng:group>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+    </rng:oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="imprint.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="index">
+    <element name="index">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(index entry) marks a location to be indexed for whatever purpose.</a:documentation>
+      <ref name="index.content"/>
+      <ref name="index.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="index.content">
+    <rng:zeroOrMore>
+      <rng:group>
+        <rng:ref name="term"/>
+        <rng:optional>
+          <rng:ref name="index"/>
+        </rng:optional>
+      </rng:group>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="index.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.spanning.attributes"/>
+    <rng:optional>
+      <rng:attribute name="indexName">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a name to specify which index (of several) the index entry belongs to.</a:documentation>
+        <ref name="data.name"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="item">
+    <element name="item">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains one
+component of a list.</a:documentation>
+      <ref name="item.content"/>
+      <ref name="item.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="item.content">
+    <rng:ref name="macro.specialPara"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="item.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="l">
+    <element name="l">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(verse line) contains a single, possibly incomplete, line of verse.</a:documentation>
+      <ref name="l.content"/>
+      <ref name="l.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="l.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="l.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.metrical.attributes"/>
+    <ref name="att.enjamb.attributes"/>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="part" a:defaultValue="N">
+        <a:documentation>specifies whether or not the line is metrically complete. </a:documentation>
+        <rng:choice>
+          <rng:value>Y</rng:value>
+          <a:documentation>(yes) the line is metrically incomplete</a:documentation>
+          <rng:value>N</rng:value>
+          <a:documentation>(no) either the line is complete, or no claim is made as to its
+completeness</a:documentation>
+          <rng:value>I</rng:value>
+          <a:documentation>(initial) the initial part of an incomplete line</a:documentation>
+          <rng:value>M</rng:value>
+          <a:documentation>(medial) a medial part of an incomplete line</a:documentation>
+          <rng:value>F</rng:value>
+          <a:documentation>(final) the final part of an incomplete line</a:documentation>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="label">
+    <element name="label">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the label associated with an item in a list; in
+glossaries, marks the term being defined.</a:documentation>
+      <ref name="label.content"/>
+      <ref name="label.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="label.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="label.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="lb">
+    <element name="lb">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line break) marks the start of a new (typographic) line in some
+edition or version of a text.</a:documentation>
+      <ref name="lb.content"/>
+      <ref name="lb.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="lb.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="lb.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="ed">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition) indicates the edition or version in which the line break is located
+at this point</a:documentation>
+        <ref name="data.code"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="lg">
+    <element name="lg">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line group) contains a group of verse lines functioning as a formal unit,
+e.g. a stanza, refrain, verse paragraph, etc.</a:documentation>
+      <ref name="lg.content"/>
+      <ref name="lg.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="lg.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.divTop"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:choice>
+        <rng:ref name="model.lLike"/>
+        <rng:ref name="lg"/>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.lLike"/>
+          <rng:ref name="lg"/>
+          <rng:ref name="model.global"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:group>
+          <rng:ref name="model.divBottom"/>
+        </rng:group>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:zeroOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="lg.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.divLike.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="list">
+    <element name="list">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains any sequence of items organized as a list.</a:documentation>
+      <ref name="list.content"/>
+      <ref name="list.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="list.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:group>
+            <rng:ref name="model.divTop"/>
+          </rng:group>
+          <rng:group>
+            <rng:ref name="model.global"/>
+          </rng:group>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:choice>
+        <rng:oneOrMore>
+          <rng:ref name="item"/>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:oneOrMore>
+        <rng:group>
+          <rng:optional>
+            <rng:ref name="headLabel"/>
+          </rng:optional>
+          <rng:optional>
+            <rng:ref name="headItem"/>
+          </rng:optional>
+          <rng:oneOrMore>
+            <rng:ref name="label"/>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+            <rng:ref name="item"/>
+            <rng:zeroOrMore>
+              <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
+          </rng:oneOrMore>
+        </rng:group>
+      </rng:choice>
+      <rng:zeroOrMore>
+        <rng:group>
+          <rng:group>
+            <rng:ref name="model.divBottom"/>
+          </rng:group>
+          <rng:zeroOrMore>
+            <rng:ref name="model.global"/>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:zeroOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="list.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="type" a:defaultValue="simple">
+        <a:documentation>describes the form of the list.
+Suggested values include: 1] ordered; 2] bulleted; 3] simple; 4] gloss</a:documentation>
+        <rng:choice>
+          <rng:value>ordered</rng:value>
+          <a:documentation>list items are numbered or lettered.
+    </a:documentation>
+          <rng:value>bulleted</rng:value>
+          <a:documentation>list items are marked with a
+bullet or other typographic device.
+    </a:documentation>
+          <rng:value>simple</rng:value>
+          <a:documentation>list items are not numbered or bulleted.
+    </a:documentation>
+          <rng:value>gloss</rng:value>
+          <a:documentation>each list item glosses some term or
+concept, which is given by a label element preceding
+the list item.</a:documentation>
+          <rng:data type="Name"/>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="listBibl">
+    <element name="listBibl">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation list) contains a list of bibliographic citations of any kind. </a:documentation>
+      <ref name="listBibl.content"/>
+      <ref name="listBibl.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="listBibl.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:ref name="model.headLike"/>
+      </rng:zeroOrMore>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="model.biblLike"/>
+          <rng:ref name="listBibl"/>
+        </rng:choice>
+      </rng:oneOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="listBibl.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.declarable.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="measure">
+    <element name="measure">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a word or phrase referring to some quantity of
+an object or commodity, usually comprising a number, a unit, and a
+commodity name.</a:documentation>
+      <ref name="measure.content"/>
+      <ref name="measure.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="measure.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="measure.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.measurement.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the type of measurement in any convenient typology.</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="measureGrp">
+    <element name="measureGrp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measure group) contains a group of dimensional specifications which relate to
+  the same object, for example the height and width of a manuscript page.</a:documentation>
+      <ref name="measureGrp.content"/>
+      <ref name="measureGrp.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="measureGrp.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.measureLike"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="measureGrp.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.measurement.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="meeting">
+    <element name="meeting">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the formalized descriptive title for a meeting or
+  conference, for use in a bibliographic description for an item
+  derived from such a meeting, or as a heading or preamble to
+  publications emanating from it.</a:documentation>
+      <ref name="meeting.content"/>
+      <ref name="meeting.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="meeting.content">
+    <rng:ref name="macro.limitedContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="meeting.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="mentioned">
+    <element name="mentioned">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marks words or phrases mentioned, not used.</a:documentation>
+      <ref name="mentioned.content"/>
+      <ref name="mentioned.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="mentioned.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="mentioned.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="milestone">
+    <element name="milestone">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marks a boundary point separating  any kind of section of a
+  text, typically but not necessarily  indicating a point at which
+  some part of  a standard reference system changes, where the change
+  is not represented by a structural element.</a:documentation>
+      <ref name="milestone.content"/>
+      <ref name="milestone.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="milestone.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="milestone.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="ed">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition) indicates the edition or version to which the milestone applies.</a:documentation>
+        <ref name="data.code"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:attribute name="unit">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a conventional name for the kind of section changing at this milestone.
+Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] canto; 7] speaker; 8] stanza; 9] act; 10] scene; 11] section; 12] absent; 13] unnumbered</a:documentation>
+      <rng:choice>
+        <rng:value>page</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">physical page breaks (synonymous with the pb
+	  element).</a:documentation>
+        <rng:value>column</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">column breaks.</a:documentation>
+        <rng:value>line</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">line breaks (synonymous with the lb element).</a:documentation>
+        <rng:value>book</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">any units termed book, liber, etc.</a:documentation>
+        <rng:value>poem</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">individual poems in a collection.</a:documentation>
+        <rng:value>canto</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">cantos or other major sections of a poem.</a:documentation>
+        <rng:value>speaker</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">changes of speaker or narrator.</a:documentation>
+        <rng:value>stanza</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">stanzas within a poem, book, or canto.</a:documentation>
+        <rng:value>act</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">acts within a play.</a:documentation>
+        <rng:value>scene</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scenes within a play or act.</a:documentation>
+        <rng:value>section</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sections of any kind.</a:documentation>
+        <rng:value>absent</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">passages not present in the reference edition.</a:documentation>
+        <rng:value>unnumbered</rng:value>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">passages present in the text, but not to be included
+	  as part of the reference.</a:documentation>
+        <rng:data type="Name"/>
+      </rng:choice>
+    </rng:attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="monogr">
+    <element name="monogr">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(monographic level) contains bibliographic elements describing an item (e.g. a book
+or journal) published as an independent item (i.e. as a separate
+physical object).</a:documentation>
+      <ref name="monogr.content"/>
+      <ref name="monogr.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="monogr.content">
+    <rng:group>
+      <rng:optional>
+        <rng:choice>
+          <rng:group>
+            <rng:choice>
+              <rng:ref name="author"/>
+              <rng:ref name="editor"/>
+              <rng:ref name="respStmt"/>
+            </rng:choice>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="author"/>
+                <rng:ref name="editor"/>
+                <rng:ref name="respStmt"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="title"/>
+            </rng:oneOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="editor"/>
+                <rng:ref name="respStmt"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </rng:group>
+          <rng:group>
+            <rng:oneOrMore>
+              <rng:ref name="title"/>
+            </rng:oneOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="author"/>
+                <rng:ref name="editor"/>
+                <rng:ref name="respStmt"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </rng:group>
+        </rng:choice>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="model.noteLike"/>
+          <rng:ref name="meeting"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="edition"/>
+        <rng:zeroOrMore>
+          <rng:choice>
+            <rng:ref name="editor"/>
+            <rng:ref name="respStmt"/>
+          </rng:choice>
+        </rng:zeroOrMore>
+      </rng:zeroOrMore>
+      <rng:ref name="imprint"/>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="imprint"/>
+          <rng:ref name="extent"/>
+          <rng:ref name="biblScope"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="monogr.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="name">
+    <element name="name">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name, proper noun) contains a proper noun or noun phrase.</a:documentation>
+      <ref name="name.content"/>
+      <ref name="name.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="name.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="name.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.naming.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the type of the object which is being named by the
+      phrase.</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="note">
+    <element name="note">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a note or annotation.</a:documentation>
+      <ref name="note.content"/>
+      <ref name="note.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="note.content">
+    <rng:ref name="macro.specialPara"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="note.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.placement.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the type of note.</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="resp">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsible party) indicates who is responsible for the annotation: author,
+	editor, translator, etc.</a:documentation>
+        <ref name="data.pointer"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="anchored" a:defaultValue="true">
+        <a:documentation>indicates whether the copy text shows the exact place of reference
+for the note.</a:documentation>
+        <ref name="data.truthValue"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="target">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the point (or points) of attachment for a note, or the beginning of
+the span to which the note is attached.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.pointer"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="targetEnd">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the end of the span to which the note is attached, if
+the note is not embedded in the text at that point.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.pointer"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="num">
+    <element name="num">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) contains a number, written in any form.</a:documentation>
+      <ref name="num.content"/>
+      <ref name="num.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="num.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="num.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the type of numeric value.
+Suggested values include: 1] cardinal; 2] ordinal; 3] fraction; 4] percentage</a:documentation>
+        <rng:choice>
+          <rng:value>cardinal</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">absolute number, e.g. 21, 21.5</a:documentation>
+          <rng:value>ordinal</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ordinal number, e.g. 21st</a:documentation>
+          <rng:value>fraction</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">fraction, e.g. one half or three-quarters</a:documentation>
+          <rng:value>percentage</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a percentage</a:documentation>
+          <rng:data type="Name"/>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="value">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the value of the number in standard form.</a:documentation>
+        <ref name="data.numeric"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="orig">
+    <element name="orig">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(original form) contains  a reading which is marked as following  the original,
+rather than being normalized or corrected.</a:documentation>
+      <ref name="orig.content"/>
+      <ref name="orig.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="orig.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="orig.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="p">
+    <element name="p">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose.</a:documentation>
+      <ref name="p.content"/>
+      <ref name="p.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="p.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="p.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="pb">
+    <element name="pb">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page break) marks the boundary between one page of a text and the next
+in a standard reference system.</a:documentation>
+      <ref name="pb.content"/>
+      <ref name="pb.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="pb.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="pb.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="ed">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition) indicates the edition or version in which the page break is located
+at this point</a:documentation>
+        <ref name="data.code"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="postBox">
+    <element name="postBox">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(postal box or post office box) contains a number or other identifier for some postal delivery
+point other than a street address. </a:documentation>
+      <ref name="postBox.content"/>
+      <ref name="postBox.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="postBox.content">
+    <rng:text/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="postBox.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="postCode">
+    <element name="postCode">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(postal code) contains a numerical or alphanumeric code used as part of a
+postal address to simplify sorting or delivery of mail. </a:documentation>
+      <ref name="postCode.content"/>
+      <ref name="postCode.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="postCode.content">
+    <rng:text/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="postCode.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ptr">
+    <element name="ptr">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pointer) defines a pointer to another location.</a:documentation>
+      <ref name="ptr.content"/>
+      <ref name="ptr.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ptr.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ptr.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.pointing.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <rng:choice>
+      <rng:attribute name="target">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the destination of the pointer by supplying one or
+      more URI References</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.pointer"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+      <rng:attribute name="cRef">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(canonical reference) specifies the destination of the pointer by supplying a
+      canonical reference from a scheme defined in a refsDecl
+      element in the TEI header</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.word"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:choice>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="pubPlace">
+    <element name="pubPlace">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication place) contains the name of the place where a bibliographic item was
+published.</a:documentation>
+      <ref name="pubPlace.content"/>
+      <ref name="pubPlace.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="pubPlace.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="pubPlace.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.naming.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="publisher">
+    <element name="publisher">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides the name of the organization responsible for
+the publication or distribution of a bibliographic item.</a:documentation>
+      <ref name="publisher.content"/>
+      <ref name="publisher.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="publisher.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="publisher.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="q">
+    <element name="q">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(separated from the surrounding text with quotation
+  marks) contains material which is marked as (ostensibly)
+  being somehow different than the surrounding text, for any
+  one of a variety of reasons including, but not limited to:
+  direct speech or thought, technical terms or jargon,
+  authorial distance, quotations from elsewhere, and passages
+  that are mentioned but not used.</a:documentation>
+      <ref name="q.content"/>
+      <ref name="q.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="q.content">
+    <rng:ref name="macro.specialPara"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="q.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.ascribed.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">may be used to indicate whether the offset passage is spoken
+      or thought, or to characterize it more finely.
+Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] foreign (foreign words); 6] distinct (linguistically distinct); 7] term (technical term); 8] emph (rhetorically emphasized); 9] mentioned</a:documentation>
+        <rng:choice>
+          <rng:value>spoken</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">representation of speech</a:documentation>
+          <rng:value>thought</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">representation of thought, e.g. internal monologue</a:documentation>
+          <rng:value>written</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">quotation from a written source</a:documentation>
+          <rng:value>soCalled</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">authorial distance</a:documentation>
+          <rng:value>foreign</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(foreign words) </a:documentation>
+          <rng:value>distinct</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(linguistically distinct) </a:documentation>
+          <rng:value>term</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(technical term) </a:documentation>
+          <rng:value>emph</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rhetorically emphasized) </a:documentation>
+          <rng:value>mentioned</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">refering to itself, not its normal
+	  referant</a:documentation>
+          <rng:data type="Name"/>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="quote">
+    <element name="quote">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quotation) contains a phrase or passage attributed by the narrator or
+  author to some agency external to the text.</a:documentation>
+      <ref name="quote.content"/>
+      <ref name="quote.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="quote.content">
+    <rng:ref name="macro.specialPara"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="quote.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <ref name="att.msExcerpt.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ref">
+    <element name="ref">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) defines a reference to another location, possibly
+  modified by additional text or comment.</a:documentation>
+      <ref name="ref.content"/>
+      <ref name="ref.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ref.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ref.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.pointing.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <rng:choice>
+      <rng:optional>
+        <rng:attribute name="target">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the destination of the reference by supplying one
+    or more URI References</a:documentation>
+          <rng:list>
+            <rng:oneOrMore>
+              <ref name="data.pointer"/>
+            </rng:oneOrMore>
+          </rng:list>
+        </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+        <rng:attribute name="cRef">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(canonical reference) specifies the destination of the reference by supplying a
+      canonical reference from a scheme defined in a refsDecl
+      element in the TEI header</a:documentation>
+          <rng:list>
+            <rng:oneOrMore>
+              <ref name="data.word"/>
+            </rng:oneOrMore>
+          </rng:list>
+        </rng:attribute>
+      </rng:optional>
+    </rng:choice>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="reg">
+    <element name="reg">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(regularization) contains a reading which has been regularized or normalized
+in some sense.</a:documentation>
+      <ref name="reg.content"/>
+      <ref name="reg.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="reg.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="reg.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="relatedItem">
+    <element name="relatedItem">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains or references some other bibliographic item which is
+related to the present one in some specified manner, for example as a
+constituent or alternative version of it.</a:documentation>
+      <ref name="relatedItem.content"/>
+      <ref name="relatedItem.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="relatedItem.content">
+    <rng:choice>
+      <rng:ref name="model.biblLike"/>
+      <rng:ref name="model.ptrLike"/>
+    </rng:choice>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="relatedItem.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="resp">
+    <element name="resp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) contains a phrase describing the nature of a person's
+  intellectual responsibility.</a:documentation>
+      <ref name="resp.content"/>
+      <ref name="resp.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="resp.content">
+    <rng:ref name="macro.phraseSeq.limited"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="resp.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="respStmt">
+    <element name="respStmt">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or
+  series, where the specialized elements for authors, editors, etc. do
+  not suffice or do not apply.</a:documentation>
+      <ref name="respStmt.content"/>
+      <ref name="respStmt.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="respStmt.content">
+    <rng:choice>
+      <rng:group>
+        <rng:oneOrMore>
+          <rng:ref name="resp"/>
+        </rng:oneOrMore>
+        <rng:oneOrMore>
+          <rng:ref name="model.nameLike.agent"/>
+        </rng:oneOrMore>
+      </rng:group>
+      <rng:group>
+        <rng:oneOrMore>
+          <rng:ref name="model.nameLike.agent"/>
+        </rng:oneOrMore>
+        <rng:oneOrMore>
+          <rng:ref name="resp"/>
+        </rng:oneOrMore>
+      </rng:group>
+    </rng:choice>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="respStmt.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="rs">
+    <element name="rs">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(referencing string) contains a general purpose name or referring string.</a:documentation>
+      <ref name="rs.content"/>
+      <ref name="rs.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="rs.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="rs.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.naming.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates more specifically the object referred to by the
+      referencing string. Values might include person,
+      place, ship, element etc.</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="said">
+    <element name="said">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(speech or thought) indicates passages thought or spoken aloud, whether
+  explicitly indicated in the source or not, whether directly
+  or indirectly reported, whether by real people or
+  fictional characters.</a:documentation>
+      <ref name="said.content"/>
+      <ref name="said.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="said.content">
+    <rng:ref name="macro.specialPara"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="said.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.ascribed.attributes"/>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="aloud" a:defaultValue="unknown">
+        <a:documentation>may be used to indicate whether the quoted matter
+      is regarded as having been vocalized or signed.</a:documentation>
+        <ref name="data.xTruthValue"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="direct" a:defaultValue="true">
+        <a:documentation>may be used to indicate whether the quoted matter is regarded
+      as direct or indirect speech.</a:documentation>
+        <ref name="data.xTruthValue"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="series">
+    <element name="series">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(series information) contains information about the series in which a book or other
+bibliographic item has appeared.</a:documentation>
+      <ref name="series.content"/>
+      <ref name="series.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="series.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="title"/>
+        <rng:ref name="editor"/>
+        <rng:ref name="respStmt"/>
+        <rng:ref name="biblScope"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="series.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="sic">
+    <element name="sic">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(latin for thus or so) contains text reproduced although apparently incorrect or inaccurate.</a:documentation>
+      <ref name="sic.content"/>
+      <ref name="sic.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="sic.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="sic.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="soCalled">
+    <element name="soCalled">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a word or phrase for which the author or narrator
+indicates a disclaiming of responsibility, for example by the use
+of scare quotes or italics.</a:documentation>
+      <ref name="soCalled.content"/>
+      <ref name="soCalled.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="soCalled.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="soCalled.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="sp">
+    <element name="sp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(speech) An individual speech in a performance text, or a passage
+	  presented as such in a prose or verse text.</a:documentation>
+      <ref name="sp.content"/>
+      <ref name="sp.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="sp.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:ref name="model.global"/>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:ref name="speaker"/>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:optional>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="model.lLike"/>
+          <rng:ref name="lg"/>
+          <rng:ref name="model.pLike"/>
+          <rng:ref name="model.stageLike"/>
+          <rng:ref name="model.qLike"/>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:ref name="model.global"/>
+        </rng:zeroOrMore>
+      </rng:oneOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="sp.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.ascribed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="speaker">
+    <element name="speaker">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A specialized form of heading or label, giving the name of
+one or more speakers in a dramatic text or fragment.</a:documentation>
+      <ref name="speaker.content"/>
+      <ref name="speaker.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="speaker.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="speaker.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="stage">
+    <element name="stage">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(stage direction) contains any kind of stage direction within a dramatic text or
+fragment.</a:documentation>
+      <ref name="stage.content"/>
+      <ref name="stage.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="stage.content">
+    <rng:ref name="macro.specialPara"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="stage.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the kind of stage direction.
+Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] novelistic; 6] delivery; 7] modifier; 8] location; 9] mixed</a:documentation>
+        <rng:choice>
+          <rng:value>setting</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes a setting.</a:documentation>
+          <rng:value>entrance</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes an entrance.</a:documentation>
+          <rng:value>exit</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes an exit.</a:documentation>
+          <rng:value>business</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes stage business.</a:documentation>
+          <rng:value>novelistic</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is a narrative, motivating stage direction.</a:documentation>
+          <rng:value>delivery</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes how a character speaks.</a:documentation>
+          <rng:value>modifier</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives some detail about a character.</a:documentation>
+          <rng:value>location</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes a location.</a:documentation>
+          <rng:value>mixed</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">more than one of the above</a:documentation>
+          <rng:data type="Name"/>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="street">
+    <element name="street">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a full street address including any name or number identifying a
+building as well as the name of the street or route on which it is
+located.</a:documentation>
+      <ref name="street.content"/>
+      <ref name="street.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="street.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="street.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="teiCorpus">
+    <element name="teiCorpus">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the whole of a TEI encoded corpus, comprising a
+single corpus header and one or more TEI elements, each containing
+a single text header and a text.</a:documentation>
+      <ref name="teiCorpus.content"/>
+      <ref name="teiCorpus.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="teiCorpus.content">
+    <rng:group>
+      <rng:ref name="teiHeader"/>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="TEI"/>
+          <rng:ref name="teiCorpus"/>
+        </rng:choice>
+      </rng:oneOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="teiCorpus.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="version" a:defaultValue="5.0">
+        <a:documentation>The version of the TEI scheme</a:documentation>
+        <data type="decimal"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="term">
+    <element name="term">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a single-word, multi-word, or symbolic designation
+  which is regarded as a technical term.</a:documentation>
+      <ref name="term.content"/>
+      <ref name="term.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="term.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="term.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <rng:choice>
+      <rng:optional>
+        <rng:attribute name="target">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the associated gloss element by an
+	absolute or relative URI reference</a:documentation>
+          <ref name="data.pointer"/>
+        </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+        <rng:attribute name="cRef">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the associated gloss element using a
+	canonical reference from a scheme defined in a
+	refsDecl element in the TEI header</a:documentation>
+          <ref name="data.pointer"/>
+        </rng:attribute>
+      </rng:optional>
+    </rng:choice>
+    <rng:optional>
+      <rng:attribute name="sortKey">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the sort key for this term in an index.</a:documentation>
+        <ref name="data.word"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="time">
+    <element name="time">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a phrase defining a time of day in any format.</a:documentation>
+      <ref name="time.content"/>
+      <ref name="time.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="time.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.phrase"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="time.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.datable.attributes"/>
+    <ref name="att.duration.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="title">
+    <element name="title">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the full title of a work of any kind.</a:documentation>
+      <ref name="title.content"/>
+      <ref name="title.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="title.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="title.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="level">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the bibliographic level for a title, that is,
+	whether it identifies  an article, book, journal,
+series, or unpublished material.</a:documentation>
+        <rng:choice>
+          <rng:value>a</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analytic) analytic title (article, poem, or other item published as
+          part of a larger item)
+    </a:documentation>
+          <rng:value>m</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(monographic) monographic title (book, collection, or other item published
+          as a distinct item, including single volumes of multi-volume
+          works)
+    </a:documentation>
+          <rng:value>j</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(journal) journal title
+    </a:documentation>
+          <rng:value>s</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(series) series title
+    </a:documentation>
+          <rng:value>u</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(unpublished) title of unpublished material (including theses and
+          dissertations unless published by a commercial press)</a:documentation>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the title according to some convenient typology.
+Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] short; 5] desc (descriptive)</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="unclear">
+    <element name="unclear">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a word, phrase, or passage which cannot be transcribed
+with certainty because it is illegible or inaudible in the source.</a:documentation>
+      <ref name="unclear.content"/>
+      <ref name="unclear.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="unclear.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="unclear.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <rng:optional>
+      <rng:attribute name="reason">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates why the material is hard to transcribe.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.word"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="hand">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Where the difficulty in transcription arises from action
+(partial deletion, etc.) assignable to an identifiable hand, signifies
+the hand responsible for the action.</a:documentation>
+        <ref name="data.pointer"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="agent">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Where the difficulty in transcription arises from
+ damage, categorizes the cause of the damage, if it can be identified.
+Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <!--3. macros-->
+</rng:grammar>

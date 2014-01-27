@@ -1,0 +1,147 @@
+
+<!--
+ TEI P5 entity declaration module for
+                  header. Generated 2008-07-08T17:39:01Z. 
+
+Copyright 2008 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+For general (non-technical) enquiries, contact the TEI
+	  Consortium at info@tei-c.org; 
+for membership enquiries contact membership@tei-c.org; for
+technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C, contact editors@tei-c.org.
+For up to date information, consult the TEI web
+	      site at http://www.tei-c.org/P5/. 
+		The TEI
+Header
+-->
+
+<!--
+Start datatype macro declarations
+-->
+
+<!--
+End of datatype macro declarations
+-->
+
+<!--
+Start of classes
+-->
+
+<!ENTITY % x.model.headerPart "" >
+<!ENTITY % model.headerPart "%x.model.headerPart; %n.encodingDesc; |
+ %n.profileDesc;"> 
+<!ENTITY % x.model.headerPart_sequence "" >
+<!ENTITY % model.headerPart_sequence "%x.model.headerPart_sequence; %n.encodingDesc;, %n.profileDesc;"> 
+<!ENTITY % x.model.headerPart_sequenceOptional "" >
+<!ENTITY % model.headerPart_sequenceOptional "%x.model.headerPart_sequenceOptional; %n.encodingDesc;?, %n.profileDesc;?"> 
+<!ENTITY % x.model.headerPart_sequenceOptionalRepeatable "" >
+<!ENTITY % model.headerPart_sequenceOptionalRepeatable "%x.model.headerPart_sequenceOptionalRepeatable; %n.encodingDesc;*, %n.profileDesc;*"> 
+<!ENTITY % x.model.headerPart_sequenceRepeatable "" >
+<!ENTITY % model.headerPart_sequenceRepeatable "%x.model.headerPart_sequenceRepeatable; %n.encodingDesc;+, %n.profileDesc;+"> 
+<!ENTITY % x.model.sourceDescPart "" >
+<!ENTITY % model.sourceDescPart "%x.model.sourceDescPart; %n.scriptStmt; |
+ %n.recordingStmt;"> 
+<!ENTITY % x.model.sourceDescPart_sequence "" >
+<!ENTITY % model.sourceDescPart_sequence "%x.model.sourceDescPart_sequence; %n.scriptStmt;, %n.recordingStmt;"> 
+<!ENTITY % x.model.sourceDescPart_sequenceOptional "" >
+<!ENTITY % model.sourceDescPart_sequenceOptional "%x.model.sourceDescPart_sequenceOptional; %n.scriptStmt;?, %n.recordingStmt;?"> 
+<!ENTITY % x.model.sourceDescPart_sequenceOptionalRepeatable "" >
+<!ENTITY % model.sourceDescPart_sequenceOptionalRepeatable "%x.model.sourceDescPart_sequenceOptionalRepeatable; %n.scriptStmt;*, %n.recordingStmt;*"> 
+<!ENTITY % x.model.sourceDescPart_sequenceRepeatable "" >
+<!ENTITY % model.sourceDescPart_sequenceRepeatable "%x.model.sourceDescPart_sequenceRepeatable; %n.scriptStmt;+, %n.recordingStmt;+"> 
+<!ENTITY % x.model.encodingPart "" >
+<!ENTITY % model.encodingPart "%x.model.encodingPart; %n.projectDesc; |
+ %n.samplingDecl; |
+ %n.editorialDecl; |
+ %n.tagsDecl; |
+ %n.refsDecl; |
+ %n.classDecl; |
+ %n.appInfo; |
+ %n.charDecl; |
+ %n.metDecl; |
+ %n.variantEncoding; |
+ %n.geoDecl; |
+ %n.fsdDecl;"> 
+<!ENTITY % x.model.encodingPart_sequence "" >
+<!ENTITY % model.encodingPart_sequence "%x.model.encodingPart_sequence; %n.projectDesc;, %n.samplingDecl;, %n.editorialDecl;, %n.tagsDecl;, %n.refsDecl;, %n.classDecl;, %n.appInfo;, %n.charDecl;, %n.metDecl;, %n.variantEncoding;, %n.geoDecl;, %n.fsdDecl;"> 
+<!ENTITY % x.model.encodingPart_sequenceOptional "" >
+<!ENTITY % model.encodingPart_sequenceOptional "%x.model.encodingPart_sequenceOptional; %n.projectDesc;?, %n.samplingDecl;?, %n.editorialDecl;?, %n.tagsDecl;?, %n.refsDecl;?, %n.classDecl;?, %n.appInfo;?, %n.charDecl;?, %n.metDecl;?, %n.variantEncoding;?, %n.geoDecl;?, %n.fsdDecl;?"> 
+<!ENTITY % x.model.encodingPart_sequenceOptionalRepeatable "" >
+<!ENTITY % model.encodingPart_sequenceOptionalRepeatable "%x.model.encodingPart_sequenceOptionalRepeatable; %n.projectDesc;*, %n.samplingDecl;*, %n.editorialDecl;*, %n.tagsDecl;*, %n.refsDecl;*, %n.classDecl;*, %n.appInfo;*, %n.charDecl;*, %n.metDecl;*, %n.variantEncoding;*, %n.geoDecl;*, %n.fsdDecl;*"> 
+<!ENTITY % x.model.encodingPart_sequenceRepeatable "" >
+<!ENTITY % model.encodingPart_sequenceRepeatable "%x.model.encodingPart_sequenceRepeatable; %n.projectDesc;+, %n.samplingDecl;+, %n.editorialDecl;+, %n.tagsDecl;+, %n.refsDecl;+, %n.classDecl;+, %n.appInfo;+, %n.charDecl;+, %n.metDecl;+, %n.variantEncoding;+, %n.geoDecl;+, %n.fsdDecl;+"> 
+<!ENTITY % x.model.editorialDeclPart "" >
+<!ENTITY % model.editorialDeclPart "%x.model.editorialDeclPart; %n.correction; |
+ %n.normalization; |
+ %n.quotation; |
+ %n.hyphenation; |
+ %n.segmentation; |
+ %n.stdVals; |
+ %n.interpretation;"> 
+<!ENTITY % x.model.editorialDeclPart_sequence "" >
+<!ENTITY % model.editorialDeclPart_sequence "%x.model.editorialDeclPart_sequence; %n.correction;, %n.normalization;, %n.quotation;, %n.hyphenation;, %n.segmentation;, %n.stdVals;, %n.interpretation;"> 
+<!ENTITY % x.model.editorialDeclPart_sequenceOptional "" >
+<!ENTITY % model.editorialDeclPart_sequenceOptional "%x.model.editorialDeclPart_sequenceOptional; %n.correction;?, %n.normalization;?, %n.quotation;?, %n.hyphenation;?, %n.segmentation;?, %n.stdVals;?, %n.interpretation;?"> 
+<!ENTITY % x.model.editorialDeclPart_sequenceOptionalRepeatable "" >
+<!ENTITY % model.editorialDeclPart_sequenceOptionalRepeatable "%x.model.editorialDeclPart_sequenceOptionalRepeatable; %n.correction;*, %n.normalization;*, %n.quotation;*, %n.hyphenation;*, %n.segmentation;*, %n.stdVals;*, %n.interpretation;*"> 
+<!ENTITY % x.model.editorialDeclPart_sequenceRepeatable "" >
+<!ENTITY % model.editorialDeclPart_sequenceRepeatable "%x.model.editorialDeclPart_sequenceRepeatable; %n.correction;+, %n.normalization;+, %n.quotation;+, %n.hyphenation;+, %n.segmentation;+, %n.stdVals;+, %n.interpretation;+"> 
+<!ENTITY % x.model.applicationLike "" >
+<!ENTITY % model.applicationLike "%x.model.applicationLike; %n.application;"> 
+<!ENTITY % x.model.applicationLike_sequence "" >
+<!ENTITY % model.applicationLike_sequence "%x.model.applicationLike_sequence; %n.application;"> 
+<!ENTITY % x.model.applicationLike_sequenceOptional "" >
+<!ENTITY % model.applicationLike_sequenceOptional "%x.model.applicationLike_sequenceOptional; %n.application;?"> 
+<!ENTITY % x.model.applicationLike_sequenceOptionalRepeatable "" >
+<!ENTITY % model.applicationLike_sequenceOptionalRepeatable "%x.model.applicationLike_sequenceOptionalRepeatable; %n.application;*"> 
+<!ENTITY % x.model.applicationLike_sequenceRepeatable "" >
+<!ENTITY % model.applicationLike_sequenceRepeatable "%x.model.applicationLike_sequenceRepeatable; %n.application;+"> 
+<!ENTITY % x.model.profileDescPart "" >
+<!ENTITY % model.profileDescPart "%x.model.profileDescPart; %n.langUsage; |
+ %n.textClass; |
+ %n.handNotes; |
+ %n.textDesc; |
+ %n.particDesc; |
+ %n.settingDesc;"> 
+<!ENTITY % x.model.profileDescPart_sequence "" >
+<!ENTITY % model.profileDescPart_sequence "%x.model.profileDescPart_sequence; %n.langUsage;, %n.textClass;, %n.handNotes;, %n.textDesc;, %n.particDesc;, %n.settingDesc;"> 
+<!ENTITY % x.model.profileDescPart_sequenceOptional "" >
+<!ENTITY % model.profileDescPart_sequenceOptional "%x.model.profileDescPart_sequenceOptional; %n.langUsage;?, %n.textClass;?, %n.handNotes;?, %n.textDesc;?, %n.particDesc;?, %n.settingDesc;?"> 
+<!ENTITY % x.model.profileDescPart_sequenceOptionalRepeatable "" >
+<!ENTITY % model.profileDescPart_sequenceOptionalRepeatable "%x.model.profileDescPart_sequenceOptionalRepeatable; %n.langUsage;*, %n.textClass;*, %n.handNotes;*, %n.textDesc;*, %n.particDesc;*, %n.settingDesc;*"> 
+<!ENTITY % x.model.profileDescPart_sequenceRepeatable "" >
+<!ENTITY % model.profileDescPart_sequenceRepeatable "%x.model.profileDescPart_sequenceRepeatable; %n.langUsage;+, %n.textClass;+, %n.handNotes;+, %n.textDesc;+, %n.particDesc;+, %n.settingDesc;+"> 
+<!--
+End of classes
+-->
+
+<!--
+Start rest of  macro declarations
+-->
+
+<!--
+End macros
+-->
+
+<!--
+Start of pre-declared macros
+-->
+
+<!--
+End of pre-declared macros
+-->

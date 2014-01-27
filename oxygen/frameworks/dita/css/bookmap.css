@@ -1,0 +1,201 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/* DITA bookmap elements */
+
+@import "xnal.css";
+
+@import "bookmap_ext.css";
+
+bookmap {
+    display: block;
+}
+
+bookmap > title {
+    font-size: 1.5em;
+    margin: 0.83ex 0;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+booklibrary {
+    display: block;
+    margin: 1.33ex 0;
+}
+
+mainbooktitle,
+booktitlealt {
+    display: block;
+    font-family: serif;
+    font-weight: bold;
+}
+
+mainbooktitle {
+    font-size: 1.5em;
+    margin: 0.83ex 0;
+}
+
+booktitlealt {
+    margin: 1.33ex 0;
+}
+
+bookmap > booktitle,
+bookmap > frontmatter,
+bookmap > backmatter {
+    display: block;
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 1.33ex;
+    border: 1px solid gray;
+    padding: 0.5ex;
+}
+
+bookmap > booktitle:before,
+bookmap > frontmatter:before,
+bookmap > backmatter:before {
+    display: inline;
+    color: gray;
+    background-color:inherit;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+part,
+chapter,
+appendix {
+    display: block;
+    margin-left: 4ex;
+    margin-top: 0.5ex;
+    margin-bottom: 0.5ex;
+}
+
+bookmap > part,
+bookmap > chapter,
+bookmap > appendix {
+    margin-left: 0;
+}
+
+bookmap:before,
+part:before,
+chapter:before,
+appendix:before {
+    display: inline;
+    color: #333333;
+    background-color:inherit;
+}
+
+frontmatter > topicgroup,
+frontmatter > topichead,
+frontmatter > topicref,
+backmatter > topicgroup,
+backmatter > topichead,
+backmatter > topicref {
+    margin-left: 0;
+}
+
+booklists {
+    display: block;
+    margin: 0;
+}
+
+toc,
+figurelist,
+tablelist,
+abbrevlist,
+trademarklist,
+bibliolist,
+indexlist,
+booklist {
+    display: block;
+    margin: 0.5ex 0;
+}
+
+glossarylist,
+notices,
+dedication,
+colophon,
+amendments,
+bookabstract,
+draftintro,
+preface {
+    display: block;
+    margin: 0.5ex 0;
+}
+
+glossarylist:before,
+notices:before,
+dedication:before,
+colophon:before,
+amendments:before,
+bookabstract:before,
+draftintro:before,
+preface:before {
+    display: inline;
+    color: #333333;
+     background-color:inherit;
+}
+
+/* 
+ * Metadata
+ */
+
+/* bookmap ---------------------------------------------------------------- */
+
+bookmeta {
+    display: block;
+    background-color: #FFFFCC;
+    color:inherit;
+    border: 1px solid #808000;
+    padding: 2px;
+    margin-left: 20px;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex; 
+}
+
+publisherinformation,
+person,
+organization,
+printlocation,
+published,
+publishtype,
+revisionid,
+started,
+year,
+month,
+day,
+completed,
+bookid,
+bookpartno,
+edition,
+isbn,
+booknumber,
+volume,
+maintainer,
+bookchangehistory,
+reviewed,
+edited,
+tested,
+approved,
+bookevent,
+bookeventtype,
+bookrights,
+copyrfirst,
+copyrlast,
+bookowner,
+bookrestriction,
+summary {
+    display: block;
+    margin-left: 16ex;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex; 
+    border-width: 0;
+    border-style: none;
+    padding: 0;
+}

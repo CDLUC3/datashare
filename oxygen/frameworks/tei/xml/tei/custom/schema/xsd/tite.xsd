@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/tite/1.0" xmlns:tite="http://www.tei-c.org/ns/tite/1.0" xmlns:ns1="http://www.tei-c.org/ns/1.0">
+  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="tei_tite.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:element name="b">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.n"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.rend"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlbase"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="i">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.n"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.rend"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlbase"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ul">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.n"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.rend"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlbase"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sub">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.n"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.rend"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlbase"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sup">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.n"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.rend"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlbase"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="smcap">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.n"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.rend"/>
+          <xs:attributeGroup ref="ns1:att.global.attribute.xmlbase"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cols">
+    <xs:complexType>
+      <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
+      <xs:attributeGroup ref="ns1:att.global.attribute.n"/>
+      <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
+      <xs:attributeGroup ref="ns1:att.global.attribute.rend"/>
+      <xs:attributeGroup ref="ns1:att.global.attribute.xmlbase"/>
+      <xs:attribute name="ed" form="qualified" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>indicates the edition or version in which the change in columnar
+         layout is located at this point</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ornament">
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
+      <xs:attributeGroup ref="ns1:att.global.attribute.n"/>
+      <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
+      <xs:attributeGroup ref="ns1:att.global.attribute.rend"/>
+      <xs:attributeGroup ref="ns1:att.global.attribute.xmlbase"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml">
+
+  <xs:annotation>
+    <xs:documentation>
+         This is the XML Schema Inline Phrasal support module for XHTML
+         $Id: xhtml-inlphras-1.xsd 28982 2006-05-04 09:40:07 +0000 (Thu, 04 May 2006) radu_coravu $
+    </xs:documentation>
+    <xs:documentation source="xhtml-copyright-1.xsd"/>
+  </xs:annotation>
+
+  <xs:annotation>
+    <xs:documentation>
+      Inline Phrasal.
+      This module declares the elements and their attributes used to
+      support inline-level phrasal markup.
+      This is the XML Schema Inline Phrasal module for XHTML
+
+        * abbr, acronym, cite, code, dfn, em, kbd, q, samp, strong, var
+
+      $Id: xhtml-inlphras-1.xsd 28982 2006-05-04 09:40:07 +0000 (Thu, 04 May 2006) radu_coravu $
+    </xs:documentation>
+    <xs:documentation source="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_textmodule"/>
+  </xs:annotation>
+
+
+  <xs:attributeGroup name="abbr.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="abbr.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="abbr.type" mixed="true">
+    <xs:group ref="abbr.content"/>
+    <xs:attributeGroup ref="abbr.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="abbr" type="abbr.type"><xs:annotation><xs:documentation>The ABBR element is used to indicates an abbreviated form, like "ie.", "Ltd.", "etc.".</xs:documentation></xs:annotation></xs:element>
+
+  <xs:attributeGroup name="acronym.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="acronym.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="acronym.type" mixed="true">
+    <xs:group ref="acronym.content"/>
+    <xs:attributeGroup ref="acronym.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="acronym" type="acronym.type"><xs:annotation><xs:documentation>The ACRONYM element defines an acronym, like "USA" or "F.B.I".</xs:documentation></xs:annotation></xs:element>
+
+  <xs:attributeGroup name="cite.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="cite.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="cite.type" mixed="true">
+    <xs:group ref="cite.content"/>
+    <xs:attributeGroup ref="cite.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="cite" type="cite.type"><xs:annotation><xs:documentation>Contains a citation or a reference to other sources.</xs:documentation></xs:annotation></xs:element>
+
+  <xs:attributeGroup name="code.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="code.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="code.type" mixed="true">
+    <xs:group ref="code.content"/>
+    <xs:attributeGroup ref="code.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="code" type="code.type"><xs:annotation><xs:documentation>Designates a fragment of computer code.</xs:documentation></xs:annotation></xs:element>
+
+  <xs:attributeGroup name="dfn.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="dfn.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="dfn.type" mixed="true">
+    <xs:group ref="dfn.content"/>
+    <xs:attributeGroup ref="dfn.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="dfn" type="dfn.type"><xs:annotation><xs:documentation>Indicates that this is the defining instance of the enclosed term.</xs:documentation></xs:annotation></xs:element>
+
+  <xs:attributeGroup name="em.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="em.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="em.type" mixed="true">
+    <xs:group ref="em.content"/>
+    <xs:attributeGroup ref="em.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="em" type="em.type"><xs:annotation><xs:documentation>Renders as emphasized text. Generally, visual user agents present EM text in italics.</xs:documentation></xs:annotation></xs:element>
+
+
+  <xs:attributeGroup name="kbd.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="kbd.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="kbd.type" mixed="true">
+    <xs:group ref="kbd.content"/>
+    <xs:attributeGroup ref="kbd.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="kbd" type="kbd.type"><xs:annotation><xs:documentation>Indicates text to be entered by the user.</xs:documentation></xs:annotation></xs:element>
+
+
+  <xs:attributeGroup name="samp.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="samp.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="samp.type" mixed="true">
+    <xs:group ref="samp.content"/>
+    <xs:attributeGroup ref="samp.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="samp" type="samp.type"><xs:annotation><xs:documentation>Designates sample output from programs, scripts, etc.</xs:documentation></xs:annotation></xs:element>
+
+
+  <xs:attributeGroup name="strong.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="strong.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="strong.type" mixed="true">
+    <xs:group ref="strong.content"/>
+    <xs:attributeGroup ref="strong.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="strong" type="strong.type"><xs:annotation><xs:documentation>Renders as strong emphasized text. Generally, visual user agents present STRONG text in bold font.</xs:documentation></xs:annotation></xs:element>
+
+  <xs:attributeGroup name="var.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:group name="var.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="var.type" mixed="true">
+    <xs:group ref="var.content"/>
+    <xs:attributeGroup ref="var.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="var" type="var.type"><xs:annotation><xs:documentation>Indicates an instance of a variable or program argument.</xs:documentation></xs:annotation></xs:element>
+
+  <xs:attributeGroup name="q.attlist">
+    <xs:attributeGroup ref="Common.attrib"/>
+    <xs:attribute name="cite" type="URI"/>
+  </xs:attributeGroup>
+
+  <xs:group name="q.content">
+     <xs:sequence>
+       <xs:group ref="Inline.mix" minOccurs="0" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="q.type" mixed="true">
+    <xs:group ref="q.content"/>
+    <xs:attributeGroup ref="q.attlist"/>
+  </xs:complexType>
+
+  <xs:element name="q" type="q.type"><xs:annotation><xs:documentation>The Q element defines the start of a short quotation. It does not render as anything special, you have to use styles to format the text.</xs:documentation></xs:annotation></xs:element>
+
+</xs:schema>

@@ -1,0 +1,131 @@
+personnel{
+    display:table;
+    
+    margin:2em;
+    border:4px ridge #EEEEEE;
+    
+    font-family:arial, helvetica, sans-serif;
+}
+
+person{
+    display:table-row;
+}
+
+
+name{
+    display:table-cell;
+    
+    border:1px solid gray;
+    padding:1em;
+    
+    color:inherit;
+    background-color:#EEFFEE;
+}
+
+name:before{
+    content:"Name:";
+}
+
+family,
+given{
+    display:block;
+
+    margin-left: 2em;
+}
+
+family:before,
+given:before{
+    display:block;
+    
+    margin-top:0.2em;
+    
+    font-size:smaller;
+    text-decoration:none;
+    
+    color:#006600;
+    background-color:inherit;
+}
+family:before{
+    content:"Family:";
+}
+given:before{
+    content:"Given:";
+}
+
+
+email{
+    display:table-cell;
+    
+    padding:1em;
+    border:1px solid gray;
+    
+    font-style:italic;
+}
+
+email:before{
+    content:"Email:";
+}
+
+link:before{
+    content:"Link:";
+}
+
+link{
+    display:table-cell;
+    
+    border:1px solid gray;
+    padding:1em;
+
+    color:inherit;
+    background-color:#EEEEDD;
+}
+
+link[manager]:before{
+    content:"Managed by :" attr(manager); 
+}
+
+link[subordinates]:before{
+    content:"Subordinates: " attr(subordinates); 
+}
+
+link[manager][subordinates]:before{
+    content:"Managed by :" attr(manager) " Subordinates: " attr(subordinates); 
+}
+
+link:before{
+    content:"Link:";
+}
+
+url{
+    display:table-cell;
+    
+    border:1px solid gray;
+    padding:1em;
+
+    color:inherit;
+    background-color:#E6C8DC;
+}
+
+url[href]:before{
+    content:"Href :" attr(href); 
+}
+
+url:after, link:after{
+    display:inline;
+    content:"\A[Edit the attributes in order to change the text]";
+    
+    font-size:smaller;
+    
+    color:gray;
+    background-color:inherit;
+}
+
+*:before{
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:underline;
+
+    color:#333333;
+    background-color:inherit;
+    
+}

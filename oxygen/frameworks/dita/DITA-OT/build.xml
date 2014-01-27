@@ -1,0 +1,107 @@
+<project name="DOST" default="init" basedir=".">
+  <import file="build_init.xml"></import>  
+  <import file="build_preprocess.xml"></import>
+  <import file="build_general.xml"></import>    
+  <import file="build_dita2xhtml.xml"></import>
+  <import file="build_dita2htmlhelp.xml"></import>
+  <import file="build_dita2javahelp.xml"></import>
+  <import file="build_dita2eclipsehelp.xml"></import>
+  <import file="build_dita2eclipsecontent.xml"></import>
+  <import file="build_dita2pdf.xml"></import>
+  <import file="build_dita2wordrtf.xml"></import>
+  <import file="build_dita2docbook.xml"></import>
+  <import file="build_dita2troff.xml"></import>
+        
+  <path id="dost.class.path">    
+	<pathelement location="${dita.dir}${file.separator}demo/fo/fo.jar"/>
+    <pathelement location="${dita.dir}${file.separator}lib${file.separator}dost.jar"></pathelement>
+  </path>
+  
+  <target name="init">
+    <dita-ot-fail id="DOTA001F">
+      <condition>
+        <and>
+          <not>
+            <equals arg1="${transtype}" arg2="xhtml" casesensitive="false"></equals>
+          </not>
+          <not>
+            <equals arg1="${transtype}" arg2="eclipsehelp" casesensitive="false"></equals>
+          </not>
+          <not>
+            <equals arg1="${transtype}" arg2="javahelp" casesensitive="false"></equals>
+          </not>
+          <not>
+            <equals arg1="${transtype}" arg2="htmlhelp" casesensitive="false"></equals>
+          </not>
+          <not>
+            <equals arg1="${transtype}" arg2="pdf" casesensitive="false"></equals>
+          </not>
+          <not>
+            <equals arg1="${transtype}" arg2="docbook" casesensitive="false"></equals>
+          </not>
+          <not>
+            <equals arg1="${transtype}" arg2="eclipsecontent" casesensitive="false"></equals>
+          </not>
+          <not>
+            <equals arg1="${transtype}" arg2="troff" casesensitive="false"></equals>
+          </not>
+          <not>
+            <equals arg1="${transtype}" arg2="wordrtf" casesensitive="false"></equals>
+          </not>
+          <not><equals arg1="${transtype}" arg2="pdf2" casesensitive="false"/></not>
+        </and>
+      </condition>
+    </dita-ot-fail>
+    <antcall target="dita2${transtype}"></antcall>
+  </target>
+  
+  <target name="all">
+    <echo>The "ant all" demonstration build has moved.
+      Please try the following command instead:
+      ant all -f build_demo.xml</echo>
+  </target>
+  
+  <target name="dita-preprocess" depends="start-process, init-logger, check-arg, output-deprecated-msg, output-css-warn-message, preprocess"></target>
+
+  
+  
+<target name="dita2pdf2" depends="dita-preprocess, map2pdf2, topic2pdf2">
+</target> 
+  
+  
+<target name="topic2pdf2" if="noMap" depends="dita-preprocess">
+	
+<ant dir="${dita.dir}/demo/fo" target="preview.topic.pdf">
+		
+<property name="caller.dir" value="${basedir}">
+</property>
+	
+</ant>
+  
+</target>
+
+  
+<target name="map2pdf2" unless="noMap" depends="dita-preprocess">
+	<!--OXYGEN patch for EXM-10624: Try to make the temporary directory absolute so that it can be sent to the pipeline-->
+	<available property="dita.temp.dir.abs" value="${basedir}/${dita.temp.dir}"
+	        file="${basedir}/${dita.temp.dir}" type="dir" />
+	  <condition property="dita.temp.dir.abs" value="${dita.temp.dir}">
+	     <not>
+	        <isset property="dita.temp.dir.abs"/>
+	      </not>
+	  </condition>
+<pipeline message="topicmerge" module="TopicMerge" inputmap="${dita.temp.dir.abs}${file.separator}${user.input.file}" extparam="output=${dita.temp.dir.abs}${file.separator}${dita.map.filename.root}_MERGED.xml;style=${dita.dir}/demo/fo/xsl/common/topicmerge.xsl">
+    
+</pipeline>
+
+    
+<ant dir="${dita.dir}/demo/fo" target="publish.map.pdf">
+        
+<property name="caller.dir" value="${basedir}">
+</property>
+    
+</ant>
+  
+</target>
+
+</project>

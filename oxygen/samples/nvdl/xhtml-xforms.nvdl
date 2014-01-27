@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+  <namespace ns="http://www.w3.org/1999/xhtml">
+    <a:documentation>We begin with XHTML sections.</a:documentation>
+    <validate schema="../../frameworks/xhtml/relaxng/xhtml.rng">
+      <a:documentation>This action invokes the XHTML schema.</a:documentation>
+      <mode>
+        <namespace ns="http://www.w3.org/2002/xforms">
+          <a:documentation>XForms in XHTML</a:documentation>
+          <validate schema="../../frameworks/xforms/XForms-Schema.xsd">
+            <a:documentation>The first action invokes the XForms schema for XForms in XHTML.</a:documentation>
+            <mode>
+              <namespace ns="http://www.w3.org/2002/xforms">
+                <a:documentation>XForms in ... in *XForm* in XHTML</a:documentation>
+                <attach message="Attaching a descendant XForms section."/>
+              </namespace>
+              <namespace ns="http://www.w3.org/1999/xhtml">
+                <a:documentation>XHTML in ... in *XForm* in XHTML</a:documentation>
+                <unwrap message="Skipping a descedant XHTML section."/>
+              </namespace>
+            </mode>
+            <context path="instance">
+              <a:documentation>Allow anything inside XForm instance element</a:documentation>
+              <mode>
+                <anyNamespace>
+                  <allow/>
+                </anyNamespace>
+              </mode>
+            </context>
+          </validate>
+          <unwrap>
+            <a:documentation>This action skip XForms in XHTML.</a:documentation>
+            <mode>
+                <namespace ns="http://www.w3.org/2002/xforms">
+                <a:documentation>XForms in ... in XForms in *XHTML*</a:documentation>
+                <unwrap message="Skipping a descendant XForms section."/>
+              </namespace>
+              <namespace ns="http://www.w3.org/1999/xhtml">
+                <a:documentation>XHTML in ... in XForms in *XHTML*</a:documentation>
+                <attach message="Attaching a descendant XHTML section."/>
+              </namespace>
+            </mode>
+            <context path="instance">
+              <a:documentation>Skip content inside XForms instance element.</a:documentation>
+              <mode>
+                <anyNamespace>
+                  <unwrap/>
+                </anyNamespace></mode>
+            </context>
+          </unwrap>
+        </namespace>        
+        <namespace ns="http://www.xsmiles.org/*">
+          <a:documentation>Allow XSmiles extensions in XHTML.</a:documentation>
+          <allow/>
+        </namespace>
+      </mode>         
+    </validate>
+  </namespace>
+</rules>

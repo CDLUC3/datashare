@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crossQueryResult totalDocs="1" startDoc="1" endDoc="1">
+   <docHit rank="1" file="doc2.xml" totalHits="0">
+      <meta>
+         <struct attr="something">
+            <hit rank="1">
+               <term>Hello</term> 
+               <term>there</term>
+            </hit>
+            <p>This is a test</p>of the emergency broadcasting system.</struct>
+      </meta>
+   </docHit>
+</crossQueryResult>

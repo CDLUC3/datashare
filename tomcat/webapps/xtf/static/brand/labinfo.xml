@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @id: four character identifier -->
+<!-- @type: entity type from a constrained list -->
+<!-- @bpURL: original Bepress URL -->
+<labs>
+	<lab id='UCSF::CIND'>
+		<contributor>UCSF::CIND</contributor>
+		<name>Center for the Imaging of Neuroregenerative Diseases</name>
+	    <campus>University of California, San Francisco</campus>
+		<description>The mission of the Center for the Imaging of Neuroregenerative Diseases (CIND) is to develop new treatments which slow progression and will ultimately prevent the development of neurodegenerative diseases including Alzheimer's disease, vascular dementia, frontotemporal dementia, Parkinson's disease, post traumatic stress disorder (PTSD), gulf war illness, epilepsy, depression, and other conditions associated with nerve loss in the brain. Our focus is brain imaging, especially with MRI including structural MRI, perfusion MRI, diffusion tensor/spectral MRI, susceptibility weighted MRI, MR spectroscopy and MR spectroscopic imaging.</description>
+	</lab>
+	<lab id='UCD::CBD'>
+		<contributor>UCD::CBD</contributor>
+		<name>Center for Biodemography</name>
+	    <campus>University of California, Davis</campus>
+		<description>Research in my laboratory focuses on biodemography: an emerging division of classical demography that brings life table techniques, mortality models, experimental systems, and comparative methods to bear on questions concerned with the fundamental determinants of mortality, longevity, aging and life span. I am interested in insect mortality dynamics, mortality trajectories, and the evolution of life span and extended longevity. I am also interested in aging with special emphasis on the oldest individuals in a population, and with studying the behavioral and social components of life span and aging. The evolution of social organization as a component of life history is an important research interest in my laboratory. While many of our studies are on captive populations, we are moving into the study of aging in nature; attempting to determine mortality dynamics in field conditions.</description>
+	</lab>
+	<lab id='OSU::Wexner'>
+		<contributor>OSU::Wexner</contributor>
+		<name>Wexner Medical Center</name>
+	    <campus>Ohio State University</campus>
+		<description><p>Located in Columbus, Ohio, The Ohio State University Wexner Medical Center is one of the largest and most diverse academic medical centers in the country and the only academic medical center in central Ohio. Ohio State's Wexner Medical Center includes:</p>
+		<ul>
+		<li>a top-30 College of Medicine</li>
+		<li>six hospitals</li>
+		<li>a unified physician practice</li>
+		<li>network of primary and specialty care practices</li>
+		<li>more than a dozen research centers and institutes</li>
+		<li>20 core laboratories</li>
+		</ul>
+		<p>This powerful enterprise is driven by our mission: to improve people’s lives through innovation in research, education and patient care.</p>
+		<p>We also share a common vision: working as a team, we will shape the future of medicine by creating, disseminating and applying new knowledge, and by personalizing health care to meet the needs of each individual.</p>
+		<p>Central to how we carry out our mission and vision are our values: excellence, collaborating as one university, integrity and personal accountability, openness and trust, diversity in people and ideas, change and innovation, simplicity in our work, empathy and compassion, and leadership.</p>
+		<p>Our Strategic Plan Overview describes our mission, vision, values and strategic goals in greater detail.</p></description>
+	</lab>
+	<lab id='OSU::Nisonger'>
+		<contributor>OSU::Nisonger</contributor>
+		<name>Nisonger Medical Center</name>
+	    <campus>Ohio State University</campus>
+		<description>The Ohio State University Nisonger Center was founded in 1966, among the first group of federally funded University Centers for Excellence in Developmental Disabilities. We are widely respected for our interdisciplinary research, education and clinical services. The Nisonger Center is proud to be part of The Ohio State University Medical Center and Office of Health Sciences. We have a strong and dynamic team of researchers, clinicians, teachers, staff and trainees who strive to improve the lives of persons with disabilities and their families across the lifespan.</description>
+	</lab>
+	<lab id='MICH::ABCD'>
+		<contributor>MICH::ABCD</contributor>
+		<name>Abcd Medical Center</name>
+	    <campus>University of Michigan</campus>
+		<description>Placeholder for University of Michigan</description>
+	</lab>
+</labs>

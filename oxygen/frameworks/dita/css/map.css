@@ -1,0 +1,86 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/*
+====================================
+    Map elements. [map]
+====================================
+*/
+
+@import "map_ext.css";
+
+map{
+    display:block;
+}
+
+anchor,
+navref,
+topicref{
+    display:block;
+    margin-left:1em;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+}
+
+topicgroup{
+    display:block;
+    border:1px solid silver;
+    padding:0.2em;
+}
+
+/*
+    The <topicmeta> element defines the metadata 
+    that applies to a topic when it appears in a 
+    map, and to the other topics in the map that 
+    are contained by the same element that contains 
+    the <topicmeta> element.
+*/
+topicmeta{
+    display: block;
+    background-color: #FFFFEE;
+    color:inherit;
+    border: 1px solid #808000;
+    padding: 2px;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex; 
+}
+
+/*
+    Relation tables.
+*/
+reltable{
+    display:table;
+    border-spacing:1px;
+}
+
+relrow{
+    display:table-row;
+}
+
+relheader{
+    display:table-row;
+    background-color: #EEEEFF;
+    color:inherit;
+}
+
+relcell,
+relcolspec{
+    display:table-cell;
+    border:1px solid silver;   
+    padding:2px;
+}
+
+relcell > topicgroup,
+relcell > topichead,
+relcell > topicref{
+    margin-left: 0;
+}
+
+relcolspec:before{
+    font-weight:bold;
+    content:"type=" attr(type);
+}
+
+reltable > topicmeta{
+    display:table-caption;    
+}

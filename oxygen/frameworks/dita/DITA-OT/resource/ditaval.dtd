@@ -1,0 +1,92 @@
+<?xml encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+     Sourceforge.net. See the accompanying license.txt file for 
+     applicable licenses.-->
+<!--
+
+====================================================================
+     Copyright: (c) International Business Machines Corporation 2002, 2007
+
+       Version:  1.1
+
+          Name:  Properties declaration file for DITA XML processing.
+
+          File:  ditaval.dtd
+
+ Formal Public
+    Identifier:  none
+
+      Function:  Set processing information for selection attributes.
+
+
+-->
+
+<!--doc:<val> is the root element of a ditaval file.
+Category: DITAVAL elements-->
+<!ELEMENT val (style-conflict?, (prop | revprop)*)>
+
+<!--doc:The style-conflict element declares behavior to be used when one or more flagging methods collide on a single content element.
+Category: DITAVAL elements-->
+<!ELEMENT style-conflict EMPTY>
+<!ATTLIST style-conflict
+  foreground-conflict-color CDATA #IMPLIED
+  background-conflict-color CDATA #IMPLIED
+>
+
+
+<!--doc:Identifies an attribute, and usually values in the attribute, to take an action on. The attribute must be a conditional processing attribute: platform, product, audience, props. and otheprops; or a specialization of the props attribute. There can be at most one occurrence of a "prop" element with no attribute specified (setting a default action for every prop element), at most one for each attribute with no value specified (setting the default action for a specific attribute), and at most one with each attribute value specification (to avoid conflicting actions for the same attribute value).
+Category: DITAVAL elements-->
+<!ELEMENT prop (startflag?, endflag?)>
+<!ATTLIST prop
+  att       CDATA	    #IMPLIED
+  val       CDATA       #IMPLIED
+  action    (flag|include|exclude|passthrough)  #REQUIRED
+  color     CDATA       #IMPLIED
+  backcolor CDATA       #IMPLIED
+  style     CDATA       #IMPLIED
+  >
+
+<!--doc:The startflag takes an optional image reference and an optional alt-text element for identifying the beginning of flagged content. If an image is specified, the specified image will be used to flag the beginning of the content, with the alt-text contents as alternative text. If alt-text is specified without an image, that text will be used to flag the content instead of an image. If no image and no alt-text are specified, then this element has no defined purpose. The startflag element is allowed inside either prop or revprop.
+Category: DITAVAL elements-->
+<!ELEMENT startflag (alt-text?)>
+<!ATTLIST startflag
+  imageref  CDATA       #IMPLIED
+>
+
+<!--doc:The endflag takes an optional image reference and an optional alt-text element for identifying the end of flagged content. If an image is specified, the specified image will be used to flag the end of the content, with the alt-text contents as alternative text. If alt-text is specified without an image, that text will be used to flag the content instead of an image. If no image and no alt-text are specified, then this element has no defined purpose. The endflag element is allowed inside either prop or revprop.
+Category: DITAVAL elements-->
+<!ELEMENT endflag (alt-text?)>
+<!ATTLIST endflag
+  imageref  CDATA       #IMPLIED
+>
+
+<!--doc:An element allowed inside either startflag or endflag to provide alternate text for an image, when the imageref attribute sets an image to be used for flagging.
+Category: DITAVAL elements-->
+<!ELEMENT alt-text (#PCDATA)>
+
+<!-- The style attribute should be a color value (either a name, or a SRGB value).
+     See below for the supported color names (taken from the XHTML DTD). -->
+<!--doc:Identifies a value in the rev attribute that should be flagged in some manner. Unlike the other conditional processing attributes, which can be used for both filtering and flagging, the rev attribute can only be used for flagging. There can be at most one occurrence of a "revprop" element for each attribute value specification (to avoid conflicting actions for the same attribute value).
+Category: DITAVAL elements-->
+<!ELEMENT revprop (startflag?, endflag?)>
+<!ATTLIST revprop
+  val		CDATA		#IMPLIED
+  action	(include|passthrough|flag)  #REQUIRED
+  changebar CDATA       #IMPLIED
+  color     CDATA       #IMPLIED
+  backcolor CDATA       #IMPLIED
+  style     CDATA       #IMPLIED
+  >
+
+<!-- There are 16 widely known color names with their sRGB values:
+
+    black  = #000000    green  = #008000
+    silver = #C0C0C0    lime   = #00FF00
+    gray   = #808080    olive  = #808000
+    white  = #FFFFFF    yellow = #FFFF00
+    maroon = #800000    navy   = #000080
+    red    = #FF0000    blue   = #0000FF
+    purple = #800080    teal   = #008080
+    fuchsia= #FF00FF    aqua   = #00FFFF
+-->
+

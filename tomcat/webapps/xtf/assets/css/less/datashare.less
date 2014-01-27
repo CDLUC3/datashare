@@ -1,0 +1,337 @@
+@import 'grid.less';
+@import 'button.less';
+
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+// @total-width: 100%;
+
+
+////////////
+// LAYOUT //
+////////////
+
+@ucsf_dark_blue: #036;
+@ucsf_light_blue: #9bc;
+@ucsf_red: #900;
+@ucsf_light_gray: #eee;
+@ucsf_dark_gray: #666;
+@ucsf_orange: #c60;
+@body_text: #333;
+
+@link_color: #12c;
+@link_active_color: #609;
+
+// #############################################################################
+
+html {
+   background: #f2f2f2;
+   color: @body_text;
+   font-size: 14px;
+}
+
+html, button, input, select, textarea { font-family: Helvetica, Arial, Verdana }
+
+body {
+   max-width: 960px;
+   margin: 0 auto;
+}
+
+a { text-decoration: none; color: @link_color }
+a:active, a:hover { text-decoration: underline; color: @link_active_color }
+h2 { color: black }
+
+// #############################################################################
+
+.header {
+   margin-top: 1em;
+   .header-ucsf { background: @ucsf_dark_gray }
+
+   .header-site {
+      .clearfix;
+      > * { line-height: 40px }
+      .header-site-name {
+	 padding: 0.6em 0;
+	 background: white;
+	 > * { margin: 0 0 0 35px; padding: 0 0 0 0; line-height: 100%; }
+	 @header_logo_image_width: 37px;
+	 h1, h1 a { font-size: 37px; color: @ucsf_dark_blue !important }
+	 h1 {
+	    background: url("../../img/logos/UCSF_DataShare_logo.37x30.png") no-repeat scroll 0 0 transparent;
+	    padding-left: @header_logo_image_width + 17;
+	 }
+	 .header-site-description { color: desaturate(@ucsf_dark_blue, 50%); font-size: 18px; font-weight: normal; padding-left: @header_logo_image_width + 19 }
+      }
+
+      .header-nav {
+	 .clearfix();
+	 > * { font-size: 14px; line-height: 30px  }
+	 background: @ucsf_dark_gray;
+	 .menu {
+	    .column(8);
+	    ul {
+	       list-style-type: none;
+	       padding: 0;
+	       margin: 0 0 0 35px;
+	       li {
+		  float: left;
+		  margin: 0 1em 0 0;
+		  padding: 0;
+		  a { color: white }
+	       }
+	    }
+	 }
+	 .header-search-block {
+	    .column(4);
+	    text-align: right;
+	    input[type="text"] { max-width: 10em }
+	 }
+      }
+   }
+}
+
+.content {
+   .clearfix();
+   padding-top: 1em;
+   padding-bottom: 1em;
+
+   &.content-longtext {
+      max-width: 70%;
+      margin: 0 auto;
+      p { margin-left: 1em }
+   }
+
+   &.content-home {
+      .main-row {
+	 .clearfix();
+	 text-align: center;
+	 .find-data, .share-data { .column(6); }
+
+	 h2 { font-size: 36px; color: black !important; margin: 0.3em 0 0.7em 0 }
+	 h2 img { max-height: 28px }
+	 h3 { font-size: 28px; color: black; margin: 0 0 0.3em 0; padding: 0 }
+	 h4 { font-size: 20px; color: black; margin: 0 0 0.3em 1em; padding: 0 }
+
+	 .find-data {
+	    .home-search-block {
+	       display:-moz-inline-stack;
+	       display:inline-block;
+	       zoom:1;
+	       *display:inline;
+	       margin-bottom: 3em;
+	       input { font-size: 130% }
+	       .advanced-search-link { font-size: 70%; text-align: right; font-style: italic }
+	       form {
+		  background: #9595B2;
+		  padding: 0.8em;
+	       }
+	    }
+	 }
+
+	 .share-data {
+	    .upload-link {
+	       margin-top: 2.8em;
+	       margin-bottom: 5em;
+	       a { .btn_params(220); font-size: 120%; font-weight: bold; }
+	    }
+	 }
+      }
+
+      .promo-row {
+	 text-align: center;
+	 .featured-data, .featured-sharer {
+	    .column(6);
+	    margin-top: 1em;
+	    .promo-box {
+	       width: 70%;
+	       min-height: 12em;
+	    }
+	 }
+      }
+
+   }
+
+   &.content-dataset {
+      .dataset-description {
+	 ._dl_horizontal_container();
+	 .column(7);
+      }
+      .dataset-actions {
+	 .column(3); .push(1);
+	 .dataset-action-buttons a { margin-bottom: 1em; font-weight: bold; display: block }
+	 .dataset-action-download { .btn_params(220) }
+	 .dataset-action-cite     { .btn_params(130) }
+      }
+   }
+
+   &.content-search {
+      .clearfix();
+
+      // set up left and right columns
+      .search-refine  { .column(3); }
+      .search-results { .column(9) }
+
+      @search_controls_background: #ddd;
+      .search-controls {
+	 padding: 0.3em;
+	 margin-bottom: 1em;
+	 background: @search_controls_background;
+	 .active { font-weight: bold; text-decoration: underline }
+	 a, .active { margin: 0 0.3em }
+      }
+      .search-refine-controls {
+	 padding: 0.2em;
+	 display: inline-block;
+	 background: @search_controls_background;
+	 overflow: hidden;
+
+	 div.facetName { font-weight: bold; margin: 10px 0; font-size: 95%; }
+	 div.facet table { border-style: none; }
+	 div.facet table td.col1 { width: 12px; text-align: center; vertical-align: middle; padding-right: 0.5em; color: #6699CC; }
+	 div.facet table td.col2 { padding-bottom: 0.1em; padding-top: 0.1em; }
+	 div.facet table td.col3 { text-align: right; color: #888; padding-left: 0.4em; }
+	 div.facetMore { margin-top: 0.5em; margin-left: 2em; }
+	 div.facetLess { margin-left: 2em; margin-bottom: 0.5em; }
+	 div.facetGroup { font-size: 95%; }
+
+      }
+   }
+
+   // used on multiple pages
+   .search-result {
+      padding: 0.5em;
+      margin-bottom: 1em;
+      h3 {
+	 margin: 0 0 0.2em 0;
+	 a { text-decoration: underline; }
+      }
+      ul {
+	 margin: 0 0 0 2em;
+	 padding: 0;
+	 li {
+	    line-height: 110%;
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	 }
+      }
+   }
+
+   &.content-contact {
+      ._dl_horizontal_container(12em);
+   }
+
+   &.content-upload {
+      .upload-apply {
+	 .column(8);
+	 ._dl_horizontal_container(12em);
+	 form {
+	    margin-top: 4em;
+	    input[type="text"], textarea { min-width: 24em }
+	 }
+      }
+      .upload-promo {
+	 .column(4);
+      }
+   }
+
+   &.content-researchgroup {
+      .researchgroup-datasets { .column(6) }
+      .researchgroup-about { .column(6) }
+      h3 { margin-bottom: 0 }
+      .researchgroup-url { margin: 0; padding: 0; font-color: @ucsf_dark_blue; font-size: 80% }
+      .researchgroup-image { float: right; max-width: 50%; margin: 1em 0 0.6em 0.6em; border: 1px solid @ucsf_dark_gray }
+   }
+}
+
+// #############################################################################
+
+.promo-box {
+   text-align: left;
+   display: inline-block;
+   padding: 0.5em 1em;
+   background-color: lighten(@ucsf_light_blue, 20%);
+   border: 1px solid #eee;
+   border: 1px solid rgba(0, 0, 0, 0.05);
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+   img.headshot { max-width: 60px; float: left; padding-right: 2em; padding-bottom: 0.5em }
+   &:first-child { padding-top: 0; margin-top: 0 }
+   &:last-child { padding-bottom: 10; margin-bottom: 0 }
+}
+
+// #############################################################################
+
+// mixin
+._dl_horizontal_container (@dt_width: 8em) {
+   dl { .clearfix; margin: 0 0 1em 0 }
+   dt, dd { line-height: 115%; margin-bottom: 0.7em; }
+   dt {
+      font-weight: bold;
+      color: black;
+      float: left;
+      width: @dt_width;
+      overflow: hidden;
+      clear: left;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &:after { content: ":" }
+   }
+   dd {
+      margin-left: @dt_width + 1.5;
+      a:after, span:after { content:", "; }
+      & span:last-child:after { content: none }
+      & a:last-child:after { content: none }
+   }
+}
+
+.collapsible {
+   .collapse-control {
+      .indicator:after { content: "▹ "; }
+      &.active .indicator:after { content: "▿ " }
+   }
+   .collapse-content {
+      margin: 0.3em 0 0 0
+   }
+}
+
+.footer {
+   .clearfix();
+   margin-top: 1em;
+   padding: 0.5em 0;
+   border-top: 4px solid @ucsf_dark_gray;
+   background: white;
+
+   .links {
+      .column(3);
+      line-height: 40px;
+   }
+   .links > a {
+      font-size: 110%;
+      font-weight: bold;
+      margin-left: 1em;
+   }
+   .credits-info {
+      .column(4);
+      text-align: left;
+      font-size: 11px;
+      a { font-weight: bold }
+   }
+   .credits-logos {
+      .column(5);
+      text-align: right;
+      img {
+	 margin-left: 1em;
+	 max-height: 40px;
+      }
+   }
+}

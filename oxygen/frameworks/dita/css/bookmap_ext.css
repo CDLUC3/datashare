@@ -1,0 +1,120 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/* DITA bookmap elements using extensions*/
+bookmap:before {
+    content: capitalize(local-name());
+}
+
+part:before,
+chapter:before,
+appendix:before{
+    content: capitalize(local-name()) " href=" attr(href);
+}
+
+bookmap > booktitle:before,
+bookmap > frontmatter:before, 
+bookmap > backmatter:before {
+    content: capitalize(local-name());
+}
+
+publisherinformation:before,
+person:before,
+organization:before,
+printlocation:before,
+published:before,
+publishtype:before,
+revisionid:before,
+started:before,
+year:before,
+month:before,
+day:before,
+completed:before,
+bookid:before,
+bookpartno:before,
+edition:before,
+isbn:before,
+booknumber:before,
+volume:before,
+maintainer:before,
+bookchangehistory:before,
+reviewed:before,
+edited:before,
+tested:before,
+approved:before,
+bookevent:before,
+bookeventtype:before,
+bookrights:before,
+copyrfirst:before,
+copyrlast:before,
+bookowner:before,
+bookrestriction:before,
+summary:before {
+    display:inline;
+    content: capitalize(local-name());
+    font-size: smaller;
+    font-weight: bold;
+    color: #333333;
+    background-color:inherit;
+}
+
+bookeventtype {
+    content: capitalize(local-name()) " name="  attr(name);
+    color: #333333;
+    background-color:inherit;
+}
+
+publishtype,
+bookrestriction {
+    content: capitalize(local-name()) " value="  attr(value);
+    color: #333333;
+    background-color:inherit;
+}
+
+notices:before,
+dedication:before,
+colophon:before,
+bookabstract:before,
+draftintro:before,
+preface:before {
+    content: capitalize(local-name()) " href=" attr(href);
+}
+
+bookmap:before {
+   content: capitalize(local-name());
+}
+
+part:before {
+    content: capitalize(local-name());
+}
+
+chapter:before,
+appendix:before {
+   content: capitalize(local-name());
+}
+
+toc:before,
+figurelist:before,
+tablelist:before,
+abbrevlist:before,
+trademarklist:before,
+bibliolist:before,
+indexlist:before,
+booklist:before,
+booklists:before {
+    display: inline;
+    color: #333333;
+    background-color:inherit;
+    content: capitalize(local-name());
+}
+
+glossarylist:before {
+    content: capitalize(local-name());
+}
+
+dedication:before,
+colophon:before,
+amendments:before,
+bookabstract:before {
+    content: capitalize(local-name());
+}

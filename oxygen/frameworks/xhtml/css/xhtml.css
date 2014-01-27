@@ -1,0 +1,910 @@
+@import "html_cals_table.css";
+@import "links.css";
+
+/*Defines an anchor*/
+a {
+    display:inline;
+    text-decoration:underline;
+    color:navy;
+    background-color:inherit;
+}
+
+a[name]:after,
+a[id]:after { 
+    content: url("img/a_name.gif"); 
+    vertical-align: text-top;
+}
+
+/*
+    The 'abbr' tag indicates an abbreviated form, 
+    like "Inc.", "etc.".
+*/
+abbr,
+/*    
+    The 'acronim' tag defines the start of an acronym, 
+    like "NATO".
+*/
+acronym {
+    display:inline;
+    font-weight:bold;
+}
+
+/*
+    The 'address' tag defines the start of an address.
+*/
+address {
+    display: block;
+    font-style: italic; 
+    margin-top: 1.1ex ;
+}
+
+/*
+    Defines an embedded applet, or another object.
+*/
+applet:before{
+    content: "Applet: width=\"" attr(width) "\", height=\"" attr(height) "\"";
+    color:gray;
+    background-color: inherit;
+    font-weight:bold;
+}
+object:before{
+    content: "Object: width=\"" attr(width) "\", height=\"" attr(height) "\"";
+    color:gray;
+    background-color: inherit;
+    font-weight:bold;
+}
+
+applet,
+object{
+    display: block;
+    color: inherit;
+    background-color:#FFFFDD;
+    border:1px solid gray;
+    padding: 2px;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+applet > param:before,
+object > param:before
+{
+    content: "Parameter name=\"" attr(name) "\", value=\"" attr(value) "\"";
+    color:gray;
+    background-color:inherit;    
+}
+applet > param
+object > param{
+    display:list-item;
+    list-style-type:square;
+    margin-left:2em;
+}
+
+/*
+    Renders as bold text
+*/
+b {
+    font-weight:bold;
+}
+
+/*
+    Renders as bigger text
+*/
+big {
+    font-size:larger;
+}
+
+/*
+    Defines the start of a long quotation.
+*/
+blockquote{
+    display:block;
+    margin:1em 4em;
+}
+blockquote:before,
+blockquote:after{
+    color:gray;
+    background-color:inherit;
+    font-size: 1.2em;
+}
+blockquote:before{
+    content:open-quote;
+}
+blockquote:after{
+    content:close-quote;
+}
+
+base,
+meta,
+/*
+    This element defines the relationship 
+    between two linked documents.
+*/
+link,
+style,
+script{
+    font-family:monospace;
+    font-size:smaller;
+    display:block;
+    background-color:#EEEEFF;
+    color:inherit;
+    border:1px solid #CCCCEE;
+    margin:1px 0;
+    
+}
+
+base:before{
+    content:"Base: href=" attr(href);
+    font-weight:bold;
+}
+
+meta:before{
+    content:"Meta: name=" attr(name);
+    font-weight:bold;
+}
+
+meta[content]:before{
+    content:"Meta: name=" attr(name) " content=" attr(content);
+    font-weight:bold;
+}
+
+
+link[href]:before{
+    content:"Link: href=" attr(href);
+    font-weight:bold;
+}
+
+link[href][style]:before{
+    content:"Link: href=" attr(href) " style=" attr(style);
+    font-weight:bold;
+}
+
+script[type]:before{
+    content:"Script: type=" attr(type);
+    font-weight:bold;
+}
+script[type][src]:before{
+    content:"Script: type=" attr(type) " src=" attr(src);
+    font-weight:bold;
+}
+style[type]:before{
+    content:"Style: type=" attr(type);
+    font-weight:bold;
+}
+style, script {    
+    white-space:pre;
+}
+
+
+/* 
+    Defines the documents' body. It contains all the 
+    contents of the document (like text, images, colors, 
+    graphics, etc.). */
+body {
+    display:block;
+}
+
+body[background] {
+    background-image: attr(background, url);
+}
+
+body[bgcolor] {
+    background-color: attr(bgcolor, color);
+}
+
+body[text] {
+    color: attr(text, color);
+}
+
+
+/*
+    Defines a base font.
+*/
+basefont { 
+    content: "basefont=\"" attr(size)  "\"";
+    font-size: small;
+    color: gray;
+    background-color:inherit;
+}
+
+/*
+    The bdo element overrides the default text direction.
+*/
+bdo:before,
+bdo:after{
+    display:inline;
+    background-color:#CCEECC;
+    border:1px solid #CCFFCC;
+    color:inherit;
+    padding:2px;
+}
+bdo:before {
+    content: "[bdo " attr(rtl);
+}
+bdo:after {
+    content: "]";
+}
+
+/*
+    The <br> tag inserts a single line break. 
+*/
+br {
+    display:block;
+}
+br:after{
+    content:"";
+}
+
+/*
+    Button in a form.
+*/
+button {
+    display: inline;
+    text-align: center;
+    border:2px outset silver;
+    background-color: #DDDDDD;
+    color:black;
+    padding:2px;
+}
+
+
+/*
+    Centers its enclosed text horizontally.
+*/
+center {
+    display: block;
+    text-align:center;
+}
+
+/*
+    Defines a citation.
+*/
+cite {
+    display:inline;
+    font-style:italic;
+}
+
+/*
+    Program code.
+*/
+code {
+    font-family:monospace;
+    font-size:smaller;
+}
+
+col {
+    display: table-column;
+}
+
+/*
+    Defines groups of table columns. 
+    With this element, you can 
+    group columns for formatting. 
+*/
+colgroup {
+    display: table-column-group;
+}
+
+/*
+    The <dd> tag defines the 
+    description of a term in 
+    a definition list.
+*/
+dd{
+    display:block;
+    margin: 0.5em 3em;
+}
+
+dl{
+    display:block;
+}
+/*
+    The <dt> tag defines the 
+    start of a term in a 
+    definition list. 
+*/
+dt{
+    display:block;
+    margin: 0.5em 1em;
+    font-weight:bold;
+}
+
+/*
+    Defines text that has been deleted in a document.
+*/
+del{
+    display:inline;
+    text-decoration:line-through;
+}
+
+/*
+    Defines a definition term.
+*/
+dfn {
+    font-style:italic;
+}
+
+/*
+    The <dir> tag defines a directory list.
+*/
+dir {
+    display:block;
+    margin-left:2em;
+}
+dir > li {
+    display:list-item;
+    list-style-type:disc;
+}
+
+/*
+    The <div> tag defines a division/section in a document.
+*/
+div {
+    display:block;
+}
+
+/*
+    Renders as emphasized text.
+*/
+em{
+    font-style: italic;
+}
+
+/*
+    The fieldset element draws 
+    a box around its containing elements.
+*/
+fieldset {
+    display:block;
+    border: 1px solid navy;
+    padding: 3px;
+    margin:0.5em 0;
+}
+
+/*
+    The <font> tag specifies the font face, 
+    font size, and font color of text.
+*/
+font{
+    display:inline;
+}
+font[color] {
+    color: attr(color, color);
+}
+font[face] {
+    font-family: attr(face);
+}
+
+font[size="1"] {
+    font-size: x-small;
+}
+font[size="2"] {
+    font-size: small;
+}
+font[size="3"] {
+    font-size: medium;
+}
+font[size="4"] {
+    font-size: large;
+}
+font[size="5"] {
+    font-size: x-large;
+}
+font[size="6"],
+font[size="7"] {
+    font-size: xx-large;
+}
+font[size="-3"],
+font[size="-2"],
+font[size="-1"] {
+    font-size: smaller;
+}
+font[size="+1"],
+font[size="+2"],
+font[size="+3"] {
+    font-size: larger;
+}
+
+/*
+    The form element creates a form 
+    for user input. A form can contain 
+    textfields, checkboxes, radio-buttons and 
+    more. Forms are used to pass user-data 
+    to a specified URL.
+*/
+form {
+    display:block;
+    margin:1em 0;
+}
+
+/*TODO - check this.*/
+frame{
+    display:block;
+    border:1px solid silver;
+}
+frame:before {
+    content: "Frame: href=" attr(href);
+    color:gray;
+    background-color:inherit;    
+}
+frameset{
+    display:block;
+    border:1px solid gray;
+    padding:2px;
+}
+
+/*
+    Contains metainformation.
+*/
+head{
+    display: block;
+}
+
+/*
+    Headings.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {    
+    display:block;
+    font-weight:bold;
+    color:#004477;
+    background-color:inherit;
+}
+
+h1 {
+    font-size: 2em;
+    margin:1em 0;
+}
+
+h2 {
+    font-size: 1.75em;
+    margin:0.75em 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin:0.5em 0;
+}
+
+h4 {
+    font-size: 1.25em;
+    margin: 0.5em 0;
+}
+
+h5 {
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+h6 {
+    font-size: .75em;
+    margin: 0.5em 0;
+}
+
+/*
+    The <hr> tag inserts a horizontal rule.
+*/
+hr {
+    display:block;
+    border:1px inset silver;
+    margin:0.5em 0;
+    content:"";
+}
+
+/*
+    The root element.
+*/
+html {
+    display:block;
+}
+
+
+/*
+    Renders as italic text
+*/
+i {
+    font-style:italic;
+}
+
+/*
+    An inline frame.
+*/
+iframe:before {
+    display:inline;
+    content: "Iframe: src=" attr(src);
+    color:gray;
+    background-color:inherit;
+}
+
+/*
+    The img element defines an image.
+*/
+img {
+    display: inline;
+    content: attr(src,url);
+}
+
+
+/*
+    The <input> tag defines the start of an input 
+    field where the user can enter data.
+*/
+input {
+    display:inline;
+    border:1px solid gray;
+    padding:0 3em;
+    color:gray;
+    background-color:white;
+    font-size:smaller;
+}
+input:before{
+    content:attr(value) "  ";
+}
+
+input[type=submit],
+input[type=button]{
+    display:inline;
+    border-style:outset;
+    background-color:silver;
+    color:black;
+}
+
+input[type=submit]:before,
+input[type=button]:before{
+    content:attr(value);
+}
+
+
+/*
+    Inserted text.
+*/
+ins {
+    text-decoration: underline;
+}
+
+/*
+    Defines keyboard text.
+*/
+kbd {
+    font-family:monospace;
+    font-size:smaller;
+}
+
+/*
+    Defines a label to a control. 
+*/
+label {
+    display: inline;
+    font-weight: bold;
+}
+
+/*
+    The legend defines a caption for a fieldset.
+*/
+legend {
+    display: block;
+    background-color: silver;
+    color:inherit;
+    font-weight: bold;
+    padding: 2px;
+    margin-bottom:2px;
+}
+
+
+/*Defines a client-side image-map. An image-map is an image with clickable regions.*/
+map:before {
+    content: "Map: id=\"" attr(id) "\"";
+    color:gray;
+    background-color:inherit;
+    font-weight:bold;
+}
+map[name]:before {
+    content: "Map: id=\"" attr(id) "\", name=\"" attr(name) "\"";
+    color:gray;
+    background-color:inherit;
+    font-weight:bold;
+}
+map {
+    display: block;
+    color: inherit;
+    background-color:#FFFFDD;
+    border:1px solid gray;
+    padding: 2px;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
+/*
+    Defines a region in an image map.
+*/
+map > area {
+    display:list-item;
+    list-style-type:square;
+    margin-left: 2em;
+}
+
+map > area:before {
+    content: "alt=\"" attr(alt) "\"" " href=\"" attr(href) "\"";
+    color:gray;
+    background-color:inherit;
+}
+
+/*
+    The menu tag defines a list.
+*/
+menu {
+    display:block;
+    margin-left:2em;
+}
+menu > li {
+    display:list-item;
+    list-style-type:disc;
+}
+
+/* 
+    Section displayed when the browser does not 
+    support the frames.
+*/
+noframes {
+    display:block;
+}
+
+
+noscript {
+    display:block;
+    background-color:#FFEEEE;
+    color:inherit;
+}
+
+ol {
+    display:block;
+    counter-reset:licount;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+
+ol > li {
+    display:block;    
+    margin-left: 2em;
+}
+
+/*
+    Prefixes the list items.
+*/
+ol > li:before {
+    content: counter(licount) ". ";
+    counter-increment:licount;
+}
+ol[type=a] > li:before {
+    content: counter(licount, lower-alpha) ". ";
+}
+ol[type=A] > li:before {
+    content: counter(licount, upper-alpha) ". ";
+}
+ol[type=i] > li:before {
+    content: counter(licount, lower-roman) ". ";
+}
+ol[type=I] > li:before {
+    content: counter(licount, upper-roman) ". ";
+}
+
+ol ol,
+ul ol,
+ul ul,
+ol lu{
+    margin-top:0em;
+    margin-bottom:0em;
+}
+
+/*
+    Defines an option group. This element allows you to group choices.
+*/
+optgroup{
+    display:block;
+    margin:1ex;
+    border:1px solid silver; 
+    padding:2px;
+}
+optgroup:before{
+    color:gray;
+    background-color:inherit;
+    font-size:small;
+    content: "Option group label=" attr(label);
+}
+option{
+    display:list-item;
+    margin:0 2em;
+}
+option:after{
+    content: " - " attr(value);
+    color:gray;
+    background-color:inherit;    
+    font-size:small;
+}
+select {
+    display:block;
+    border-style:ridge;
+    border-color:silver;
+}
+
+/*
+    The paragraph.
+*/
+p{ 
+    display: block;
+    margin: 0.5ex 0;
+}
+p[align=center]{
+    text-align:center;
+}
+p[align=left]{
+    text-align:left;
+}
+p[align=right]{
+    text-align:right;
+}
+
+/* 
+    We do not support justified text.
+
+p[align=justify]{
+    text-align:justify;
+}
+*/
+/*
+    Preformatted sections.
+*/
+pre {
+    font-family:monospace;
+    font-size:smaller;
+    white-space: pre;
+}
+
+/* 
+    A small quotation.
+*/
+q{
+    font-style:italic;
+}
+q:before{
+    content:open-quote;
+    color:gray;
+    background-color:inherit;
+}
+q:after{
+    content:close-quote;
+    color:gray;
+    background-color:inherit;    
+}
+
+/*
+    Renders as smaller text
+*/
+small{
+    font-size: smaller;
+}
+
+strike,
+s{
+    text-decoration: line-through;
+}
+
+/*
+    Defines sample computer code
+*/
+samp{
+    font-family:monospace;
+    font-size:smaller;
+}
+
+span{
+    display:inline;
+}
+span:before{
+    content:"{";
+    color:gray;
+    background-color:inherit;
+}
+span:after{
+    content:"}";
+    color:gray;
+    background-color:inherit;
+}
+
+/*
+    Strong text.
+*/
+strong { 
+    font-weight: bold; 
+}
+
+/*
+    Subscript.
+*/
+sub {
+    vertical-align: sub;
+    font-size:small;
+}
+
+/*
+    Superscript.
+*/
+sup {
+    vertical-align: super;
+    font-size:small;    
+}
+
+textarea {
+    font-family:  monospace;
+    font-size:smaller;
+    display:block;
+    margin:1em;
+    border:2px inset silver;
+    padding:1px;
+}
+
+
+
+
+/*
+    Renders as teletype or mono spaced text
+*/
+tt{
+    font-family: monospace;
+    font-size:smaller;
+}
+
+/*
+    The title of the page.
+*/
+title {
+    display:block;
+    font-weight:bold;
+    color:#004477;
+    background-color:inherit;
+    font-size: 2.2em;
+    margin: 1em 0;
+    border-bottom: 2px solid #004477;    
+}
+
+/*
+    Underlined text.
+*/
+u{
+    text-decoration:underline;
+}
+
+/*
+    Unordered list.
+*/
+ul {
+    display:block;
+    counter-reset:licount;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+
+ul > li {
+    display:list-item;
+    list-style-type:disc;
+    margin-left: 2em;
+}
+
+ul > li ul > li {
+    list-style-type:square;
+}
+ul > li ul > li ul > li {
+    list-style-type:circle;
+}
+ul > li ul > li ul > li ul > li {
+    list-style-type:disc;
+}
+
+/*
+    Defines a variable.
+*/
+var {
+    font-style:italic;
+}

@@ -1,0 +1,7 @@
+ucsf_datashare	producer/mrt-dc.xml	ark:/b7272/q6mw2f2n	doi:10.7272/Q6MW2F2N	3 Gb	1
+ucsf_datashare	producer/mrt-dc.xml	ark:/b7272/q6rn35sz	doi:10.7272/Q6RN35SZ	2.3 Gb	1
+ucsf_datashare	producer/mrt-dc.xml	ark:/b7272/q6154f00	doi:10.7272/Q6154F00	8.9 Mb	1
+ucsf_datashare	producer/mrt-dc.xml	ark:/b7272/q6h41pb7	doi:10.7272/Q6H41PB7	350.5 Mb	1
+ucsf_datashare	producer/mrt-dc.xml	ark:/b7272/q6cc0xmh	doi:10.7272/Q6CC0XMH	278.9 Mb	1
+ucsf_datashare	producer/mrt-dc.xml	ark:/b7272/q67p8w9z	doi:10.7272/Q67P8W9Z	380.3 Mb	1
+ucsf_datashare	producer/mrt-dc.xml	ark:/b7272/q6057cv6	doi:10.7272/Q6057CV6	4 Gb	2

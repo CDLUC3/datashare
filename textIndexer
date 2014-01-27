@@ -1,0 +1,2 @@
+source setVars.sh
+"$XTF_HOME/bin/textIndexer" $*

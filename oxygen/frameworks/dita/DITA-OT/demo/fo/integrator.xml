@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <target name="dita2pdf2" depends="dita-preprocess, map2pdf2, topic2pdf2"/> 
+  
+  <target name="topic2pdf2" if="noMap" depends="dita-preprocess">
+	<ant dir="${dita.dir}/demo/fo" target="preview.topic.pdf">
+		<property name="caller.dir" value="${basedir}"/>
+	</ant>
+  </target>
+
+  <target name="map2pdf2" unless="noMap" depends="dita-preprocess">
+    <pipeline message="topicmerge" module="TopicMerge"
+              inputmap="${dita.temp.dir}${file.separator}${user.input.file}"
+              extparam="output=${dita.temp.dir}${file.separator}${dita.map.filename.root}_MERGED.xml;style=${dita.dir}/demo/fo/xsl/common/topicmerge.xsl">
+    </pipeline>
+
+    <ant dir="${dita.dir}/demo/fo" target="publish.map.pdf">
+        <property name="caller.dir" value="${basedir}"/>
+    </ant>
+  </target>
+</project>

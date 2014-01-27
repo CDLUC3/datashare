@@ -1,0 +1,230 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/*
+===============================
+    Programming elements. [pr-d]
+===============================
+*/
+codeblock{
+    display:block;
+    font-family:monospace;
+    white-space:pre;
+    margin:0.8em 0;
+    padding:2px;
+    background-color: #e0e0e0;
+	color:black;
+    border: thin solid gray; 
+}
+
+codeph{
+    display:inline;
+    font-family:monospace;
+}
+
+option{
+    display:inline;
+    font-weight:bold;
+}
+
+apiname,
+paramname {
+    display:inline;
+    font-family:monospace;
+}
+
+parmname{
+    font-style:italic;
+}
+
+/*
+    The parameter list (<parml>) element contains 
+    a list of terms and definitions that describes 
+    the parameters in an application programming interface.
+*/
+paraml{
+    display:block;
+    margin-left:1em;
+    margin-top:0.8em;
+    margin-bottom:0.8em;
+}
+
+plentry{
+    display:block;
+    margin:0.3em 0;
+}
+
+pt {
+    display:block;
+    font-weight:bold;
+}
+
+pd {
+    display:block;
+    margin-left: 2em;
+}
+
+/*
+======================
+    Syntax.
+======================
+*/
+
+/*
+    The syntax diagram (<syntaxdiagram>) 
+    element is the main container for all 
+    the syntax elements that make up a 
+    syntax definition. 
+*/
+
+syntaxdiagram {
+    display: block;
+    margin-left: 16ex;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex;
+}
+
+
+/*
+    The syntax block (<synblk>) element 
+    organizes small pieces of a syntax 
+    definition into a larger piece. 
+*/
+synblk,
+groupseq,
+groupchoice,
+groupcomp,
+synnote,
+synnoteref,
+fragref,
+fragment{
+    display:block;
+    margin-left:9em;
+}
+
+syntaxdiagram:before {
+    content: "Syntax Diagram: ";
+}
+synblk:before {
+    content: "Syntax Block: ";
+}
+
+groupseq:before {
+    content: "Group Sequence: ";
+}
+groupchoice:before {
+    content: "Group Choice: ";
+}
+groupcomp:before {
+    content: "Group Composite: ";
+}
+
+fragment:before {
+    content: "Fragment: ";
+}
+fragref:before {
+    content: url("../img/link.png") " Fragment reference: ";
+}
+
+synnoteref:before {
+    content: url("../img/link.png") " Syntax Note Reference:";
+}
+synnote:before {
+    content: "Syntax Note: ";
+}
+
+syntaxdiagram:before,
+synblk:before,
+groupseq:before,
+groupchoice:before,
+groupcomp:before,
+fragment:before,
+synnote:before,
+fragref:before,
+synnoteref:before {
+    font-weight: bold;
+    color: #444444;
+    background-color:inherit;
+}
+
+fragref {
+    color: navy;
+    background-color: inherit;
+    text-decoration: underline;
+}
+
+fragref:after,
+synnoteref:after {
+    content: "[" attr(href) "]";
+    font-size: small;
+    color: gray;
+    background-color:inherit;
+}
+
+/*
+    The character must be used between 
+    repetitions of the syntax elements.
+*/
+repsep:before{
+    content: "(";
+}
+repsep:after {
+    content: ")";
+}
+
+/*
+    Operators, keywords, variables, delimiters and separators.
+*/
+sep{
+    display:inline;
+    color:#333399;
+    background-color:inherit;
+}
+
+kwd{
+    display:inline;
+    font-weight:bold;
+    color:#000033;
+    background-color:inherit;
+}
+
+var{
+    display:inline;
+    font-style:italic;    
+}
+
+oper{
+    display:inline;
+    color:#339933;
+    background-color:inherit;
+}
+
+delim{
+    display:inline;
+    color:#993333;
+    background-color:inherit;
+}
+
+
+/*
+    Places some spaces between the syntax inlines.
+*/
+sep:before,
+kwd:before,
+var:before,
+oper:before,
+delim:before{
+    content: " ";
+}
+
+sep:first-child:before,
+kwd:first-child:before,
+var:first-child:before,
+oper:first-child:before,
+delim:first-child:before{
+    content: "";
+}
+
+synph{
+    display:inline;
+}

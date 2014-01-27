@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE AAA SYSTEM "name.dtd">
+<?oxygen SCHSchema="name.sch"?>
+<AAA name="aaa">
+    <BBB id="bbb"/>
+    <CCC color="ccc"/>
+</AAA>

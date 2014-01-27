@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE AAA SYSTEM "present.dtd">
+<?oxygen SCHSchema="present.sch"?>
+<AAA>
+     <BBB>
+          <CCC/>
+          <CCC/>
+     </BBB>
+     <CCC name="c1"/>
+     <CCC name="c2"/>
+</AAA>

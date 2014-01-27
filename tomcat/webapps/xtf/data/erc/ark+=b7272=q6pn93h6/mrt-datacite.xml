@@ -1,0 +1,52 @@
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/q6pn93h6</identifier>
+<creators>
+<creator><creatorName>Creasman, Jennifer</creatorName></creator>
+</creators>
+<titles>
+<title>Program to Reduce Incontinence through Diet and Exercise (PRIDE)</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2009</publicationYear>
+<subjects>
+<subject> Behavior Therapy </subject>
+<subject>Body Mass Index </subject>
+<subject>Combined Modality Therapy Diet</subject>
+<subject>Reducing Exercise </subject>
+<subject>Female</subject>
+<subject> Humans</subject>
+<subject> Middle Aged</subject>
+<subject> Obesity/complications</subject>
+<subject> Obesity/therapy</subject>
+<subject>Overweight/complications </subject>
+<subject>Overweight/therapy</subject>
+<subject>Urinary Incontinence/complications</subject>
+<subject> Urinary Incontinence/therapy</subject>
+<subject>Weight Loss</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup"><contributorName>UCSF</contributorName></contributor>
+</contributors>
+<resourceType resourceTypeGeneral="Dataset">Dataset</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">19179316</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">Background
+Obesity is an established and modifiable risk factor for urinary incontinence, but conclusive evidence for a beneficial effect of weight loss on urinary incontinence is lacking.<br />
+Methods<br />
+We randomly assigned 338 overweight and obese women with at least 10 urinary incontinence episodes per week to an intensive 6-month weight-loss program that included diet, exercise, and behavior modification (226 patients) or to a structured education program (112 patients).<br />
+Results<br />
+The mean (±SD) age of the participants was 53±11 years. The body-mass index (the weight in kilograms divided by the square of the height in meters) (36±6) and the weekly number of incontinence episodes as recorded in a 7-day diary of voiding (24±18) were similar for both groups at baseline. The women in the intervention group had a mean weight loss of 8.0% (7.8 kg), as compared with 1.6% (1.5 kg) in the control group (P&lt;0.001). After 6 months, the mean weekly number of incontinence episodes decreased by 47% in the intervention group, as compared with 28% in the control group (P = 0.01). As compared with the control group, the intervention group had a greater decrease in the frequency of stress-incontinence episodes (P = 0.02), but not of urge-incontinence episodes (P = 0.14). A higher proportion of the intervention group than of the control group had a clinically relevant reduction of 70% or more in the frequency of all incontinence episodes (P&lt;0.001), stress-incontinence episodes (P = 0.009), and urge-incontinence episodes (P = 0.04).<br />
+Conclusions<br />
+A 6-month behavioral intervention targeting weight loss reduced the frequency of self-reported urinary-incontinence episodes among overweight and obese women as compared with a control group. A decrease in urinary incontinence may be another benefit among the extensive health improvements associated with moderate weight reduction. (ClinicalTrials.gov number, NCT00091988.)</description>
+<description descriptionType="Methods">Eligible participants were randomly assigned at a 2:1 ratio to an intensive 6-month behavioral weight-loss program or to a structured four-session education program (the control group). Randomization
+was performed with the use of randomly permuted blocks of three or six, stratified according to clinical center, with random assignment concealed in tamper-proof envelopes. The participants were aware of their treatment assignment, but the staff members who collected the outcome data were not.<br />
+The participants completed questionnaires concerning their demographic characteristics, medical and behavioral history, and history of incontinence that were routinely used by the investigators.<br />
+The participants were weighed to the nearest 0.5 kg on a calibrated digital scale (Tanita BWB 800) while wearing street clothes and without shoes. Height was measured at baseline to the nearest centimeter with the use of a calibrated, wall-mounted stadiometer and a horizontal measuring block.<br />
+The participants were trained to complete a 7-day diary of voiding (see the Supplementary Appendix, available with the full text of this article at NEJM.org), and interviewers reviewed the diaries with the participants to answer questions and reconcile inconsistencies.15,16 The participants recorded the time of each void and each incontinence episode. According to the instructions provided, the participants identified each episode as stress incontinence (involuntary loss of urine with coughing, sneezing, straining, or Weight Loss to Treat Urinary Incontinence n engl j med 360;5 nejm.org january 29, 2009 37 exercise), urge incontinence (loss of urine associated with a strong need or urge to void), or other. For the purposes of analysis, each woman was then classified as having stress-only incontinence, stress-predominant incontinence (i.e., at least two thirds of the total number of episodes were stress episodes), urge-only incontinence, urge-predominant continence (i.e., at least two thirds of the total number of episodes were urge episodes), or mixed incontinence (i.e., at least two types were reported, but no type constituted two
+thirds of the total number of episodes).</description>
+<description descriptionType="SeriesInformation">Weight loss to treat urinary incontinence in overweight and obese women.
+Subak LL, Wing R, West DS, Franklin F, Vittinghoff E, Creasman JM, Richter HE, Myers D, Burgio KL, Gorin AA, Macer J, Kusek JW, Grady D; PRIDE Investigators. N Engl J Med. 2009 Jan 29;360(5):481-90. doi: 10.1056/NEJMoa0806375. PMID: 19179316 [PubMed - indexed for MEDLINE] Free PMC Article</description>
+</descriptions>
+</resource>

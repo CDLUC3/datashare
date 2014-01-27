@@ -1,0 +1,8 @@
+#!/usr/bin/env perl
+
+use File::Spec;
+my ($vol, $dir, $file) = File::Spec->splitpath(File::Spec->rel2abs($0));
+push @INC, File::Spec->catpath($vol, $dir, '');
+require "classpath.pl";
+
+exec "java -classpath \"$classpath\" -Xms50m -Xmx500m -Dxtf.home=\"$home\" -enableassertions org.cdlib.xtf.textIndexer.IndexDump $args";

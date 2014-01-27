@@ -1,0 +1,112 @@
+END USER LICENSE AGREEMENT
+
+<oXygen/> XML Editor End User License Agreement
+
+IMPORTANT: THIS SOFTWARE END USER LICENSE AGREEMENT ("EULA") IS A LEGAL AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR, IF PURCHASED OR OTHERWISE ACQUIRES BY OR FOR AN ENTITY, A SINGLE LEGAL ENTITY) AND SYNCRO. READ IT CAREFULLY BEFORE COMPLETING THE INSTALLATION PROCESS AND USING THIS SOFTWARE. IT PROVIDES A LICENSE TO USE THIS SOFTWARE AND CONTAINS WARRANTY INFORMATION AND LIABILITY DISCLAIMERS. BY DOWNLOADING OR INSTALLING THE SOFTWARE YOU ARE INDICATING YOUR ASSENT TO THE TERMS OF THIS LICENSE. IF YOU DO NOT AGREE TO ALL OF THE FOLLOWING TERMS, DO NOT DOWNLOAD OR INSTALL THE SOFTWARE OR DISCONTINUE USE IMMEDIATELY AND DESTROY ALL COPIES.
+
+1. DEFINITION
+
+a) "Syncro" means Syncro Soft SRL.
+b) "Software" means the executable code of <oXygen/> XML Editor (software program for editing and processing XML documents) and corresponding documentation, printed materials, online or electronic documentation.
+c) "Named User" is an individual authorized by You to use the Software through the assignment of a single user ID, regardless of whether or not the individual is using the Software at any given time. A non-human operated device is counted as a Named User in addition to all individuals authorized to use the Software, if such device can access the Software. 
+
+2. LICENSE GRANTS
+
+2.1 Trial Period License. You may download and use the Software for free for thirty (30) days after installation ("Trial Period"). During the Trial Period, Syncro grants You a limited, non-exclusive, non-transferable, non-renewable license to copy and use the Software for evaluation purposes only and not for any commercial use. At Syncro discretion, Syncro may provide limited support through email or discussion forums at Syncro web site. The evaluation copy of the Software contains a feature that will automatically disable the Software at the end of Trial Period. Syncro will have no liability to you if this feature disables the Software.
+
+2.2 License After Trial Period. This Software is licensed, not sold. During Trial Period, You have the option of paying a license fee in order to use the Software after expiration of the Trial Period. The Software is available as Enterprise Edition, Professional Edition or Academic/Non-profit Edition. Upon your payment of the license fee, Syncro provides you with a permanent registration number ("License key") and grants you a limited, non-exclusive, non-transferable license to:
+a) use the Software on a Named User basis meaning specific individuals are authorized to access the Software and the total number of named users may not exceed the total number licensed by You. 
+b) copy the Software in machine-readable form solely for backup purposes.
+If you do not pay the license fee before the Trial Period expires, the present License will be immediately terminated and you lose any right to the Software.
+
+2.3 The Named User of the Software may install and use the Software on as many computers (including operating systems) as he or she likes.
+
+2.4 Academic/Non-profit Edition Software. Unlike Enterprise or Professional Edition that is available for commercial usage, the Academic Edition is available for academic and non-commercial purposes only. In order to use this edition,You must be a:
+a) full-time or part-time student attending colleges or universities.
+b) full-time or part-time faculty or staff employed by colleges and universities.
+c) non-profit organizations or individuals, excluding federal, provincial, or national government departments / agencies.
+
+2.5 An academic classroom license designed to support educators using the Software for classroom teaching is available on request.
+
+2.6 Floating License: If you are using the Software under the control of a Floating license, you may: 
+a) install the Software on an unlimited number of computers that are connected to the designated network (there has to be a TCP/IP connection between the machines)
+b) use the Software by no more than the authorized number of concurrent users. 
+A separate license is required for each additional concurrent user and/or network on which the Software is used. Syncro will provide you with a license code key that enables the Software for a Floating license up to the authorized number of concurrent users. 
+
+2.7 Certain rights are not granted under this Agreement, but may be available under a separate agreement. If you would like to enter into a distribution agreement contact Syncro (support@oxygenxml.com)
+
+3. LICENSE RESTRICTIONS
+
+3.1 You may not provide or make available by any means the License Key to any third party. You undertake to take such steps as are necessary in order to protect the License Key against unauthorized use.
+
+3.2 You may not alter, merge, modify, adapt or translate the Software, or decompile, reverse engineer, disassemble, or otherwise reduce the Software to a human-perceivable form.
+
+3.3 You may not sell, rent, lease, sublicense, transfer, resell for profit or otherwise distribute the Software or any part thereof.
+
+3.4 You may not modify the Software or create derivative works based upon the Software.
+
+3.5 You may not remove or obscure any copyright and trademark notices relating to the Software.
+
+4. OWNERSHIP AND INTELLECTUAL PROPERTY RIGHTS
+
+4.1 This Agreement gives you limited rights to use the Software. Syncro retain any and all rights, title and interest in and to the Software and all copies thereof, including copyrights, patents, trade secret rights, trademarks and other intellectual property rights. All rights not specifically granted in this Agreement, including International Copyrights, are reserved by Syncro. The structure, organization and code of the Software are valuable trade secrets and confidential information of Syncro.
+
+5. PATENT AND COPYRIGHT INDEMNITY
+
+5.1 Syncro will defend and indemnify You for all costs (including reasonable attorneys fees) arising from a claim that Software furnished and used within the scope of this Agreement infringes the copyright or other intellectual property rights of any third party, provided that:
+
+(i) You notify Syncro in writing within 30 days of the claim, (ii) Syncro has sole control of the defense and all related settlement negotiations, and (iii) You provide Syncro with the assistance, information, and authority necessary to perform the above.
+
+5.2 Syncro will have no liability for any claim of infringement based on (i) code contained within the Software which was not created by Syncro (ii) use of a superseded or altered release of the Software, except for such alteration(s) or modification(s) which have been made by Syncro or under Syncro' direction, if such infringement would have been avoided by the use of a current, unaltered release of the Software that Syncro provides to You, or (iii)the combination, operation, or use of any Software furnished under this Agreement with programs or data not furnished by Syncro if such infringement would have been avoided by the use of the Software without such programs or data.
+
+5.3 In the event the Software is held or believed by Syncro to infringe, or Your use of the Software is enjoined, Syncro will have the option, at its expense, to (i) modify the Software to cause it to become non-infringing, (ii) obtain for You a license to continue using the Software, (iii) substitute the Software with other Software reasonably suitable to You, or (iv) if none of the foregoing remedies are commercially feasible, terminate the license for the infringing Software and refund any license fees paid for the Software, prorated over a three-year term from the effective date of the Agreement. This Section states Syncro' entire liability for infringement.
+
+6. LIMITED WARRANTIES
+
+6.1 Syncro warrants that is holds the proper rights allowing it to license the Software and is not currently aware of any actions that may affect its rights to do so.
+
+6.2 THE SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, EXCEPT AS PROVIDED IN SECTION 5.1, SYNCRO MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTY OR MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. WITHOUT LIMITATION, YOU ASSUME SOLE RESPONSIBILITY FOR SELECTING THE SOFTWARE TO ACHIEVE YOUR INTENDED RESULTS AND FOR THE INSTALLATION, USE AND RESULTS OBTAINED FROM THE SOFTWARE. SYNCRO MAKES NO WARRANTY THAT THE SOFTWARE WILL BE ERROR FREE OR FREE FROM INTERRUPTIONS OR OTHER FAILURES. IN PARTICULAR, THE SOFTWARE IS NOT DESIGNED FOR USE IN HAZARDOUS ENVIRONMENTS REQUIRING FAIL-SAFE PERFORMANCE. SYNCRO EXPRESSLY DISCLAIMS ANY WARRANTY OF FITNESS FOR HIGH-RISK ACTIVITIES.
+
+7. NO REFUND
+
+7.1 Because the Software is provided free of charge during the Trial Period to allow potential customers to evaluate and test it before paying the license fee, Syncro enforces a strict no-refund policy. Please evaluate and test the Software carefully during the Trial Period. Once you pay the license fee, your payment is final and may not be reimbursed.
+
+8. MAINTENANCE PACK
+
+8.1 A Maintenance Pack is a time-limited right to technical support and Software updates and upgrades. Technical support only covers issues or questions resulting directly out of the operation of the Software and Syncro will not provide you with generic consultation, assistance, or advice under any circumstances.
+
+8.2 At any time prior to the expiration of your Maintenance Pack and 14 days after, you may purchase additional Maintenance Packs. Additional Maintenance Pack will extend the availability of your current Maintenance Pack. If you do not purchase any additional Maintenance Pack, you will lose the right to technical support and Software updates and upgrades as of the date your current Maintenance Pack expires. However, you will not lose the right to use the Software or the technical support,updates and upgrades provided free by Syncro.
+
+8.3 For customers that purchase or already own multiple licenses, a Maintenance Pack must be purchased for each license.
+
+8.4 Technical support is provided via electronic mail at the following address: support@oxygenxml.com, and by phone at +40-251-461480 during business hours 9AM to 6PM, GMT+2 time. Syncro will use its best efforts to provide you with technical support within forty-eight (48) business hours of your request. Please check our website to find our latest contact information.
+
+8.5 The latest information is provided on the web site at http://www.oxygenxml.com. Please refer to our web site for additional information regarding Maintenance Pack (prices, online purchase, etc.)
+
+9. LIMITATION OF LIABILITY
+
+9.1 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL SYNCRO OR ITS SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS OR CONFIDENTIAL OR OTHER INFORMATION, FOR BUSINESS INTERRUPTION, FOR PERSONAL INJURY, FOR LOSS OF PRIVACY, FOR FAILURE TO MEET ANY DUTY INCLUDING OF GOOD FAITH OR OF REASONABLE CARE, FOR NEGLIGENCE, AND FOR ANY OTHER PECUNIARY OR OTHER LOSS WHATSOEVER) ARISING OUT OF OR IN ANY WAY RELATED TO THE USE OR INABILITY TO USE THE SOFTWARE, THE PROVISION OF OR FAILURE TO PROVIDE SUPPORT SERVICES, OR OTHERWISE UNDER OR IN CONNECTION WITH ANY PROVISION OF THIS EULA, EVEN IN EVENT OF FAULT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, BREACH OF CONTRACT OR BREACH OF WARRANTY OF SYNCRO OR ANY SUPPLIER, AND EVEN IF SYNCRO OR ANY SUPPLIER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY CASE, SYNCRO ENTIRE LIABILITY UNDER ANY PROVISION OF THIS EULA SHALL BE LIMITED TO THE GREATER OF THE AMOUNT ACTUALLY PAID BY YOU FOR THE SOFTWARE OR U.S.$5.00.
+
+10 HIGH RISK ACTIVITIES
+
+10.1 The Software is not fault-tolerant and is not designed, manufactured or intended for use or resale as on-line control equipment in hazardous environments requiring fail-safe performance, such as in the operation of nuclear facilities, aircraft navigation or communication systems, air traffic control, direct life support machines, or weapons systems, in which the failure of the Software could lead directly to death, personal injury, or severe physical or environmental damage ("High Risk Activities"). Syncro and its suppliers specifically disclaim any express or implied warranty of fitness for High Risk Activities.
+
+11. THIRD PARTY SOFTWARE
+
+11.1 The Software may contain third party software that requires and/or additional terms and conditions. Such required third party software notices and/or additional terms and conditions are located at http://www.oxygenxml.com/thirdparty/index.html and are made a part of and incorporated by reference into this EULA. By accepting this EULA, You are also accepting the additional terms and conditions, if any, forth therein.
+
+12. DURATION
+
+12.1 This Agreement will terminate at the end of Trial Period unless You purchase an ongoing license by paying the license fee. In the event that You purchase an ongoing license prior to the end of the Trial Period, this Agreement shall remain in effect until terminated by either party. You may terminate the Agreement at any time by destroying all copies of the Software. Syncro may terminate the Agreement upon breach of your obligations under the present Agreement.
+
+13. GENERAL
+
+13.1 Syncro reserves the right at any time to cease the support of the Software and to alter prices, features, specifications, capabilities, functions, licensing terms, release dates, general availability or other characteristics of the Software.
+
+13.2 If any provision hereof shall be held illegal, invalid or unenforceable, in whole or in part, such provision shall be modified to the minimum extent necessary to make it legal, valid and enforceable, and the legality, validity and enforceability of all other provisions of this Agreement shall not be affected.
+
+13.3 This Agreement is to be governed by and construed in accordance with the laws and jurisdiction of the defending party. Each party for itself and its property, hereby submits to the jurisdiction and venue of the defending party in relation to any claim or dispute that may arise with respect to this Agreement and any judgment that may be rendered in connection with any such claim or dispute. Service of process upon either party shall be valid if served by registered or certified mail, return receipt requested and to the most current address provided by such party. The United Nations Convention on Contracts for the International Sale of Goods shall not apply to this Agreement.
+
+13.4 You may not assign this Agreement in whole or in part, without Syncro prior written consent. Any attempt by You to assign this Agreement without such consent will be null and void.
+
+13.5 This Agreement contains the entire agreement between Syncro and You related to the software and supersedes all prior agreements and understandings, whether oral or written. All questions concerning this Agreement shall be directed to support@oxygenxml.com 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<links xmlns="http://titanium.dstc.edu.au/xml/xs3p">
+    <schema file-location="schemaNS1-master.xsd" docfile-location="schemaNS1-master.html"/>
+    <schema file-location="schemaNS1-part1.xsd" docfile-location="schemaNS1-part1.html"/>
+    <schema file-location="schemaNS1-part2.xsd" docfile-location="schemaNS1-part2.html"/>
+    <schema file-location="schemaNS2.xsd" docfile-location="schemaNS2.html"/>
+</links>

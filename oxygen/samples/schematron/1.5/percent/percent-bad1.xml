@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Total SYSTEM "percent.dtd">
+<?oxygen SCHSchema="percent.sch"?>
+<Total>
+     <Percent>20</Percent>
+     <Percent>30</Percent>
+     <Percent>10</Percent>
+     <Percent>50</Percent>          
+</Total>

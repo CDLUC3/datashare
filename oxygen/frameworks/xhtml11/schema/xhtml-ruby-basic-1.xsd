@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml">
+
+  <xs:annotation>
+    <xs:documentation>
+      This is the XML Schema module for Ruby Basic.
+      $Id: xhtml-ruby-basic-1.xsd 29242 2006-05-11 14:01:28 +0000 (Thu, 11 May 2006) radu_coravu $
+    </xs:documentation>
+    <xs:documentation source="xhtml-copyright-1.xsd"/>
+  </xs:annotation>
+
+  <xs:annotation>
+    <xs:documentation>
+      "Ruby" are short runs of text alongside the base text, typically
+      used in East Asian documents to indicate pronunciation or to
+      provide a short annotation. The full specification for Ruby is here:
+      
+        http://www.w3.org/TR/2001/REC-ruby-20010531/
+
+      This module defines "Ruby Basic" or "simple Ruby" as described
+      in the specification:
+      
+        http://www.w3.org/TR/ruby/#simple-ruby1
+        
+      This module declares the elements and their attributes used to
+      support simple ruby annotation markup. Elements defined here are
+          * ruby, rb, rt, rp
+      Ruby Basic does not use the rbc or rtc elements.
+      The content of the ruby element for Ruby Basic
+      uses the rp element for fallback purposes.        
+    </xs:documentation>
+    <xs:documentation source="http://www.w3.org/TR/2001/REC-ruby-20010531/#simple-ruby1"/>  
+  </xs:annotation>
+
+  <xs:group name="ruby.content.simple">
+    <xs:sequence>
+      <xs:element ref="rb"/>
+      <xs:choice>
+        <xs:element ref="rt"/>
+        <xs:sequence>
+          <xs:element ref="rp"/>
+          <xs:element ref="rt"/>
+          <xs:element ref="rp"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:sequence>
+  </xs:group>
+
+  <!-- 
+   add to this group any common attributes for all Ruby elements 
+  -->
+  <xs:attributeGroup name="ruby.common.attrib"/>
+
+  <xs:complexType name="ruby.basic.type">
+    <xs:group ref="ruby.content.simple"/>
+    <xs:attributeGroup ref="ruby.common.attrib"/>
+  </xs:complexType>
+
+  <xs:element name="ruby" type="ruby.basic.type"><xs:annotation><xs:documentation>Ruby text is used to provide a short annotation of the associated base text. The ruby element is an inline (or text-level) element that serves as an overall container. It contains either the rb, rt and optional rp elements (simple ruby markup) or the rbc and rtc elements (complex ruby markup).</xs:documentation></xs:annotation></xs:element>
+
+  <!-- 
+   rb (ruby base) element 
+  -->
+  <xs:attributeGroup name="rb.attrib">
+    <xs:attributeGroup ref="ruby.common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:complexType name="rb.type" mixed="true">
+    <xs:attributeGroup ref="rb.attrib"/>
+  </xs:complexType>
+
+  <xs:element name="rb" type="rb.type"><xs:annotation><xs:documentation>The rb (ruby base) element serves to markup the base text. For simple ruby markup, only one rb element may appear. For complex ruby markup, multiple rb elements may appear inside an rbc element. Each rb element is associated with a corresponding rt element, for fine-grained control of ruby presentation.</xs:documentation></xs:annotation></xs:element>
+
+  <!--
+   rt (ruby text) element 
+  -->
+  <xs:attributeGroup name="rt.attrib">
+    <xs:attributeGroup ref="ruby.common.attrib"/>
+  </xs:attributeGroup>
+
+  <!--
+   Note that the rbspan element is not used in Ruby Basic
+  -->
+  <xs:complexType name="rt.type" mixed="true">
+    <xs:attributeGroup ref="rt.attrib"/>
+  </xs:complexType>
+
+  <xs:element name="rt" type="rt.type"><xs:annotation><xs:documentation>The rt element is the markup for ruby text. For simple ruby markup, only one rt element may appear. For complex ruby markup, multiple rt elements may appear inside an rtc element, and each rt element contains the ruby text for the relevant base text, represented by the corresponding rb element.</xs:documentation></xs:annotation></xs:element>
+
+  <!-- 
+   rp (ruby parenthesis) element 
+  -->
+  <xs:attributeGroup name="rp.attrib">
+    <xs:attributeGroup ref="ruby.common.attrib"/>
+  </xs:attributeGroup>
+
+  <xs:complexType name="rp.type" mixed="true">
+    <xs:attributeGroup ref="rp.attrib"/>
+  </xs:complexType>
+
+  <xs:element name="rp" type="rp.type"><xs:annotation><xs:documentation>The rp element can be used in the case of simple ruby markup to specify characters that can denote the beginning and end of ruby text when user agents do not have other ways to present ruby text distinctively from the base text. Parentheses (or similar characters) can provide an acceptable fallback. In this situation, ruby text will only degrade to be rendered inline and enclosed in the fallback parentheses. This is the least inappropriate rendering under the condition that only inline rendering is available. The rp element cannot be used with complex ruby markup.</xs:documentation></xs:annotation></xs:element>
+
+</xs:schema>

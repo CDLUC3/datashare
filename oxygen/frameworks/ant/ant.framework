@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <map>
+    <entry>
+      <String xml:space="preserve">document.types</String>
+      <documentTypeDescriptor-array>
+        <documentTypeDescriptor>
+          <field name="name">
+            <String xml:space="preserve">ANT</String>
+          </field>
+          <field name="schemaDescriptor">
+            <docTypeSchema>
+              <field name="type">
+                <Integer xml:space="preserve">1</Integer>
+              </field>
+              <field name="uri">
+                <String xml:space="preserve">${frameworks}/ant/ant.dtd</String>
+              </field>
+            </docTypeSchema>
+          </field>
+          <field name="classpath">
+            <String-array></String-array>
+          </field>
+          <field name="authorExtensionDescriptor">
+            <authorExtension>
+              <field name="cssDescriptors">
+                <cssFile-array></cssFile-array>
+              </field>
+              <field name="mergeCSSsFromDocument">
+                <Boolean xml:space="preserve">false</Boolean>
+              </field>
+              <field name="actionDescriptors">
+                <action-array></action-array>
+              </field>
+              <field name="menubarDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">New menu</String>
+                  </field>
+                  <field name="accessKey">
+                    <null></null>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array></menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="popupMenuDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">Contextual Menu</String>
+                  </field>
+                  <field name="accessKey">
+                    <null></null>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array></menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="toolbarDescriptor">
+                <toolbar>
+                  <field name="id">
+                    <String xml:space="preserve">Toolbar</String>
+                  </field>
+                  <field name="type">
+                    <Integer xml:space="preserve">2</Integer>
+                  </field>
+                  <field name="largeIconPath">
+                    <null></null>
+                  </field>
+                  <field name="smallIconPath">
+                    <null></null>
+                  </field>
+                  <field name="toolbarEntriesDescriptorList">
+                    <toolbarEntry-array></toolbarEntry-array>
+                  </field>
+                </toolbar>
+              </field>
+              <field name="tableSupportClassName">
+                <null></null>
+              </field>
+              <field name="customReferencesResolver">
+                <null></null>
+              </field>
+            </authorExtension>
+          </field>
+          <field name="templatesLocations">
+            <null></null>
+          </field>
+          <field name="xmlCatalogs">
+            <String-array></String-array>
+          </field>
+          <field name="description">
+            <String xml:space="preserve">Ant is a software tool for automating software build processes.
+It is similar to Make but is written in the Java language and is primarily intended for use with Java.</String>
+          </field>
+          <field name="doctypeRules">
+            <documentTypeRule-array>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">project</String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <null></null>
+                </field>
+              </documentTypeRule>
+            </documentTypeRule-array>
+          </field>
+          <field name="scenarios">
+            <scenario-array></scenario-array>
+          </field>
+          <field name="elementLocatorExtension">
+            <null></null>
+          </field>
+        </documentTypeDescriptor>
+      </documentTypeDescriptor-array>
+    </entry>
+  </map>
+</serialized>

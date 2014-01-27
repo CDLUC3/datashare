@@ -1,0 +1,45 @@
+// via http://forrst.com/posts/Easy_parametric_CSS_buttons_using_LESS_HSLa-sgy
+
+/* parametric mixin for use in button classes */
+.btn_params(@hue: 150) {
+
+   text-align: center;
+   
+        /* vars defined inside mixin so we can pass in the @hue param */
+   @button_bg: hsla(@hue, 26%, 45%, 1);
+   @button_bg_light: spin(saturate(lighten(@button_bg, 5%), -10%), 22); 
+   @button_border: spin(saturate(lighten(@button_bg, 19%), -10%), 22);
+   @button_hover: spin(lighten(@button_bg, 3%), 10);
+   @button_active: spin(saturate(lighten(@button_bg, -15%), 5%), 18);
+   
+   border-top: 1px solid @button_border;
+   background: @button_bg;
+   background: -webkit-gradient(linear, left top, left bottom, from(@button_bg_light), to(@button_bg));
+   background: -moz-linear-gradient(top, @button_bg_light, @button_bg);
+   padding: 12px 36px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 12px;
+   text-decoration: none;
+   vertical-align: middle;
+   
+   &:hover {
+      border-top-color: @button_hover;
+      background: @button_hover;
+      color: white;
+   }
+   
+   &:active {
+      border-top-color: @button_active;
+      background: @button_active;
+      position: relative;
+      top: 1px;
+      color: white;
+   }
+}

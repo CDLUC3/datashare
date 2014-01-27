@@ -1,0 +1,102 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/*
+====================================
+    Reference elements. [reference]
+====================================
+*/
+reference{
+	display: block;
+	margin: 0.5em 0;
+	padding-left: 0.5em;
+}
+
+/*
+   Reference topics limit the body structure to tables 
+   (both simple and standard), property lists, syntax 
+   sections, and generic sections and examples, in any 
+   sequence or number.
+*/
+refbody{
+    display:block;
+}
+
+reference > title{
+	font-size: 1.8em;
+	border-bottom:1px solid #004477;
+}
+
+refbody > section > title{
+	font-size: 1.4em;
+	border-bottom:1px solid #004477;
+}
+
+/*
+    The section often contains syntax or signature 
+    content (for example, a command-line utility's 
+    calling syntax, or an API's signature).
+*/
+refsyn{
+    display:block;
+    margin: 1em 0;
+    background-color: #EFEFEF;
+    color:inherit;
+    padding: 2px;   
+}
+
+refsyn:before {
+  font-weight: bold;
+  display: block;
+  content: "Syntax: ";
+}
+
+refsyn[spectitle]:before {
+  font-weight: bold;
+  display: block;
+  content: attr(spectitle)": ";
+}
+
+/*
+    The <properties> element gives a list of properties 
+    for the subject of the current topic, for example whether 
+    a class is public or protected. Each property can include 
+    the type, value, and a description.
+*/
+properties {
+    display:table;
+    border-spacing:1px;
+    border:1px solid #EEC0D0;
+    margin:1.33ex 0;
+}
+
+prophead,
+property{
+    display:table-row;
+}
+
+/*
+    The cells.
+*/
+proptypehd,
+proptype,
+propvaluehd,
+propvalue,
+propdeschd,
+propdesc{
+    display: table-cell;
+    border: 1px solid #EEC0D0;
+    padding: 2px;
+}
+
+prophead{
+    font-weight:bold;
+}
+
+proptypehd,
+propvaluehd,
+propdeschd {
+    color:inherit;
+    background-color: #FFE0E0;
+}
+

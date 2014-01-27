@@ -1,0 +1,83 @@
+
+<!--
+ TEI P5 DTD module verse. Generated 2008-07-08T17:38:51Z. 
+Copyright 2008 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+For general (non-technical) enquiries, contact the TEI
+	  Consortium at info@tei-c.org; 
+for membership enquiries contact membership@tei-c.org; for
+technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C, contact editors@tei-c.org.
+For up to date information, consult the TEI web
+	      site at http://www.tei-c.org/P5/. 
+		Verse structures
+-->
+
+<!ENTITY % caesura 'INCLUDE' >
+<![ %caesura; [
+
+<!--doc:marks the point at which a metrical line may be divided. -->
+<!ELEMENT %n.caesura; %om.RR; EMPTY>
+<!ATTLIST %n.caesura; xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST %n.caesura;
+ %att.global.attributes; >
+]]>
+
+<!ENTITY % metDecl 'INCLUDE' >
+<![ %metDecl; [
+
+<!--doc:(metrical notation declaration) documents the notation employed to represent a metrical
+  pattern when this is specified as the value of a met,
+  real, or rhyme attribute on any structural
+  element of a metrical text (e.g. lg, l, or
+  seg). -->
+<!ELEMENT %n.metDecl; %om.RR; ((%model.pLike; |
+ %model.noteLike;)+ |
+ (%n.metSym;)+)>
+<!ATTLIST %n.metDecl; xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST %n.metDecl;
+ %att.global.attributes;
+ %att.declarable.attributes;
+type CDATA  "met real" 
+pattern %data.pattern;  #IMPLIED >
+]]>
+
+<!ENTITY % metSym 'INCLUDE' >
+<![ %metSym; [
+
+<!--doc:(metrical notation symbol) documents the intended significance of a particular character or
+character sequence within a metrical notation, either explicitly or in
+terms of other symbol elements in the same metDecl. -->
+<!ELEMENT %n.metSym; %om.RR; %macro.phraseSeq.limited;>
+<!ATTLIST %n.metSym; xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST %n.metSym;
+ %att.global.attributes;
+value CDATA  #REQUIRED
+terminal %data.truthValue;  "true"  >
+]]>
+
+<!ENTITY % rhyme 'INCLUDE' >
+<![ %rhyme; [
+
+<!--doc:marks the rhyming part of  a metrical line. -->
+<!ELEMENT %n.rhyme; %om.RR; %macro.paraContent;>
+<!ATTLIST %n.rhyme; xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST %n.rhyme;
+ %att.global.attributes;
+ %att.typed.attributes;
+label %data.word;  #IMPLIED >
+]]>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+                         "http://www.docbook.org/xml/4.4/docbookx.dtd">
+<article>
+    <title>Welcome to the Docbook</title>
+    <sect1>
+        <title>Inline Markup and Images</title>
+        <para>This is a sample showing that &lt;oXygen/&gt; can be used to edit documents in conformity with the
+            dockbookx.dtd.</para>
+        <para>This is a
+            <code>Docbook</code>
+            figure, inserted using the
+            <code>imagedata</code>
+            tag:</para>
+        <figure>
+            <title>Lake in Fagaras</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="../lake.jpeg" scale="50"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <para>In order to preview this text in a Web browser, you have to choose the
+            <code>Docbook HTML</code>
+            transformation scenario. For this press the
+            <guibutton>Configure transformation scenario</guibutton>
+            button or the shortcut
+            <keycap>CTRL+SHIFT+C</keycap>
+            or (<keycap>META+SHIFT+C</keycap>
+            on Mac OS X), then select the scenario. Press
+            <guibutton>Ok</guibutton>.</para>
+        <para>To apply the stylesheet you have to press the "Apply transformation scenario" button or to press
+            <keycap>CTRL+SHIFT+T</keycap>
+            (<keycap>META+SHIFT+T</keycap>
+            on Mac OS X).
+        </para>
+    </sect1>
+    <sect1>
+        <title>CALS Tables and Lists</title>
+        <para>Now some tables. To hide the colspecs, you should chose the
+            <guilabel>Hide colspec</guilabel>
+            CSS from the
+            <guimenu>CSS Alternatives</guimenu>
+            toolbars.</para>
+        <table>
+            <title>Sample CALS Table</title>
+            <tgroup cols="5" align="left" colsep="1" rowsep="1">
+                <colspec colnum="1" colname="c1"/>
+                <colspec colnum="2" colname="c2"/>
+                <colspec colnum="3" colname="c3"/>
+                <colspec colnum="4" colname="c4"/>
+                <colspec colnum="5" colname="c5"/>
+                <thead>
+                    <row>
+                        <entry namest="c1" nameend="c2" align="center">Horizontal Span</entry>
+                        <entry>a3</entry>
+                        <entry>a4</entry>
+                        <entry>a5</entry>
+                    </row>
+                </thead>
+                <tfoot>
+                    <row>
+                        <entry>f1</entry>
+                        <entry>f2</entry>
+                        <entry>f3</entry>
+                        <entry>f4</entry>
+                        <entry>f5</entry>
+                    </row>
+                </tfoot>
+                <tbody>
+                    <row>
+                        <entry>b1</entry>
+                        <entry>b2</entry>
+                        <entry>b3</entry>
+                        <entry>b4</entry>
+                        <entry morerows="1" valign="middle">
+                            <para>
+                                <emphasis role="bold">Vertical</emphasis>
+                                Span
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>c1</entry>
+                        <entry namest="c2" nameend="c3" align="center" morerows="1" valign="bottom">Spans
+                            <emphasis role="bold">Both</emphasis>
+                            directions</entry>
+                        <entry>c4</entry>
+                    </row>
+                    <row>
+                        <entry>d1</entry>
+                        <entry>d4</entry>
+                        <entry>d5</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <para>Docbook 4 supports also the
+            <abbrev>HTML</abbrev>
+            tables:</para>
+        <table frame="hsides">
+            <caption>Sample HTML Table</caption>
+            <thead>
+                <tr>
+                    <th>Person Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jane</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>Bart
+                    </td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>Alexander</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <emphasis role="italic">They are all students of the computer science department</emphasis>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <para>This is a list of useful
+            <abbrev>XML</abbrev>
+            links:</para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <ulink url="http://www.xml.com">http://www.xml.com</ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://www.xml.org">http://www.xml.org</ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="http://www.w3c.org">http://www.w3c.org</ulink>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>And here is the &lt;oXygen/&gt; home site:
+            <ulink url="http://www.oxygenxml.com/">http://www.oxygenxml.com/</ulink>
+        </para>
+    </sect1>
+</article>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml">
+    <xs:annotation>
+      <xs:documentation>
+          Editing Elements
+          This is the XML Schema Editing Markup module for XHTML
+
+           * ins, del
+  
+         This module declares element types and attributes used to indicate
+         inserted and deleted content while editing a document.
+
+          $Id: xhtml-edit-1.xsd 28982 2006-05-04 09:40:07 +0000 (Thu, 04 May 2006) radu_coravu $
+        </xs:documentation>
+      <xs:documentation source="xhtml-copyright-1.xsd"/>
+      <xs:documentation source="http://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/abstract_modules.html#s_editmodule"/>
+    </xs:annotation>
+    
+    <xs:attributeGroup name="edit.attlist">
+        <xs:attributeGroup ref="Common.attrib"/>
+        <xs:attribute name="cite" type="URI"/>
+        <xs:attribute name="datetime" type="Datetime"/>
+    </xs:attributeGroup>
+    
+    <xs:group name="edit.content">
+        <xs:sequence>
+            <xs:group ref="Flow.mix" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+    
+    <xs:complexType name="edit.type" mixed="true">
+        <xs:group ref="edit.content"/>
+        <xs:attributeGroup ref="edit.attlist"/>
+    </xs:complexType>
+    
+    <!-- ins: Inserted Text   -->
+    <xs:element name="ins" type="edit.type"><xs:annotation><xs:documentation>INS is used to markup sections of the document that have been inserted with respect to a different version of a document (e.g., in draft legislation where lawmakers need to view the changes).</xs:documentation></xs:annotation></xs:element>
+    
+    <!-- del: Deleted Text   -->
+    <xs:element name="del" type="edit.type"><xs:annotation><xs:documentation>DEL is used to markup sections of the document that have been deleted with respect to a different version of a document (e.g., in draft legislation where lawmakers need to view the changes).</xs:documentation></xs:annotation></xs:element>
+</xs:schema>

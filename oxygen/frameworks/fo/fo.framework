@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <map>
+    <entry>
+      <String xml:space="preserve">document.types</String>
+      <documentTypeDescriptor-array>
+        <documentTypeDescriptor>
+          <field name="name">
+            <String xml:space="preserve">FO</String>
+          </field>
+          <field name="schemaDescriptor">
+            <docTypeSchema>
+              <field name="type">
+                <Integer xml:space="preserve">2</Integer>
+              </field>
+              <field name="uri">
+                <String xml:space="preserve">${frameworks}/fo/xsd/fo.xsd</String>
+              </field>
+            </docTypeSchema>
+          </field>
+          <field name="classpath">
+            <String-array></String-array>
+          </field>
+          <field name="authorExtensionDescriptor">
+            <authorExtension>
+              <field name="cssDescriptors">
+                <cssFile-array></cssFile-array>
+              </field>
+              <field name="mergeCSSsFromDocument">
+                <Boolean xml:space="preserve">false</Boolean>
+              </field>
+              <field name="actionDescriptors">
+                <action-array></action-array>
+              </field>
+              <field name="menubarDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">New menu</String>
+                  </field>
+                  <field name="accessKey">
+                    <null></null>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array></menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="popupMenuDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">Contextual Menu</String>
+                  </field>
+                  <field name="accessKey">
+                    <null></null>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array></menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="toolbarDescriptor">
+                <toolbar>
+                  <field name="id">
+                    <String xml:space="preserve">Toolbar</String>
+                  </field>
+                  <field name="type">
+                    <Integer xml:space="preserve">2</Integer>
+                  </field>
+                  <field name="largeIconPath">
+                    <null></null>
+                  </field>
+                  <field name="smallIconPath">
+                    <null></null>
+                  </field>
+                  <field name="toolbarEntriesDescriptorList">
+                    <toolbarEntry-array></toolbarEntry-array>
+                  </field>
+                </toolbar>
+              </field>
+              <field name="tableSupportClassName">
+                <null></null>
+              </field>
+              <field name="customReferencesResolver">
+                <null></null>
+              </field>
+            </authorExtension>
+          </field>
+          <field name="templatesLocations">
+            <String-array>
+              <String xml:space="preserve">${frameworksDir}/fo/templates</String>
+            </String-array>
+          </field>
+          <field name="xmlCatalogs">
+            <String-array>
+              <String xml:space="preserve">${frameworks}/fo/xsd/catalog.xml</String>
+            </String-array>
+          </field>
+          <field name="description">
+            <String xml:space="preserve">The XSL Formatting Objects is a W3C standard representing an XML language for specifying the layout of printed documents. </String>
+          </field>
+          <field name="doctypeRules">
+            <documentTypeRule-array>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://www.w3.org/1999/XSL/Format</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+            </documentTypeRule-array>
+          </field>
+          <field name="scenarios">
+            <scenario-array>
+              <scenario>
+                <field name="name">
+                  <String xml:space="preserve">FO PDF</String>
+                </field>
+                <field name="baseURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="footerURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="fOPMethod">
+                  <String xml:space="preserve">pdf</String>
+                </field>
+                <field name="fOProcessorName">
+                  <null></null>
+                </field>
+                <field name="headerURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="inputXSLURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="inputXMLURL">
+                  <String xml:space="preserve">${currentFileURL}</String>
+                </field>
+                <field name="defaultScenario">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="isFOPPerforming">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="type">
+                  <String xml:space="preserve">XSL</String>
+                </field>
+                <field name="saveAs">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="openInBrowser">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="outputFile">
+                  <File xml:space="preserve">${cfd}/${cfn}.pdf</File>
+                </field>
+                <field name="openOtherLocationInBrowser">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="locationToOpenInBrowserURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="openInEditor">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="showInHTMLPane">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="showInXMLPane">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="showInSVGPane">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="useXSLTInput">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="xsltParams">
+                  <list></list>
+                </field>
+                <field name="cascadingStylesheets">
+                  <String-array></String-array>
+                </field>
+                <field name="xslTransformer">
+                  <String xml:space="preserve">Saxon6.5.5</String>
+                </field>
+                <field name="extensionURLs">
+                  <String-array></String-array>
+                </field>
+              </scenario>
+            </scenario-array>
+          </field>
+          <field name="elementLocatorExtension">
+            <null></null>
+          </field>
+        </documentTypeDescriptor>
+      </documentTypeDescriptor-array>
+    </entry>
+  </map>
+</serialized>

@@ -1,0 +1,43 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/*
+=====================================
+    Text formatting elements.  [hi-d]
+=====================================
+*/
+
+b, 
+i, 
+tt, 
+u, 
+sup, 
+sub {
+  display: inline;
+}
+
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+tt {
+  font-family: monospace;
+}
+
+u {
+  text-decoration: underline;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}

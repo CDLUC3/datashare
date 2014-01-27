@@ -1,0 +1,46 @@
+Jan 27, 2014 7:33:10 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Users/boushey/Library/Java/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+Jan 27, 2014 7:33:11 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Jan 27, 2014 7:33:11 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 788 ms
+Jan 27, 2014 7:33:11 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Jan 27, 2014 7:33:11 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.29
+Jan 27, 2014 7:33:11 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Jan 27, 2014 7:33:11 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Jan 27, 2014 7:33:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Jan 27, 2014 7:33:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Jan 27, 2014 7:33:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Jan 27, 2014 7:33:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory xtf
+Jan 27, 2014 7:33:12 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/Users/boushey/bitbucket/datashare/tomcat/webapps/xtf/WEB-INF/lib/servlet.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Jan 27, 2014 7:33:12 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Jan 27, 2014 7:33:12 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Jan 27, 2014 7:33:12 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=1/23  config=null
+Jan 27, 2014 7:33:12 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1350 ms
+2014-01-27:07:33:18 
+2014-01-27:07:33:18 *** SERVLET RESTART: crossQuery search servlet ***
+2014-01-27:07:33:18 
+2014-01-27:07:33:18 Log level: info
+2014-01-27:07:33:18 Warming index [/Users/boushey/bitbucket/datashare/tomcat/webapps/xtf/index]
+2014-01-27:07:33:19 Done.
+2014-01-27:07:33:19 Latency: 1877 msec for request: http://localhost:8080/xtf/search
+2014-01-27:07:33:23 Latency: 303 msec for request: http://localhost:8080/xtf/search?browse-all=yes
+2014-01-27:07:33:26 
+2014-01-27:07:33:26 *** SERVLET RESTART: dynaXML dynamic publishing servlet ***
+2014-01-27:07:33:26 
+2014-01-27:07:33:26 Log level: info
+2014-01-27:07:33:26 Latency: 363 msec for request: http://localhost:8080/xtf/view?docId=erc/ark+=b7272=q6bg2kwf/mrt-datacite.xml;query=;brand=default
+2014-01-27:07:33:29 Latency: 15 msec for request: http://localhost:8080/xtf/view?docId=erc/ark+=b7272=q6bg2kwf/mrt-datacite.xml&doc.view=citation

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><!--  Migrating HTML to DITA: sample input file
+ |
+ | (C) Copyright IBM Corporation 2001, 2002, 2003, 2004, 2005. All Rights Reserved.
+ | This file is related to the DITA package on IBM's developerWorks site.
+ | See license.txt for disclaimers.
+ + --><!DOCTYPE topic PUBLIC "{$publicid}" "{$systemid}">
+<topic xml:lang="en-us" id="topic"><title>A generic topic</title><body><p>Block text.</p><!-- any number of blocks --><section><title>A section</title><p>Section block text.</p><!-- any combination of blocks and sections --><!-- any number of related links at body level --></section></body><related-links><linklist><title>Collected links</title><link href="relatedlink1.dita"><linktext/></link><link href="relatedlink2.dita"><linktext/></link></linklist></related-links></topic>

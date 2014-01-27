@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crossQueryResult totalDocs="10" startDoc="0" endDoc="0">
+   <facet field="group-subject" totalGroups="16" totalDocs="10">
+      <group value="Environmental Studies" rank="6" totalSubGroups="0" totalDocs="3"
+             startDoc="0"
+             endDoc="0"/>
+      <group value="African History" rank="7" totalSubGroups="0" totalDocs="2" startDoc="1"
+             endDoc="2">
+         <docHit rank="1" file="doc1.xml" totalHits="0">
+            <meta>
+               <title>XYZ: Document 1</title>
+               <group-subject>African Studies</group-subject>
+               <group-subject>Politics</group-subject>
+               <group-subject>African History</group-subject>
+               <subject>African Studies</subject>
+               <subject>Politics</subject>
+               <subject>African History</subject>
+               <type>text</type>
+               <collection>
+                  <snippet rank="1">
+                     <hit>
+                        <term>UC</term>
+                     </hit>
+                  </snippet>
+               </collection>
+               <geography>US::California::Berkeley</geography>
+               <geography-sort>US::California::Berkeley</geography-sort>
+            </meta>
+         </docHit>
+         <docHit rank="2" file="doc6.xml" totalHits="0">
+            <meta>
+               <title>Don't read Document 6</title>
+               <group-subject>Environmental Studies</group-subject>
+               <group-subject>African History</group-subject>
+               <subject>Environmental Studies</subject>
+               <subject>African History</subject>
+               <type>text</type>
+               <collection>
+                  <snippet rank="1">
+                     <hit>
+                        <term>UC</term>
+                     </hit>
+                  </snippet>
+               </collection>
+               <geography>US::Oregon::Grants Pass</geography>
+               <geography-sort>US::Oregon::Grants Pass</geography-sort>
+            </meta>
+         </docHit>
+      </group>
+      <group value="California and the West" rank="8" totalSubGroups="0" totalDocs="2"
+             startDoc="0"
+             endDoc="0"/>
+      <group value="Classical Politics" rank="9" totalSubGroups="0" totalDocs="2"
+             startDoc="0"
+             endDoc="0"/>
+      <group value="Urban Studies" rank="10" totalSubGroups="0" totalDocs="2" startDoc="0"
+             endDoc="0"/>
+   </facet>
+</crossQueryResult>

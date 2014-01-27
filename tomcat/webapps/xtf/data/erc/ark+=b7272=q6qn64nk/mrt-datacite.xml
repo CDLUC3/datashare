@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q6QN64NK</identifier>
+<creators>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+<creator>
+<creatorName>Schuff, Norbert</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Posttraumatic Stress Disorder (PTSD)</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cognition</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Neuropsychological Test</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Brain</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Middle Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Post-Traumatic</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Stress Disorders</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Veterans</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<resourceType resourceTypeGeneral="Dataset">application/octet-stream</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">11750891</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">18201876</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">19703319</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">20104401</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">20194830</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">20483375</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">This data set was acquired to study various aspects associated with PTSD and includes structural neuroimaging data as well as clinical assessments including history of physical and sexual abuse or neglect, family history of violence, veteran status, presence of alcoholism, and scores on the clinician-administered PTSD scale (CAPS).</description>
+<description descriptionType="Methods">Data Acquisition Location: San Francisco VA Medical Center; Scanner Type: Siemens Vision 1.5T; Coronal T1 MPRAGE: TR=10ms, TE=4ms, TI=300ms, 1x1mm2, 1.4mm slice thickness; Axial double spin echo PD &amp; T2: TR=2500ms, TE=20/80ms, 1x1.4mm2, 3mm slice thickness</description>
+</descriptions>
+</resource>

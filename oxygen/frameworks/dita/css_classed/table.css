@@ -1,0 +1,5 @@
+@import "../../xhtml/css/cals_table.css";
+
+table > desc{
+    display:block;
+}

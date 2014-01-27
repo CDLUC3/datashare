@@ -1,0 +1,117 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/* extensible Name and Address Language */
+
+@import "xnal_ext.css";
+
+personinfo,
+organizationinfo,
+namedetails,
+personname,
+organizationnamedetails,
+addressdetails,
+contactnumbers,
+emailaddresses,
+urls {
+    display: list-item;
+    margin-left: 20px;
+    margin-top: 1ex;
+    margin-bottom: 1ex; 
+    border-width: 0;
+    border-style: none;
+    padding: 0;
+}
+
+personinfo,
+organizationinfo{
+    list-style:square;
+}
+
+namedetails,
+contactnumbers,
+emailaddresses,
+addressdetails {
+    list-style:disc;
+}
+
+organizationnamedetails,
+personname,
+contactnumber,
+emailaddress,
+urls {
+    list-style:circle;
+}
+
+
+authorinformation:before,
+personinfo:before,
+organizationinfo:before,
+namedetails:before,
+personname:before,
+organizationnamedetails:before,
+addressdetails:before,
+contactnumbers:before,
+emailaddresses:before,
+urls:before {
+    font-size: smaller;
+    font-weight: bold;
+    color: #333333;
+    background-color:inherit;
+    margin-left:1em;
+}
+
+honorific,
+firstname,
+middlename,
+lastname,
+generationidentifier,
+organizationname,
+otherinfo,
+locality,
+localityname,
+postalcode,
+administrativearea,
+thoroughfare,
+country {
+    display: inline;
+    border-width: 0;
+    border-style: none;
+    padding: 0;
+}
+
+honorific:before,
+firstname:before,
+middlename:before,
+lastname:before,
+generationidentifier:before,
+organizationname:before,
+otherinfo:before,
+locality:before,
+localityname:before,
+postalcode:before,
+administrativearea:before,
+thoroughfare:before,
+country:before {
+    display: inline;
+    content: " ";
+}
+
+personname > *:first-child:before,
+organizationnamedetails  > *:first-child:before,
+addressdetails > *:first-child:before,
+locality > *:first-child:before {
+    content: "";
+}
+
+contactnumber,
+emailaddress,
+url {
+    display: list-item;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0; 
+    border-width: 0;
+    border-style: none;
+    padding: 0;
+}

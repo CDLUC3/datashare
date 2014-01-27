@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!--Schema generated 2008-07-08T17:38:34Z..
+Copyright 2008 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+For general (non-technical) enquiries, contact the TEI
+	  Consortium at info@tei-c.org; 
+for membership enquiries contact membership@tei-c.org; for
+technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C, contact editors@tei-c.org.
+For up to date information, consult the TEI web
+	      site at http://www.tei-c.org/P5/. 
+		Simple analytic mechanisms-->
+  <!--Definitions from module analysis-->
+  <!--Set global predeclared macros-->
+  <!--Set predeclared macros-->
+  <!--0. predeclared macros-->
+  <!--1. classes-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.analytic.attributes">
+    <ref name="att.global.analytic.attribute.ana"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.analytic.attribute.ana">
+    <rng:optional>
+      <rng:attribute name="ana">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analysis) indicates one or more elements containing interpretations of the
+element on which the ana attribute appears.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.pointer"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="c">
+    <element name="c">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(character) represents a character.</a:documentation>
+      <ref name="c.content"/>
+      <ref name="c.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="c.content">
+    <rng:ref name="macro.xtext"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="c.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.segLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cl">
+    <element name="cl">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(clause) represents a grammatical clause.</a:documentation>
+      <ref name="cl.content"/>
+      <ref name="cl.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cl.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cl.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.segLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="interp">
+    <element name="interp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(interpretation) summarizes a specific interpretative annotation which can be
+linked to a span of text.</a:documentation>
+      <ref name="interp.content"/>
+      <ref name="interp.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="interp.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.glossLike"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="interp.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.interpLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="interpGrp">
+    <element name="interpGrp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(interpretation group) collects together a set of related interpretations which share
+responsibility or type.</a:documentation>
+      <ref name="interpGrp.content"/>
+      <ref name="interpGrp.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="interpGrp.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:ref name="model.glossLike"/>
+      </rng:zeroOrMore>
+      <rng:oneOrMore>
+        <rng:ref name="interp"/>
+      </rng:oneOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="interpGrp.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.interpLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="m">
+    <element name="m">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(morpheme) represents a grammatical morpheme.</a:documentation>
+      <ref name="m.content"/>
+      <ref name="m.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="m.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.segLike"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="m.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.segLike.attributes"/>
+    <rng:optional>
+      <rng:attribute name="baseForm">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the morpheme's base form.</a:documentation>
+        <ref name="data.word"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="phr">
+    <element name="phr">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(phrase) represents a grammatical phrase.</a:documentation>
+      <ref name="phr.content"/>
+      <ref name="phr.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="phr.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="phr.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.segLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="s">
+    <element name="s">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(s-unit) contains a sentence-like division of a text.</a:documentation>
+      <ref name="s.content"/>
+      <ref name="s.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="s.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="s.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.segLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="span">
+    <element name="span">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">associates an interpretative annotation directly with a span
+  of text.</a:documentation>
+      <ref name="span.content"/>
+      <ref name="span.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="span.content">
+    <rng:ref name="macro.phraseSeq.limited"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="span.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.interpLike.attributes"/>
+    <rng:attribute name="from">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the beginning of the passage being annotated; if
+      not accompanied by a to attribute, then specifies the
+      entire passage.</a:documentation>
+      <ref name="data.pointer"/>
+    </rng:attribute>
+    <rng:optional>
+      <rng:attribute name="to">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the end of the passage being annotated.</a:documentation>
+        <ref name="data.pointer"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="spanGrp">
+    <element name="spanGrp">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(span group) collects together span tags.</a:documentation>
+      <ref name="spanGrp.content"/>
+      <ref name="spanGrp.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="spanGrp.content">
+    <rng:zeroOrMore>
+      <rng:ref name="span"/>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="spanGrp.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.interpLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="w">
+    <element name="w">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(word) represents a grammatical (not necessarily orthographic) word.</a:documentation>
+      <ref name="w.content"/>
+      <ref name="w.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="w.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="model.gLike"/>
+        <rng:ref name="model.segLike"/>
+        <rng:ref name="model.global"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="w.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.segLike.attributes"/>
+    <rng:optional>
+      <rng:attribute name="lemma">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a lemma for the word, such as an uninflected
+      dictionary entry form.</a:documentation>
+        <ref name="data.key"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="lemmaRef">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a pointer to a definition for the root form of this word
+form.</a:documentation>
+        <ref name="data.pointer"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <!--3. macros-->
+</rng:grammar>

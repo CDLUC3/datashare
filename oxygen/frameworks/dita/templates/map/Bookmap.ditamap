@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/bookmap.dtd">
+<bookmap id="taskbook">
+    <booktitle>
+        <mainbooktitle>Main book title</mainbooktitle>
+        <booktitlealt>Alternate Book Title</booktitlealt>
+    </booktitle>
+    <bookmeta>
+        <author>John Doe</author>
+        <bookrights>
+            <copyrfirst>
+                <year>2007</year>
+            </copyrfirst>
+            <bookowner>
+                <person href="janedoe.xml">Jane Doe</person>
+            </bookowner>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <preface/>
+    </frontmatter>
+    <chapter format="ditamap" href="installing.ditamap"/>
+    <chapter href="configuring.xml"/>
+    <appendix href="task_appendix.xml"/>
+</bookmap>

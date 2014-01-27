@@ -1,0 +1,32 @@
+@import "html_cals_table.css";
+
+/*
+=================================
+    Modify the HTML defaults to reflect
+    the structure of the CALS table.
+=================================
+*/
+
+/* Because the tgroup below is having the display: table, the table element 
+containing the element tgroup loses its display, becoming a block.*/
+table,
+informaltable{
+  border-color:#FEFEFE;
+  border-style:solid;
+  border-width:2px;
+  padding:2px;
+}
+
+/*
+  A wrapper for the main content of a table, or part of a table
+ */
+tgroup {
+  display:table;
+  border-color:#EFEFEF;
+  border-style:solid;
+  border-width:1px;
+}
+
+
+
+

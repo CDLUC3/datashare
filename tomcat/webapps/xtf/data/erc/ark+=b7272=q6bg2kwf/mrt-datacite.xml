@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q6BG2KWF </identifier>
+<creators>
+<creator>
+<creatorName>Harper, Cynthia</creatorName>
+</creator>
+<creator>
+<creatorName>Blanchard, Kelly</creatorName>
+</creator>
+<creator>
+<creatorName>Chipato, Tsungai</creatorName>
+</creator>
+<creator>
+<creatorName>Nhemachena, Taazadza</creatorName>
+</creator>
+<creator>
+<creatorName>Ramjee, Gita</creatorName>
+</creator>
+<creator>
+<creatorName>Blum, Maya</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Provider counseling and provision of female condom in South Africa and Zimbabwe</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">HIV</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Prevention</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Female condoms</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Health care providers</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Southern Africa</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributor>UCSF Bixby Center for Global Reproductive Health</contributor> 
+</contributor>
+<contributor contributorType="ResearchGroup">
+<contributor>Ibis Reproductive Health</contributor> 
+</contributor>
+<contributor contributorType="ResearchGroup">
+<contributor>UZ-UCSF Collaborative Programme on Women's Health</contributor> 
+</contributor>
+<contributor contributorType="ResearchGroup">
+<contributor>South African Medical Research Council HIV Prevention Research Unit</contributor> 
+</contributor>
+</contributors>
+<dates>
+<date dateType="Collected">2008-2009</date>
+</dates>
+<resourceType resourceTypeGeneral="Dataset">application/octet-stream</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">23512836</relatedIdentifier>
+</relatedIdentifiers>
+<rightsList>
+<rights>Terms of Use for these data are outlined in the associated Data Use Agreement</rights>
+</rightsList>
+<descriptions>
+<description descriptionType="Abstract">Objectives: Female condoms are the only female-initiated HIV and pregnancy prevention technology currently available. We examined female condom counseling and provision among providers in South Africa and Zimbabwe, high HIV-prevalence countries. Design: Cross-sectional study using a nationally-representative survey. Setting: All facilities that provide family planning or HIV/STI services in the two countries. Participants: National probability sample of 1,444 nurses and physicians who provide family planning or HIV/STI services. Primary and secondary outcome measures: Female condom practices with different female patients, including adolescents, married women, women using hormonal contraception, and by HIV status. Using multivariable logistic analysis, we measured variations in condom counseling by provider characteristics. Results: Most providers reported offering female condoms (88%), but perceived a need for novel female barrier methods for HIV/STI prevention (85%). By patient type, providers reported less frequent female condom counseling of adolescents (55%), women using hormonal contraception (65%), and married women (66%), compared to unmarried (74%) or HIV-positive women (82%). Multivariable results showed providers in South Africa were less likely to counsel women on female condoms than in Zimbabwe (OR=0.48, 95% CI: 0.35-0.68, p= 0.001). However, South African providers were more likely to counsel women on male condoms (OR=2.39, 95% CI: 1.57-3.65, p= 0.001). Nurses counseled patients on female condoms more frequently than physicians (OR=5.41, 95% CI: 3.26-8.98, p= 0.001). HIV training, family planning training, provider location (urban vs. rural), and facility type (hospital vs. clinic) were not associated with greater condom counseling. Conclusions: Female condoms were integrated into provider counseling and care, although providers reported a need for new female-initiated multipurpose prevention technologies, suggesting female condoms do not meet all patient/provider needs or are not adequately well-known or accessible. Providers should be included in HIV training efforts to raise awareness of new and existing products, and encouraged to educate all women.</description>
+<description descriptionType="Methods">Stata dataset</description>
+</descriptions>
+</resource>

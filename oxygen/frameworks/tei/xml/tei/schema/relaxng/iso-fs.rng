@@ -1,0 +1,699 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!--Schema generated 2008-07-08T17:38:34Z..
+Copyright 2008 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+For general (non-technical) enquiries, contact the TEI
+	  Consortium at info@tei-c.org; 
+for membership enquiries contact membership@tei-c.org; for
+technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C, contact editors@tei-c.org.
+For up to date information, consult the TEI web
+	      site at http://www.tei-c.org/P5/. 
+		Feature structures-->
+  <!--Definitions from module iso-fs-->
+  <!--Set global predeclared macros-->
+  <!--Set predeclared macros-->
+  <!--0. predeclared macros-->
+  <!--1. classes-->
+  <!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="bicond">
+    <element name="bicond">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bi-conditional feature-structure constraint) defines a biconditional feature-structure constraint; both
+consequent and antecedent are specified as feature structures or groups
+of feature structures; the constraint is satisfied if both
+subsume a given feature structure, or if both do not.</a:documentation>
+      <ref name="bicond.content"/>
+      <ref name="bicond.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="bicond.content">
+    <rng:group>
+      <rng:choice>
+        <rng:ref name="fs"/>
+        <rng:ref name="f"/>
+      </rng:choice>
+      <rng:ref name="iff"/>
+      <rng:choice>
+        <rng:ref name="fs"/>
+        <rng:ref name="f"/>
+      </rng:choice>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="bicond.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="binary">
+    <element name="binary">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(binary value) represents the value part of a feature-value specification which can contain either
+  of exactly two possible values.</a:documentation>
+      <ref name="binary.content"/>
+      <ref name="binary.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="binary.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="binary.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:attribute name="value">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a binary value.</a:documentation>
+      <ref name="data.truthValue"/>
+    </rng:attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cond">
+    <element name="cond">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(conditional feature-structure constraint) defines a conditional feature-structure constraint; the consequent
+and the antecedent are specified as feature structures or
+feature-structure collections; the constraint is satisfied if both the
+antecedent and the consequent subsume a given feature
+structure, or if the antecedent does not.</a:documentation>
+      <ref name="cond.content"/>
+      <ref name="cond.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cond.content">
+    <rng:group>
+      <rng:choice>
+        <rng:ref name="fs"/>
+        <rng:ref name="f"/>
+      </rng:choice>
+      <rng:ref name="then"/>
+      <rng:choice>
+        <rng:ref name="fs"/>
+        <rng:ref name="f"/>
+      </rng:choice>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="cond.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="default">
+    <element name="default">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(default feature value) represents the value part of a feature-value specification
+  which contains a defaulted value.</a:documentation>
+      <ref name="default.content"/>
+      <ref name="default.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="default.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="default.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="f">
+    <element name="f">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature) represents a feature value specification, that
+  is, the association of a name with a value of any of several different types.</a:documentation>
+      <ref name="f.content"/>
+      <ref name="f.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="f.content">
+    <zeroOrMore>
+      <ref name="model.featureVal"/>
+    </zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="f.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:attribute name="name">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a name for the feature.</a:documentation>
+      <ref name="data.name"/>
+    </rng:attribute>
+    <rng:optional>
+      <rng:attribute name="fVal">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature value) references any element which can be used to represent the
+  value of a feature.</a:documentation>
+        <ref name="data.pointer"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fDecl">
+    <element name="fDecl">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature declaration) declares a single feature, specifying its name, organization,
+range of allowed values, and optionally its default value.</a:documentation>
+      <ref name="fDecl.content"/>
+      <ref name="fDecl.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fDecl.content">
+    <rng:group>
+      <rng:optional>
+        <rng:ref name="fDescr"/>
+      </rng:optional>
+      <rng:ref name="vRange"/>
+      <rng:optional>
+        <rng:ref name="vDefault"/>
+      </rng:optional>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fDecl.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:attribute name="name">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the name of the feature being declared; matches the
+name attribute of f elements in the text.</a:documentation>
+      <ref name="data.name"/>
+    </rng:attribute>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="optional" a:defaultValue="true">
+        <a:documentation>indicates whether or not the value of this feature may
+	be present.</a:documentation>
+        <data type="boolean"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fDescr">
+    <element name="fDescr">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature description (in FSD)) describes in prose what is represented by the feature being
+declared and its values.</a:documentation>
+      <ref name="fDescr.content"/>
+      <ref name="fDescr.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fDescr.content">
+    <rng:ref name="macro.limitedContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fDescr.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fLib">
+    <element name="fLib">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature library) assembles a library of feature elements.</a:documentation>
+      <ref name="fLib.content"/>
+      <ref name="fLib.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fLib.content">
+    <rng:oneOrMore>
+      <rng:ref name="f"/>
+    </rng:oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fLib.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fs">
+    <element name="fs">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature structure) represents a feature structure, that is, a
+  collection of feature-value pairs organized as a
+structural unit.</a:documentation>
+      <ref name="fs.content"/>
+      <ref name="fs.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fs.content">
+    <rng:zeroOrMore>
+      <rng:ref name="f"/>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fs.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the type of the feature structure.</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="feats">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(features) references the feature-value specifications making up this feature structure.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.pointer"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsConstraints">
+    <element name="fsConstraints">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature-structure constraints) specifies constraints on the content of valid feature
+structures.</a:documentation>
+      <ref name="fsConstraints.content"/>
+      <ref name="fsConstraints.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsConstraints.content">
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:ref name="cond"/>
+        <rng:ref name="bicond"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsConstraints.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsDecl">
+    <element name="fsDecl">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature structure declaration) declares one type of feature structure.</a:documentation>
+      <ref name="fsDecl.content"/>
+      <ref name="fsDecl.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsDecl.content">
+    <rng:group>
+      <rng:optional>
+        <rng:ref name="fsDescr"/>
+      </rng:optional>
+      <rng:oneOrMore>
+        <rng:ref name="fDecl"/>
+      </rng:oneOrMore>
+      <rng:optional>
+        <rng:ref name="fsConstraints"/>
+      </rng:optional>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsDecl.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:attribute name="type">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a name for the type of feature structure being declared.</a:documentation>
+      <ref name="data.enumerated"/>
+    </rng:attribute>
+    <rng:optional>
+      <rng:attribute name="baseTypes">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the name of one or more typed feature structures
+	from which this type inherits feature specifications and
+	constraints; if this type includes a feature specification
+	with the same name as that of any of those specified by this
+	attribute, or if more than one specification of the same name
+	is inherited, then the set of possible values is defined by
+	unification. Similarly, the set of constraints applicable is
+	derived by combining those specified explicitly within this
+	element with those implied by the baseTypes
+	attribute. When no baseTypes attribute is specified, no
+	feature specification or constraint is inherited.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.name"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsDescr">
+    <element name="fsDescr">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature system description (in FSD)) describes in prose what is represented by the type of feature
+structure declared in the enclosing fsDecl.</a:documentation>
+      <ref name="fsDescr.content"/>
+      <ref name="fsDescr.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsDescr.content">
+    <rng:ref name="macro.limitedContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsDescr.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsdDecl">
+    <element name="fsdDecl">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature system declaration) provides a feature system declaration comprising one or more
+  feature structure declarations or feature structure declaration links.</a:documentation>
+      <ref name="fsdDecl.content"/>
+      <ref name="fsdDecl.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsdDecl.content">
+    <rng:oneOrMore>
+      <rng:choice>
+        <rng:ref name="fsDecl"/>
+        <rng:ref name="fsdLink"/>
+      </rng:choice>
+    </rng:oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsdDecl.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsdLink">
+    <element name="fsdLink">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature structure declaration link) associates the name of a typed feature structure with a feature
+structure declaration for it.</a:documentation>
+      <ref name="fsdLink.content"/>
+      <ref name="fsdLink.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsdLink.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fsdLink.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:attribute name="type">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the type of feature structure to be documented;
+      this will be the value of the type attribute on at least one
+feature structure.</a:documentation>
+      <ref name="data.enumerated"/>
+    </rng:attribute>
+    <rng:attribute name="target">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a pointer to a feature structure declaration
+      (fsDecl) element within the current document or elsewhere. </a:documentation>
+      <ref name="data.pointer"/>
+    </rng:attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fvLib">
+    <element name="fvLib">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature-value library) assembles a library of reusable feature value elements
+  (including complete feature structures).</a:documentation>
+      <ref name="fvLib.content"/>
+      <ref name="fvLib.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fvLib.content">
+    <rng:zeroOrMore>
+      <rng:ref name="model.featureVal"/>
+    </rng:zeroOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fvLib.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="if">
+    <element name="if">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a conditional default value for a feature; the condition
+is specified as a feature structure, and is met if it
+subsumes the feature structure in the text for which a
+default value is sought.</a:documentation>
+      <ref name="if.content"/>
+      <ref name="if.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="if.content">
+    <rng:group>
+      <rng:choice>
+        <rng:ref name="fs"/>
+        <rng:ref name="f"/>
+      </rng:choice>
+      <rng:ref name="then"/>
+      <rng:group>
+        <rng:ref name="model.featureVal"/>
+      </rng:group>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="if.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="iff">
+    <element name="iff">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(if and only if) separates the condition from the consequence in a bicond
+element.</a:documentation>
+      <ref name="iff.content"/>
+      <ref name="iff.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="iff.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="iff.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="numeric">
+    <element name="numeric">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(numeric value) represents the value part of a feature-value specification
+  which contains a numeric value or range.</a:documentation>
+      <ref name="numeric.content"/>
+      <ref name="numeric.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="numeric.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="numeric.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:attribute name="value">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a lower bound for the numeric value represented,
+      and also (if max is not supplied) its upper bound.</a:documentation>
+      <ref name="data.numeric"/>
+    </rng:attribute>
+    <rng:optional>
+      <rng:attribute name="max">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies an upper bound for the numeric value represented.</a:documentation>
+        <ref name="data.numeric"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="trunc">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies whether the value represented should be
+	  truncated to give an integer value.</a:documentation>
+        <ref name="data.truthValue"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="string">
+    <element name="string">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(string value) represents the value part of a feature-value specification
+  which contains a string.</a:documentation>
+      <ref name="string.content"/>
+      <ref name="string.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="string.content">
+    <rng:ref name="macro.xtext"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="string.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="symbol">
+    <element name="symbol">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(symbolic value) represents the value part of a feature-value specification
+  which contains one of a finite list of symbols.</a:documentation>
+      <ref name="symbol.content"/>
+      <ref name="symbol.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="symbol.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="symbol.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:attribute name="value">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the symbolic value for the feature, one of a finite list that
+may be specified in a feature declaration.</a:documentation>
+      <ref name="data.word"/>
+    </rng:attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="then">
+    <element name="then">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">separates the condition from the default in an if, or
+the antecedent and the consequent in a cond element.</a:documentation>
+      <ref name="then.content"/>
+      <ref name="then.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="then.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="then.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vAlt">
+    <element name="vAlt">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value alternation) represents the value part of a feature-value specification
+  which contains a set of values, only one of which can be valid.</a:documentation>
+      <ref name="vAlt.content"/>
+      <ref name="vAlt.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vAlt.content">
+    <rng:group>
+      <rng:group>
+        <rng:ref name="model.featureVal"/>
+      </rng:group>
+      <rng:oneOrMore>
+        <rng:ref name="model.featureVal"/>
+      </rng:oneOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vAlt.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vColl">
+    <element name="vColl">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(collection of values) represents the value part of a feature-value specification
+  which contains multiple values organized as a set, bag, or list.</a:documentation>
+      <ref name="vColl.content"/>
+      <ref name="vColl.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vColl.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="fs"/>
+          <rng:ref name="model.featureVal.single"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vColl.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="org">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(organization) indicates organization of given value or values as  set, bag or list.</a:documentation>
+        <rng:choice>
+          <rng:value>set</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the given values are organized as a set.
+   </a:documentation>
+          <rng:value>bag</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the given values are organized as a
+bag (multiset).
+   </a:documentation>
+          <rng:value>list</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the given values are organized as a
+list.</a:documentation>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vDefault">
+    <element name="vDefault">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value default) declares the default value to be supplied when a feature structure
+does not contain an instance of f for this name; if
+unconditional, it is specified as one (or, depending on the value of
+the org attribute of the enclosing fDecl) more
+fs elements or primitive values;
+if conditional, it is specified as
+one or more if elements; if no default is specified, or no
+condition matches, the value none is assumed.</a:documentation>
+      <ref name="vDefault.content"/>
+      <ref name="vDefault.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vDefault.content">
+    <rng:choice>
+      <rng:oneOrMore>
+        <rng:ref name="model.featureVal"/>
+      </rng:oneOrMore>
+      <rng:oneOrMore>
+        <rng:ref name="if"/>
+      </rng:oneOrMore>
+    </rng:choice>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vDefault.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vLabel">
+    <element name="vLabel">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value label) represents the value part of a feature-value specification
+  which appears at more than one point in a feature structure.</a:documentation>
+      <ref name="vLabel.content"/>
+      <ref name="vLabel.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vLabel.content">
+    <rng:optional>
+      <rng:ref name="model.featureVal"/>
+    </rng:optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vLabel.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:attribute name="name">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a name for the sharing point.</a:documentation>
+      <ref name="data.word"/>
+    </rng:attribute>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vMerge">
+    <element name="vMerge">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(merged collection of values) represents a feature value which is the result of merging
+  together the feature values contained by its children, using the organization
+  specified by the org attribute.</a:documentation>
+      <ref name="vMerge.content"/>
+      <ref name="vMerge.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vMerge.content">
+    <rng:oneOrMore>
+      <rng:ref name="model.featureVal"/>
+    </rng:oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vMerge.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:optional>
+      <rng:attribute name="org">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the organization of the resulting merged values as  set, bag or list.</a:documentation>
+        <rng:choice>
+          <rng:value>set</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the resulting values are organized as a set.</a:documentation>
+          <rng:value>bag</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the resulting values are organized as a bag (multiset).
+   </a:documentation>
+          <rng:value>list</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the resulting values are organized as a list.</a:documentation>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vNot">
+    <element name="vNot">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value negation) represents a feature value which is the negation of its content.</a:documentation>
+      <ref name="vNot.content"/>
+      <ref name="vNot.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vNot.content">
+    <rng:group>
+      <rng:ref name="model.featureVal"/>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vNot.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vRange">
+    <element name="vRange">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value range) defines the range of allowed values for a feature, in the form of
+an fs, vAlt, or primitive value;
+for the value of an f to be valid, it must be
+subsumed by the specified range; if the f
+contains multiple values (as sanctioned by the org attribute),
+then each value must be subsumed by the vRange.</a:documentation>
+      <ref name="vRange.content"/>
+      <ref name="vRange.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vRange.content">
+    <rng:ref name="model.featureVal"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="vRange.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <!--3. macros-->
+</rng:grammar>

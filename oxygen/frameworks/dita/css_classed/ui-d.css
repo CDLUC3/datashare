@@ -1,0 +1,51 @@
+/*
+====================================
+    User interface elements. [ui-d]
+====================================
+*/
+
+/*
+    The <screen> element contains or 
+    refers to a textual representation 
+    of a computer screen or user 
+    interface panel (window).
+*/
+*[class~="ui-d/screen"]{
+    display:block;
+    font-family:monospace;
+    white-space:pre;
+    background-color: #303030;
+    color: #66FF66;
+    padding:2px;
+    margin:0.5em 0.5em;    
+}
+
+*[class~="ui-d/shortcut"]{
+    display:inline;
+    text-decoration:underline;
+}
+
+*[class~="ui-d/uicontrol"]{
+    display:inline;
+    font-weight:bold;
+}
+
+*[class~="ui-d/wintitle"]{
+    display:inline;
+    font-weight:bold;
+}
+
+*[class~="ui-d/menucascade"]{
+    display:inline;
+}
+/*
+    Separates the submenus. 
+*/
+*[class~="ui-d/menucascade"] > *[class~="ui-d/uicontrol"]:before{
+    content: "/";
+}
+*[class~="ui-d/menucascade"] > *[class~="ui-d/uicontrol"]:first-child:before{
+    content: "";
+}
+
+

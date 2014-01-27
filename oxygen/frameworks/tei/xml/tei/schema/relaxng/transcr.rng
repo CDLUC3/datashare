@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!--Schema generated 2008-07-08T17:38:31Z..
+Copyright 2008 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+For general (non-technical) enquiries, contact the TEI
+	  Consortium at info@tei-c.org; 
+for membership enquiries contact membership@tei-c.org; for
+technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C, contact editors@tei-c.org.
+For up to date information, consult the TEI web
+	      site at http://www.tei-c.org/P5/. 
+		Transcription of primary
+sources-->
+  <!--Definitions from module transcr-->
+  <!--Set global predeclared macros-->
+  <!--Set predeclared macros-->
+  <!--0. predeclared macros-->
+  <!--1. classes-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.facs.attributes">
+    <ref name="att.global.facs.attribute.facs"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.global.facs.attribute.facs">
+    <rng:optional>
+      <rng:attribute name="facs">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(facsimile) points to all or part of an image which corresponds with
+      the content of the element.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.pointer"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.coordinated.attributes">
+    <ref name="att.coordinated.attribute.ulx"/>
+    <ref name="att.coordinated.attribute.uly"/>
+    <ref name="att.coordinated.attribute.lrx"/>
+    <ref name="att.coordinated.attribute.lry"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.coordinated.attribute.ulx">
+    <rng:optional>
+      <rng:attribute name="ulx">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the x coordinate value for the upper left corner of a
+rectangular space.</a:documentation>
+        <ref name="data.numeric"/>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.coordinated.attribute.uly">
+    <rng:optional>
+      <rng:attribute name="uly">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the y coordinate value for the upper left corner of a
+rectangular space.</a:documentation>
+        <ref name="data.numeric"/>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.coordinated.attribute.lrx">
+    <rng:optional>
+      <rng:attribute name="lrx">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the x coordinate value for the lower right corner of a
+rectangular space.</a:documentation>
+        <ref name="data.numeric"/>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.coordinated.attribute.lry">
+    <rng:optional>
+      <rng:attribute name="lry">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the y coordinate value for the lower right corner of a
+rectangular space.</a:documentation>
+        <ref name="data.numeric"/>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="addSpan">
+    <element name="addSpan">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(added span of text) marks the beginning of a longer sequence of text added by an
+  author, scribe, annotator or corrector (see also add).</a:documentation>
+      <ref name="addSpan.content"/>
+      <ref name="addSpan.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="addSpan.content">
+    <rng:empty/>
+    <s:pattern xmlns:s="http://www.ascc.net/xml/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" name="spanTo_required">
+      <s:rule context="tei:addSpan">
+        <s:assert test="@spanTo">The spanTo= attribute of <s:name/> is required.</s:assert>
+      </s:rule>
+    </s:pattern>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="addSpan.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.transcriptional.attributes"/>
+    <ref name="att.placement.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <ref name="att.spanning.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="am">
+    <element name="am">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(abbreviation marker) contains a sequence of letters or signs present in an
+  abbreviation which are omitted or replaced in the expanded form of
+  the abbreviation.</a:documentation>
+      <ref name="am.content"/>
+      <ref name="am.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="am.content">
+    <rng:ref name="macro.xtext"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="am.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="damage">
+    <element name="damage">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an area of damage to the text witness.</a:documentation>
+      <ref name="damage.content"/>
+      <ref name="damage.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="damage.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="damage.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <ref name="att.damaged.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="damageSpan">
+    <element name="damageSpan">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(damaged span of text) marks the beginning of a longer sequence of text which is
+  damaged in some way but still legible.</a:documentation>
+      <ref name="damageSpan.content"/>
+      <ref name="damageSpan.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="damageSpan.content">
+    <rng:empty/>
+    <s:pattern xmlns:s="http://www.ascc.net/xml/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" name="spanTo_required_for_damageSpan">
+      <s:rule context="tei:damageSpan">
+        <s:assert test="@spanTo">The spanTo= attribute of <s:name/> is required.</s:assert>
+      </s:rule>
+    </s:pattern>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="damageSpan.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.damaged.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <ref name="att.spanning.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="delSpan">
+    <element name="delSpan">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(deleted span of text) marks the beginning of a longer sequence of text deleted,
+marked as deleted, or otherwise signaled as superfluous or spurious by an
+author, scribe, annotator, or corrector.</a:documentation>
+      <ref name="delSpan.content"/>
+      <ref name="delSpan.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="delSpan.content">
+    <rng:empty/>
+    <s:pattern xmlns:s="http://www.ascc.net/xml/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" name="spanTo_required_for_delSpan">
+      <s:rule context="tei:delSpan">
+        <s:assert test="@spanTo">The spanTo= attribute of <s:name/> is required.</s:assert>
+      </s:rule>
+    </s:pattern>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="delSpan.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.transcriptional.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <ref name="att.spanning.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ex">
+    <element name="ex">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(editorial expansion) contains a sequence of letters added by an editor or
+  transcriber when expanding an abbreviation.</a:documentation>
+      <ref name="ex.content"/>
+      <ref name="ex.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ex.content">
+    <rng:ref name="macro.xtext"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="ex.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="facsimile">
+    <element name="facsimile">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a representation of some written source in the form of
+a set of images rather than as transcribed or encoded text.</a:documentation>
+      <ref name="facsimile.content"/>
+      <ref name="facsimile.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="facsimile.content">
+    <rng:group>
+      <rng:optional>
+        <rng:ref name="front"/>
+      </rng:optional>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="model.graphicLike"/>
+          <rng:ref name="surface"/>
+        </rng:choice>
+      </rng:oneOrMore>
+      <rng:optional>
+        <rng:ref name="back"/>
+      </rng:optional>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="facsimile.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fw">
+    <element name="fw">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(forme work) contains a running head (e.g. a header, footer), catchword, or
+  similar material appearing on the current page.</a:documentation>
+      <ref name="fw.content"/>
+      <ref name="fw.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fw.content">
+    <rng:ref name="macro.phraseSeq"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="fw.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.placement.attributes"/>
+    <rng:optional>
+      <rng:attribute name="type">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the material encoded according to some useful typology.
+Sample values include: 1] header; 2] footer; 3] pageNum (page number); 4] lineNum (line number); 5] sig (signature); 6] catch (catchword)</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="handNotes">
+    <element name="handNotes">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains one or more handNote elements documenting the
+different hands identified within the source texts.</a:documentation>
+      <ref name="handNotes.content"/>
+      <ref name="handNotes.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="handNotes.content">
+    <rng:oneOrMore>
+      <rng:ref name="handNote"/>
+    </rng:oneOrMore>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="handNotes.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="handShift">
+    <element name="handShift">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marks the beginning of a sequence of text written in a new
+hand, or the beginning of a scribal stint.</a:documentation>
+      <ref name="handShift.content"/>
+      <ref name="handShift.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="handShift.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="handShift.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.handFeatures.attributes"/>
+    <rng:optional>
+      <rng:attribute name="new">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the new hand.</a:documentation>
+        <ref name="data.code"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="resp">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">signifies the editor or transcriber responsible for identifying
+the change of hand.</a:documentation>
+        <ref name="data.code"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="restore">
+    <element name="restore">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates restoration of text to an earlier state by
+cancellation of an editorial or authorial marking or instruction.</a:documentation>
+      <ref name="restore.content"/>
+      <ref name="restore.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="restore.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="restore.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.transcriptional.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="space">
+    <element name="space">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the location of a significant space in the copy text.</a:documentation>
+      <ref name="space.content"/>
+      <ref name="space.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="space.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="space.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.dimensions.attributes"/>
+    <rng:optional>
+      <rng:attribute name="dim">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dimension) indicates whether the space is horizontal or vertical.</a:documentation>
+        <rng:choice>
+          <rng:value>horizontal</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the space is horizontal.</a:documentation>
+          <rng:value>vertical</rng:value>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the space is vertical.</a:documentation>
+        </rng:choice>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="resp">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsible party) indicates the individual responsible for identifying and measuring
+the space.</a:documentation>
+        <ref name="data.pointer"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="subst">
+    <element name="subst">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(substitution) groups one or more deletions with one or more additions when
+  the combination is to be regarded as a single intervention in the text.</a:documentation>
+      <ref name="subst.content"/>
+      <ref name="subst.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="subst.content">
+    <rng:group>
+      <rng:group>
+        <rng:ref name="model.pPart.transcriptional"/>
+      </rng:group>
+      <rng:oneOrMore>
+        <rng:ref name="model.pPart.transcriptional"/>
+      </rng:oneOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="subst.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.transcriptional.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="supplied">
+    <element name="supplied">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">signifies text supplied by the transcriber or editor for any
+  reason, typically because the original cannot be read because of
+  physical damage or loss to the original.</a:documentation>
+      <ref name="supplied.content"/>
+      <ref name="supplied.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="supplied.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="supplied.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.editLike.attributes"/>
+    <rng:optional>
+      <rng:attribute name="reason">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates why the text has had to be supplied.</a:documentation>
+        <rng:list>
+          <rng:oneOrMore>
+            <ref name="data.word"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="surface">
+    <element name="surface">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a written surface in terms of a rectangular
+coordinate space, optionally  grouping one or more graphic representations of
+that space, and rectangular zones of interest
+within it.</a:documentation>
+      <ref name="surface.content"/>
+      <ref name="surface.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="surface.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:ref name="model.glossLike"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="model.graphicLike"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="zone"/>
+      </rng:zeroOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="surface.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.coordinated.attributes"/>
+    <ref name="att.declaring.attributes"/>
+    <rng:optional>
+      <rng:attribute name="start">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to an element which encodes the starting position of the text corresponding to the
+inscribed part of the surface.</a:documentation>
+        <ref name="data.pointer"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="zone">
+    <element name="zone">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a rectangular area contained within a surface
+element. </a:documentation>
+      <ref name="zone.content"/>
+      <ref name="zone.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="zone.content">
+    <rng:group>
+      <rng:zeroOrMore>
+        <rng:ref name="model.glossLike"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="model.graphicLike"/>
+      </rng:zeroOrMore>
+    </rng:group>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="zone.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.coordinated.attributes"/>
+    <empty/>
+  </define>
+  <!--3. macros-->
+</rng:grammar>

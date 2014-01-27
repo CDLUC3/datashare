@@ -1,0 +1,2996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <map>
+    <entry>
+      <String xml:space="preserve">document.types</String>
+      <documentTypeDescriptor-array>
+        <documentTypeDescriptor>
+          <field name="name">
+            <String xml:space="preserve">DocBook 5</String>
+          </field>
+          <field name="schemaDescriptor">
+            <docTypeSchema>
+              <field name="type">
+                <Integer xml:space="preserve">6</Integer>
+              </field>
+              <field name="uri">
+                <String xml:space="preserve">${frameworks}/docbook/5.0/rng/docbookxi.rng</String>
+              </field>
+            </docTypeSchema>
+          </field>
+          <field name="classpath">
+            <String-array>
+              <String xml:space="preserve">${frameworks}/docbook/docbook.jar</String>
+            </String-array>
+          </field>
+          <field name="authorExtensionDescriptor">
+            <authorExtension>
+              <field name="cssDescriptors">
+                <cssFile-array>
+                  <cssFile>
+                    <field name="href">
+                      <String xml:space="preserve">${frameworks}/docbook/css/docbook.css</String>
+                    </field>
+                    <field name="title">
+                      <String xml:space="preserve">DocBook default</String>
+                    </field>
+                    <field name="alternate">
+                      <Boolean xml:space="preserve">false</Boolean>
+                    </field>
+                  </cssFile>
+                  <cssFile>
+                    <field name="href">
+                      <String xml:space="preserve">${frameworks}/docbook/css/hideColspec.css</String>
+                    </field>
+                    <field name="title">
+                      <String xml:space="preserve">Hide colspec</String>
+                    </field>
+                    <field name="alternate">
+                      <Boolean xml:space="preserve">true</Boolean>
+                    </field>
+                  </cssFile>
+                </cssFile-array>
+              </field>
+              <field name="mergeCSSsFromDocument">
+                <Boolean xml:space="preserve">false</Boolean>
+              </field>
+              <field name="actionDescriptors">
+                <action-array>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">bold</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Bold</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Emphasises text. Inserts the emphasis[@role='bold'] element</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Bold20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Bold16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">B</String>
+                    </field>
+                    <field name="accelerator">
+                      <String xml:space="preserve">ctrl shift B</String>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;emphasis xmlns="http://docbook.org/ns/docbook" role="bold"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">italic</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Italic</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Emphasises text. Inserts the emphasis[@role='italic'] element</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Italic20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Italic16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">I</String>
+                    </field>
+                    <field name="accelerator">
+                      <String xml:space="preserve">ctrl shift I</String>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;emphasis xmlns="http://docbook.org/ns/docbook" role="italic"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">underline</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Underline</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Emphasises text. Inserts the emphasis[@role='underline'] element</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Underline20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Underline16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve">U</String>
+                    </field>
+                    <field name="accelerator">
+                      <String xml:space="preserve">ctrl shift U</String>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;emphasis xmlns="http://docbook.org/ns/docbook" role="underline"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">para</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Paragraph</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a new paragraph</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Paragraph20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Paragraph16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <String xml:space="preserve">ctrl shift P</String>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:para[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;para xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:para[namespace-uri() = "http://docbook.org/ns/docbook"][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:title[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;para xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:title[namespace-uri() = "http://docbook.org/ns/docbook"][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;para xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">listitem</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert List Item</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a list item</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/ListItem20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/ListItem16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:variablelist[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;varlistentry xmlns="http://docbook.org/ns/docbook">&lt;term/>&lt;listitem>&lt;para/>&lt;/listitem>&lt;/varlistentry></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:variablelist | self::*:varlistentry][1][self::*:variablelist]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;varlistentry xmlns="http://docbook.org/ns/docbook">&lt;term/>&lt;listitem>&lt;para/>&lt;/listitem>&lt;/varlistentry></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:variablelist][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:variablelist | self::*:itemizedlist | self::*:orderedlist][1][self::*:variablelist]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;varlistentry xmlns="http://docbook.org/ns/docbook">&lt;term/>&lt;listitem>&lt;para/>&lt;/listitem>&lt;/varlistentry></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:varlistentry[namespace-uri() = "http://docbook.org/ns/docbook"][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:listitem | self::*:itemizedlist | self::*:orderedlist][1][self::*:listitem]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;listitem xmlns="http://docbook.org/ns/docbook">&lt;para/>&lt;/listitem></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:listitem[namespace-uri() = "http://docbook.org/ns/docbook"][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:orderedlist | self::*:itemizedlist][1]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;listitem xmlns="http://docbook.org/ns/docbook">&lt;para/>&lt;/listitem></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">orderedlist</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Ordered List</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert an ordered list at the caret position</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/OrderedList20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/OrderedList16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:itemizedlist[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;listitem xmlns="http://docbook.org/ns/docbook">&lt;orderedlist>&lt;listitem>&lt;para/>&lt;/listitem>&lt;/orderedlist>&lt;/listitem></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;orderedlist xmlns="http://docbook.org/ns/docbook">&lt;listitem>&lt;para/>&lt;/listitem>&lt;/orderedlist></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">itemizedlist</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Itemized List</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert an itemized list at the caret position</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/UnorderedList20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/UnorderedList16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:orderedlist[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;listitem xmlns="http://docbook.org/ns/docbook">&lt;itemizedlist>&lt;listitem>&lt;para/>&lt;/listitem>&lt;/itemizedlist>&lt;/listitem></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;itemizedlist xmlns="http://docbook.org/ns/docbook">&lt;listitem>&lt;para/>&lt;/listitem>&lt;/itemizedlist></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">variablelist</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Variable List</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a variable list at the caret position</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/VariableList20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/VariableList16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">(self::*:itemizedlist | self::*:orderedlist)[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;listitem xmlns="http://docbook.org/ns/docbook">&lt;variablelist>&lt;varlistentry>&lt;term/>&lt;listitem>&lt;para/>&lt;/listitem>&lt;/varlistentry>&lt;/variablelist>&lt;/listitem></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;variablelist xmlns="http://docbook.org/ns/docbook">&lt;varlistentry>&lt;term/>&lt;listitem>&lt;para/>&lt;/listitem>&lt;/varlistentry>&lt;/variablelist></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">section</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Section</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a new section/subsection in the document</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Section20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Section16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:sect4[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;sect5 xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/sect5></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:sect4[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;sect5 xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/sect5></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:sect4][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:sect3[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;sect4 xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/sect4></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:sect3[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;sect4 xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/sect4></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:sect3][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:sect2[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;sect3 xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/sect3></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:sect2[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;sect3 xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/sect3></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:sect2][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:sect1[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;sect2 xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/sect2></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:sect1[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;sect2 xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/sect2></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:sect1][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">descendant::*:sect1[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;sect1 xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/sect1></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:section[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;section xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/section></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:section[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;section xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/section></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:section][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;section xmlns="http://docbook.org/ns/docbook">&lt;title/>&lt;/section></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Table</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a docbook table</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Table20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Table16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.docbook.table.InsertTableOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table.row</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Row</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a table row</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableRow20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableRow16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">(self::*:tbody | self::*:tfoot | self::*:thead)[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:tgroup]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">(self::*:tbody | self::*:tfoot)[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">header row</String>
+                                <String xml:space="preserve">no</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve"></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:thead[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">header row</String>
+                                <String xml:space="preserve">yes</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">Inside</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:table | self::*:informaltable][1][child::*:tgroup]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:row[namespace-uri() = "http://docbook.org/ns/docbook"][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:tbody | parent::*:tfoot | parent::*:table]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">header row</String>
+                                <String xml:space="preserve">no</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri() = "http://docbook.org/ns/docbook"][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:thead]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">header row</String>
+                                <String xml:space="preserve">yes</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri() = "http://docbook.org/ns/docbook"][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertRowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table.entry</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Cell</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a table cell(entry)</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableCell20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableCell16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:row[namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;entry xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:tr[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:tbody | parent::*:tfoot | parent::*:table]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;td xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:tr[namespace-uri() = "http://docbook.org/ns/docbook"][parent::*:thead]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;th xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">(self::*:thead | self::*:tbody | self::*:tfoot)[namespace-uri() = "http://docbook.org/ns/docbook"] [parent::*:tgroup][namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;row xmlns="http://docbook.org/ns/docbook">&lt;entry/>&lt;/row></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">self::*:thead[namespace-uri() = "http://docbook.org/ns/docbook"] [parent::*:table][namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;tr xmlns="http://docbook.org/ns/docbook">&lt;th/>&lt;/tr></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">(self::*:tbody | self::*:tfoot)[namespace-uri() = "http://docbook.org/ns/docbook"] [parent::*:table][namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;tr xmlns="http://docbook.org/ns/docbook">&lt;td/>&lt;/tr></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[self::*:entry | self::*:td | self::*:th][1][self::*:entry][namespace-uri() = "http://docbook.org/ns/docbook"]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;entry xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::*:entry[namespace-uri() = "http://docbook.org/ns/docbook"][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri() = "http://docbook.org/ns/docbook"][1][parent::*:tbody | parent::*:tfoot | parent::*:table]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;td xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:td | self::*:th][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::*:tr[namespace-uri() = "http://docbook.org/ns/docbook"][1][parent::*:thead]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;th xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:td | self::*:th][1]</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">insertPosition</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.graphic</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Graphic</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a Docbook graphic</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/Image20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/Image16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.docbook.InsertImageDataOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.join.row.cells</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Join Row Cells</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Join the content of the selected cells. The operation is available only if the selected cells are from the same row and they have the same column span.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableJoinRowCells20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableJoinRowCells16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:row | self::*:tr][1][self::*:row]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.JoinRowCellsOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:row | self::*:tr][1][self::*:tr]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.JoinRowCellsOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.left</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell To The Left</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple columns</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellLeft20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellLeft16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:entry]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Left</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.SplitLeftRightOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:td | self::*:th]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Left</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.SplitLeftRightOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.right</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell To The Right</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple columns</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellRight20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellRight16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:entry]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Right</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.SplitLeftRightOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:td | self::*:th]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Right</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.SplitLeftRightOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.join.cell.above</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Join Cell Above</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Join the content of the selected cell with the content of the cell above. The operation is available only if there is an above cell and both cells have the same column span.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellUp20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellUp16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:entry]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Join direction</String>
+                                <String xml:space="preserve">Above</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.JoinCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:td |self::*:th]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Join direction</String>
+                                <String xml:space="preserve">Above</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.JoinCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.join.cell.below</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Join Cell Below</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Join the content of the selected cell with the content of the cell below. The operation is available only if there is an below cell and both cells have the same column span.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellDown20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableJoinCellDown16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:entry]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Join direction</String>
+                                <String xml:space="preserve">Below</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.JoinCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:td |self::*:th]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Join direction</String>
+                                <String xml:space="preserve">Below</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.JoinCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.below</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell Below</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple rows</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellDown20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellDown16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:entry]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Below</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.SplitCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:td | self::*:th]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Below</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.SplitCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">table.split.above</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Split Cell Above</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Split the content of a table cell that spans over multiple rows</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellUp20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableSplitCellUp16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:entry]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Above</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.SplitCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:entry | self::*:td | self::*:th][1][self::*:td | self::*:th]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">Split point</String>
+                                <String xml:space="preserve">Above</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.SplitCellAboveBelowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.table.column</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Insert Column</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Insert a table column</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/TableColumn20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/TableColumn16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:row | self::*:tr][1][self::*:row]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">insertLocation</String>
+                                <String xml:space="preserve">After</String>
+                              </entry>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.InsertColumnOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"][self::*:row | self::*:tr][1][self::*:tr]</String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">namespace</String>
+                                <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.InsertColumnOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">delete.table.column</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Delete Column</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Delete a table column</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/DeleteColumn20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/DeleteColumn16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"]
+[self::*:td | self::*:th | self::*:entry][1][self::*:entry]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.DeleteColumnOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"]
+[self::*:td | self::*:th | self::*:entry][1][self::*:td | self::*:th]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.DeleteColumnOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">delete.table.row</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">Delete Row</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Delete a table row</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve">/images/DeleteRow20.gif</String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve">/images/DeleteRow16.gif</String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"]
+[self::*:row | self::*:tr][1][self::*:row]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.cals.DeleteRowOperation</String>
+                          </field>
+                        </actionMode>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve">ancestor-or-self::node()[namespace-uri() = "http://docbook.org/ns/docbook"]
+[self::*:row | self::*:tr][1][self::*:tr]</String>
+                          </field>
+                          <field name="argValues">
+                            <map></map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.operations.xhtml.DeleteRowOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.link</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">link</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Inserts a hypertext link</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;link xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.olink</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">olink</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Inserts a link that addresses its target indirectly, through an entity</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;olink xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.xref</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">xref</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Inserts a cross reference to another part of the document</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;xref xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                  <action>
+                    <field name="id">
+                      <String xml:space="preserve">insert.uri</String>
+                    </field>
+                    <field name="name">
+                      <String xml:space="preserve">uri</String>
+                    </field>
+                    <field name="description">
+                      <String xml:space="preserve">Inserts an URI element. The URI element identifies a Uniform Resource Identifier (URI) in content.</String>
+                    </field>
+                    <field name="largeIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="smallIconPath">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accessKey">
+                      <String xml:space="preserve"></String>
+                    </field>
+                    <field name="accelerator">
+                      <null></null>
+                    </field>
+                    <field name="actionModes">
+                      <actionMode-array>
+                        <actionMode>
+                          <field name="xpathCondition">
+                            <String xml:space="preserve"></String>
+                          </field>
+                          <field name="argValues">
+                            <map>
+                              <entry>
+                                <String xml:space="preserve">fragment</String>
+                                <String xml:space="preserve">&lt;uri xmlns="http://docbook.org/ns/docbook"/></String>
+                              </entry>
+                            </map>
+                          </field>
+                          <field name="operationID">
+                            <String xml:space="preserve">ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+                          </field>
+                        </actionMode>
+                      </actionMode-array>
+                    </field>
+                  </action>
+                </action-array>
+              </field>
+              <field name="menubarDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">DocBook5</String>
+                  </field>
+                  <field name="accessKey">
+                    <String xml:space="preserve">B</String>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Emphasize</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Emphasize16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">bold</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">italic</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">underline</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Link</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Link16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.link</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.olink</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.xref</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.uri</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menuSeparator></menuSeparator>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">section</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">para</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.graphic</String>
+                        </field>
+                      </menuItem>
+                      <menuSeparator></menuSeparator>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">List</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/UnorderedList16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">listitem</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">orderedlist</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">itemizedlist</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">variablelist</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Table</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Table16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.entry</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.row.cells</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.below</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.left</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.right</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.below</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                    </menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="popupMenuDescriptor">
+                <menu>
+                  <field name="label">
+                    <String xml:space="preserve">Contextual Menu</String>
+                  </field>
+                  <field name="accessKey">
+                    <null></null>
+                  </field>
+                  <field name="iconPath">
+                    <null></null>
+                  </field>
+                  <field name="menuEntriesDescriptorList">
+                    <menuEntry-array>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Emphasize</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Emphasize16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">bold</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">italic</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">underline</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Link</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Link16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.link</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.olink</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.xref</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.uri</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menuSeparator></menuSeparator>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">section</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">para</String>
+                        </field>
+                      </menuItem>
+                      <menuItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.graphic</String>
+                        </field>
+                      </menuItem>
+                      <menuSeparator></menuSeparator>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">List</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/UnorderedList16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">listitem</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">orderedlist</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">itemizedlist</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">variablelist</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                      <menu>
+                        <field name="label">
+                          <String xml:space="preserve">Table</String>
+                        </field>
+                        <field name="accessKey">
+                          <String xml:space="preserve"></String>
+                        </field>
+                        <field name="iconPath">
+                          <String xml:space="preserve">/images/Table16.gif</String>
+                        </field>
+                        <field name="menuEntriesDescriptorList">
+                          <menuEntry-array>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.table.entry</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.column</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">delete.table.row</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.row.cells</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.join.cell.below</String>
+                              </field>
+                            </menuItem>
+                            <menuSeparator></menuSeparator>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.left</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.right</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.above</String>
+                              </field>
+                            </menuItem>
+                            <menuItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">table.split.below</String>
+                              </field>
+                            </menuItem>
+                          </menuEntry-array>
+                        </field>
+                      </menu>
+                    </menuEntry-array>
+                  </field>
+                </menu>
+              </field>
+              <field name="toolbarDescriptor">
+                <toolbar>
+                  <field name="id">
+                    <String xml:space="preserve">Toolbar</String>
+                  </field>
+                  <field name="type">
+                    <Integer xml:space="preserve">2</Integer>
+                  </field>
+                  <field name="largeIconPath">
+                    <null></null>
+                  </field>
+                  <field name="smallIconPath">
+                    <null></null>
+                  </field>
+                  <field name="toolbarEntriesDescriptorList">
+                    <toolbarEntry-array>
+                      <toolbar>
+                        <field name="id">
+                          <String xml:space="preserve">Emphasize</String>
+                        </field>
+                        <field name="type">
+                          <Integer xml:space="preserve">3</Integer>
+                        </field>
+                        <field name="largeIconPath">
+                          <String xml:space="preserve">/images/Emphasize20.gif</String>
+                        </field>
+                        <field name="smallIconPath">
+                          <String xml:space="preserve">/images/Emphasize16.gif</String>
+                        </field>
+                        <field name="toolbarEntriesDescriptorList">
+                          <toolbarEntry-array>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">bold</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">italic</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">underline</String>
+                              </field>
+                            </toolbarItem>
+                          </toolbarEntry-array>
+                        </field>
+                      </toolbar>
+                      <toolbar>
+                        <field name="id">
+                          <String xml:space="preserve">Link</String>
+                        </field>
+                        <field name="type">
+                          <Integer xml:space="preserve">3</Integer>
+                        </field>
+                        <field name="largeIconPath">
+                          <String xml:space="preserve">/images/Link20.gif</String>
+                        </field>
+                        <field name="smallIconPath">
+                          <String xml:space="preserve">/images/Link16.gif</String>
+                        </field>
+                        <field name="toolbarEntriesDescriptorList">
+                          <toolbarEntry-array>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.link</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.olink</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.xref</String>
+                              </field>
+                            </toolbarItem>
+                            <toolbarItem>
+                              <field name="actionID">
+                                <String xml:space="preserve">insert.uri</String>
+                              </field>
+                            </toolbarItem>
+                          </toolbarEntry-array>
+                        </field>
+                      </toolbar>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">section</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">para</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.graphic</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">listitem</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">orderedlist</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">itemizedlist</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">variablelist</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table.row</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table.column</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">insert.table.entry</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">delete.table.column</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">delete.table.row</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.join.row.cells</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.join.cell.above</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.join.cell.below</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarSeparator></toolbarSeparator>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.left</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.right</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.above</String>
+                        </field>
+                      </toolbarItem>
+                      <toolbarItem>
+                        <field name="actionID">
+                          <String xml:space="preserve">table.split.below</String>
+                        </field>
+                      </toolbarItem>
+                    </toolbarEntry-array>
+                  </field>
+                </toolbar>
+              </field>
+              <field name="tableSupportClassName">
+                <String xml:space="preserve">ro.sync.ecss.extensions.commons.table.spansupport.CALSandHTMLTableCellSpanProvider</String>
+              </field>
+              <field name="customReferencesResolver">
+                <null></null>
+              </field>
+            </authorExtension>
+          </field>
+          <field name="templatesLocations">
+            <String-array>
+              <String xml:space="preserve">${frameworksDir}/docbook/templates/Docbook 5</String>
+            </String-array>
+          </field>
+          <field name="xmlCatalogs">
+            <String-array>
+              <String xml:space="preserve">${frameworks}/docbook/5.0/catalog.xml</String>
+            </String-array>
+          </field>
+          <field name="description">
+            <String xml:space="preserve">DocBook is a markup language for technical documentation, originally intended for authoring technical documents</String>
+          </field>
+          <field name="doctypeRules">
+            <documentTypeRule-array>
+              <documentTypeRule>
+                <field name="namespace">
+                  <String xml:space="preserve">http://docbook.org/ns/docbook</String>
+                </field>
+                <field name="rootElem">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="fileName">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="publicID">
+                  <String xml:space="preserve">&lt;ANY></String>
+                </field>
+                <field name="javaRuleClass">
+                  <String xml:space="preserve"></String>
+                </field>
+              </documentTypeRule>
+            </documentTypeRule-array>
+          </field>
+          <field name="scenarios">
+            <scenario-array>
+              <scenario>
+                <field name="name">
+                  <String xml:space="preserve">Docbook HTML</String>
+                </field>
+                <field name="baseURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="footerURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="fOPMethod">
+                  <null></null>
+                </field>
+                <field name="fOProcessorName">
+                  <null></null>
+                </field>
+                <field name="headerURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="inputXSLURL">
+                  <String xml:space="preserve">${frameworks}/docbook/xsl/html/docbook.xsl</String>
+                </field>
+                <field name="inputXMLURL">
+                  <String xml:space="preserve">${currentFileURL}</String>
+                </field>
+                <field name="defaultScenario">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="isFOPPerforming">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="type">
+                  <String xml:space="preserve">XSL</String>
+                </field>
+                <field name="saveAs">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="openInBrowser">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="outputFile">
+                  <File xml:space="preserve">${cfd}/${cfn}.html</File>
+                </field>
+                <field name="openOtherLocationInBrowser">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="locationToOpenInBrowserURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="openInEditor">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="showInHTMLPane">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="showInXMLPane">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="showInSVGPane">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="useXSLTInput">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="xsltParams">
+                  <list>
+                    <transformationParameter>
+                      <field name="name">
+                        <String xml:space="preserve">draft.mode</String>
+                      </field>
+                      <field name="value">
+                        <String xml:space="preserve">no</String>
+                      </field>
+                    </transformationParameter>
+                  </list>
+                </field>
+                <field name="cascadingStylesheets">
+                  <String-array></String-array>
+                </field>
+                <field name="xslTransformer">
+                  <String xml:space="preserve">Saxon6.5.5</String>
+                </field>
+                <field name="extensionURLs">
+                  <String-array></String-array>
+                </field>
+              </scenario>
+              <scenario>
+                <field name="name">
+                  <String xml:space="preserve">Docbook PDF</String>
+                </field>
+                <field name="baseURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="footerURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="fOPMethod">
+                  <String xml:space="preserve">pdf</String>
+                </field>
+                <field name="fOProcessorName">
+                  <null></null>
+                </field>
+                <field name="headerURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="inputXSLURL">
+                  <String xml:space="preserve">${frameworks}/docbook/xsl/fo/docbook.xsl</String>
+                </field>
+                <field name="inputXMLURL">
+                  <String xml:space="preserve">${currentFileURL}</String>
+                </field>
+                <field name="defaultScenario">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="isFOPPerforming">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="type">
+                  <String xml:space="preserve">XSL</String>
+                </field>
+                <field name="saveAs">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="openInBrowser">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="outputFile">
+                  <File xml:space="preserve">${cfd}/${cfn}.pdf</File>
+                </field>
+                <field name="openOtherLocationInBrowser">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="locationToOpenInBrowserURL">
+                  <String xml:space="preserve"></String>
+                </field>
+                <field name="openInEditor">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="showInHTMLPane">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="showInXMLPane">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="showInSVGPane">
+                  <Boolean xml:space="preserve">false</Boolean>
+                </field>
+                <field name="useXSLTInput">
+                  <Boolean xml:space="preserve">true</Boolean>
+                </field>
+                <field name="xsltParams">
+                  <list>
+                    <transformationParameter>
+                      <field name="name">
+                        <String xml:space="preserve">draft.mode</String>
+                      </field>
+                      <field name="value">
+                        <String xml:space="preserve">no</String>
+                      </field>
+                    </transformationParameter>
+                    <transformationParameter>
+                      <field name="name">
+                        <String xml:space="preserve">paper.type</String>
+                      </field>
+                      <field name="value">
+                        <String xml:space="preserve">A4</String>
+                      </field>
+                    </transformationParameter>
+                    <transformationParameter>
+                      <field name="name">
+                        <String xml:space="preserve">fop.extensions</String>
+                      </field>
+                      <field name="value">
+                        <String xml:space="preserve">0</String>
+                      </field>
+                    </transformationParameter>
+                    <transformationParameter>
+                      <field name="name">
+                        <String xml:space="preserve">fop1.extensions</String>
+                      </field>
+                      <field name="value">
+                        <String xml:space="preserve">1</String>
+                      </field>
+                    </transformationParameter>
+                  </list>
+                </field>
+                <field name="cascadingStylesheets">
+                  <String-array></String-array>
+                </field>
+                <field name="xslTransformer">
+                  <String xml:space="preserve">Saxon6.5.5</String>
+                </field>
+                <field name="extensionURLs">
+                  <String-array></String-array>
+                </field>
+              </scenario>
+            </scenario-array>
+          </field>
+          <field name="elementLocatorExtension">
+            <null></null>
+          </field>
+        </documentTypeDescriptor>
+      </documentTypeDescriptor-array>
+    </entry>
+  </map>
+</serialized>

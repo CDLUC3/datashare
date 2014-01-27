@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="project">
+        <xs:annotation>
+            <xs:documentation>The root element of a project file for
+            &lt;oXygen/&gt;.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="meta"/>
+                <xs:element ref="projectTree"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="meta">
+        <xs:annotation>
+            <xs:documentation>Meta information about the project.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="lastOpenedFiles"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="lastOpenedFiles">
+        <xs:annotation>
+            <xs:documentation>The list of files opened when oXygen was closed.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="file"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="projectTree">
+        <xs:annotation>
+            <xs:documentation>The tree of folders and files included in the
+            project.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="folder"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="file"/>
+            </xs:sequence>
+            <xs:attribute name="name" use="required" type="xs:NCName">
+                <xs:annotation>
+                    <xs:documentation>The name of the project file.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="file">
+        <xs:annotation>
+            <xs:documentation>A file included in the project.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="focused" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>This attribute is for files from element lastOpenedFiles. Only
+                        the file that was edited when oXygen was closed has this
+                    attribute.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="name" use="required" type="xs:anyURI">
+                <xs:annotation>
+                    <xs:documentation>The name of the file starting at the root of the
+                    project.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="folder">
+        <xs:annotation>
+            <xs:documentation>A folder included in the project. If it has the attribute path it
+                represents a folder from disk with all the contained files and folders. Otherwise it
+                is a logical folder that does not have to exist on disk.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="folder"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="file"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:NCName">
+                <xs:annotation>
+                    <xs:documentation>The displayed name of the folder.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="path" type="xs:anyURI">
+                <xs:annotation>
+                    <xs:documentation>The path attribute occur only for folders linked to external
+                        folders.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

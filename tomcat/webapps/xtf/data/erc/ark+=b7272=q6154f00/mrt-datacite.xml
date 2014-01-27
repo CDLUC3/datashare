@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q6154F00</identifier>
+<creators>
+<creator>
+<creatorName>Ewers, Michael</creatorName>
+</creator>
+<creator>
+<creatorName>Insel, Philip</creatorName>
+</creator>
+<creator>
+<creatorName>Jagust, William J.</creatorName>
+</creator>
+<creator>
+<creatorName>Shaw, Leslie</creatorName>
+</creator>
+<creator>
+<creatorName>Trojanowski, John Q.</creatorName>
+</creator>
+<creator>
+<creatorName>Aisen, Paul</creatorName>
+</creator>
+<creator>
+<creatorName>Petersen, Ronald C.</creatorName>
+</creator>
+<creator>
+<creatorName>Schuff, Norbert</creatorName>
+</creator>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+</creators>
+<titles>
+<title>CSF Biomarker and PIB-PET Derived Beta-Amyloid Signature Predicts Metabolic, Grey Matter and Cognitive Changes in Non-Demented Subjects</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Male</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Female</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Brain</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Amyloid</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cerebral Spinal Fluid</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Positron Emission Tomography</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Pathology</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">A Beta</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">FDG-PET</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Glucose Metabolism</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Atrophy</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<resourceType resourceTypeGeneral="Dataset">application/octet-stream</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">22038908</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">Beta-amyloid (Aß is a histopathological hallmark of Alzheimer's disease dementia, but high levels of Aß in the brain can also be found in a substantial proportion of nondemented subjects. Here we investigated which 2-year rate of brain and cognitive changes are present in nondemented subjects with high and low Aß levels, as assessed with cerebrospinal fluid and molecular positron emission tomography (PET)-based biomarkers of Aß. In subjects with mild cognitive impairment, increased brain Aß levels were associated with significantly faster cognitive decline, progression of gray matter atrophy within temporal and parietal brain regions, and a trend for a faster decline in parietal Fludeoxyglucose (FDG)-PET metabolism. Changes in gray matter and FDG-PET mediated the association between Aß and cognitive decline. In contrast, elderly cognitively healthy controls (HC) with high Aß levels showed only a faster medial temporal lobe and precuneus volume decline compared with HC with low Aß. In conclusion, the current results suggest not only that both functional and volumetric brain changes are associated with high Aß years before the onset of dementia but also that HC with substantial Aß levels show higher Aß pathology resistance, lack other pathologies that condition neurotoxic effects of Aß, or accumulated Aß for a shorter time period.</description>
+<description descriptionType="Methods">Subjects: The study included 465 subjects of which 124 were elderly cognitively HC subjects, 229 subjects were diagnosed with amnestic MCI and 112 subjects had probable AD, recruited within the North American multicenter Alzheimer's Disease Neuroimaging Initiative (ADNI, for database, see www.loni.ucla.edu/ADNI). ADNI was launched in 2003 by the National Institute on Aging, the National Institute of Biomedical Imaging and Bioengineering (NIBIB), the Food and Drug Administration, private pharmaceutical companies, and nonprofit organizations, as a $60 million, 5-year public-private partnership. The primary goal of ADNI has been to test whether serial magnetic resonance imaging (MRI), PET, other biological markers, and clinical and neuropsychological assessment can be combined to measure the progression of MCI and early Alzheimer's disease (AD). The initial goal of ADNI was to recruit 800 adults, ages 55 to 90, to participate in the research—approximately 200 cognitively normal older individuals to be followed for 3 years, 400 people with MCI to be followed for 3 years, and 200 people with early AD to be followed for 2 years. For up-to-date information, see www.adni-info.org. The current sample was restricted to those subjects who had either a PIB-PET assessment or a CSF-Aß-1-42 measurement. Within this subset, PIB-PET was available in 103 subjects including 19 HC, 65 MCI, and 19 AD subjects. The CSF-Aß-1-42 concentration was assessed in a total of 116 HC, 199 MCI, and 102 AD subjects (see Fig. 1 for further information on subjects and data inclusion). Within 55 subjects, both CSF Ab1--42 and PIB-PET were assessed. The observation interval covered 2 years, where neuropsychological assessment, FDG-PET scanning, and MRI acquisition was conducted at baseline, 6, 12, and 24 month. All collected data are freely accessible online to researchers (http://www.loni.ucla.edu/ADNI). General inclusion criteria included an age between 55 and 90 years, a modified Hachinski score =4, education of at least 6 grade level, and stable treatment of at least 4 weeks in case of treatment with permitted medication (for full list, see http://www.adni-info.org, Procedures Manual). The diagnosis of AD was made according to the NINCDS-ADRDA criteria (McKhann et al. 1984). Inclusion criteria for AD encompassed subjective memory complaint, memory impairment as assessed by an education adjusted score on delayed recall of a single paragraph recall from the Wechsler Logical Memory II Subscale as follows: 0–7 years of education, =2; for 8–15 years, =4; for 16 years or more, =8, a Mini Mental State Exam (MMSE) score between 20 and 26, and a clinical dementia rating (CDR) score of 0.5 or 1. For the diagnosis of amnestic MCI, the subjects had to show subjective memory impairment and objective memory impairment identical to that for AD, a CDR of 0.5 including the memory box score of 0.5 or greater, and a MMSE score between 24 and 30, with unimpaired general cognitive ability and functional performance such that they did not meet criteria for dementia. HC had to show normal performance on the Logical Memory II Subscale adjusted for education as follows: 0–7 years, =3, 8–15 years, =5; 16 or more years, =9, and absence of significant impairment on cognitive function or activities of daily living (Ewers et al. 2010).
+CSF Measurement: All CSF samples collected at the different centers were shipped on dry ice to the Penn ADNI Biomarker Core Laboratory at the University of Pennsylvania, Philadelphia, for storage at -80°C until further analysis at the laboratory. More details on data collection of the CSF samples can be found at http://www.adni-info.org, under "ADNI study procedures." The CSF concentration of Aß-1-42, t-tau, and p-tau181 were measured in the baseline CSF samples using the multiplex xMAP Luminex platform (Lumnix Corp, Austin, TX) at the Penn ADNI Biomarker Core Laboratory. For detailed description, see Shaw et al. (2009).
+PIB-PET, FDG-PET, MRI Acquisition, and ROI Measurement: All MRI data were acquired on 1.5-T MRI scanners using a volumetric T1-weighted sequences to map brain structures, optimized for the different scanners as indicated at http://www.loni.ucla.edu/ADNI/Research/Cores/index (Jack, Bernstein, et al. 2008). Freesurfer software version 4.5 (Dale et al. 1999; Fischl et al. 1999) was employed to measure longitudinal changes in regional brain volumes. Briefly, the image-processing pipeline using FreeSurfer consisted of five stages: an affine registration with Talairach space, an initial volumetric labeling, bias field correction, nonlinear alignment to the Talairach space, and a final labeling of the volume. The fully automated labeling of volumes is achieved by warping a population based brain atlas to the target brain and by maximizing an a posteriori probability of the labels given specific constraints. A full description of the FreeSurfer processing steps can be found in (Fischl et al. 2002). The procedures have been extensively validated.
+MRI-volume ROIs were selected based on the previous meta-analyses on MRI gray matter volume measures that were most predictive of AD, including the hippocampus, middle temporal gyrus, superior temporal gyrus, amygdala, parahippocampus, entorhinal cortex, inferior parietal lobe, precuneus, and thalamus (Schroeter et al. 2009).
+PET data were acquired on multiple instruments of varying resolution. PIB scans were collected as 4 × 5 min frames beginning 50 min after injection of tracer. FDG scans were collected as 6 × 5 min frames beginning 30 min after injection of approximately 5 mCi of tracer. Attenuation correction was performed either via transmission scan or computer tomography. Images were uploaded to the Laboratory of Neuroimaging where they were processed to provide standard orientation, voxel size, and resolution.  FDG-PET ROIs were constructed based on a meta-analysis of the location of FDG-PET changes in the brain that are typically affected in AD as described previously (Jagust et al. 2009; Landau et al. 2009). FDG uptake was normalized to a reference region composed of the pons and cerebellum and measured in the target ROIs that included bilateral angular gyrus, posterior cingulate/precuneus, and inferior temporal cortex as described previously (Jagust et al. 2009). PIB-PET uptake was normalized to the cerebellum to generate maps of the PIB-PET score used for further statistical analysis. Target ROIs were drawn on a structural MRI template from a single 79-year-old MCI subject scanned at the University of Pittsburgh. This image was deemed an "average" older subject with typical atrophy and ventricular size. Each subject's PIB-PET score map was coregistered to the individual MRI with SPM5 that was normalized to the MCI template with SPM5 and permitted the transformation of the subject's PIB-PET to the template space. ROIs in which PIB uptake is known to predominate were averaged in left and right hemispheres and comprised of prefrontal, lateral temporal, anterior cingulate gyrus, parietal and posterior cingulate/precuneus. Further information is available at the ADNI webpage (http://www.loni.ucla.edu/ADNI/).
+Neuropsychological Tests: Global cognitive ability was assessed with the neuropsychological test battery Alzheimer's Disease Assessment Scale–cognitive section (ADAS-cog) (Rosen et al. 1984). The ADAS-cog score is the total score on a number of tests on learning and memory, language production, language comprehension, constructional praxis, ideational praxis, and orientation (see ADNI procedures manual for details at http://www.adni-info.org/Scientists/ProceduresManuals.aspx). A higher score on ADAS-cog scores indicates lower cognitive performance.
+Episodic memory was assessed with the Rey Auditory Verbal Learning Test (RAVLT), using the score on the 30-min delayed recall of a list of 15 words that had been repeatedly presented and recalled during the learning phase of 5 verbal presentations of the list (Rey 1964). The test score corresponds to the number of words recalled on the 30-min delayed test. For details on the administration and scoring, see the "Procedures Manual" (http://www.adni-info.org/Scientists/ProceduresManuals.aspx). </description>
+</descriptions>
+</resource>

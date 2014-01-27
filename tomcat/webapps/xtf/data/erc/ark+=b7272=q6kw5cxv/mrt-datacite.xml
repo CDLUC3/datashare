@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q6KW5CXV</identifier>
+<creators>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Predicting Cognitive Decline</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cognition</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Neuropsychological Test</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Middle Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Dementia</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cognition Disorders</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Risk Factors</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<resourceType resourceTypeGeneral="Dataset">application/octet-stream</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">15961190</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">18550226</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">15668426</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">15592130</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">15834860</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">18550226</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">These data were acquired with the overall goal of determining the regional and longitudinal pattern of changes in the brain which best predict future cognitive decline and dementia due to Alzheimer's disease (AD). The data set includes longitudinal clinical evaluation, cognitive testing, and neuroimaging assessments from a non-demented study population aged 65 and up who complain of memory problems and show some indication of memory and/or executive functioning below age/gender/education adjusted norm.</description>
+<description descriptionType="Methods">Data Acquisition Location: San Francisco VA Medical Center; Scanner Type: Siemens Vision 1.5T; Coronal T1 MPRAGE: TR=9ms, TE=4ms, TI=300ms, 1x1mm2, 3mm slice thickness; Axial double spin echo PD &amp; T2: TR=5000ms, TE=20/85ms, 1x1.25mm2, 3mm slice thickness</description>
+</descriptions>
+</resource>

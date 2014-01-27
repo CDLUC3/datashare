@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE AAA SYSTEM "followed.dtd">
+<?oxygen SCHSchema="followed.sch"?>
+<AAA>
+    <BBB aaa="A" bbb="B"/>
+</AAA>

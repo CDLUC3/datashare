@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @id: four character identifier -->
+<!-- @type: entity type from a constrained list -->
+<!-- @bpURL: original Bepress URL -->
+<entity id="osu-nc" type="oru">
+    <meta>
+        <label><!-- Value of @id from 'entity' element --></label>
+    </meta>
+    <display>
+        <mainFrame>
+            <logo>
+                <div id="logoDiv">
+                    <!-- @logo: logo path (e.g. 'brand/acgcc/institute_logo.jpg') -->
+                    <img class="logo" src="brand/osu-nc/nisonger.png"/>
+                    <span class="entity">Wexner Medical Center</span>
+                    <span class="campus">Ohio State University</span>
+                </div>
+            </logo>
+            <blurb>
+                <!-- descriptive blurb -->
+                <div id="blurbDiv">
+<p>Located in Columbus, Ohio, The Ohio State University Wexner Medical Center is one of the largest and most diverse academic medical centers in the country and the only academic medical center in central Ohio. Ohio State's Wexner Medical Center includes:</p>
+<ul>
+<li>a top-30 College of Medicine</li>
+<li>six hospitals</li>
+<li>a unified physician practice</li>
+<li>network of primary and specialty care practices</li>
+<li>more than a dozen research centers and institutes</li>
+<li>20 core laboratories</li>
+</ul>
+<p>This powerful enterprise is driven by our mission: to improve people’s lives through innovation in research, education and patient care.</p>
+<p>We also share a common vision: working as a team, we will shape the future of medicine by creating, disseminating and applying new knowledge, and by personalizing health care to meet the needs of each individual.</p>
+<p>Central to how we carry out our mission and vision are our values: excellence, collaborating as one university, integrity and personal accountability, openness and trust, diversity in people and ideas, change and innovation, simplicity in our work, empathy and compassion, and leadership.</p>
+<p>Our Strategic Plan Overview describes our mission, vision, values and strategic goals in greater detail.</p>
+                </div>
+            </blurb>
+        </mainFrame>
+        <generalInfo>
+            <contactInfo>
+                <div id="contactInfo">
+                    <h2>Wexner Medical Center</h2>
+                    <p>
+                        <a href="http://http://medicalcenter.osu.edu/" target="_blank">medicalcenter.osu.edu</a>
+                    </p>
+                </div>
+            </contactInfo>
+            <linkSet>
+                <div id="linksDiv">
+					<p>
+						<a href="/uc/search?entity=osu-nc;view=policyStatement">Policies</a>
+                    </p> 
+                </div>
+            </linkSet>
+            <linkedPages>
+                <div id="policyStatement">
+                    <h1>Wexner Medical Center Data Use Policy</h1>
+					<p>DataShare is a project dedicated to making research data openly available to the public.</p>
+					<p>Using data available through the DataShare project requires agreeing with the following:</p>
+					<ol>
+						<li>The quality and completeness of the data cannot be guaranteed. Users employ these data at their own risk.</li>
+						<li>Users shall respect restrictions of access to sensitive data. Users will make no attempt to identify the individuals whose images are included in DataShare data sets.</li>
+						<li>Users must acknowledge the use of DataShare data and data derived from DataShare data when publicly presenting any findings or algorithms that benefited from their use. Such presentations include but are not limited to papers, books, book chapters, conference posters, and talks. <br/>
+						When publishing findings that benefit from DataShare data, please include the following grant numbers in the acknowledgements section and in the associated Pubmed Central submission:  P50 AG05681, P01 AG03991, R01 AG021910, P20 MH071616, U24  RR021382.</li>
+						<li>Redistribution of original DataShare data is permitted so long as the data are redistributed under the same terms and conditions are described in this DUA.</li>
+						<li>Data derived from original DataShare data may be distributed under terms and conditions established by the creators of the data. Users must comply with the terms and conditions of use set by the creators of the data.</li>
+					</ol>
+				</div>		
+            </linkedPages>
+        </generalInfo>
+    </display>
+</entity>

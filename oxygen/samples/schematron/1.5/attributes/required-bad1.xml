@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE AAA SYSTEM "required.dtd">
+<?oxygen SCHSchema="required.sch"?>
+<AAA>
+     <CCC id="Q2"/>
+     <CCC/>
+     <BBB>
+          <CCC id="Q1"/>
+     </BBB>
+</AAA>

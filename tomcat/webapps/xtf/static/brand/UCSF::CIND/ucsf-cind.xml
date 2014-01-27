@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @id: four character identifier -->
+<!-- @type: entity type from a constrained list -->
+<!-- @bpURL: original Bepress URL -->
+<entity id="ucsf-cind" type="oru">
+    <meta>
+        <label><!-- Value of @id from 'entity' element --></label>
+    </meta>
+    <display>
+        <mainFrame>
+            <logo>
+                <div id="logoDiv">
+                    <!-- @logo: logo path (e.g. 'brand/acgcc/institute_logo.jpg') -->
+                    <img class="logo" src="brand/ucsf-cind/r.png"/>
+                    <span class="entity">Center for the Imaging of Neuroregenerative Diseases</span>
+                    <span class="campus">University of California, San Francisco</span>
+                </div>
+            </logo>
+            <blurb>
+                <!-- descriptive blurb -->
+                <div id="blurbDiv">
+<p>The mission of the Center for the Imaging of Neuroregenerative Diseases (CIND) is to develop new treatments which slow progression and will ultimately prevent the development of neurodegenerative diseases including Alzheimer's disease, vascular dementia, frontotemporal dementia, Parkinson's disease, post traumatic stress disorder (PTSD), gulf war illness, epilepsy, depression, and other conditions associated with nerve loss in the brain. Our focus is brain imaging, especially with MRI including structural MRI, perfusion MRI, diffusion tensor/spectral MRI, susceptibility weighted MRI, MR spectroscopy and MR spectroscopic imaging.</p>
+                </div>
+            </blurb>
+        </mainFrame>
+        <generalInfo>
+            <contactInfo>
+                <div id="contactInfo">
+                    <h2>Center for the Imaging of Neuroregenerative Diseases</h2>
+                    <p>
+                        <a href="http://www.radiology.ucsf.edu/cind" target="_blank">www.radiology.ucsf.edu/cind</a>
+                    </p>
+                </div>
+            </contactInfo>
+            <linkSet>
+                <div id="linksDiv">
+					<p>
+						<a href="/uc/search?entity=ucsf-cind;view=policyStatement">Policies</a>
+                    </p> 
+                </div>
+            </linkSet>
+            <linkedPages>
+                <div id="policyStatement">
+                    <h1>CIND Data Use Policy</h1>
+					<p>DataShare is a project dedicated to making research data openly available to the public.</p>
+					<p>Using data available through the DataShare project requires agreeing with the following:</p>
+					<ol>
+						<li>The quality and completeness of the data cannot be guaranteed. Users employ these data at their own risk.</li>
+						<li>Users shall respect restrictions of access to sensitive data. Users will make no attempt to identify the individuals whose images are included in DataShare data sets.</li>
+						<li>Users must acknowledge the use of DataShare data and data derived from DataShare data when publicly presenting any findings or algorithms that benefited from their use. Such presentations include but are not limited to papers, books, book chapters, conference posters, and talks. <br/>
+						When publishing findings that benefit from DataShare data, please include the following grant numbers in the acknowledgements section and in the associated Pubmed Central submission:  P50 AG05681, P01 AG03991, R01 AG021910, P20 MH071616, U24  RR021382.</li>
+						<li>Redistribution of original DataShare data is permitted so long as the data are redistributed under the same terms and conditions are described in this DUA.</li>
+						<li>Data derived from original DataShare data may be distributed under terms and conditions established by the creators of the data. Users must comply with the terms and conditions of use set by the creators of the data.</li>
+					</ol>
+				</div>		
+            </linkedPages>
+        </generalInfo>
+    </display>
+</entity>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <nextCatalog catalog="jsp/xsd/jspcatalog.xml"/>
+  <nextCatalog catalog="xml/catalog.xml"/>
+  <nextCatalog catalog="xs3p/catalog.xml" />
+</catalog>

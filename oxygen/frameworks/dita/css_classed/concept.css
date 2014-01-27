@@ -1,0 +1,44 @@
+/*
+====================================
+    Concept elements. [concept]
+====================================
+*/
+
+*[class~="concept/concept"]{
+	display: block;
+	margin: 0.5em 0;
+	padding-left: 0.5em;
+}
+
+*[class~="concept/conbody"]{
+    display: block;
+}
+
+
+/*
+    Reduce the font size.
+*/
+*[class~="concept/concept"] > *[class~="topic/title"]{
+	font-size: 1.8em;
+    color:#660000;
+    background-color:inherit;
+	border-bottom:1px solid #660000;
+}
+
+* *[class~="concept/concept"] > *[class~="topic/title"]{
+	font-size: 1.6em;
+	border-bottom:1px solid;
+}
+
+* * *[class~="concept/concept"] > *[class~="topic/title"]{
+	font-size: 1.4em;
+	border-bottom:none;
+}
+
+* * * *[class~="concept/concept"] > *[class~="topic/title"]{
+	font-size: 1.2em;
+}
+
+* * * * *[class~="concept/concept"] > *[class~="topic/title"]{
+	font-size: 1em;
+}

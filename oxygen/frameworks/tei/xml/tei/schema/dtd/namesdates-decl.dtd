@@ -1,0 +1,85 @@
+
+<!--
+ TEI P5 entity declaration module for
+                  namesdates. Generated 2008-07-08T17:38:57Z. 
+
+Copyright 2008 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+For general (non-technical) enquiries, contact the TEI
+	  Consortium at info@tei-c.org; 
+for membership enquiries contact membership@tei-c.org; for
+technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C, contact editors@tei-c.org.
+For up to date information, consult the TEI web
+	      site at http://www.tei-c.org/P5/. 
+		Names and dates
+-->
+
+<!--
+Start datatype macro declarations
+-->
+
+<!--
+End of datatype macro declarations
+-->
+
+<!--
+Start of classes
+-->
+
+<!ENTITY % x.model.persNamePart "" >
+<!ENTITY % model.persNamePart "%x.model.persNamePart; %n.surname; |
+ %n.forename; |
+ %n.genName; |
+ %n.nameLink; |
+ %n.addName; |
+ %n.roleName;"> 
+<!ENTITY % x.model.persNamePart_sequence "" >
+<!ENTITY % model.persNamePart_sequence "%x.model.persNamePart_sequence; %n.surname;, %n.forename;, %n.genName;, %n.nameLink;, %n.addName;, %n.roleName;"> 
+<!ENTITY % x.model.persNamePart_sequenceOptional "" >
+<!ENTITY % model.persNamePart_sequenceOptional "%x.model.persNamePart_sequenceOptional; %n.surname;?, %n.forename;?, %n.genName;?, %n.nameLink;?, %n.addName;?, %n.roleName;?"> 
+<!ENTITY % x.model.persNamePart_sequenceOptionalRepeatable "" >
+<!ENTITY % model.persNamePart_sequenceOptionalRepeatable "%x.model.persNamePart_sequenceOptionalRepeatable; %n.surname;*, %n.forename;*, %n.genName;*, %n.nameLink;*, %n.addName;*, %n.roleName;*"> 
+<!ENTITY % x.model.persNamePart_sequenceRepeatable "" >
+<!ENTITY % model.persNamePart_sequenceRepeatable "%x.model.persNamePart_sequenceRepeatable; %n.surname;+, %n.forename;+, %n.genName;+, %n.nameLink;+, %n.addName;+, %n.roleName;+"> 
+<!ENTITY % att.datable.iso.attributes '
+when-iso %data.temporal.iso;  #IMPLIED
+notBefore-iso %data.temporal.iso;  #IMPLIED
+notAfter-iso %data.temporal.iso;  #IMPLIED
+from-iso %data.temporal.iso;  #IMPLIED
+to-iso %data.temporal.iso;  #IMPLIED'> 
+<!ENTITY % att.duration.iso.attributes '
+dur-iso %data.duration.iso;  #IMPLIED'> 
+<!--
+End of classes
+-->
+
+<!--
+Start rest of  macro declarations
+-->
+
+<!--
+End macros
+-->
+
+<!--
+Start of pre-declared macros
+-->
+
+<!--
+End of pre-declared macros
+-->

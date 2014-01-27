@@ -1,0 +1,54 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/*
+====================================
+    User interface elements. [ui-d]
+====================================
+*/
+
+/*
+    The <screen> element contains or 
+    refers to a textual representation 
+    of a computer screen or user 
+    interface panel (window).
+*/
+screen{
+    display:block;
+    font-family:monospace;
+    white-space:pre;
+    background-color: #303030;
+    color: #66FF66;
+    padding:2px;
+    margin:0.5em 0.5em;    
+}
+
+shortcut{
+    display:inline;
+    text-decoration:underline;
+}
+
+uicontrol{
+    display:inline;
+    font-weight:bold;
+}
+
+wintitle{
+    display:inline;
+    font-weight:bold;
+}
+
+menucascade{
+    display:inline;
+}
+/*
+    Separates the submenus. 
+*/
+menucascade > uicontrol:before{
+    content: "/";
+}
+menucascade > uicontrol:first-child:before{
+    content: "";
+}
+
+

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <meta>
+        <filters directoryPatterns="CVS" filePatterns=""
+            positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="sample.xpr">
+        <folder name="css">
+            <file name="css/sample1.css"/>
+            <file name="css/sample1.xhtml"/>
+            <file name="css/sample2.css"/>
+            <file name="css/sample2.xhtml"/>
+            <file name="css/sample3.css"/>
+            <file name="css/sample3.xhtml"/>
+        </folder>
+        <folder name="debugger">
+            <folder name="Axes">
+                <file name="debugger/Axes/sample1.xml"/>
+                <file name="debugger/Axes/sample1.xsl"/>
+            </folder>
+            <folder name="Boolean functions">
+                <file name="debugger/Boolean%20functions/sample1.xml"/>
+                <file name="debugger/Boolean%20functions/sample1.xsl"/>
+            </folder>
+            <folder name="Combining stylesheets">
+                <file
+                    name="debugger/Combining%20stylesheets/sample1.xml"/>
+                <file
+                    name="debugger/Combining%20stylesheets/sample1.xsl"/>
+                <file
+                    name="debugger/Combining%20stylesheets/sample2.xsl"/>
+                <file
+                    name="debugger/Combining%20stylesheets/sample3.xml"/>
+                <file
+                    name="debugger/Combining%20stylesheets/sample3.xsl"/>
+                <file
+                    name="debugger/Combining%20stylesheets/sample4.xsl"
+                />
+            </folder>
+            <folder name="Conditional processing">
+                <file
+                    name="debugger/Conditional%20processing/sample1.xml"/>
+                <file
+                    name="debugger/Conditional%20processing/sample1.xsl"/>
+                <file
+                    name="debugger/Conditional%20processing/sample2.xml"/>
+                <file
+                    name="debugger/Conditional%20processing/sample2.xsl"
+                />
+            </folder>
+            <folder name="Copying">
+                <file name="debugger/Copying/sample1.xml"/>
+                <file name="debugger/Copying/sample1.xsl"/>
+            </folder>
+            <folder name="Creation of elements and attributes">
+                <file
+                    name="debugger/Creation%20of%20elements%20and%20attributes/sample1.xml"/>
+                <file
+                    name="debugger/Creation%20of%20elements%20and%20attributes/sample1.xsl"/>
+                <file
+                    name="debugger/Creation%20of%20elements%20and%20attributes/sample2.xml"/>
+                <file
+                    name="debugger/Creation%20of%20elements%20and%20attributes/sample2.xsl"
+                />
+            </folder>
+            <folder name="Miscellaneous additional functions">
+                <file
+                    name="debugger/Miscellaneous%20additional%20functions/sample1.xml"/>
+                <file
+                    name="debugger/Miscellaneous%20additional%20functions/sample1.xsl"/>
+                <file
+                    name="debugger/Miscellaneous%20additional%20functions/sample2.xml"/>
+                <file
+                    name="debugger/Miscellaneous%20additional%20functions/sample2.xsl"
+                />
+            </folder>
+            <folder name="Nodeset functions">
+                <file name="debugger/Nodeset%20functions/sample1.xml"/>
+                <file name="debugger/Nodeset%20functions/sample1.xsl"/>
+                <file name="debugger/Nodeset%20functions/sample2.dtd"/>
+                <file name="debugger/Nodeset%20functions/sample2.xml"/>
+                <file name="debugger/Nodeset%20functions/sample2.xsl"/>
+            </folder>
+            <folder name="Numbers and formatting">
+                <file
+                    name="debugger/Numbers%20and%20formatting/sample1.xml"/>
+                <file
+                    name="debugger/Numbers%20and%20formatting/sample1.xsl"
+                />
+            </folder>
+            <folder name="Numeric calculations">
+                <file name="debugger/Numeric%20calculations/sample1.xml"/>
+                <file name="debugger/Numeric%20calculations/sample1.xsl"/>
+                <file name="debugger/Numeric%20calculations/sample2.xml"/>
+                <file name="debugger/Numeric%20calculations/sample2.xsl"
+                />
+            </folder>
+            <folder name="Repetition and Sorting">
+                <file
+                    name="debugger/Repetition%20and%20Sorting/sample1.xml"/>
+                <file
+                    name="debugger/Repetition%20and%20Sorting/sample1.xsl"
+                />
+            </folder>
+            <folder name="String functions">
+                <file name="debugger/String%20functions/sample1.xml"/>
+                <file name="debugger/String%20functions/sample1.xsl"/>
+                <file name="debugger/String%20functions/sample2.xml"/>
+                <file name="debugger/String%20functions/sample2.xsl"/>
+            </folder>
+            <folder name="Templates">
+                <file name="debugger/Templates/sample1.xml"/>
+                <file name="debugger/Templates/sample1.xsl"/>
+                <file name="debugger/Templates/sample2.xml"/>
+                <file name="debugger/Templates/sample2.xsl"/>
+            </folder>
+            <folder name="Variables">
+                <file name="debugger/Variables/sample1.xml"/>
+                <file name="debugger/Variables/sample1.xsl"/>
+                <file name="debugger/Variables/sample2.xml"/>
+                <file name="debugger/Variables/sample2.xsl"/>
+                <file name="debugger/Variables/sample3.xml"/>
+                <file name="debugger/Variables/sample3.xsl"/>
+                <file name="debugger/Variables/sample4.xml"/>
+                <file name="debugger/Variables/sample4.xsl"/>
+                <file name="debugger/Variables/sample5.xml"/>
+                <file name="debugger/Variables/sample5.xsl"/>
+            </folder>
+        </folder>
+        <folder name="fo">
+            <folder name="Basic Font Attributes">
+                <file name="fo/Basic%20Font%20Attributes/bold.fo"/>
+                <file name="fo/Basic%20Font%20Attributes/bold.xml"/>
+            </folder>
+            <folder name="Block Properties">
+                <file name="fo/Block%20Properties/borders.fo"/>
+                <file name="fo/Block%20Properties/borders.xml"/>
+            </folder>
+            <folder name="Character Sets">
+                <file name="fo/Character%20Sets/adobe-standard.fo"/>
+                <file name="fo/Character%20Sets/adobe-standard.xml"/>
+            </folder>
+            <folder name="Extended Font Attributes">
+                <file name="fo/Extended%20Font%20Attributes/aspect.fo"/>
+                <file name="fo/Extended%20Font%20Attributes/aspect.xml"
+                />
+            </folder>
+            <folder name="Invoice">
+                <file name="fo/Invoice/invoice.xml"/>
+                <file name="fo/Invoice/invoice.xsd"/>
+                <file name="fo/Invoice/invoice.xsl"/>
+            </folder>
+            <folder name="Miscellaneous">
+                <file name="fo/Miscellaneous/fontAttributes.fo"/>
+                <file name="fo/Miscellaneous/helloWorld.fo"/>
+                <file name="fo/Miscellaneous/leaders.fo"/>
+                <file name="fo/Miscellaneous/pageLayout.fo"/>
+                <file name="fo/Miscellaneous/table.fo"/>
+            </folder>
+            <folder name="Paragraph Attributes">
+                <file name="fo/Paragraph%20Attributes/pagebreak.fo"/>
+                <file name="fo/Paragraph%20Attributes/pagebreak.xml"/>
+            </folder>
+            <folder name="Text Block Attributes">
+                <file name="fo/Text%20Block%20Attributes/align.fo"/>
+                <file name="fo/Text%20Block%20Attributes/align.xml"/>
+            </folder>
+            <file name="fo/macro.xsl"/>
+        </folder>
+        <folder name="import">
+            <folder name="excel">
+                <file name="import/excel/sample.xls"/>
+            </folder>
+            <folder name="text">
+                <file name="import/text/sample.csv"/>
+            </folder>
+        </folder>
+        <folder name="jsp">
+            <file name="jsp/jspsample.jspx"/>
+        </folder>
+        <folder name="nvdl">
+            <file name="nvdl/xhtml-xforms.nvdl"/>
+            <file name="nvdl/xhtml-xforms.xml"/>
+        </folder>
+        <folder name="relaxng">
+            <file name="relaxng/personal.rnc"/>
+            <file name="relaxng/personal.rng"/>
+            <file name="relaxng/personal.xml"/>
+        </folder>
+        <folder name="schematron">
+            <folder name="1.5">
+                <folder name="attributes">
+                    <file
+                        name="schematron/1.5/attributes/followed-bad.xml"/>
+                    <file
+                        name="schematron/1.5/attributes/followed-good.xml"/>
+                    <file name="schematron/1.5/attributes/followed.dtd"/>
+                    <file name="schematron/1.5/attributes/followed.sch"/>
+                    <file
+                        name="schematron/1.5/attributes/length-bad.xml"/>
+                    <file
+                        name="schematron/1.5/attributes/length-bad1.xml"/>
+                    <file
+                        name="schematron/1.5/attributes/length-bad2.xml"/>
+                    <file
+                        name="schematron/1.5/attributes/length-good.xml"/>
+                    <file name="schematron/1.5/attributes/length.dtd"/>
+                    <file name="schematron/1.5/attributes/length.sch"/>
+                    <file name="schematron/1.5/attributes/name-bad.xml"/>
+                    <file name="schematron/1.5/attributes/name.dtd"/>
+                    <file name="schematron/1.5/attributes/name.sch"/>
+                    <file
+                        name="schematron/1.5/attributes/present-bad.xml"/>
+                    <file name="schematron/1.5/attributes/present.dtd"/>
+                    <file name="schematron/1.5/attributes/present.sch"/>
+                    <file
+                        name="schematron/1.5/attributes/required-bad1.xml"/>
+                    <file
+                        name="schematron/1.5/attributes/required-bad2.xml"/>
+                    <file
+                        name="schematron/1.5/attributes/required-good.xml"/>
+                    <file name="schematron/1.5/attributes/required.dtd"/>
+                    <file name="schematron/1.5/attributes/required.sch"
+                    />
+                </folder>
+                <folder name="author">
+                    <file name="schematron/1.5/author/author.sch"/>
+                    <file name="schematron/1.5/author/source1.xml"/>
+                    <file name="schematron/1.5/author/source2.xml"/>
+                </folder>
+                <folder name="paragraph">
+                    <file name="schematron/1.5/paragraph/paragraph.sch"/>
+                    <file name="schematron/1.5/paragraph/source1.xml"/>
+                    <file name="schematron/1.5/paragraph/source2.xml"/>
+                </folder>
+                <folder name="percent">
+                    <file name="schematron/1.5/percent/percent-bad1.xml"/>
+                    <file name="schematron/1.5/percent/percent-bad2.xml"/>
+                    <file name="schematron/1.5/percent/percent-good.xml"/>
+                    <file name="schematron/1.5/percent/percent.dtd"/>
+                    <file name="schematron/1.5/percent/percent.sch"/>
+                </folder>
+                <folder name="po">
+                    <file name="schematron/1.5/po/po-bad.xml"/>
+                    <file name="schematron/1.5/po/po-schema.sch"/>
+                    <file name="schematron/1.5/po/po.xml"/>
+                    <file name="schematron/1.5/po/po.xsd"/>
+                </folder>
+                <folder name="tournament">
+                    <file
+                        name="schematron/1.5/tournament/tournament-schema.sch"/>
+                    <file
+                        name="schematron/1.5/tournament/Tournament.rng"/>
+                    <file
+                        name="schematron/1.5/tournament/Tournament.xml"/>
+                    <file
+                        name="schematron/1.5/tournament/Tournament.xsd"
+                    />
+                </folder>
+            </folder>
+            <folder name="iso">
+                <folder name="tournament">
+                    <file
+                        name="schematron/iso/tournament/tournament-schema.sch"/>
+                    <file
+                        name="schematron/iso/tournament/Tournament.rng"/>
+                    <file
+                        name="schematron/iso/tournament/Tournament.xml"/>
+                    <file
+                        name="schematron/iso/tournament/Tournament.xsd"
+                    />
+                </folder>
+            </folder>
+        </folder>
+        <folder name="svg">
+            <file name="svg/batik3D.svg"/>
+            <file name="svg/sales.xml"/>
+            <file name="svg/sales.xsl"/>
+        </folder>
+        <folder name="wsdl">
+            <file name="wsdl/xCurrencies.wsdl"/>
+            <file name="wsdl/xMetals.wsdl"/>
+            <file name="wsdl/xStatistics.wsdl"/>
+            <file name="wsdl/xStockNews.wsdl"/>
+            <file name="wsdl/xWorldNews.wsdl"/>
+        </folder>
+        <folder name="xquery">
+            <folder name="Books">
+                <file name="xquery/Books/authors.xquery"/>
+                <file name="xquery/Books/books.xml"/>
+                <file name="xquery/Books/expensiveBooks.xquery"/>
+                <file name="xquery/Books/sfBooks.xquery"/>
+            </folder>
+            <folder name="Movies">
+                <file name="xquery/Movies/movies.xml"/>
+                <file name="xquery/Movies/movies.xquery"/>
+                <file name="xquery/Movies/reviews.xml"/>
+            </folder>
+            <folder name="Personal">
+                <file name="xquery/Personal/personal.xml"/>
+                <file name="xquery/Personal/personal.xquery"/>
+            </folder>
+            <folder name="Products">
+                <file name="xquery/Products/products.xml"/>
+                <file name="xquery/Products/products.xquery"/>
+                <file name="xquery/Products/sales.xml"/>
+            </folder>
+        </folder>
+        <folder path="dita/"/>
+        <folder path="docbook/"/>
+        <folder path="ooxml/"/>
+        <folder path="tei/"/>
+        <folder path="xhtml/"/>
+        <file name="personal-schema.css"/>
+        <file name="personal-schema.xml"/>
+        <file name="personal.css"/>
+        <file name="personal.dtd"/>
+        <file name="personal.xml"/>
+        <file name="personal.xsd"/>
+        <file name="personal.xsl"/>
+        <file name="simpleLayoutSample.xpr"/>
+    </projectTree>
+</project>

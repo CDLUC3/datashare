@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+    <xs:include schemaLocation="sml-calculationChain.xsd"/>
+    <xs:include schemaLocation="sml-customXmlMappings.xsd"/>
+    <xs:include schemaLocation="sml-sharedStringTable.xsd"/>
+    <xs:include schemaLocation="sml-sheet.xsd"/>
+    <xs:include schemaLocation="sml-styles.xsd"/>
+    <xs:include schemaLocation="sml-table.xsd"/>
+    <xs:include schemaLocation="sml-workbook.xsd"/>
+</xs:schema>

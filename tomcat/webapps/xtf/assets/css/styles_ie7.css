@@ -1,0 +1,13 @@
+/* #search-form #search-go {
+	margin: 1px 0 0 -4px;
+} */
+
+#steps-to-publish h1, #step-three-upload-page  h1, #contact-us-page h1{
+	margin: 3px 0 0 0;
+	font-size: 230%;
+}
+
+#login-page h1 {
+	margin: 3px 0 8px 0;
+	font-size: 230%;
+}

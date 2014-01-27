@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q6MW2F2N</identifier>
+<creators>
+<creator>
+<creatorName>Cardenas, Valerie</creatorName>
+</creator>
+<creator>
+<creatorName>Tosun, Duygu</creatorName>
+</creator>
+<creator>
+<creatorName>Chao, Linda</creatorName>
+</creator>
+<creator>
+<creatorName>Fletcher, P. Thomas</creatorName>
+</creator>
+<creator>
+<creatorName>Joshi, Sarang</creatorName>
+</creator>
+<creator>
+<creatorName>Joshi, Sarang</creatorName>
+</creator>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+<creator>
+<creatorName>Schuff, Norbert</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Voxel-wise co-analysis of macro- and microstructural brain alteration in Mild Cognitive Impairment and Alzheimer's disease using anatomical and diffusion MRI</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Male</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Female</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Brain</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Multivariate Analysis</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Deformation Morphometry</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Anisotropy</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/"/>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/"/>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/"/>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<dates>
+<date dateType="Collected">2005-2009</date>
+</dates>
+<resourceType resourceTypeGeneral="Dataset">application/octet-stream</resourceType>
+<descriptions>
+<description descriptionType="Abstract">Structural and diffusion data from cognitively normal elderly and those with mild cognitive impairment.  Background and Purpose: To determine if a voxel-wise "co-analysis" of structural and diffusion tensor magnetic resonance imaging (MRI) together reveals additional brain regions affected in mild cognitive impairment (MCI) and Alzheimer's Disease (AD) than voxel-wise analysis of the individual MRI modalities alone.  Conclusion: These results suggest that in corpus callosum and temporal regions macro- and microstructural variations in MCI can be congruent, providing potentially new insight into the mechanisms of brain tissue degeneration. </description>
+<description descriptionType="Methods">Methods: Twenty-one patients with MCI, 21 patients with AD, and 21 cognitively normal healthy elderly were studied with MRI. Maps of deformation and fractional anisotropy (FA) were computed and used as dependent variables in univariate and multivariate statistical models. Results: Univariate voxel-wise analysis of macrostructural changes in MCI showed atrophy in the right anterior temporal lobe, left posterior parietal/precuneus region, WM adjacent to the cingulate gyrus, and dorsolateral prefrontal regions, consistent with prior research. Univariate voxel-wise analysis of microstructural changes in MCI showed reduced FA in the left posterior parietal region extending into the corpus callosum, consistent with previous work. The multivariate analysis, which provides more information than univariate tests when structural and FA measures are correlated, revealed additional MCI-related changes in corpus callosum and temporal lobe.  Participants: Participants were recruited by advertisements in the community or referred by one of several memory clinics in the San Francisco Bay Area, including the Memory Disorders Clinic at the San Francisco Veterans Affairs Medical Center, the Memory and Aging Center at the University of California, San Francisco, and the Memory Disorders Clinic at the California Pacific Medical Center, for inclusion in one of several studies. Study procedures include a neurological exam, structural MRI, diffusion MRI, and comprehensive neuropsychological testing. In compliance with the Code of Ethics of the World Medical Association and the Declaration of Helsinki, study procedures were approved by review boards of the University of California San Francisco and the San Francisco VA Medical Center, explained to all participants, written informed consent was obtained. From the larger population studied, only participants with artifact-free structural and diffusion MRI were included. Twenty-one patients met Petersen's criteria for MCI, age: 71 ± 8 yrs, 11 women, MMSE (Mini-Mental State Examination): 29 ± 2. These patients were gender matched with 21 cognitively normal healthy elderly controls (CN), age: 70 ± 7 yrs, 11 women, MMSE 29 ± 1. The MCI patients were also gender matched with 21 patients who met AD criteria of the National Institute of Neurological and Communicative Disorders and Stroke-Alzheimer's Disease and Related Disorders Association (NINCDS/ADRDA), age: 69 ± 9, 11 women, MMSE 21 ± 7. As evidenced by the high MMSE scores, the MCI patients were in an early stage of cognitive deficits and far less impaired than the AD patients.  Magnetic resonance imaging (MRI) acquisition: All scans were performed on a 4 Tesla (Bruker/Siemens) MRI system with a birdcage transmit and 8 channel receive coil arranged in the same housing. The scans included T1-weighted and T2-weighted structural MRI data for measurements of brain macro-structure and diffusion tensor MRI for measurement of micro-structure. T1-weighted images were obtained with a 3D volumetric magnetization prepared rapid gradient echo (MPRAGE) sequence, TR/TE/TI=2300/3/950 ms, timing; 7º flip angle; 1.0 x 1.0 x 1.0 mm3 resolution; 157 continuous sagittal slices; acquisition time of 5 min. T2-weighted images were acquired with a variable flip (VFL) angle turbo spin-echo sequence with TR/TE = 4000/30 ms and with the same resolution matrix and field of view of MPRAGE. DTI was based on a dual spin-echo refocused echo-planar imaging (EPI) sequence supplemented with parallel imaging acceleration (GRAPPA) (Griswold et al., 2002) with a factor 2 to reduce susceptibility distortions. Other imaging parameters were: TR/TE=6000/77 ms; 2 x 2 mm2 in-plane resolution; 40 continuous 3 mm slices. A reference image (no diffusion gradient b=0) and six diffusion-weighted images (b=800s/mm2 along six non-collinear direction) were acquired. Four DTI scans were acquired and averaged after motion correction to boost signal-to-noise. The total acquisition time of DTI was 4 min.  MRI pre-processing: An expectation maximization segmentation (EMS) algorithm including correction for intensity inhomogeneity 30,31 was applied to T1 weighted MRI, separating skull, scalp, extra-cranial tissue from the rest of brain image volume. Each individual skull-stripped and bias field corrected brain image volume was affine registered to a reference brain image to adjust for global differences in brain positioning and scale across individuals. For this study, an unbiased average brain image was used as the reference. The unbiased average brain was generated from 10 healthy elderly individual brains (i.e., age of 50 to 70) that were not part of the CN group using an unbiased atlas formation technique based on large deformations mapping 32. A large deformation diffeomorphic mapping algorithm using fluid-flow registration 33 was used to register individual scans to standard image space of the unbiased atlas brain. The Jacobian determinant of this transformation was computed at each voxel (resolution 1x1x1 mm3), giving the pattern of volume change required to force the individual anatomy to conform to the reference. The Jacobian images were log transformed to achieve a more normal distribution and then smoothed using a Gaussian filter (FWHM=10 mm) to create tissue volume maps (JAC), where the value at each voxel represents the tissue volume relative to the reference (e.g., a voxel value of 0.06 denotes a volume volrefx100.06, or about 15 percent greater than the reference voxel)  DTI pre-processing: The pre-processing pipeline aims to align a set of DTI images with the corresponding structural data through the following steps. Diffusion tensor images were corrected for eddy currents and head motion 34. Based on a mutual information metric, the T2-weighted image was rigidly aligned to the B0 image, which is a DTI maps without diffusion sensing gradients (b=0 s/mm2). A variational image-based approach was used to calculate a deformation field from the B0 image to the rigidly aligned T2-weighted image to correct for susceptibility artifacts (i.e., nonlinear geometric distortion in DTI) 35. We selected a variational approach for EPI distortion correction over the conventional field map approach, because studies have shown that the local deformations in EPI are best handled with a dense displacement field (i.e. high order deformations) 35. In contrast, field maps can fail to completely correct geometric distortions, presumably due to limits in the physical model 36. Concatenated eddy current transformation and the deformation field for nonlinear distortion correction were applied to all DTIs. Diffusion tensors were estimated for each subject from the diffusion tensor images using weighted least squares tensor estimation 37. The T2-weighted image was rigidly aligned to the T1-weighted image and the transformation was concatenated with the inverse rigid transformation from B0 image to T2-weighted image. The resulting rigid transformation was applied to the FA image to map onto the T1-weighted structural image space of the subject. The FA image was then mapped onto the standard image space by applying the diffeomorphic mapping estimated in MRI pre-processing. FA images were then smoothed using a Gaussian filter (FWHM=10 mm) in the standard image space. </description>
+</descriptions>
+</resource>

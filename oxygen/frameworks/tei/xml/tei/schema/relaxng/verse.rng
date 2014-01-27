@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!--Schema generated 2008-07-08T17:38:29Z..
+Copyright 2008 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+For general (non-technical) enquiries, contact the TEI
+	  Consortium at info@tei-c.org; 
+for membership enquiries contact membership@tei-c.org; for
+technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C, contact editors@tei-c.org.
+For up to date information, consult the TEI web
+	      site at http://www.tei-c.org/P5/. 
+		Verse structures-->
+  <!--Definitions from module verse-->
+  <!--Set global predeclared macros-->
+  <!--Set predeclared macros-->
+  <!--0. predeclared macros-->
+  <!--1. classes-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.metrical.attributes">
+    <ref name="att.metrical.attribute.met"/>
+    <ref name="att.metrical.attribute.real"/>
+    <ref name="att.metrical.attribute.rhyme"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.metrical.attribute.met">
+    <rng:optional>
+      <rng:attribute name="met">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(metrical structure, conventional) contains a user-specified encoding for the conventional
+metrical structure of the element.</a:documentation>
+        <data type="token"/>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.metrical.attribute.real">
+    <rng:optional>
+      <rng:attribute name="real">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(metrical structure, realized) contains a user-specified encoding for the actual realization
+of the conventional metrical structure applicable to the element.</a:documentation>
+        <data type="token"/>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.metrical.attribute.rhyme">
+    <rng:optional>
+      <rng:attribute name="rhyme">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rhyme scheme) specifies the rhyme scheme applicable to a group of verse lines.</a:documentation>
+        <data type="token"/>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.enjamb.attributes">
+    <ref name="att.enjamb.attribute.enjamb"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="att.enjamb.attribute.enjamb">
+    <rng:optional>
+      <rng:attribute name="enjamb">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(enjambement) indicates that the end of a verse line is marked by enjambement.
+Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
+        <ref name="data.enumerated"/>
+      </rng:attribute>
+    </rng:optional>
+  </define>
+  <!--2. elements-->
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="caesura">
+    <element name="caesura">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marks the point at which a metrical line may be divided.</a:documentation>
+      <ref name="caesura.content"/>
+      <ref name="caesura.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="caesura.content">
+    <rng:empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="caesura.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="metDecl">
+    <element name="metDecl">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(metrical notation declaration) documents the notation employed to represent a metrical
+  pattern when this is specified as the value of a met,
+  real, or rhyme attribute on any structural
+  element of a metrical text (e.g. lg, l, or
+  seg).</a:documentation>
+      <ref name="metDecl.content"/>
+      <ref name="metDecl.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="metDecl.content">
+    <rng:choice>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="model.pLike"/>
+          <rng:ref name="model.noteLike"/>
+        </rng:choice>
+      </rng:oneOrMore>
+      <rng:oneOrMore>
+        <rng:ref name="metSym"/>
+      </rng:oneOrMore>
+    </rng:choice>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="metDecl.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.declarable.attributes"/>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="type" a:defaultValue="met real">
+        <a:documentation>indicates whether the notation conveys the abstract
+      metrical form, its actual prosodic realization, or the rhyme
+      scheme, or some combination thereof.</a:documentation>
+        <rng:list>
+          <ref name="data.enumerated"/>
+          <rng:optional>
+            <ref name="data.enumerated"/>
+          </rng:optional>
+          <rng:optional>
+            <ref name="data.enumerated"/>
+          </rng:optional>
+        </rng:list>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="pattern">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(regular expression pattern) specifies a regular expression defining any value that
+	is legal for this notation.</a:documentation>
+        <ref name="data.pattern"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="metSym">
+    <element name="metSym">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(metrical notation symbol) documents the intended significance of a particular character or
+character sequence within a metrical notation, either explicitly or in
+terms of other symbol elements in the same metDecl.</a:documentation>
+      <ref name="metSym.content"/>
+      <ref name="metSym.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="metSym.content">
+    <rng:ref name="macro.phraseSeq.limited"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="metSym.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <rng:attribute name="value">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the character or character sequence being documented.</a:documentation>
+      <rng:list>
+        <rng:oneOrMore>
+          <ref name="data.word"/>
+        </rng:oneOrMore>
+      </rng:list>
+    </rng:attribute>
+    <rng:optional>
+      <rng:attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="terminal" a:defaultValue="true">
+        <a:documentation>specifies whether the symbol is defined in terms of other
+symbols (terminal is set to false) or in prose
+(terminal is set to true).</a:documentation>
+        <ref name="data.truthValue"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="rhyme">
+    <element name="rhyme">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marks the rhyming part of  a metrical line.</a:documentation>
+      <ref name="rhyme.content"/>
+      <ref name="rhyme.localattributes"/>
+    </element>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="rhyme.content">
+    <rng:ref name="macro.paraContent"/>
+  </define>
+  <define xmlns="http://relaxng.org/ns/structure/1.0" name="rhyme.localattributes">
+    <rng:ref name="att.global.attributes"/>
+    <ref name="att.typed.attributes"/>
+    <rng:optional>
+      <rng:attribute name="label">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a label to identify which part of a rhyme
+	scheme this rhyming string instantiates.</a:documentation>
+        <ref name="data.word"/>
+      </rng:attribute>
+    </rng:optional>
+    <empty/>
+  </define>
+  <!--3. macros-->
+</rng:grammar>

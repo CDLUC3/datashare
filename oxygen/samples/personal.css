@@ -1,0 +1,113 @@
+personnel{
+    display:block;
+    margin:1em;
+    /*Counter for the person elements*/
+    counter-reset:pers_cnt;
+}
+
+personnel:before{
+    display:block;
+    content:"List of employees";
+    
+    border-bottom: 0.1em solid navy;
+    padding: 0.3em;
+    
+    font-size:large;
+    font-weight:bold;
+    
+    color:navy;
+    background-color:inherit;
+}
+
+person{
+    display:block;
+    
+    margin: 1em;
+    border:0.1em solid #DDDDEE;
+    padding:0.5em;
+
+    color:inherit;
+    background-color: #EFEFEF;
+    
+    /*Increments the person counter.*/    
+    counter-increment:pers_cnt;
+}
+
+name,
+family,
+given,
+link,
+url{
+    display:block;
+}
+
+email{
+    display:block;
+    font-style:italic;
+}
+
+
+family:before{
+    content:"Family Name: ";
+}
+
+given:before{
+    content:"Given Name : ";
+}
+
+email:before{
+    content:"Email      : ";
+}
+
+
+link[manager]:before{
+    content:"Managed by : " attr(manager);
+    link: "#" attr(manager);
+    color:blue;
+    text-decoration:underline;
+}
+
+link[subordinates]:before{
+    content:"Subordinates : " attr(subordinates); 
+}
+
+link[manager][subordinates]:before{
+    content:"Managed by : " attr(manager) " Subordinates: " attr(subordinates); 
+}
+
+url[href]:before{
+    content:"Href : " attr(href); 
+}
+
+url:after, link:after{
+    display:inline;
+    content:"\A[Edit the attributes in order to change the text]";
+    
+    font-size:smaller;
+    
+    color:gray;
+    background-color:inherit;
+}
+
+person:before{
+    display:block;
+    content:"Person no. " counter(pers_cnt,decimal);
+    
+    padding-top:0.3em;
+    padding-bottom:0.3em;
+    
+    text-decoration:underline;
+    font-weight:bold;
+    
+    color:inherit;
+    background-color:#EEFFEE;
+}
+
+*:before{
+    color:black;    
+    background-color:inherit;
+    
+    font-family:monospace;
+    font-style:normal;
+}
+

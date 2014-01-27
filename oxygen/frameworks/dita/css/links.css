@@ -1,0 +1,19 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+link[href]:before,
+fragref[href]:before,
+synnoteref[href]:before,
+xref[href]:before, 
+topicref[href]:before,
+source[href]:after {
+    link: attr(href);
+}
+
+navref[mapref]:before{
+    link: attr(mapref);
+}
+
+*[conref]:before, *[conref]:after{
+    link: attr(conref);
+}

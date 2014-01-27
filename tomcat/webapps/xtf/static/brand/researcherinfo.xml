@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<researchers>
+	<researcher id='Weiner, Michael'>
+		<creator>Weiner, Michael</creator>
+		<lab>Center for the Imaging of Neuroregenerative Diseases</lab>
+	    <campus>University of California, San Francisco</campus>
+		<description>The mission of the Center for the Imaging of Neuroregenerative Diseases (CIND) is to develop new treatments which slow progression and will ultimately prevent the development of neurodegenerative diseases including Alzheimer's disease, vascular dementia, frontotemporal dementia, Parkinson's disease, post traumatic stress disorder (PTSD), gulf war illness, epilepsy, depression, and other conditions associated with nerve loss in the brain. Our focus is brain imaging, especially with MRI including structural MRI, perfusion MRI, diffusion tensor/spectral MRI, susceptibility weighted MRI, MR spectroscopy and MR spectroscopic imaging.</description>
+	</researcher>
+</researchers>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crossQueryResult totalDocs="3" startDoc="1" endDoc="3">
+   <docHit rank="1" file="doc7.xml" totalHits="0">
+      <meta>
+         <title>Do read Document 7</title>
+         <group-subject>Politics</group-subject>
+         <group-subject>Classics</group-subject>
+         <group-subject>Ancient History</group-subject>
+         <subject>Politics</subject>
+         <subject>
+            <snippet rank="1">
+               <hit>
+                  <term>Classics</term>
+               </hit>
+            </snippet>
+         </subject>
+         <subject>Ancient History</subject>
+         <type>text</type>
+         <collection>
+            <snippet rank="1">
+               <hit>
+                  <term>UC</term>
+               </hit>
+            </snippet>
+         </collection>
+         <geography>US::California::Mendocino</geography>
+         <geography-sort>US::California::Mendocino</geography-sort>
+      </meta>
+   </docHit>
+   <docHit rank="2" file="doc4.xml" totalHits="0">
+      <meta>
+         <title>Why? Document 4</title>
+         <group-subject>Classics</group-subject>
+         <group-subject>Ancient History</group-subject>
+         <group-subject>Politics</group-subject>
+         <group-subject>Classical History</group-subject>
+         <group-subject>Classical Religions</group-subject>
+         <group-subject>Classical Politics</group-subject>
+         <subject>
+            <snippet rank="1">
+               <hit>
+                  <term>Classics</term>
+               </hit>
+            </snippet>
+         </subject>
+         <subject>Ancient History</subject>
+         <subject>Politics</subject>
+         <subject>Classical History</subject>
+         <subject>Classical Religions</subject>
+         <subject>Classical Politics</subject>
+         <type>text</type>
+         <collection>
+            <snippet rank="1">
+               <hit>
+                  <term>UC</term>
+               </hit>
+            </snippet>
+         </collection>
+         <geography>US::Nevada::Las Vegas</geography>
+         <geography-sort>US::Nevada::Las Vegas</geography-sort>
+      </meta>
+   </docHit>
+   <docHit rank="3" file="doc9.xml" totalHits="0">
+      <meta>
+         <title>Document 9 is absolutely cool</title>
+         <group-subject>Classics</group-subject>
+         <group-subject>Ancient History</group-subject>
+         <group-subject>Politics</group-subject>
+         <group-subject>Classical History</group-subject>
+         <group-subject>Classical Religions</group-subject>
+         <group-subject>Classical Politics</group-subject>
+         <subject>
+            <snippet rank="1">
+               <hit>
+                  <term>Classics</term>
+               </hit>
+            </snippet>
+         </subject>
+         <subject>Ancient History</subject>
+         <subject>Politics</subject>
+         <subject>Classical History</subject>
+         <subject>Classical Religions</subject>
+         <subject>Classical Politics</subject>
+         <type>text</type>
+         <collection>
+            <snippet rank="1">
+               <hit>
+                  <term>UC</term>
+               </hit>
+            </snippet>
+         </collection>
+         <geography>US::California::Oakland</geography>
+         <geography-sort>US::California::Oakland</geography-sort>
+      </meta>
+   </docHit>
+   <facet field="group-subject" totalGroups="6" totalDocs="3">
+      <group value="Ancient History" rank="1" totalSubGroups="0" totalDocs="3" startDoc="0"
+             endDoc="0"/>
+      <group value="Classics" rank="2" totalSubGroups="0" totalDocs="3" startDoc="0"
+             endDoc="0"/>
+      <group value="Politics" rank="3" totalSubGroups="0" totalDocs="3" startDoc="1"
+             endDoc="3">
+         <docHit rank="1" file="doc7.xml" totalHits="0">
+            <meta>
+               <title>Do read Document 7</title>
+               <group-subject>Politics</group-subject>
+               <group-subject>Classics</group-subject>
+               <group-subject>Ancient History</group-subject>
+               <subject>Politics</subject>
+               <subject>
+                  <snippet rank="1">
+                     <hit>
+                        <term>Classics</term>
+                     </hit>
+                  </snippet>
+               </subject>
+               <subject>Ancient History</subject>
+               <type>text</type>
+               <collection>
+                  <snippet rank="1">
+                     <hit>
+                        <term>UC</term>
+                     </hit>
+                  </snippet>
+               </collection>
+               <geography>US::California::Mendocino</geography>
+               <geography-sort>US::California::Mendocino</geography-sort>
+            </meta>
+         </docHit>
+         <docHit rank="2" file="doc4.xml" totalHits="0">
+            <meta>
+               <title>Why? Document 4</title>
+               <group-subject>Classics</group-subject>
+               <group-subject>Ancient History</group-subject>
+               <group-subject>Politics</group-subject>
+               <group-subject>Classical History</group-subject>
+               <group-subject>Classical Religions</group-subject>
+               <group-subject>Classical Politics</group-subject>
+               <subject>
+                  <snippet rank="1">
+                     <hit>
+                        <term>Classics</term>
+                     </hit>
+                  </snippet>
+               </subject>
+               <subject>Ancient History</subject>
+               <subject>Politics</subject>
+               <subject>Classical History</subject>
+               <subject>Classical Religions</subject>
+               <subject>Classical Politics</subject>
+               <type>text</type>
+               <collection>
+                  <snippet rank="1">
+                     <hit>
+                        <term>UC</term>
+                     </hit>
+                  </snippet>
+               </collection>
+               <geography>US::Nevada::Las Vegas</geography>
+               <geography-sort>US::Nevada::Las Vegas</geography-sort>
+            </meta>
+         </docHit>
+         <docHit rank="3" file="doc9.xml" totalHits="0">
+            <meta>
+               <title>Document 9 is absolutely cool</title>
+               <group-subject>Classics</group-subject>
+               <group-subject>Ancient History</group-subject>
+               <group-subject>Politics</group-subject>
+               <group-subject>Classical History</group-subject>
+               <group-subject>Classical Religions</group-subject>
+               <group-subject>Classical Politics</group-subject>
+               <subject>
+                  <snippet rank="1">
+                     <hit>
+                        <term>Classics</term>
+                     </hit>
+                  </snippet>
+               </subject>
+               <subject>Ancient History</subject>
+               <subject>Politics</subject>
+               <subject>Classical History</subject>
+               <subject>Classical Religions</subject>
+               <subject>Classical Politics</subject>
+               <type>text</type>
+               <collection>
+                  <snippet rank="1">
+                     <hit>
+                        <term>UC</term>
+                     </hit>
+                  </snippet>
+               </collection>
+               <geography>US::California::Oakland</geography>
+               <geography-sort>US::California::Oakland</geography-sort>
+            </meta>
+         </docHit>
+      </group>
+      <group value="Classical History" rank="4" totalSubGroups="0" totalDocs="2"
+             startDoc="0"
+             endDoc="0"/>
+      <group value="Classical Politics" rank="5" totalSubGroups="0" totalDocs="2"
+             startDoc="0"
+             endDoc="0"/>
+      <group value="Classical Religions" rank="6" totalSubGroups="0" totalDocs="2"
+             startDoc="0"
+             endDoc="0"/>
+   </facet>
+</crossQueryResult>

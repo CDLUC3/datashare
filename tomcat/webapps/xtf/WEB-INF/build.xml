@@ -1,0 +1,252 @@
+<project name="XTF" default="compile" basedir=".">
+
+  <description>
+      eXtensible Text Framework
+  </description>
+
+  <!-- set global properties for this build -->
+  <property name="src1"    location="src"/>
+  <property name="src2"    location="contrib/xtf-lucene/src/java"/>
+  <property name="classes" location="classes"/>
+  <property name="dist"    location="dist"/>
+  <property name="lib"     location="lib"/>
+  <property name="cdlLib"  location="cdlLib"/>
+  <property name="bin"     location="bin"/>
+  <property name="doc"     location="javadoc"/>
+  <property name="lucene-jar" location="${lib}/lucene-core-2.1.0.jar"/>
+  <property name="saxon-jar" location="${lib}/saxonb-8.9.jar"/>
+  <property name="libs"    value="${lucene-jar}:${saxon-jar}:${lib}/servlet.jar:${lib}/pdfBox.jar:${lib}/fontBox.jar:${lib}/log4j-1.2.9.jar:${lib}/Tidy.jar:${lib}/cql-java.jar:${lib}/marc4j.jar:${lib}/activation.jar:${lib}/mail.jar:${lib}/tm-extractors-1.0.jar:${lib}/poi-3.0.2-FINAL.jar:${lib}/fop-core-0.94.jar:${lib}/fop-libs-0.94.jar:${lib}/iText.jar"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${classes}"/>
+  </target>
+
+  <!-- ================================================== compile -->
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${classes} -->
+    <javac target="1.5" 
+           source="1.5" 
+           debug="true"
+           classpath="${libs}"
+           encoding="UTF-8"
+           excludes="**/.*/**/*"
+           destdir="${classes}">
+      <src path="${src1}"/>
+      <src path="${src2}"/>
+    </javac>
+  </target>
+                
+  <target name="tokenizer" description="compile the XTF tokenizer">
+    <javacc target="${src1}/org/cdlib/xtf/textIndexer/tokenizer/XTFTokenizer.jj"
+                        javacchome="${lib}"/>
+  </target>
+
+  <!-- ================================================== jar -->
+  <target name="jar" depends="compile"
+          description="generate a JAR file">
+
+    <mkdir dir="${dist}"/>
+
+    <!-- Copy the Lucene class files -->
+    <delete dir="jar-tmp" quiet="true"/>
+    <mkdir dir="jar-tmp"/>
+
+    <unzip src="${lucene-jar}" dest="jar-tmp"/>
+
+    <!-- Copy the Saxon class files -->
+    <unzip src="${saxon-jar}" dest="jar-tmp"/>
+
+    <!-- Add/overwrite with the XTF classes -->
+    <copy todir="jar-tmp" overwrite="true">
+      <fileset dir="${classes}"/>
+    </copy>
+
+    <!-- Add/overwrite with the XTF classes -->
+    <delete file="${dist}/xtf.jar" quiet="true"/>
+    <jar jarfile="${dist}/xtf.jar" basedir="jar-tmp"/>
+
+    <delete dir="jar-tmp" quiet="true"/>
+  </target>
+
+  <!-- ================================================== dist -->
+  <target name="dist" depends="jar,docs"
+          description="generate the distribution" >
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}"/>
+
+    <!-- Create a temp directory for the build -->
+    <delete dir="build-tmp" quiet="true"/>
+    <mkdir dir="build-tmp"/>
+    <mkdir dir="build-tmp/WEB-INF"/>
+    <mkdir dir="build-tmp/WEB-INF/lib"/>
+
+    <!-- Copy the jar file containing the XTF classes -->
+    <copy todir="build-tmp/WEB-INF/lib" file="${dist}/xtf.jar"/>
+
+    <!-- Zip up the regression tests -->
+    <zip zipfile="build-tmp/regress.zip">
+      <fileset dir="..">
+        <include name="regress/**/*"/>
+        <exclude name="regress/**/IndexDB/**/*"/>
+        <exclude name="regress/**/*-test.xml"/>
+        <include name="bin/regressTest"/>
+      </fileset>
+    </zip>
+
+    <!-- Make a zip file of all the source code, plus the extra
+         libraries needed to build it.
+    -->
+    <zip zipfile="build-tmp/WEB-INF/src.zip">
+      <fileset dir="." includes="src/**/*.java"/>
+      <fileset dir="." includes="src/**/*.xml"/>
+      <fileset dir="." includes="src/**/*.jj"/>
+      <fileset dir="." includes="src/**/*.html"/>
+      <fileset dir="." includes="contrib/**/*.java"/>
+      <fileset dir="." includes="contrib/**/*.html"/>
+      <fileset dir="." includes="lib/lucene*.jar"/> <!-- Normally part of xtf.jar, needed for build -->
+      <fileset dir="." includes="lib/saxon*.jar"/> <!-- Normally part of xtf.jar, needed for build -->
+      <fileset dir="." includes="lib/servlet.jar"/> <!-- Only needed for source build -->
+    </zip>
+
+    <!-- Zip up the JavaDocs -->
+    <zip zipfile="build-tmp/WEB-INF/javadoc.zip">
+      <fileset dir="." includes="javadoc/**/*"/>
+    </zip>
+
+    <!-- Copy the remaining files to the temporary build dir -->
+    <copy todir="build-tmp">
+      <fileset dir="..">
+
+        <exclude name="**/backup"/>
+        <exclude name="**/backup/**/*"/>
+        <exclude name="**/.*"/>
+        <exclude name="**/.*/**/*"/>
+        <exclude name="**/CVS/**/*"/>
+        <exclude name="style/crossQuery/complexQueryParser.xsl"/>
+
+        <include name="bin/classpath.pl"/>
+        <include name="bin/textIndexer"/>
+        <include name="bin/indexStats"/>
+        <include name="bin/indexDump"/>
+        <include name="bin/indexMerge"/>
+        <include name="bin/textIndexer.bat"/>
+
+        <include name="brand/default.xml"/>
+
+        <include name="conf/**/*"/>
+
+        <include name="css/**/*"/>
+
+        <include name="icons/default/**/*"/>
+
+        <include name="profiles/**/public*"/>
+        <include name="profiles/**/default*"/>
+
+        <include name="script/**/*"/>
+
+        <include name="style/**/*"/>
+
+        <include name="INSTALL"/>
+
+        <include name="LICENSE"/>
+        <include name="licenses/**/*"/>
+        <include name="CHANGES"/>
+
+        <include name="docs/**/*"/>
+
+        <include name="WEB-INF/build.xml"/>
+        <include name="WEB-INF/web.xml"/>
+        <include name="WEB-INF/lib/versions.txt"/>
+        <include name="WEB-INF/lib/*.jar"/>
+        <exclude name="WEB-INF/lib/servlet.jar"/> <!-- only needed in src.zip -->
+        <exclude name="WEB-INF/lib/lucene-*.jar"/> <!-- Included in xtf.jar -->
+        <exclude name="WEB-INF/lib/saxon*.jar"/> <!-- Included in xtf.jar -->
+
+      </fileset>
+    </copy>
+
+    <!-- Now make the main distribution WAR file -->
+    <delete file="${dist}/xtf-${DSTAMP}.war" quiet="true"/>
+    <jar jarfile="${dist}/xtf-${DSTAMP}.war">
+      <fileset dir="build-tmp">
+        <include name="**/*"/>
+      </fileset>
+    </jar>
+
+    <!-- Make a subset for the "core" distribution -->
+    <delete file="${dist}/xtf-core-${DSTAMP}.zip" quiet="true"/>
+    <zip destfile="${dist}/xtf-core-${DSTAMP}.zip">
+      <fileset dir="build-tmp">
+        <include name="bin/**/*"/>
+        <include name="WEB-INF/**/*"/>
+        <include name="INSTALL"/>
+        <include name="LICENSE"/>
+        <include name="licenses/**/*"/>
+        <include name="regress.zip"/>
+        <include name="docs/**/*"/>
+      </fileset>
+    </zip>
+
+    <!-- Make a subset for the "example" distribution -->
+    <delete file="${dist}/xtf-example-${DSTAMP}.zip" quiet="true"/>
+    <zip destfile="${dist}/xtf-example-${DSTAMP}.zip">
+      <fileset dir="build-tmp">
+        <include name="brand/**/*"/>
+        <include name="conf/**/*"/>
+        <include name="css/**/*"/>
+        <include name="icons/**/*"/>
+        <include name="profiles/**/*"/>
+        <include name="script/**/*"/>
+        <include name="style/**/*"/>
+      </fileset>
+    </zip>
+
+    <delete dir="build-tmp" quiet="true"/>
+    <delete file="${dist}/xtf.jar" quiet="true"/>
+  </target>
+
+  <!-- ================================================== docs -->
+  <target name="docs" 
+          description="generate javadoc documentation.">
+    <javadoc destdir="${doc}" 
+             private="true" 
+             breakiterator="yes"
+             source="1.5"
+             encoding="UTF-8"
+             classpath="${libs}"
+             noqualifier="all">
+      <tag name=".notes" description="Notes:"/>
+
+      <packageset dir="${src1}">
+        <include name="**"/>
+        <exclude name="**/.*/**"/>
+
+        <!-- Exclude the generated code because it has javadoc warnings
+             we can't fix.
+        -->
+        <exclude name="**/org/cdlib/xtf/textIndexer/tokenizer/**"/>
+      </packageset>
+
+      <packageset dir="${src2}">
+        <include name="**"/>
+        <exclude name="**/.*/**"/>
+      </packageset>
+
+    </javadoc>
+  </target>
+
+  <!-- ================================================== clean -->
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${classes} and ${dist} directory trees -->
+    <delete dir="${classes}" quiet="true"/>
+    <delete dir="${dist}" quiet="true"/>
+    <delete dir="${doc}" quiet="true"/>
+  </target>
+</project>
+
+

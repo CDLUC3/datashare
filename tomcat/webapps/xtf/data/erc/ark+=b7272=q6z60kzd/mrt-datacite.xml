@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q6Z60KZD</identifier>
+<creators>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+<creator>
+<creatorName>Chui, Helena</creatorName>
+</creator>
+</creators>
+<titles>
+<title>SIVD (Subcortical Ischemic Vascular Dementia)</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2013</publicationYear>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<resourceType resourceTypeGeneral="Dataset">dataset</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">11756602</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">10369354</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">10782769</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">11796772</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">12040300</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">12058091</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">12297568</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">12913198</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">15277612</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">15595356</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">15653183</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">15929035</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">17192928</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">14872024</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">10369354</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">10782769</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">11113215</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">The overall goal of this project was to determine the extent to which subcortical ischemia and infaraction, and Alzheimer's disease, contribute to dementia. This project aimed to provide a greater understanding of the pathogenesis of dementia in patients with SIVD and AD.</description>
+<description descriptionType="Methods">Data were acquired at several sites: ABS = Aging Brain San Francisco (SFVAMC), ABD = Aging Brain UC Davis, and ABL = Aging Brain Los Angeles (USC).</description>
+</descriptions>
+</resource>

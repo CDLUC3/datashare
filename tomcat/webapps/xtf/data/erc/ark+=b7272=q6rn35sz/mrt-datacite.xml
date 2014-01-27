@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q6RN35SZ</identifier>
+<creators>
+<creator>
+<creatorName>Cardenas, Valerie</creatorName>
+</creator>
+<creator>
+<creatorName>Samuelson, Kristin</creatorName>
+</creator>
+<creator>
+<creatorName>Lenoci, Maryanne A.</creatorName>
+</creator>
+<creator>
+<creatorName>Studholme, Colin</creatorName>
+</creator>
+<creator>
+<creatorName>Neylan, Thomas C.</creatorName>
+</creator>
+<creator>
+<creatorName>Marmar, Charles R.</creatorName>
+</creator>
+<creator>
+<creatorName>Schuff, Norbert</creatorName>
+</creator>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Changes in brain anatomy during the course of PTSD</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Male</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Brain</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Deformation Morphometry</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Longitudinal</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Neuropsychological Testing</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Stress Disorders, Post-Traumatic</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Veterans</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Vietnamese Conflict, 1961-1975</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<dates>
+<date dateType="Collected">1998-2005</date>
+</dates>
+<resourceType resourceTypeGeneral="Dataset">application/octet-stream</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">21683556</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">Longitudinal structural T1-weighted images from middle-aged controls and veterans with PTSD (post-traumatic stress disorder). Most patients were Vietnam veterans.  The goal of this study was to determine whether PTSD was associated with an increase in time-related decline in macrostructural brain volume and whether these changes were associated with accelerated cognitive decline. To quantify brain structure, 3 dimensional T1-weighted MRI scans were performed at baseline and again after a minimum of 24 months in 25 patients with PTSD and 22 controls. Longitudinal changes in brain volume were measured using deformation morphometry. For the group as a whole PTSD+ patients did not show significant ongoing brain atrophy compared to PTSD-. PTSD+ patients were then subgrouped into those with decreasing or increasing symptoms. We found little evidence for brain markers of accelerated atrophy in PTSD+ veterans whose symptoms improved over time, with only a small left parietal region showing greater ongoing tissue loss than PTSD-. PTSD patients whose symptoms increased over time showed accelerated atrophy throughout the brain, particularly brainstem and frontal and temporal lobes. Lastly, for the sample as a whole greater rates of brain atrophy were associated with greater rates of decline in verbal memory and delayed facial recognition.</description>
+<description descriptionType="Methods">Participants: After complete description of the study to the subjects, written informed consent was obtained to a protocol approved by the review boards of both the University of California, San Francisco (UCSF) and the San Francisco Veterans Affairs (SFVA) Medical Center. Participants had previously participated in one of two earlier studies examining neuroimaging and neuropsychological correlates of PTSD (Neylan et al., 2004; Samuelson et al., 2006; Schuff et al., 2008; Schuff et al., 2001). When initially studied, participants had given consent to be re-contacted about future studies. Veterans were contacted a minimum of two years after completion of the first assessment. Study procedures included completing a neuropsychological test battery and MRI scanning. Participants met the following basic inclusion criteria at baseline: veterans 25-65 years of age; PTSD+ participants had current PTSD attributable to a traumatic life event (e.g., Vietnam or Gulf War combat, experiencing or witnessing serious accidents, illnesses, sudden death, physical and sexual assault), PTSD- participants had no current, subthreshold, or lifetime history of PTSD. Exclusion criteria at baseline were: diagnosis of drug dependence or abuse within the past 6 months, current or lifetime history of any psychiatric disorder with psychotic features, current or lifetime history of bipolar disorder, history of neurologic or systemic illness affecting CNS function, history of head injury with loss of consciousness exceeding 10 minutes, and history of head injury with any persistent post-injury symptoms. Alcohol abuse and dependence were allowable diagnoses for one of the original studies. Patients and controls were studied twice, once after enrollment (baseline) and again after a minimum of 24 months. Because we were interested in the natural course of PTSD, we did not apply exclusionary criteria at follow-up. At follow-up, three PTSD+ participants met one of the exclusionary baseline diagnoses—two exhibiting psychotic symptoms and one exhibiting symptoms of bipolar disorder not otherwise specified. These participants did not represent outliers in terms of neuropsychological functioning and were included in our previous study of longitudinal neuropsychological functioning (Samuelson et al., 2009), and were also included in this longitudinal imaging study. This analysis included 25 PTSD+ male veterans and 22 PTSD- male veterans that had complete longitudinal MRI and neuropsychological datasets.  Clinical and cognitive testing: Diagnoses of PTSD at baseline and follow-up were made by a clinical psychologist using the Clinician Administered PTSD Scale, which determines if DSM-IV diagnostic criteria were met (CAPS; (Blake et al., 1995)). Individuals with no trauma exposure received a CAPS score of 0. The Structured Clinical Interview for DSM-IV Diagnosis (SCID; (First et al., 1996)) was used to diagnose comorbid and exclusionary conditions. Lifetime alcohol use was obtained using the Lifetime Drinking History questionnaire (LDH; (Skinner and Sheu, 1982)).  All participants were administered a test battery of neuropsychological measures at both timepoints, including the California Verbal Learning Test (CVLT; (Delis et al., 1987)), Faces I, Faces II, Family Pictures I, Family Pictures II, Digit Span and Spatial Span subtests of the Wechsler Memory Scale-Third Edition (WMS-III; (Wechsler, 1987)). Samuelson and colleagues previously reported on the longitudinal neuropsychological changes observed in this dataset (Samuelson et al., 2009), and found a subtle decline in delayed facial recognition as indexed by performance on the Faces II subtest. In light of this finding and the previous reports of longitudinal changes on the CVLT due to PTSD (Yehuda et al., 2006), this study focused only on the relationships of longitudinal changes in Faces II, CVLT total (short term verbal memory) and CVLT long delay (long term verbal memory) with longitudinal measures of brain atrophy. Longitudinal change on these neuropsychological tests was defined as (scoretp1-scoretp2)/(test interval in yrs).  MRI acquisition and processing: T1-weighted images were acquired on a clinical 1.5 Tesla MR scanner (Vision, Siemens Medical Systems, Iselin NJ) using Magnetization Prepared Rapid Acquisition Gradient Echo (TR/TI/TE = 9/300/4 ms, 1x1 mm2 in-plane resolution, 1.5 mm slabs); images were acquired orthogonal to the long axis of the hippocampus.  Deformation based morphometry (DBM) analyses: Robust fluid registration was used to nonlinearly register baseline and follow-up scans of each participant to create maps of longitudinal atrophy. Each participant's baseline image was then registered to an atlas; transformations were combined to create maps of longitudinal atrophy in common space as described in (Cardenas et al., 2007). The longitudinal atrophy maps were normalized by interscan interval and these maps of annualized atrophy rate in common space were used in statistical analysis using linear models. ANCOVA at each voxel was used to test our first hypothesis that PTSD was associated with greater tissue atrophy rates; the maps of longitudinal change were the dependent variable, group status (i.e., PTSD+ or PTSD-) was the categorical predictor, and age was a covariate. Linear regressions with baseline clinical or imaging measures as the independent variable were fit at each voxel in order to identify baseline predictors of ongoing atrophy. Subsequent analyses compared PTSD+ participants with improving symptoms vs. PTSD-, and PTSD+ with worsening symptoms vs. PTSD-, in order to determine the relationship between improving mental health and ongoing brain atrophy. Using all participants, linear regression with change in neuropsychological test score as the independent variable was also fit at each voxel, covarying for age, in order to determine the relationship between rate of tissue atrophy and cognitive decline. Statistical maps were corrected for multiple comparisons by thresholding at uncorrected p=0.005, identifying suprathreshold clusters, and using nonstationary random field theory (Worsley et al., 2002) to identify clusters with corrected p&lt;0.05. Within each cluster with corrected p&lt;0.05, the estimated effects (i.e., the voxel-wise beta coefficients from the linear model) were averaged to determine the magnitude of the group effects (for ANCOVA models) or the slope (for regression models).</description>
+</descriptions>
+</resource>
+

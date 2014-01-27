@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q67P8W9Z </identifier>
+<creators>
+<creator>
+<creatorName>Zhang, Yu</creatorName>
+</creator>
+<creator>
+<creatorName>Du, An-Tao</creatorName>
+</creator>
+<creator>
+<creatorName>Hayasaka, Satoru</creatorName>
+</creator>
+<creator>
+<creatorName>Jahng, Geon-ho</creatorName>
+</creator>
+<creator>
+<creatorName>Hlavin, Jennifer</creatorName>
+</creator>
+<creator>
+<creatorName>Zhan, Wang</creatorName>
+</creator>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+<creator>
+<creatorName>Schuff, Norbert</creatorName>
+</creator>
+<creator>
+<creatorName>Memory and Aging Center</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Patterns of age-related water diffusion changes in human brain by concordance and discordance analysis.</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Diffusion Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Brain</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Middle Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Young Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Anisotropy</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Reference Values</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Aging</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<resourceType resourceTypeGeneral="Dataset">application/octet-stream</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">19036473</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">In diffusion tensor imaging (DTI), interpreting changes in terms of fractional anisotropy (FA) and mean diffusivity or axial (D(||)) and radial (D(?)) diffusivity can be ambiguous. The main objective of this study was to gain insight into the heterogeneity of age-related diffusion changes in human brain white matter by analyzing relationships between the diffusion measures in terms of concordance and discordance instead of evaluating them separately, which is difficult to interpret. Fifty-one cognitively normal subjects (22-79 years old) were studied with DTI at 4 Tesla. Age was associated with widespread concordant changes of decreased FA and increased MD but in some regions significant FA reductions occurred discordant to MD changes. Prominent age-related FA reductions were primarily related to greater radial (D(?)) than axial (D(||)) diffusivity changes, potentially reflecting processes of demyelination. In conclusion, concordant/discordant changes of DTI indices provide additional characterization of white matter alterations that accompany normal aging.</description>
+<description descriptionType="Methods">The dataset available here consists of Fractional Anisotropy (FA), Mean Diffusivity (MD), Axial Diffusivity (I1), and Radial Diffusivity (Dra) images as well as subject-study-specific normalization images (B0, see methods in paper) in Analyze format. There are B0, FA, MD, I1, and Dra images for 51 subjects, and a spreadsheet describing each subject's handedness (right, left or ambidextrous), age (at time of scan), gender, ApoE alleles, and Mini-Mental State Exam score. Data Acquisition Location: San Francisco VA Medical Center; Scanner Type: Siemens Bruker 4T, equipped with a birdcage transmit and 8 channel receive coil. DTI was based on a dual spin-echo echo-planar imaging (EPI) sequence, augmented by parallel imaging acceleration (GRAPPA) by a factor 2 to reduce susceptibility distortions. Other imaging parameters were: TR/TE = 6000/77 ms; field of view 256 cm × 224 cm; 128 × 112 matrix size, yielding 2 mm × 2 mm in-plane resolution; 40 continuous slices, each 3 mm thick. A diffusion reference image (no diffusion gradient b = 0) and six diffusion-weighted images (b = 800 s/mm2 along 6 non-collinear directions) were acquired. Four DTI scans were acquired and averaged after motion correction to boost signal-to-noise.</description>
+</descriptions>
+</resource>

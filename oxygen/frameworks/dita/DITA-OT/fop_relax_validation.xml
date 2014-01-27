@@ -1,0 +1,4 @@
+<fop version="1.0">    
+    <!-- No strict FO validation for the Apache FOP-->
+    <strict-validation>false</strict-validation>
+</fop>

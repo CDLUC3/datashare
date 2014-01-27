@@ -1,0 +1,58 @@
+
+<!--
+ TEI P5 DTD module certainty. Generated 2008-07-08T17:39:06Z. 
+Copyright 2008 TEI Consortium.
+This is free software; you can redistribute it and/or
+	    modify it under the terms of the GNU General Public
+	    License as published by the Free Software Foundation;
+	    either version 2 of the License, or (at your option) any
+	    later version.
+This material is distributed in the hope that it will be
+	    useful, but WITHOUT ANY WARRANTY; without even the implied
+	    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	    PURPOSE. See the GNU General Public License for more
+	    details.
+You should have received a copy of the GNU General Public
+	    License along with this file; if not, write to the Free
+	    Software Foundation, Inc., 59 Temple Place, Suite 330,
+	    Boston, MA 02111-1307, USA.
+For general (non-technical) enquiries, contact the TEI
+	  Consortium at info@tei-c.org; 
+for membership enquiries contact membership@tei-c.org; for
+technical enquiries, particularly about the
+		Guidelines, DTDs, schemas, or software available from
+		the TEI-C, contact editors@tei-c.org.
+For up to date information, consult the TEI web
+	      site at http://www.tei-c.org/P5/. 
+		Certainty and uncertainty
+-->
+
+<!ENTITY % certainty 'INCLUDE' >
+<![ %certainty; [
+
+<!--doc:indicates the degree of certainty or uncertainty associated
+  with some aspect of the text markup.  -->
+<!ELEMENT %n.certainty; %om.RR; (%model.glossLike;)*>
+<!ATTLIST %n.certainty; xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST %n.certainty;
+ %att.global.attributes;
+target CDATA  #REQUIRED
+locus %data.enumerated;  #REQUIRED
+assertedValue CDATA #IMPLIED
+given CDATA  #IMPLIED
+degree %data.probability;  #IMPLIED >
+]]>
+
+<!ENTITY % respons 'INCLUDE' >
+<![ %respons; [
+
+<!--doc:(responsibility) identifies the individual(s) responsible for some aspect of the
+markup of particular element(s). -->
+<!ELEMENT %n.respons; %om.RR; (%model.glossLike;)*>
+<!ATTLIST %n.respons; xmlns CDATA "http://www.tei-c.org/ns/1.0">
+<!ATTLIST %n.respons;
+ %att.global.attributes;
+target CDATA  #REQUIRED
+locus CDATA  #REQUIRED
+resp %data.pointer;  #REQUIRED >
+]]>

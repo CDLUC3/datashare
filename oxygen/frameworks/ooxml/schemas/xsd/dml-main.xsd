@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.openxmlformats.org/drawingml/2006/main">    
+    <xs:include schemaLocation="dml-audioVideo.xsd" />
+    <xs:include schemaLocation="dml-baseTypes.xsd" />
+    <xs:include schemaLocation="dml-documentProperties.xsd" />
+    <xs:include schemaLocation="dml-graphicalObject.xsd" />
+    <xs:include schemaLocation="dml-graphicalObjectFormat.xsd" />
+    <xs:include schemaLocation="dml-graphicalObjectAnimation.xsd" />    
+    <xs:include schemaLocation="dml-textCharacter.xsd" />
+    <xs:include schemaLocation="dml-stylesheet.xsd" />
+    <xs:include schemaLocation="dml-shapeStyle.xsd" />
+    <xs:include schemaLocation="dml-shapeProperties.xsd" />
+    <xs:include schemaLocation="dml-shape3DScene.xsd" />
+    <xs:include schemaLocation="dml-shape3DStyles.xsd" />
+    <xs:include schemaLocation="dml-shapeGeometry.xsd" />
+    <xs:include schemaLocation="dml-shapeLineProperties.xsd" />    
+    <xs:include schemaLocation="dml-shapeMiscellaneous.xsd" />    
+    <xs:include schemaLocation="dml-text.xsd" />
+    <xs:include schemaLocation="dml-tableStyle.xsd" />
+</xs:schema>

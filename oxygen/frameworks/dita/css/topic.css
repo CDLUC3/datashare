@@ -1,0 +1,1064 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/*
+    ===========================
+    Topic elements.
+    ===========================
+*/
+
+
+
+/*
+    The <topic> element is the top-level DITA element for 
+    a single-subject topic or article. Other top-level 
+    DITA elements that are more content-specific are 
+    <concept>, <task>, <reference>, and <glossary>.
+*/
+topic{
+	display: block;
+	margin: 0.5em 0;
+	padding-left: 0.5em;
+}
+
+body {
+    display: block;
+}
+
+/*
+    The generic title.
+*/
+title{
+    display:block;
+    font-weight:bold;
+    font-family:serif;
+    color: #004477;
+    background-color:inherit;
+    margin-top:0.5em;
+    margin-bottom:0.3em;
+}
+
+/*
+    Reduce the font size.
+*/
+topic > title{
+	font-size: 1.8em;
+	border-bottom:1px solid #004477;
+}
+
+* topic > title{
+	font-size: 1.6em;
+	border-bottom:1px solid #004477;
+}
+
+* * topic > title{
+	font-size: 1.4em;
+	border-bottom:none;
+}
+
+* * * topic > title{
+	font-size: 1.2em;
+}
+
+* * * * topic > title{
+	font-size: 1em;
+}
+
+
+/*
+    The alternate title element. 
+*/
+titlealts{
+    display:block;
+}
+
+/*
+    When your DITA topic is transformed to XHTML, the 
+    <searchtitle> element is used to create a title 
+    element at the top of the resulting HTML file
+*/
+searchtitle,
+navtitle{
+	margin: 0.5em 0;
+	font-weight: bold;
+	display: block;
+	background-color:inherit;
+}
+searchtitle:before,
+navtitle:before{
+	color: #444444;
+	background-color:inherit;
+	font-weight: bold;
+    display: inline;
+}
+
+searchtitle:before {
+	content: "Search Title: ";
+}
+navtitle:before {
+	content: "Navigation Title: ";
+}
+
+
+/* For authoring, call attention to shortdesc by boxing it.  
+   For output, its just a paragraph. */
+shortdesc{
+	display: block;
+	margin: 0.5em 0;
+}
+shortdesc:before{
+    content:"Short Description: ";
+    color:#444444;
+    background-color: inherit;
+    font-weight:bold;
+    display: inline;
+	margin: 0.5em 0;	
+}
+
+/*
+    The <prolog> element contains information about 
+    the topic as an whole (for example, author information 
+    or subject category) that is either entered by 
+    the author or machine-maintained. 
+*/
+prolog{
+	margin-top: 1pc;
+	margin-bottom: 1pc;
+	
+	background-color: #FFFFEE;
+	color:inherit;
+	
+	padding-top: 3pt;
+	padding-right: 3pt;
+	padding-left: 3pt;
+	padding-bottom: 6pt;
+	
+	border: thin solid olive;
+	display:block;
+}
+
+
+/* general setup for section-like divisions and 
+    exhibits */
+section, 
+fig {
+	margin-top: 12pt;
+	display: block;
+}
+
+
+section > title, 
+example > title {
+	display: block;
+	font-weight: bold;
+	margin-top: 6pt;
+	margin-bottom: 2pt;
+}
+
+
+/*== special content and exhibits ==*/
+/*
+    The specialized title attribute allows 
+    architects of specialized types to define 
+    a fixed or default title for a specialized 
+    element. Not intended for direct use by authors.
+*/
+*[spectitle]:before {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 2pt;
+	content: attr(spectitle)": ";
+}
+
+section[spectitle]:before, 
+example[spectitle]:before{
+	display: block;
+	font-weight: bold;
+	content: attr(spectitle)": ";
+}
+
+example:before{
+	display: block;
+	font-weight: bold;
+	color:#444444;
+	background-color:inherit;
+	content: "Example: ";
+}
+
+
+/*
+    Body elements
+*/
+p, 
+note{
+	display: block;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+    margin-left:3em;
+}
+
+
+note:before{
+    content:url('../img/note.png') " Note: ";
+    font-weight:bold;
+    display:block;
+    margin-left:1em;
+}
+note[type="attention"]:before{
+    content:url('../img/important.png') " Attention: ";
+}
+note[type="caution"]:before{
+    content:url('../img/caution.png') " Caution: ";
+}
+note[type="danger"]:before{
+    content:url('../img/danger.png') " Danger: ";
+}
+note[type="fastpath"]:before{
+	content:"Fastpath: ";
+}
+note[type="important"]:before{
+    content:url('../img/important.png') " Important: ";
+}
+note[type="note"]:before{
+    content:url('../img/note.png') " Note: ";
+}
+note[type="other"]:before{
+	content:"Other: ";
+}
+note[type="remember"]:before{
+    content:url('../img/remember.png') " Remember: ";
+}
+note[type="restriction"]:before{
+    content:url('../img/restriction.png') " Restriction: ";
+}
+note[type="tip"]:before{
+    content:url('../img/tip.png') " Tip: ";
+}
+note[type="other"][othertype]:before{
+    content:attr(othertype) ": ";
+}
+
+
+/*
+    Lists
+*/
+li{
+	margin-left: 20pt;
+	display: list-item;
+	margin-bottom: 2pt;
+	margin-top: 6pt;
+}
+
+ul, 
+ol{
+    display:block;
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+}
+
+ul > li{
+	list-style-type: disc;
+}
+ul ul > li{
+	list-style-type: circle;
+}
+ul ul ul > li{
+	list-style-type: square;
+}
+ul ul ul ul > li{
+	list-style-type: disc;
+}
+
+li > ol{
+  margin-top:0;
+  margin-bottom:0;
+}
+
+/*
+    This works on firefox, but it looks odd into
+    the XML editor.
+*/
+ol {
+    counter-reset:item-count;
+    display:block;
+}
+ol > li{
+    display:block;
+}
+ol > li:before{
+    content: counters(item-count, ".", decimal) " "; 
+    counter-increment: item-count;    
+} 
+
+/*
+    The simple list (<sl>) element contains 
+    a simple list of items of short, 
+    phrase-like content, such as in documenting 
+    the materials in a kit or package.
+    On output, the list should have no bullets, 
+    on the assumption that each item is short enough 
+    to fit on one line, and needs no additional 
+    differentiation from its neighbors.
+*/
+sl{
+    display:block;
+	list-style: none;
+}
+sli{
+	display: list-item;
+}
+
+/*== phrase markup ==*/
+q{
+    display:inline;
+}
+q:before{
+	content: "\"";
+	color:gray;
+	background-color:inherit;
+}
+
+q:after{
+	content: "\"";
+	color:gray;
+	background-color:inherit;
+}
+
+/*
+    The long quote (<lq>) element indicates content quoted from another source. 
+*/
+lq:before{
+    color:gray;
+    background-color:inherit;
+    content:open-quote;
+    font-size:larger;
+}
+
+lq:after{
+    color:gray;
+    background-color:inherit;
+    content:close-quote;
+    font-size:larger;
+}
+
+lq{
+	display: block;
+    margin: 0.8em 0;
+}
+
+/*
+    The <cite> element is used when 
+    you need a bibliographic 
+    citation that refers to a book or article. 
+*/
+cite {
+    display:inline;
+	font-style: italic;
+}
+
+
+p{
+    display: block;
+    margin: 1.33ex 0;
+}
+
+pre {
+    display:block;
+    white-space: pre;
+    font-family: monospace;
+    background-color: #e0e0e0;
+	color:black;
+    border: thin solid gray; 
+    padding: 2px; 
+    margin: 1.33ex 0;
+}
+
+lines{
+	display: block;
+	white-space: pre;
+	font-style: normal;
+    margin: 1.33ex 0;
+}
+
+
+/*
+    Use footnote (<fn>) to annotate text with notes that 
+    are not appropriate for inclusion inline. 
+*/
+fn:before{	
+	font-weight: bold;
+	content: "fn ";
+	color:#333333;
+	background-color:inherit;
+}
+
+fn[callout]:before{	
+	font-weight: bold;
+	content: attr(callout) " ";
+	color:#333333;
+	background-color:inherit;
+}
+
+fn{
+    display:block;    
+    font-size:small;
+    padding:2px;
+    border-top:1px solid gray;
+}
+
+/*
+    Definition list.
+*/
+dlhead,
+dlentry{
+    display:block;
+}
+dlhead{
+	color:maroon;
+	background-color:inherit;
+    font-weight: bold;
+}
+
+dl{
+    display:block;
+	margin-left: 2ex;
+	margin-top: 1.33ex;
+	margin-bottom: 1.33ex;
+}
+
+dt, 
+dthd{
+	font-weight: bold;
+	display:block;
+}
+
+dd, 
+ddhd{
+    display:block;
+	margin-left: 4ex;
+}
+
+/*
+================
+    Figures
+================
+*/
+
+fig,
+figgroup{
+    display:block;
+    margin:0.8em 0;
+}
+desc{
+    display:inline;
+}
+desc:before {
+    content: " [";
+    color: #333333;
+    background-color:inherit;
+}
+desc:after {
+    content: "]";
+    color: #333333;
+    background-color:inherit;
+}
+
+/*
+    Only descs from xref and link are 
+    left inline.
+*/
+fig > desc,
+object > desc,
+table > desc,
+linklist > desc {
+    display: block;
+    margin: 1.33ex 0;
+}
+
+fig > title:before    {
+	content: "Figure: ";
+}
+
+/*
+    Parameter of an object.
+*/
+param:before {
+    content:"Param name=" attr(name) " value=" attr(value);
+    color:silver;
+    background-color:inherit;
+}
+
+/*
+    Level 3 Compatible content specification.
+*/
+image, 
+image[placement="inline"] {
+	display: inline;
+    content: attr(href, url); 
+}
+
+image[placement="break"] {
+	display: block;
+	content: attr(href, url); 
+}
+
+/*
+    The alt element provides an element equivalent 
+    of the alt attribute on the image element. 
+*/
+alt{
+    display:block;
+}
+alt:before{
+    content:"[";
+}
+alt:after{
+    content:"]";
+}
+
+
+*[conref] {
+    background-color:inherit;
+}
+
+/*== simple table markup ==*/
+
+simpletable{
+	display: table;
+	border: thin solid gray;
+}
+
+strow, 
+sthead {
+	display: table-row;
+}
+
+sthead > stentry {
+	display: table-cell;
+	font-weight: bold;
+	text-align: center;
+	border: thin solid gray;
+	padding:2px;
+}
+
+strow > stentry {
+	display: table-cell;
+	border: thin solid gray;
+}
+
+/*== specially highlighted elements ==*/
+
+/*
+    The <draft-comment> element allows simple 
+    review and discussion of topic contents 
+    within the marked-up content. 
+*/
+draft-comment {
+    padding:2px;
+	display: block;
+	margin-top: 6pt;
+	margin-bottom: 2pt;
+	background-color: #99FF99;
+	color:inherit;
+	border-left: thick solid green;
+	border-right: thick solid green;
+}
+
+draft-comment:before {
+	font-weight: bold;
+	content: "Comment by "attr(author)": ";
+}
+
+/*
+    The related information links of a topic 
+    (<related-links> element) are stored in a 
+    special section following the body of the topic.
+*/
+related-links{
+	display: block;
+	margin:0.5em 0;
+}
+
+related-links:before {
+	display: block;
+	font-weight: bold;
+	content: "Related Links: ";
+	margin:0.5em 0;
+	color:#444444;
+	background-color:inherit;
+}
+
+links, 
+linklist, 
+linkpool{
+	display: block;
+	margin-top: 1.33ex;
+	margin-bottom: 1.33ex;
+	margin-left: 2ex;
+}
+
+links:before, 
+linklist:before, 
+linkpool:before    {
+	color: #444444;
+	background-color:inherit;
+	font-weight: bold;
+	content: "Links: ";
+}
+
+links > title, 
+linklist > title, 
+linkpool > title{
+	display: block;
+	font-weight: bold;
+	margin-top: 6pt;
+}
+
+/*
+    The <linkinfo> element allows you to place a 
+    descriptive paragraph following a list of links 
+    in a linklist element.
+*/
+linkinfo {
+    display:block;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+    margin-left:1em;
+    
+}
+
+linkinfo:before {
+    content: "Link Info: ";
+    font-weight:bold;
+    color: #444444;
+    background-color:inherit;
+    display:block;
+}
+
+/*
+    The <link> element defines a relationship 
+    to another topic. Links represent the types 
+    and roles of topics in a web of information, 
+    and therefore represent navigational links 
+    within that web. Links are typically sorted 
+    on output based on their attributes. 
+*/
+link {
+	display: list-item;
+	list-style-type:circle;
+	margin-left: +20pt;
+}
+
+
+/*
+    Use the cross-reference (<xref>) element 
+    to link to a different location within 
+    the current topic, or a different topic 
+    within the same help system, or to 
+    external sources, such as Web pages, or 
+    to a location in another topic. The href 
+    attribute on the <xref> element provides 
+    the location of the target.
+*/
+xref{
+  text-decoration:underline;
+}
+xref, 
+cite{
+    display:inline;
+}
+
+link:before,
+xref:before{
+    content:url("../img/link.png");
+    text-decoration:underline;
+    color:navy;
+    background-color:inherit;
+}
+
+
+link[href]:before,
+xref[href]:before{
+    content:url("../img/link.png") "[" attr(href) "]";
+}
+
+link[type][href]:before,
+xref[type][href]:before{
+    content:url("../img/link.png") "[" attr(type) " - " attr(href) "]";
+}
+
+/*
+==============================
+    Specialization elements.
+==============================
+*/
+boolean,
+state{
+    display:inline;
+}
+
+boolean:before,
+state:before{    
+    display:inline;
+    color:gray;
+    background-color:inherit;
+    font-weight:bold;
+}
+
+boolean:before{
+    content: "boolean state=" attr(state);
+}
+state:before{
+    content: "state name=" attr(name) " value=" attr(value);
+}
+
+
+/*
+    A <required-cleanup> element is used as a 
+    placeholder for migrated elements that cannot 
+    be appropriately tagged without manual 
+    intervention. As the element name implies, 
+    the intent for authors is to clean up the 
+    contained material and eventually get rid 
+    of the <required-cleanup> element. 
+*/
+required-cleanup {
+    display:block;
+    padding:2px;
+	color: inherit;
+	background-color: #FFFF99;
+	border-left: thick solid red;
+	border-right: thick solid red;
+}
+
+
+itemgroup{
+    display:block;
+    margin:0.5em 0;
+}
+
+term {
+    display: inline;
+    font-style: italic;
+}
+
+/*
+    The <resourceid> element provides an identifier for 
+    applications that require them in a particular format, 
+    when the normal id attribute of the topic can't be used.
+*/
+resourceid,
+
+/*
+    The <series> metadata element contains information about 
+    the product series that the topic supports.
+*/
+series,
+
+/*
+    The <source> element contains a reference to a resource 
+    from which the present topic is derived, either 
+    completely or in part. 
+*/
+source,
+permissions,
+
+/*
+    The <prognum> metadata element identifies the program 
+    number of the associated program product. 
+*/
+prognum,
+publisher,
+othermeta,
+platform,
+/*
+    The <featnum> element contains the feature number of 
+    a product in the metadata.
+*/
+featnum,
+keywords,
+critdates,
+copyright,
+/*
+    The <component> element describes the component of 
+    the product that this topic is concerned with. 
+*/
+component,
+prodname,
+audience,
+/*
+    The <brand> element indicates the manufacturer or brand 
+    associated with the product described by the parent 
+    <prodinfo> element.
+*/
+brand,
+category,
+prodinfo,
+metadata,
+author {
+    display: block;
+    margin-left: 4ex;
+    margin-top: 1.33ex;
+    margin-bottom: 1.33ex; 
+}
+
+vrmlist {
+    display: block;
+    margin: 1.33ex 0;
+}
+
+vrm {
+    display: block;
+    margin-left: 16ex;
+}
+
+copyryear,
+copyrholder {
+    display: inline;
+    padding-left:10px;
+}
+
+created,
+revised{
+    display: block;
+    margin-left: 16ex;
+}
+
+
+
+/*
+    Labels for the meta information.
+*/
+resourceid:before,
+series:before,
+source:before,
+permissions:before,
+prognum:before,
+publisher:before,
+othermeta:before,
+platform:before,
+featnum:before,
+keywords:before,
+critdates:before,
+created:before,
+revised:before,
+copyryear:before,
+copyrholder:before,
+copyright:before,
+component:before,
+vrm:before,
+prodname:before,
+audience:before,
+brand:before,
+category:before,
+prodinfo:before,
+metadata:before,
+author:before {
+    display: inline;
+    font-weight: bold;
+    color: #444400;
+    background-color:inherit;
+}
+
+resourceid:before {
+    content: "Resource Id: ";
+}
+
+series:before {
+    content: "Series: ";
+}
+
+source[href]:after {
+    display: inline;
+    content: url("../img/link.png")  attr(href) ;
+    color: navy;
+    background-color:inherit;
+    font-family: monospace;
+    text-decoration:underline;
+    font-size: small;
+}
+
+source:before {
+    content: "Source: ";
+}
+
+permissions:before {
+    content: "Permissions: ";
+}
+
+prognum:before {
+    content: "Program number: ";
+}
+
+publisher:before {
+    content: "Publisher: ";
+}
+
+othermeta:before {
+    content: "Othermeta:";
+}
+
+platform:before {
+    content: "Platform: ";
+}
+
+featnum:before {
+    content: "Feature number: ";
+}
+
+keywords:before {
+    content: "Keywords: ";
+}
+
+critdates:before {
+    content: "Critical dates: ";
+}
+
+created:before {
+    content: "Created: ";
+}
+
+revised:before {
+    content: "Revised: ";
+}
+
+copyryear:before {
+    display: inline;
+    content: "Year: " " [" attr(year, string, "Please specify the year attribute") "]";
+}
+
+copyright:before {
+    content: "Copyright ";
+}
+
+copyrholder:before {
+    content: "Holder:  ";
+}
+
+component:before {
+    content: "Component: ";
+}
+
+vrm:before {
+    content: "VRM: ";
+}
+
+prodname:before {
+    content: "Product name: ";
+}
+
+audience:before {
+    content: "Audience: ";
+}
+
+author:before {
+    content: "Author: ";
+}
+
+brand:before {
+    content: "Brand: ";
+}
+
+prodinfo:before {
+    content: "Product info: ";
+}
+
+metadata:before {
+    content: "Metadata: ";
+}
+
+/*
+    Effective values.
+*/
+audience:after {
+    content: " type=" attr(type) " job=" attr(job)
+             " experiencelevel=" attr(experiencelevel);
+}
+
+vrm:after {
+    content: " version=" attr(version) " modification=" attr(modification)
+             " release=" attr(release);
+}
+
+created:after {
+    content: " date=" attr(date)
+             " golive=" attr(golive)
+             " expiry=" attr(expiry);
+}    
+
+revised:after {
+    content: " modified=" attr(modified)
+             " golive=" attr(golive)
+             " expiry=" attr(expiry);
+}
+
+othermeta:after {
+    content: " name=" attr(name)
+             " content=" attr(content);
+}
+
+permissions:after {
+    content: " view=" attr(view) " ";
+}
+
+resourceid:after {
+    content: " id=" attr(id);
+}
+resourceid[id][appname]:after {
+    content: " id=" attr(id) " appname=" attr(appname);
+}
+
+/* ---------------------------------------------------------------------------
+  Common to topicmeta/keywords and to DITA topics
+--------------------------------------------------------------------------- */
+
+keyword{
+    display: inline;
+    font-weight: bold;
+}
+
+/*
+    Separates the keywords.
+*/
+keywords > *:before {
+    display: inline;
+    content: " ";
+}
+keywords > *:first-child:before {
+    content: "";
+}
+
+
+indextermref,
+indexterm {
+    display: inline;
+    font-size: small;
+}
+
+indextermref:before,
+indexterm:before {
+    display: inline;
+    content: "(";
+}
+
+indexterm:after,
+indextermref:after {
+    display: inline;
+    content: attr(keyref) ")";
+}
+
+tm:after{
+    content: "[tm]";
+    vertical-align:super;
+    color:gray;
+    background-color:inherit;
+    font-size:smaller;
+}
+
+tm[tmtype="reg"]:after{
+    content: "\AE";     
+}
+
+tm[tmtype="service"]:after{
+    content: "[sm]";     
+}

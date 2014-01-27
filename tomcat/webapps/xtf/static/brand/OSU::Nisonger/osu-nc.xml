@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @id: four character identifier -->
+<!-- @type: entity type from a constrained list -->
+<!-- @bpURL: original Bepress URL -->
+<entity id="osu-nc" type="oru">
+    <meta>
+        <label><!-- Value of @id from 'entity' element --></label>
+    </meta>
+    <display>
+        <mainFrame>
+            <logo>
+                <div id="logoDiv">
+                    <!-- @logo: logo path (e.g. 'brand/acgcc/institute_logo.jpg') -->
+                    <img class="logo" src="brand/osu-nc/nisonger.png"/>
+                    <span class="entity">Nisonger Center</span>
+                    <span class="campus">Ohio State University</span>
+                </div>
+            </logo>
+            <blurb>
+                <!-- descriptive blurb -->
+                <div id="blurbDiv">
+                    <p>The Ohio State University Nisonger Center was founded in 1966, among the first group of federally funded University Centers for Excellence in Developmental Disabilities. We are widely respected for our interdisciplinary research, education and clinical services. The Nisonger Center is proud to be part of The Ohio State University Medical Center and Office of Health Sciences. We have a strong and dynamic team of researchers, clinicians, teachers, staff and trainees who strive to improve the lives of persons with disabilities and their families across the lifespan.</p>
+                </div>
+            </blurb>
+        </mainFrame>
+        <generalInfo>
+            <contactInfo>
+                <div id="contactInfo">
+                    <h2>Nisonger Center</h2>
+                    <p>
+                        <a href="http://nisonger.osu.edu/" target="_blank">nisonger.osu.edu</a>
+                    </p>
+                </div>
+            </contactInfo>
+            <linkSet>
+                <div id="linksDiv">
+					<p>
+						<a href="/uc/search?entity=osu-nc;view=policyStatement">Policies</a>
+                    </p> 
+                </div>
+            </linkSet>
+            <linkedPages>
+                <div id="policyStatement">
+                    <h1>Nisonger Center Data Use Policy</h1>
+					<p>DataShare is a project dedicated to making research data openly available to the public.</p>
+					<p>Using data available through the DataShare project requires agreeing with the following:</p>
+					<ol>
+						<li>The quality and completeness of the data cannot be guaranteed. Users employ these data at their own risk.</li>
+						<li>Users shall respect restrictions of access to sensitive data. Users will make no attempt to identify the individuals whose images are included in DataShare data sets.</li>
+						<li>Users must acknowledge the use of DataShare data and data derived from DataShare data when publicly presenting any findings or algorithms that benefited from their use. Such presentations include but are not limited to papers, books, book chapters, conference posters, and talks. <br/>
+						When publishing findings that benefit from DataShare data, please include the following grant numbers in the acknowledgements section and in the associated Pubmed Central submission:  P50 AG05681, P01 AG03991, R01 AG021910, P20 MH071616, U24  RR021382.</li>
+						<li>Redistribution of original DataShare data is permitted so long as the data are redistributed under the same terms and conditions are described in this DUA.</li>
+						<li>Data derived from original DataShare data may be distributed under terms and conditions established by the creators of the data. Users must comply with the terms and conditions of use set by the creators of the data.</li>
+					</ol>
+				</div>		
+            </linkedPages>
+        </generalInfo>
+    </display>
+</entity>

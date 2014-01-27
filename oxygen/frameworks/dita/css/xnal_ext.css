@@ -1,0 +1,18 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/* extensible Name and Address Language */
+
+authorinformation:before,
+personinfo:before,
+organizationinfo:before,
+namedetails:before,
+personname:before,
+organizationnamedetails:before,
+addressdetails:before,
+contactnumbers:before,
+emailaddresses:before,
+urls:before {
+    content: capitalize(local-name());
+    display:inline;
+}

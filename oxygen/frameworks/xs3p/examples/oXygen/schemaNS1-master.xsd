@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema' targetNamespace="http://www.example.com/ns1" xmlns:ns1="http://www.example.com/ns1"
+    xmlns:ns2="http://www.example.com/ns2">
+    <xs:include schemaLocation="schemaNS1-part1.xsd"/>    
+    <xs:include schemaLocation="schemaNS1-part2.xsd"/>    
+    <xs:import namespace="http://www.example.com/ns2" schemaLocation="schemaNS2.xsd"/>
+    <xs:element name="master">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ns1:part1"/>
+                <xs:element ref="ns1:part2"/>
+                <xs:element ref="ns2:test"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

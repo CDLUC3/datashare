@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q6057CV6</identifier>
+<creators>
+<creator>
+<creatorName>Cardenas, Valerie</creatorName>
+</creator>
+<creator>
+<creatorName>Reed, Bruce</creatorName>
+</creator>
+<creator>
+<creatorName>Chao, Linda</creatorName>
+</creator>
+<creator>
+<creatorName>Chui, Helena</creatorName>
+</creator>
+<creator>
+<creatorName>Sanossian, Nerses</creatorName>
+</creator>
+<creator>
+<creatorName>DeCarli, Charles</creatorName>
+</creator>
+<creator>
+<creatorName>Mack, Wendy</creatorName>
+</creator>
+<creator>
+<creatorName>Kramer, Joel</creatorName>
+</creator>
+<creator>
+<creatorName>Hodis, Howard</creatorName>
+</creator>
+<creator>
+<creatorName>Yan, Mingzhu</creatorName>
+</creator>
+<creator>
+<creatorName>Buonocore, Michael</creatorName>
+</creator>
+<creator>
+<creatorName>Carmichael, Owen</creatorName>
+</creator>
+<creator>
+<creatorName>Jagust, William J.</creatorName>
+</creator>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Associations between vascular risk factors, carotid atherosclerosis and cortical volume and thickness in older adults</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Male</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Female</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Brain</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Framingham Cardiovascular Risk Profile</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Carotid Intima Media</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Gray Matter</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cortical Thickness</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cortical Volume</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Atrophy</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cerebrovascular Disease</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Stroke</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Myocardial Infarction</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Infarct</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<dates>
+<date dateType="Collected">2009-2011</date>
+</dates>
+<resourceType resourceTypeGeneral="Dataset">application/octet-stream</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">22984010</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">Data from healthy and cognitively impaired elderly, enriched for cerebrovascular disease.
+Background and Purpose: To investigate whether the Framingham Cardiovascular Risk Profile (FCRP) and carotid artery intima-media thickness (CIMT) are associated with cortical volume and thickness.
+Results: 152 subjects (82 men) were aged 78 (±7) years old, 94 had a CDR of 0, 58 had a clinical dementia rating (CDR) of 0.5 and the mean mini-mental status examination (MMSE) was 28 ±2. FCRP score was inversely associated with total gray matter (GM) volume, parietal and temporal GM volume (adjusted p&lt;0.04). FCRP was inversely associated with parietal and total cerebral GM thickness (adjusted p&lt;0.03). CIMT was inversely associated with thickness of parietal GM only (adjusted p=0.04). Including history of myocardial infarction or stroke and radiologic evidence of brain infarction, or apoE genotype did not alter relationships with FCRP or CIMT.
+Conclusions: Increased cardiovascular risk was associated with reduced GM volume and thickness in regions also affected by Alzheimer's disease (AD), independent of infarcts and apoE genotype. These results suggest a "double hit" toward developing dementia when someone with incipient AD also has high cardiovascular risk.
+Subjects: Consecutive subjects were identified from an ongoing, longitudinal, multi-institutional Aging Brain program project that recruits subjects with normal cognition to mild cognitive impairment, representing a spectrum of low to high vascular risk14. Most participants were acquired through community-based recruitment using a protocol designed to obtain a demographically diverse cohort, or through sources such as stroke clinics and support groups attended by people with high vascular risk factors. All participants gave written informed consent in accordance with the policies of each institutional review board. Inclusion criteria include age 60 or older, with cognitive function in the normal to mild cognitive impairment range (Clinical Dementia Rating [CDR] score of 0 or 0.5) 15. Persons with history of multiple vascular risk factors, coronary or carotid disease, myocardial infarction, or ischemic stroke were targeted for inclusion, although patients with very large strokes that interfered with estimation of cortical volume and thickness were excluded. Exclusion criteria included evidence of alcohol or substance abuse, head trauma with loss of consciousness lasting longer than 15 minutes, factors contraindicating MRI, and severe medical illness, neurologic or psychiatric disorders unrelated to AD or vascular dementia that could significantly affect brain structure (e.g., schizophrenia and other psychotic disorders, bipolar disorder, current major depression, post-traumatic stress disorder, obsessive-compulsive disorder, liver disease, multiple sclerosis, amyotrophic lateral sclerosis). Participant demographics by CDR are shown in Table 1.
+Measures of cardiovascular risk and carotid atherosclerosis: The FCRP uses empirically-derived age- and gender-adjusted weighting of categorical variables to predict the 10-year risk of coronary heart disease and is a weighted sum of: age, gender, active smoking, diabetes, systolic blood pressure (and/or use of hypertensive medications) and total cholesterol and high-density lipoprotein cholesterol levels13. Higher scores indicate greater coronary risk.
+CIMT was used as a measure of subclinical atherosclerosis. CIMT is a measures of the thickness of the inner two layers of the carotid artery; higher CIMT indicates greater atherosclerosis burden. High-resolution B-mode ultrasound images of the right and left common carotid arteries were obtained with a 7.5-MHz linear array transducer attached to an ATL Apogee ultrasound system (Bothell, WA). CIMT was determined as the average of 70 to 100 measurements between the intima-lumen and media-adventitia interfaces along a 1 cm length just proximal to the carotid artery bulb at the same point of the cardiac cycle using comperterized automated edge detection. Right and left CIMT were measured in each individual whenever possible. For individuals with CIMT measurements from both sides, the maximum of these two quantities was used in subsequent statistical analyses.
+Measure of AD risk: Blood was drawn with the subject's consent for apolipoprotein E genotyping. Genotyping was completed for 102 participants. Subjects with 3/4 or 4/4 combined alleles were classified as apoE e4 positive, and those with 3/3 alleles as apoE e4 negative. Because the 2/4 combined allele is associated with a lower risk of AD16, these subjects were not included in the APOE e4 positive group.</description>
+<description descriptionType="Methods">Consecutive subjects participating in a prospective cohort study of aging and mild cognitive impairment enriched for vascular risk factors for atherosclerosis underwent structural MRI scans at 3T and 4T MRI at three sites. Freesurfer (v5.1) was used to obtain regional measures of neocortical volumes (mm3) and thickness (mm). Multiple linear regression was used to determine the association of FCRP and CIMT with cortical volume and thickness.
+MRI: acquisition: Structural T1-weighted MRI scans for participants were collected on 3T and 4T MRI systems. Forty-three participants were scanned at the University of Southern California using a 3T General Electric Signal HDx system with an 8-channel head coil. Acquired images included a T1-weighted volumetric SPGR (TR = 7 ms, TE = 2.9 ms, TI= 650 ms, 1 mm3 isotropic resolution). Fifty-four participants were scanned at the University of California, Davis research center. Nine participants were scanned using a 3T Siemens Magnetom Trio Syngo System with an 8-channel head coil. Forty-five were scanned using a 3T Siemens Magnetom TrioTim system with an 8-channel head coil. Acquired images for all 54 participants included a T1-weighted volumetric MP-RAGE (TR = 2500, TE = 2.98, TI = 1100, 1 mm3 isotropic resolution). Thirty-three participants were scanned at the San Francisco Veterans Administration Medical Center using a 4T Siemens MedSpec Syngo System with an 8-channel head coil. A T1-weighted volumetric MP-RAGE scan (TR = 2300, TE = 2.84, TI = 950, 1 mm3 isotropic resolution) was acquired. Twenty-two participants were scanned at the University of California, San Francisco Neuroscience Imaging Center using a 3T Siemens Magnetom TrioTim system with a 12-channel head coil. Acquired images included a T1-weighted volumetric MP-RAGE (TR = 2500, TE = 2.98, TI = 1100, 1 mm3 isotropic resolution).
+MRI: processing: The publicly available Freesurfer v5.1 (http://surfer.nmr.mgh.harvard.edu/) volumetric segmentation and cortical surface reconstruction methods were used to obtain regional measures of neocortical volumes (mm3) and thickness (mm). The reconstructed cortical surface models for each participant were manually inspected to ensure segmentation accuracy; regions with poor segmentation accuracy due to poor image quality or misregistration were excluded from further statistical analyses. Cortical surfaces were automatically parcellated17 and combined to create average cortical thickness and volume for total GM and for frontal, temporal, parietal, and occipital lobar regions. Region of interest volumes and thicknesses by cognitive status are shown in Table 2.</description>
+</descriptions>
+</resource>

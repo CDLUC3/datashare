@@ -1,0 +1,27 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+topic,
+section,
+example,
+table,
+simpletable{
+    foldable:true;
+    not-foldable-child: title;
+}
+
+/* Foldable but without foldable child, will fold to permit only before and after pseudo elements */
+topicref{
+    foldable:true;
+}
+
+/** Bookmap folds */
+part,
+chapter,
+appendix,
+glossarylist,
+notices,
+draftintro,
+preface{
+    foldable:true;
+}

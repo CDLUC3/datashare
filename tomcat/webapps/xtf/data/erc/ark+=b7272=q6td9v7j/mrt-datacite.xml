@@ -1,0 +1,28 @@
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/q6td9v7j</identifier>
+<creators>
+<creator><creatorName>Laurance, Megan</creatorName></creator>
+</creators>
+<titles>
+<title>Re-analysis of microarray data from rapamycin resistant DLBCL cell lines </title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2013</publicationYear>
+<subjects>
+<subject>microarray</subject>
+<subject>rapamycin</subject>
+<subject>Diffuse Large B-Cell Lymphoma</subject>
+<subject>pathway analysis</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup"><contributorName>UCSF:CIND</contributorName></contributor>
+<contributor contributorType="ResearchGroup"><contributorName>UCSF</contributorName></contributor>
+</contributors>
+<resourceType resourceTypeGeneral="Dataset">Dataset</resourceType>
+<descriptions>
+<description descriptionType="Abstract">This dataset contains a re-analysis of the raw microarray data originally published by Petrich AM et al in 2012 (citation details are provided through the link to the GEO record). We were interested in re-analyzing the data because the list of differentially expressed genes that were identified when comparing rapamycin resistant DLBCL cell lines to rapamycin sensitive cell lines was not included in the original article or supplemental materials. We were interested in validating and expanding upon the findings from the original article by reevaluating the raw microarray data. Our reanalysis identified over 200 genes that were significantly differentially expressed between rapamycin resistant and sensitive cells. Importantly, our analysis highlighted a gene that was highly upregulated in rapamycin resistant cells, CD247, that was not the focus on the original publication, and is the target of a drug currently in clinical trials for refractory DLBCL. Our reanalysis also highlighted the role of SYK, a kinase upregulated in rapamycin resistant cell lines, that has a direct molecular relationship with CD247, and is a potential biomarker of drug response in DLBCL.</description>
+<description descriptionType="Methods">The methods used to generate the original microarray data are described in the GEO record where the data were originally published: (http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27255)   We downloaded the raw Affymetrix data (CEL files) from GEO for renalysis. Statistical and quality analysis was performed using the data analysis pipeline in iReport (http://www.ingenuity.com/products/ireport) which utilizes packages such as RMA and Limma from Bioconductor, in the R programming language. A full description of the analysis packages used by this pipeline are included in the word document &quot;GSE27255 stats and QC details&quot; included in this DataShare record. Analysis of microarray data in iReport identified 229 differentially expressed genes (DEGs) with a p-value &lt;0.05, fold change &gt;1.5. These DEGs were then uploaded and analyzed in Ingenuity Pathway Analysis (www.ingenuity.com) for functional enrichment, pathway analysis, and drug target/biomarker analysis. Our novel findings with respect to the role of CD247 and SYK in rapamycin resistant DLBCL cell lines is depicted in the pathway image fine &quot;Rap resist network with CD247&quot; which is included in this DataShare record.</description>
+<description descriptionType="SeriesInformation">The original microarray data that was used for this reanalysis use case is described in the GEO record GSE27255.</description>
+<description descriptionType="SeriesInformation">http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27255 </description>
+</descriptions>
+</resource>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q6CC0XMH</identifier>
+<creators>
+<creator>
+<creatorName>Zhang, Yu</creatorName>
+</creator>
+<creator>
+<creatorName>Schuff, Norbert</creatorName>
+</creator>
+<creator>
+<creatorName>Du, An-Tao</creatorName>
+</creator>
+<creator>
+<creatorName>Rosen, Howard J.</creatorName>
+</creator>
+<creator>
+<creatorName>Kramer, Joel H.</creatorName>
+</creator>
+<creator>
+<creatorName>Gorno-Tempini, Maria Luisa</creatorName>
+</creator>
+<creator>
+<creatorName>Miller, Bruce L.</creatorName>
+</creator>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+<creator>
+<creatorName>Memory and Aging Center</creatorName>
+</creator>
+</creators>
+<titles>
+<title>White matter damage in frontotemporal dementia and Alzheimer's disease measured by diffusion MRI</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Diffusion Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Brain</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Middle Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Alzheimer's Disease</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cross-sectional Studies</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Dementia</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Differential Diagnosis</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<resourceType resourceTypeGeneral="Dataset">application/octet-stream</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">19439421</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">Frontotemporal dementia (FTD) and Alzheimer's disease are sometimes difficult to differentiate clinically because of overlapping symptoms. Using diffusion tensor imaging (DTI) measurements of fractional anisotropy (FA) can be useful in distinguishing the different patterns of white matter degradation between the two dementias. In this study, we performed MRI scans in a 4 Tesla MRI machine including T1-weighted structural images and diffusion tensor images in 18 patients with FTD, 18 patients with Alzheimer's disease and 19 cognitively normal (CN) controls. FA was measured selectively in specific fibre tracts (including corpus callosum, cingulum, uncinate and corticospinal tracts) as well as globally in a voxel-by-voxel analysis. Patients with FTD were associated with reductions of FA in frontal and temporal regions including the anterior corpus callosum (P &lt; 0.001), bilateral anterior (left P &lt; 0.001; right P = 0.005), descending (left P &lt; 0.001; right P = 0.003) cingulum tracts, and uncinate tracts (left P &lt; 0.001; right P = 0.005), compared to controls. Patients with Alzheimer's disease were associated with reductions of FA in parietal, temporal and frontal regions including the left anterior (P = 0.003) and posterior (P = 0.002) cingulum tracts, bilateral descending cingulum tracts (P &lt; 0.001) and left uncinate tracts (P &lt; 0.001) compared to controls. When compared with Alzheimer's disease, FTD was associated with greater reductions of FA in frontal brain regions, whereas no region in Alzheimer's disease showed greater reductions of FA when compared to FTD. In conclusion, the regional patterns of anisotropy reduction in FTD and Alzheimer's disease compared to controls suggest a characteristic distribution of white matter degradation in each disease. Moreover, the white matter degradation seems to be more prominent in FTD than in Alzheimer's disease. Taken together, the results suggest that white matter degradation measured with DTI may improve the diagnostic differentiation between FTD and Alzheimer's disease.</description>
+<description descriptionType="Methods">The dataset available here consists of Fractional Anisotropy (FA) and Mean Diffusivity (MD) images in Analyze format. There are FA &amp; MD images for 55 subjects (some subjects have two timepoints, as indicated by a -1 or -2 following subject ID in the filename, please disregard timepoint 2 at this time), and a spreadsheet describing each subject’s age (at time of scan), gender, diagnosis (Normal Control, Alzheimer’s Dissease, or Frontotemporal Dementia), ApoE alleles, and Mini-Mental State Exam score. Data Acquisition Location: San Francisco VA Medical Center; Scanner Type: Siemens Bruker 4T, equipped with a birdcage transmit and eight channel receive coil. DTI was based on a dual spin-echo echo-planar imaging (EPI) sequence supplemented with parallel imaging acceleration (GRAPPA) with a factor 2 to reduce susceptibility distortions. Other imaging parameters were: TR/TE = 6000/77 ms; field of view 256 × 224 cm; 128 × 112 matrix size, yielding 2 × 2 mm2 in-plane resolution; 40 continuous 3 mm slices. A reference image (no diffusion gradient b = 0) and six diffusion-weighted images (b = 800 s/mm2 along six non-collinear directions) were acquired. Four DTI scans were acquired and averaged after motion correction to boost signal-to-noise.</description>
+</descriptions>
+</resource>

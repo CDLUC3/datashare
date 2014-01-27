@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xslt" href="../../frameworks/tei/xml/teip4/stylesheet/html/tei.xsl"?>
+<!DOCTYPE TEI.2 PUBLIC "-//TEI Consortium//DTD TEI Lite XML ver. 1//EN"
+                       "http://www.tei-c.org/Lite/DTD/teixlite.dtd" [
+<!ENTITY % TEI.XML 'INCLUDE'>
+]>
+
+<!-- 
+        For HTML transforms use the ${frameworks}/tei/xsl/html/teihtml-teic.xsl stylesheet. 
+-->
+
+<!-- 
+        For PDF transforms use the ${frameworks}/tei/xsl/fo/tei-teic.xsl stylesheet. 
+-->
+
+<TEI.2>
+    <teiHeader type="text">
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Writing TEI XML Documents</title>
+                <title type="sub">How to create a TEI XML document and convert it to PDF within 
+                                            the &lt;oXygen/&gt; XML Editor</title>
+                <author>syncRO soft Ltd.</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>Copyrighted document prepared by syncRO soft Ltd. staff for demonstration purposes</edition>
+            </editionStmt>
+            <extent>
+                <seg type="size">Filesize uncompressed: 25 KB.</seg>
+                <seg type="format">XML TEI Lite</seg>
+                <seg type="location">online</seg>
+            </extent>
+            <publicationStmt>
+                <distributor>
+                    <address>
+                        <addrLine>
+                            <name key="syncRO" type="organisation">syncRO soft Ltd.</name>
+                        </addrLine>
+                        <addrLine>44 Nicolae Titulescu Street</addrLine>
+                        <addrLine>
+                            <name type="place">Craiova</name>
+                        </addrLine>
+                        <addrLine>1100</addrLine>
+                        <addrLine>support@oxygenxml.com</addrLine>
+                    </address>
+                </distributor>
+                <idno type="demo-article">oxy4</idno>
+                <availability status="restricted">
+                    <p>Freely available non-commercial use provided that this header is included
+                        in its entirety with any copy distributed</p>
+                </availability>
+                <date>2003-09-18</date>
+                <pubPlace>Craiova, Romania</pubPlace>
+                <publisher>&copy; 2003, syncRO soft Ltd</publisher>
+            </publicationStmt>
+            <notesStmt>
+                <note>This is a prototype header</note>
+            </notesStmt>
+            <sourceDesc>
+                <p>Example TEI documents.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>Paragraph, page divisions and punctuation have been checked before publication.
+                    Unless otherwise indicated (by a REND attribute) all EMPH elements should be rendered
+                    in italics, and all SOCALLED elements should be enclosed by quotation marks.</p>
+            </editorialDecl>
+            <refsDecl>
+                <p>div sections bear IDs in the form Sn.</p>
+            </refsDecl>
+        </encodingDesc>
+        <revisionDesc>
+            <change>
+                <date>2003-09-15</date>
+                <respStmt>
+                    <name>syncRO soft staff</name>
+                    <resp>edt (Editor)</resp>
+                </respStmt>
+                <item>Created the initial version of the article</item>
+            </change>
+            <change>
+                <date>2003-09-16</date>
+                <respStmt>
+                    <name>syncRO soft staff</name>
+                    <resp>pfr (Proofreader)</resp>
+                </respStmt>
+                <item>check text</item>
+            </change>
+            <change>
+                <date>2003-09-18</date>
+                <respStmt>
+                    <name>syncRO soft staff</name>
+                    <resp>cvt (Converter)</resp>
+                </respStmt>
+                <item>convert to PDF using TEI XSL-FO stylesheets and Apache FOP</item>
+            </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <titlePage>
+                <docTitle>
+                    <titlePart type="sub">How to create a <hi rend="bold">TEI</hi> XML document and convert it to 
+                                <hi rend="bold">PDF</hi> within the <hi rend="bold">&lt;oXygen/&gt; XML Editor</hi></titlePart>
+                </docTitle>
+                <docAuthor>
+                    <name>syncRO soft</name>
+                </docAuthor>
+                <docDate>September 15, 2003</docDate>
+            </titlePage>
+        </front>
+        <body>
+            <divGen type="toc"/>
+            <div type="abstract" id="S0" rend="bold">
+                <head rend="bold">Abstract</head>
+                <p rend="bold">
+                    This article is intended to prove how easy it is to create a TEI XML (Text Encoding Initiative) document 
+                    and then convert it to the PDF or HTML format, all from within the &lt;oXygen/&gt; XML editor. We will 
+                    use the TEI Lite DTD, the TEI XSL-FO stylesheets and the Apache's FOP, all of which are integrated 
+                    into the &lt;oXygen/&gt; installation kit.
+                </p>
+            </div>
+            
+            <div type="sect" id="S1">
+                <head>Creating an XML Document in &lt;oXygen/&gt; Using the TEI Lite DTD</head>
+                <p>
+                    From the &quot;<hi rend="bold">File</hi>&quot; menu choose 
+                    &quot;<hi rend="bold">New from Templates ...</hi>&quot;. It will be displayed a window, 
+                    allowing you to choose from a list of built-in document templates as starting points for 
+                    your TEI XML documents:
+                </p>
+                <p>
+                    Choose one of the TEI document templates from the list of built-in templates. If you select the 
+                    TEI Lite template and click on the &quot;Ok&quot; button &lt;oXygen/&gt; will automatically generate 
+                    and open a skeleton document with a DTD declaration and minimum markup conforming to the 
+                    declared DTD. The encoding is automatically set to &quot;UTF-8&quot;.
+                </p>
+                <p>
+                    If you wish to use a customized special-purpose TEI DTD, for example generated with the 
+                    PizzaChef program &lpar;<hi rend="bold">http://www.tei-c.org/pizza.html</hi>&rpar;, available on the  
+                    TEI website &lpar;<hi rend="bold">http://www.tei-c.org/</hi>&rpar;, you can manually modify the default 
+                    document type declaration at the beginning of the document.
+                </p>
+                <note>
+                    <p>The encoding can be changed at any time by editing the XML prolog, for instance,
+                        changing to UTF-16:</p>
+                    <p> &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-16&quot;?></p>
+                </note>
+            </div>
+            <div type="sect" id="S2">
+                <head>Editing the XML Document</head>
+                <p>The editor will scan the DTD file and will initialize the Code-Insight assistant. By
+                    pressing the &quot;&lt;&quot; key, it is displayed a window containing all the elements
+                    that can be inserted at that point in the document. Notice that the window appears also
+                    when adding new attributes or when an attribute has default values you can choose from.
+                    In the first case the Code-Insight window is triggered by pressing the SPACE key, in the
+                    later by pressing &apos; or &quot; keys.</p>
+                <p> A simple TEI document can be:</p>
+                <p rend="bold" id="S3">
+
+<lb/>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<lb/>
+&lt;!DOCTYPE TEI.2 PUBLIC &quot;-//TEI Consortium//DTD TEI Lite XML ver. 1//EN&quot;<lb/>
+                       &quot;http://www.tei-c.org/Lite/DTD/teixlite.dtd&quot; [<lb/>
+&lt;!ENTITY % TEI.XML &apos;INCLUDE&apos;&gt;<lb/>
+]&gt;<lb/>
+<lb/>
+&lt;TEI.2&gt;<lb/>
+    &lt;teiHeader type=&quot;text&quot;&gt;<lb/>
+        &lt;fileDesc&gt;<lb/>
+            &lt;titleStmt&gt;<lb/>
+                &lt;title type=&quot;main&quot;&gt;Main title goes here&lt;/title&gt;<lb/>
+                &lt;title type=&quot;sub&quot;&gt;Subtitle goes here&lt;/title&gt;<lb/>
+                &lt;author&gt;syncRO soft Ltd.&lt;/author&gt;<lb/>
+            &lt;/titleStmt&gt;<lb/>
+            &lt;editionStmt&gt;<lb/>
+                &lt;edition&gt;&lt;/edition&gt;<lb/>
+            &lt;/editionStmt&gt;<lb/>
+            &lt;extent&gt;<lb/>
+                &lt;seg type=&quot;size&quot;&gt;Filesize uncompressed: 10 Kbytes.&lt;/seg&gt;<lb/>
+                &lt;seg type=&quot;format&quot;&gt;XML TEI Lite&lt;/seg&gt;<lb/>
+                &lt;seg type=&quot;location&quot;&gt;online&lt;/seg&gt;<lb/>
+            &lt;/extent&gt;<lb/>
+            &lt;publicationStmt&gt;<lb/>
+                &lt;distributor&gt;<lb/>
+                    &lt;address&gt;<lb/>
+                        &lt;addrLine&gt;<lb/>
+                            &lt;name type=&quot;organisation&quot;&gt;syncRO soft Ltd.&lt;/name&gt;<lb/>
+                        &lt;/addrLine&gt;<lb/>
+                        &lt;addrLine&gt;170 Nicolae Titulescu Street&lt;/addrLine&gt;<lb/>
+                        &lt;addrLine&gt;<lb/>
+                            &lt;name type=&quot;place&quot;&gt;Craiova&lt;/name&gt;<lb/>
+                        &lt;/addrLine&gt;<lb/>
+                        &lt;addrLine&gt;1100&lt;/addrLine&gt;<lb/>
+                        &lt;addrLine&gt;support@oxygenxml.com&lt;/addrLine&gt;<lb/>
+                    &lt;/address&gt;<lb/>
+                &lt;/distributor&gt;<lb/>
+                &lt;availability status=&quot;restricted&quot;&gt;<lb/>
+                    &lt;p&gt;Freely available for non-commercial use provided that this header is included<lb/>
+                        in its entirety with any copy distributed&lt;/p&gt;<lb/>
+                &lt;/availability&gt;<lb/>
+                &lt;date&gt;2003-05-27&lt;/date&gt;<lb/>
+                &lt;pubPlace&gt;Craiova, Romania&lt;/pubPlace&gt;<lb/>
+                &lt;publisher&gt;&amp;copy; 2003, syncRO soft Ltd&lt;/publisher&gt;<lb/>
+            &lt;/publicationStmt&gt;<lb/>
+            &lt;notesStmt&gt;<lb/>
+                &lt;note&gt;This is a prototype header&lt;/note&gt;<lb/>
+            &lt;/notesStmt&gt;<lb/>
+            &lt;sourceDesc&gt;<lb/>
+                &lt;p&gt;Compiled from existing internal syncRO documents.&lt;/p&gt;<lb/>
+            &lt;/sourceDesc&gt;<lb/>
+        &lt;/fileDesc&gt;<lb/>
+        &lt;encodingDesc&gt;<lb/>
+            &lt;editorialDecl&gt;<lb/>
+                &lt;p&gt;Paragraph, page divisions and punctuation have been checked before publication.<lb/>
+                    Unless otherwise indicated (by a REND attribute) all EMPH elements should be rendered<lb/>
+                    in italics, and all SOCALLED elements should be enclosed by quotation marks.&lt;/p&gt;<lb/>
+            &lt;/editorialDecl&gt;<lb/>
+            &lt;refsDecl&gt;<lb/>
+                &lt;p&gt;div sections bear IDs in the form Sn.&lt;/p&gt;<lb/>
+            &lt;/refsDecl&gt;<lb/>
+        &lt;/encodingDesc&gt;<lb/>
+        &lt;revisionDesc&gt;<lb/>
+            &lt;change&gt;<lb/>
+                &lt;date&gt;2003-05-25&lt;/date&gt;<lb/>
+                &lt;respStmt&gt;<lb/>
+                    &lt;name&gt;syncRO soft staff&lt;/name&gt;<lb/>
+                    &lt;resp&gt;edt (Editor)&lt;/resp&gt;<lb/>
+                &lt;/respStmt&gt;<lb/>
+                &lt;item&gt;Created the initial version of the article&lt;/item&gt;<lb/>
+            &lt;/change&gt;<lb/>
+            &lt;change&gt;<lb/>
+                &lt;date&gt;2003-05-26&lt;/date&gt;<lb/>
+                &lt;respStmt&gt;<lb/>
+                    &lt;name&gt;syncRO soft staff&lt;/name&gt;<lb/>
+                    &lt;resp&gt;pfr (Proofreader)&lt;/resp&gt;<lb/>
+                &lt;/respStmt&gt;<lb/>
+                &lt;item&gt;check text&lt;/item&gt;<lb/>
+            &lt;/change&gt;<lb/>
+            &lt;change&gt;<lb/>
+                &lt;date&gt;2003-05-27&lt;/date&gt;<lb/>
+                &lt;respStmt&gt;<lb/>
+                    &lt;name&gt;syncRO soft staff&lt;/name&gt;<lb/>
+                    &lt;resp&gt;cvt (Converter)&lt;/resp&gt;<lb/>
+                &lt;/respStmt&gt;<lb/>
+                &lt;item&gt;convert to PDF using TEI XSL-FO stylesheets and Apache FOP&lt;/item&gt;<lb/>
+            &lt;/change&gt;<lb/>
+        &lt;/revisionDesc&gt;<lb/>
+    &lt;/teiHeader&gt;<lb/>
+    &lt;text&gt;<lb/>
+        &lt;front&gt;<lb/>
+            &lt;titlePage&gt;<lb/>
+                &lt;docTitle&gt;<lb/>
+                    &lt;titlePart type=&quot;main&quot;&gt;Main title to be displayed on screen&lt;/titlePart&gt;<lb/>
+                    &lt;titlePart type=&quot;sub&quot;&gt;Subtitle to be displayed on screen&lt;/titlePart&gt;<lb/>
+                &lt;/docTitle&gt;<lb/>
+                &lt;docAuthor&gt;<lb/>
+                    &lt;name&gt;syncRO soft&lt;/name&gt;<lb/>
+                &lt;/docAuthor&gt;<lb/>
+                &lt;docDate&gt;May 27, 2003&lt;/docDate&gt;<lb/>
+            &lt;/titlePage&gt;<lb/>
+        &lt;/front&gt;<lb/>
+        &lt;body&gt;<lb/>
+            &lt;divGen type=&quot;toc&quot;/&gt;<lb/>
+            &lt;div type=&quot;abstract&quot; id=&quot;S0&quot; rend=&quot;bold&quot;&gt;<lb/>
+                &lt;head rend=&quot;bold&quot;&gt;Abstract&lt;/head&gt;<lb/>
+                &lt;p rend=&quot;bold&quot;&gt;<lb/>
+                    This template is intended to prove how easy it is to create a TEI XML (Text Encoding Initiative) document <lb/>
+                    and then convert it to the PDF or HTML format, all from within the &amp;lt;oXygen/&gt; XML editor. We can <lb/>
+                    use the TEI Lite DTD, the TEI XSL-FO stylesheets and the Apache&apos;s FOP, all of which are integrated <lb/>
+                    into the &amp;lt;oXygen/&gt; installation kit.<lb/>
+                &lt;/p&gt;<lb/>
+            &lt;/div&gt;<lb/>
+            &lt;div type=&quot;sect&quot; id=&quot;S1&quot;&gt;<lb/>
+                &lt;head&gt;Title of first section&lt;/head&gt;<lb/>
+                &lt;p&gt;First para&lt;/p&gt;<lb/>
+                &lt;p&gt;Second para&lt;/p&gt;<lb/>
+                &lt;p&gt;Third para&lt;/p&gt;<lb/>
+                &lt;note&gt;<lb/>
+                    &lt;p&gt;The encoding can be changed at any time by editing the XML prolog, for instance,<lb/>
+                        changing to UTF-16:&lt;/p&gt;<lb/>
+                    &lt;p&gt; &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-16&amp;quot;?&gt;&lt;/p&gt;<lb/>
+                &lt;/note&gt;<lb/>
+            &lt;/div&gt;<lb/>
+            &lt;div type=&quot;sect&quot; id=&quot;S2&quot;&gt;<lb/>
+                &lt;head&gt;Title of second section&lt;/head&gt;<lb/>
+                &lt;p&gt;First para of second section&lt;/p&gt;<lb/>
+                &lt;p&gt;Second para of second section&lt;/p&gt;<lb/>
+                &lt;p rend=&quot;bold&quot; id=&quot;S3&quot;&gt;Third para of second section&lt;/p&gt;<lb/>
+            &lt;/div&gt;<lb/>
+        &lt;/body&gt;<lb/>
+    &lt;/text&gt;<lb/>
+&lt;/TEI.2&gt;<lb/>
+<lb/>
+        
+                </p>
+            </div>
+            <div type="sect" id="S4">
+                <head>Transforming to PDF</head>
+                <p>
+                    Before proceeding to the FO transformation you need to check the validity of the
+                    document. For this, press the Validate button from the left of the view toolbar, or
+                    CTRL-SHIFT-V (COMMAND-SHIFT-V on Mac). The validity report will be displayed in the
+                    status bar. If there are errors, they will be listed.
+                </p>
+                <list type="bulleted">
+                    <head>Configuring the XSL-FO transformation</head>
+                    <item>
+                        <p>Press the Transformation Configuration button from the toolbar. This will open
+                            the Transformation Configuration window.</p>
+                    </item>
+                    <item>
+                        <p>In the XSL URL choose the &quot;tei.xsl&quot; file. You can find it by
+                            browsing to {OxygenInstallDir}/tei/xsl/fo/. An XML FO document is
+                            generated when applying this stylesheet. Next, the FO processor can process it
+                            in order to generate output in the PDF format.</p>
+                    </item>
+                    <item>
+                        <p>Make sure that &quot;Perform FOP&quot; checkbox is selected.</p>
+                    </item>
+                    <item>
+                        <p>Make sure that &quot;XSLT result as input&quot; radio button is selected.</p>
+                    </item>
+                    <item>
+                        <p>Let the processor set to &quot;Built-in&quot;. This means the use of the
+                            Apache FOP.</p>
+                    </item>
+                    <item>
+                        <p>Let the method set to &quot;pdf&quot;.</p>
+                    </item>
+                    <item>
+                        <p>Choose the output file name and press the &quot;Ok&quot; button.</p>
+                    </item>
+                </list>
+                <p>Press the Transform button from the toolbar or use CTRL-SHIFT-T (COMMAND-SHIFT-T on
+                    Mac) shortcut. This way the XSLT and FO processing is started. In the status bar is
+                    presented the current processing state. It will be displayed &quot;FO transformation successful&quot; 
+                    when the FO processor ends. You can inspect the generated PDF file using
+                    the <hi rend="bold">Acrobat Reader</hi>&trade; program.</p>
+            </div>
+            <div type="sect" id="S5">
+                <head>Configuring an external FO Processor, or other post processor.</head>
+                <p>The built-in FO Processor is based on the Apache project, and is under development.
+                    Problems may occur, depending on the complexity of the intermediate FO file.</p>
+                <p>To avoid this kind of difficulties it is possible to configure one or more external FO
+                    processors. (In other situations, you may need to run other post processors, not
+                    necessarily FOP.) Use Options/Preferences/Extrenal FO Processors for set up.</p>
+                <p>
+                </p>
+                <p>By default, the list is empty. By pressing the &quot;New&quot; button it can be created a new FO entry. 
+                      The entry consists of:</p>
+                <p>
+                    <list type="bulleted">
+                        <item>
+                            <p>A name. This can be any name, but no whitespace are allowed in it.</p>
+                        </item>
+                        <item>
+                            <p>A command line template. The command line is specifying the FOP executable.
+                                Try not to use environment variables in its expression, since those will not be
+                                expanded. There are used three macros: 
+                                <list type="bulleted">
+                                    <item>
+                                        <p>The FO method (the macro &quot;${method}&quot;) - this being
+                                            replaced by the editor with &quot;pdf&quot;, &quot;ps&quot; or &quot;txt&quot;;</p>
+                                    </item>
+                                    <item>
+                                        <p> The FO input file (the macro &quot;${fo}&quot;)- this can be the
+                                            edited file or the result of an XSLT; </p>
+                                    </item>
+                                    <item>
+                                        <p> The file in which the result is stored (the macro &quot;${out}&quot;).</p>
+                                    </item>
+                                </list>
+                            </p>
+                            <p>
+                            </p>
+                            <note>
+                                <p>Your editor may take as argument just one or two of the possible
+                                    parameters. It is not required to use all the macros in the command line.</p>
+                            </note>
+                        </item>
+                    </list>
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI.2>

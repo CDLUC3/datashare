@@ -1,0 +1,70 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/*
+==============================
+    Software elements. [sw-d]
+==============================
+*/
+
+/*
+    Application Messages.
+*/
+msgnum, 
+msgph,
+msgblock{
+    font-family:monospace;
+    background-color: #FFFFEE;
+    color:inherit;
+    padding:2px;
+    border:1px solid #DDDD99;    
+}
+
+msgnum{
+    font-weight:bold;
+}
+
+msgblock{
+    display:block;
+    white-space:pre;
+    margin:1em 0;
+}
+
+
+/*
+    User interraction.
+*/
+userinput{
+    display:inline;
+    font-family:monospace;
+    padding:2px;
+    background-color: #FFEEFF;
+    color:inherit;
+    border:1px solid #DD99DD;
+}
+
+
+/*
+    Other.
+*/
+systemoutput,
+varname,
+cmdname{
+    display:inline;
+    font-family:monospace;    
+}
+
+varname {
+    font-style:italic;
+}
+
+cmdname{
+    font-weight:bold;
+}
+
+systemoutput{
+    padding:2px;
+    background-color: #EEFFFF;
+    color:inherit;
+    border:1px solid #99DDDD;
+}

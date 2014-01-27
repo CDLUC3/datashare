@@ -1,0 +1,19 @@
+/* GENERATED FILE. DO NOT EDIT. */
+/* EDIT THE CLASSED FILE AND THEN REGENERATE USING THE CONVERT SCRIPT*/
+
+/*
+====================================
+    The mapgroup domain elements 
+    represent particular containment 
+    strategies within a set of topicrefs 
+    in a map.. [mapgroup-d]
+====================================
+*/
+topicgroup,
+topichead{
+    display:block;
+    margin-left: 2em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+

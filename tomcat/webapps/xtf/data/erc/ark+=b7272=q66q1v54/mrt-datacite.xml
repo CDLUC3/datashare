@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q66Q1V54 </identifier>
+<creators>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Gulf War Illness</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cognition</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Neuropsychological Test</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Gulf War</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Middle Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Persian Gulf Syndrome</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Veterans</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<dates>
+<date dateType="Collected">2001-2009</date>
+</dates>
+<resourceType resourceTypeGeneral="Dataset">dataset</resourceType>
+<relatedIdentifiers>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">20580739</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">21882779</relatedIdentifier>
+<relatedIdentifier relatedIdentifierType="PMID" relationType="References">21094937</relatedIdentifier>
+</relatedIdentifiers>
+<descriptions>
+<description descriptionType="Abstract">Some veterans who served in the Gulf War subsequently complained of a wide variety of physical and neuro-psychological symptoms, termed Gulf War Illness (GWI). Several investigators have attributed these symptoms to stress. In contrast, Haley and coworkers reported clusters of symptoms into three primary syndromes and reported reductions of the neuronal marker N- Acetyl aspartate (NAA, a marker of neuron integrity and density) in the basal ganglia and pons of some GWI subjects. Based on this and other data they suggested that GWI has a neurological component. One limitation of previous studies is that post traumatic stress disorder (PTSD), depresssion, and alcoholism also cause structural and metabolic changes in the brain; the previous studies did not carefully control for these confounds. The primary goal of this project was to test the hypothesis that: subjects with GWI have metabolic and/or morphological changes in their brain, which are not accounted for by confounds such as post traumatic stress disorder (PTSD), alcohol abuse, and depression. A secondary goal was to determine: if these brain changes correlate with CNS signs and symptoms of GWI. This project studied 200 subjects with GWI and 200 Gulf War Veteran (GWV) controls drawn from Northern California and surrounding regions. GWI was defined by the same criteria used in previous VA cooperative studies. The extent of alcohol abuse and PTSD symptoms was measured. MRI/MRS, audiovestibular, neuro-psychological and other measurements were also made.</description>
+<description descriptionType="Methods">Data Acquisition Location: San Francisco VA Medical Center; Scanner Type: Siemens Vision 1.5T; Coronal T1 MPRAGE: TR=9ms, TE=4ms, TI=300ms, 1x1mm2, 3mm slice thickness; Axial double spin echo PD &amp; T2: TR=2500ms, TE=20/80ms, 1x1mm2, 3mm slice thickness</description>
+</descriptions>
+</resource>

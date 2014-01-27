@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crossQueryResult totalDocs="10" startDoc="0" endDoc="0">
+   <facet field="group-subject" totalGroups="16" totalDocs="10">
+      <group value="Politics" rank="1" totalSubGroups="0" totalDocs="7" startDoc="2"
+             endDoc="4">
+         <docHit rank="2" file="doc7.xml" totalHits="0">
+            <meta>
+               <title>Do read Document 7</title>
+               <group-subject>Politics</group-subject>
+               <group-subject>Classics</group-subject>
+               <group-subject>Ancient History</group-subject>
+               <subject>Politics</subject>
+               <subject>Classics</subject>
+               <subject>Ancient History</subject>
+               <type>text</type>
+               <collection>UC</collection>
+               <geography>US::California::Mendocino</geography>
+               <geography-sort>US::California::Mendocino</geography-sort>
+            </meta>
+         </docHit>
+         <docHit rank="3" file="doc8.xml" totalHits="0">
+            <meta>
+               <title>Document 8 is cool</title>
+               <group-subject>Politics</group-subject>
+               <group-subject>Politics</group-subject>
+               <group-subject>Classical History</group-subject>
+               <group-subject>Classical Religions</group-subject>
+               <group-subject>Urban Studies</group-subject>
+               <subject>Politics</subject>
+               <subject>Politics</subject>
+               <subject>Classical History</subject>
+               <subject>Classical Religions</subject>
+               <subject>Urban Studies</subject>
+               <type>text</type>
+               <collection>UC</collection>
+               <geography>US::California::Santa Cruz</geography>
+               <geography-sort>US::California::Santa Cruz</geography-sort>
+            </meta>
+         </docHit>
+         <docHit rank="4" file="doc9.xml" totalHits="0">
+            <meta>
+               <title>Document 9 is absolutely cool</title>
+               <group-subject>Classics</group-subject>
+               <group-subject>Ancient History</group-subject>
+               <group-subject>Politics</group-subject>
+               <group-subject>Classical History</group-subject>
+               <group-subject>Classical Religions</group-subject>
+               <group-subject>Classical Politics</group-subject>
+               <subject>Classics</subject>
+               <subject>Ancient History</subject>
+               <subject>Politics</subject>
+               <subject>Classical History</subject>
+               <subject>Classical Religions</subject>
+               <subject>Classical Politics</subject>
+               <type>text</type>
+               <collection>UC</collection>
+               <geography>US::California::Oakland</geography>
+               <geography-sort>US::California::Oakland</geography-sort>
+            </meta>
+         </docHit>
+      </group>
+      <group value="Ancient History" rank="2" totalSubGroups="0" totalDocs="3" startDoc="0"
+             endDoc="0"/>
+      <group value="Classical History" rank="3" totalSubGroups="0" totalDocs="3"
+             startDoc="0"
+             endDoc="0"/>
+      <group value="Classical Religions" rank="4" totalSubGroups="0" totalDocs="3"
+             startDoc="0"
+             endDoc="0"/>
+      <group value="Classics" rank="5" totalSubGroups="0" totalDocs="3" startDoc="0"
+             endDoc="0"/>
+   </facet>
+</crossQueryResult>

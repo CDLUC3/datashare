@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @id: four character identifier -->
+<!-- @type: entity type from a constrained list -->
+<!-- @bpURL: original Bepress URL -->
+<entity id="ucsf-cind" type="oru">
+    <meta>
+        <label><!-- Value of @id from 'entity' element --></label>
+    </meta>
+    <display>
+        <mainFrame>
+            <logo>
+                <div id="logoDiv">
+                    <!-- @logo: logo path (e.g. 'brand/acgcc/institute_logo.jpg') -->
+                    <img class="logo" src="brand/ucd-cbd.jpg"/>
+                    <span class="entity">Center for Biodemography</span>
+                    <span class="campus">University of California, Davis</span>
+                </div>
+            </logo>
+            <blurb>
+                <!-- descriptive blurb -->
+                <div id="blurbDiv">
+<p> Research in my laboratory focuses on biodemography: an emerging division of classical demography that brings life table techniques, mortality models, experimental systems, and comparative methods to bear on questions concerned with the fundamental determinants of mortality, longevity, aging and life span. I am interested in insect mortality dynamics, mortality trajectories, and the evolution of life span and extended longevity. I am also interested in aging with special emphasis on the oldest individuals in a population, and with studying the behavioral and social components of life span and aging. The evolution of social organization as a component of life history is an important research interest in my laboratory. While many of our studies are on captive populations, we are moving into the study of aging in nature; attempting to determine mortality dynamics in field conditions.</p>
+                </div>
+            </blurb>
+        </mainFrame>
+        <generalInfo>
+            <contactInfo>
+                <div id="contactInfo">
+                    <h2>Center for Biodemography</h2>
+                    <p>
+                        <a href="http://entomology.ucdavis.edu/faculty/carey/index.cfm" target="_blank">entomology.ucdavis.edu</a>
+                    </p>
+                </div>
+            </contactInfo>
+            <linkSet>
+                <div id="linksDiv">
+					<p>
+						<a href="/uc/search?entity=ucd-cbd;view=policyStatement">Policies</a>
+                    </p> 
+                </div>
+            </linkSet>
+            <linkedPages>
+                <div id="policyStatement">
+                    <h1>CBD Data Use Policy</h1>
+					<p>DataShare is a project dedicated to making research data openly available to the public.</p>
+					<p>Using data available through the DataShare project requires agreeing with the following:</p>
+					<ol>
+						<li>The quality and completeness of the data cannot be guaranteed. Users employ these data at their own risk.</li>
+						<li>Users shall respect restrictions of access to sensitive data. Users will make no attempt to identify the individuals whose images are included in DataShare data sets.</li>
+						<li>Users must acknowledge the use of DataShare data and data derived from DataShare data when publicly presenting any findings or algorithms that benefited from their use. Such presentations include but are not limited to papers, books, book chapters, conference posters, and talks. <br/>
+						When publishing findings that benefit from DataShare data, please include the following grant numbers in the acknowledgements section and in the associated Pubmed Central submission:  P50 AG05681, P01 AG03991, R01 AG021910, P20 MH071616, U24  RR021382.</li>
+						<li>Redistribution of original DataShare data is permitted so long as the data are redistributed under the same terms and conditions are described in this DUA.</li>
+						<li>Data derived from original DataShare data may be distributed under terms and conditions established by the creators of the data. Users must comply with the terms and conditions of use set by the creators of the data.</li>
+					</ol>
+				</div>		
+            </linkedPages>
+        </generalInfo>
+    </display>
+</entity>

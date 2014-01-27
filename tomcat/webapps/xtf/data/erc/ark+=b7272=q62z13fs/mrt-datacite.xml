@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+<identifier identifierType="DOI">10.7272/Q62Z13FS</identifier>
+<creators>
+<creator>
+<creatorName>Weiner, Michael W.</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Frontotemporal Lobar Degeneration (FTLD)</title>
+</titles>
+<publisher>University of California, San Francisco</publisher>
+<publicationYear>2012</publicationYear>
+<subjects>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Adult</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Human</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Magnetic Resonance Imaging</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Cognition</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Neuropsychological Test</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Middle Aged</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Atrophy</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Pathology</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Physiopathology</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Brain</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Dementia</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Mental Disorders</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Frontotemporal Dementia</subject>
+<subject subjectScheme="MeSH" schemeURI="http://www.nlm.nih.gov/mesh/">Alzheimer's Disease</subject>
+</subjects>
+<contributors>
+<contributor contributorType="ResearchGroup">
+<contributorName>UCSF Center for Imaging of Neurodegenerative Diseases</contributorName>
+</contributor>
+</contributors>
+<dates>
+<date dateType="Collected">2002-2009</date>
+</dates>
+<resourceType resourceTypeGeneral="Dataset">dataset</resourceType>
+<descriptions>
+<description descriptionType="Abstract">This data set was acquired with the aim of determining the structural and chemical changes that occur in the brain as a result of frontotemporal lobar degeneration (FTLD). The data includes proton density, T1, and T2-weighted neuroimages from subjects suffering from FTLD and Alzheimer's Disease, as well as a population of matched controls.</description>
+<description descriptionType="Methods">Data Acquisition Location: San Francisco VA Medical Center; Scanner Type: Siemens Vision 1.5T; Coronal T1 MPRAGE (orthogonal to long axis of hippocampus): TR=9ms, TE=4ms, TI=300ms, 1x1mm2, 1.5mm slice thickness; Coronal MPRAGE (orthogonal to PD, T2): TR=10ms, TE=7ms, TI=300ms, 1x1mm2, 1.4mm slice thickness; Axial double spin echo PD &amp; T2: TR=2500ms, TE=20/80ms, 1x1.25mm2, 3mm slice thickness.</description>
+</descriptions>
+</resource>

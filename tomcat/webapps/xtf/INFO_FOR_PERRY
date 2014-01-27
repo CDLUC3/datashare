@@ -1,0 +1,17 @@
+How to regenerate this XTF instance:
+
+cd WEB-INF; ant; cd ..
+
+rm -r data
+
+./parseFeed.py https://badger.cdlib.org/object/recent.atom?collection=ark:/13030/m52b8w1p
+
+bin/textIndexer -clean -index default
+
+(optional):
+bin/indexDump -index default -xml -allFields
+
+View in tomcat
+
+You can see how this source tree differs from the default XTF by doing this:
+hg diff -r default
