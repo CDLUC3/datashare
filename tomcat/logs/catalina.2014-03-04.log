@@ -1,0 +1,32 @@
+Mar 4, 2014 9:33:44 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Users/boushey/Library/Java/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+Mar 4, 2014 9:33:45 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Mar 4, 2014 9:33:45 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2067 ms
+Mar 4, 2014 9:33:45 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Mar 4, 2014 9:33:45 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.29
+Mar 4, 2014 9:33:45 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Mar 4, 2014 9:33:46 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Mar 4, 2014 9:33:46 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Mar 4, 2014 9:33:46 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Mar 4, 2014 9:33:47 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Mar 4, 2014 9:33:47 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory xtf
+Mar 4, 2014 9:33:48 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/Users/boushey/cdluc3/datashare/tomcat/webapps/xtf/WEB-INF/lib/servlet.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Mar 4, 2014 9:33:49 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Mar 4, 2014 9:33:49 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Mar 4, 2014 9:33:49 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=1/68  config=null
+Mar 4, 2014 9:33:49 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 4376 ms

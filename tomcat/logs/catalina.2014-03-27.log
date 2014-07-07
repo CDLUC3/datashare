@@ -1,0 +1,8 @@
+Mar 27, 2014 4:28:42 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Mar 27, 2014 4:28:43 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Mar 27, 2014 4:28:45 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/host-manager] appears to have started a thread named [Poller SunPKCS11-Darwin] but has failed to stop it. This is very likely to create a memory leak.
+Mar 27, 2014 4:28:45 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080

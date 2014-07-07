@@ -219,3 +219,81 @@ INFO: Server startup in 830 ms
 2014-01-27:07:48:52 Warming index [/Users/boushey/bitbucket/datashare/tomcat/webapps/xtf/index]
 2014-01-27:07:48:53 Done.
 2014-01-27:07:48:54 Latency: 1782 msec for request: http://localhost:8080/xtf/search
+Mar 4, 2014 9:33:44 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Users/boushey/Library/Java/Extensions:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+Mar 4, 2014 9:33:45 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Mar 4, 2014 9:33:45 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2067 ms
+Mar 4, 2014 9:33:45 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Mar 4, 2014 9:33:45 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.29
+Mar 4, 2014 9:33:45 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Mar 4, 2014 9:33:46 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Mar 4, 2014 9:33:46 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Mar 4, 2014 9:33:46 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Mar 4, 2014 9:33:47 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Mar 4, 2014 9:33:47 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory xtf
+Mar 4, 2014 9:33:48 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/Users/boushey/cdluc3/datashare/tomcat/webapps/xtf/WEB-INF/lib/servlet.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Mar 4, 2014 9:33:49 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Mar 4, 2014 9:33:49 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Mar 4, 2014 9:33:49 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=1/68  config=null
+Mar 4, 2014 9:33:49 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 4376 ms
+2014-03-04:09:34:01 
+2014-03-04:09:34:01 *** SERVLET RESTART: crossQuery search servlet ***
+2014-03-04:09:34:01 
+2014-03-04:09:34:01 Log level: info
+2014-03-04:09:34:03 Warming index [/Users/boushey/cdluc3/datashare/tomcat/webapps/xtf/index]
+2014-03-04:09:34:05 Done.
+2014-03-04:09:34:06 Latency: 5386 msec for request: http://localhost:8080/xtf/search
+2014-03-04:09:34:06 [2] Latency: 42 msec for request: http://localhost:8080/xtf/search
+2014-03-04:09:34:09 [2] Latency: 1206 msec for request: http://localhost:8080/xtf/search?browse-all=yes
+2014-03-04:09:34:13 [2] Latency: 93 msec for request: http://localhost:8080/xtf/search?browse-all=yes;expand=contributor
+2014-03-04:09:34:15 [2] Latency: 191 msec for request: http://localhost:8080/xtf/search?browse-all=yes;expand=keyword
+2014-03-04:09:34:16 [2] Latency: 174 msec for request: http://localhost:8080/xtf/search?expand=keyword;f1-contributor=Ibis Reproductive Health
+2014-03-04:09:34:18 [2] Latency: 64 msec for request: http://localhost:8080/xtf/search?browse-all=yes
+2014-03-04:09:39:16 [2] Latency: 8 msec for request: http://localhost:8080/xtf/search
+2014-03-04:09:39:19 [3] Latency: 9 msec for request: http://localhost:8080/xtf/search?smode=aboutPage
+2014-03-04:09:39:22 [3] Latency: 7 msec for request: http://localhost:8080/xtf/search?smode=faqPage
+2014-03-04:10:07:12 [3] 
+2014-03-04:10:07:12 [3] *** SERVLET RESTART: dynaXML dynamic publishing servlet ***
+2014-03-04:10:07:12 [3] 
+2014-03-04:10:07:12 [3] Log level: info
+2014-03-04:10:07:13 [3] Latency: 469 msec for request: http://localhost:8080/xtf/view?docId=erc/ark+=b7272=q6057cv6/mrt-datacite.xml;query=;brand=default
+2014-03-04:10:08:06 [3] Latency: 9 msec for request: http://localhost:8080/xtf/search?smode=termsPage
+2014-03-04:10:08:12 [3] Latency: 9 msec for request: http://localhost:8080/xtf/search?smode=stepsPage
+2014-03-04:10:08:43 [3] Latency: 7 msec for request: http://localhost:8080/xtf/search?smode=stepsPage
+2014-03-04:10:08:44 [3] Latency: 8 msec for request: http://localhost:8080/xtf/search?smode=stepsPage
+2014-03-04:10:08:45 [3] Latency: 7 msec for request: http://localhost:8080/xtf/search?smode=metadataBasicsPage
+2014-03-04:10:08:52 [3] Latency: 9 msec for request: http://localhost:8080/xtf/search?smode=metadataBasicsPage
+2014-03-04:10:09:01 [3] Latency: 7 msec for request: http://localhost:8080/xtf/search?smode=dataUseAgreement
+2014-03-04:14:45:12 [4] Latency: 6 msec for request: http://localhost:8080/xtf/search
+2014-03-04:16:11:01 [4] Latency: 5 msec for request: http://localhost:8080/xtf/search?smode=aboutPage
+2014-03-04:16:11:08 [4] Latency: 8 msec for request: http://localhost:8080/xtf/search
+2014-03-05:10:37:40 [5] Latency: 8 msec for request: http://localhost:8080/xtf/search
+2014-03-18:08:23:29 [3] Latency: 5 msec for request: http://localhost:8080/xtf/search
+2014-03-18:10:09:39 [1] Latency: 5 msec for request: http://localhost:8080/xtf/search
+2014-03-18:13:38:25 [1] Latency: 7 msec for request: http://localhost:8080/xtf/search
+2014-03-21:10:58:39 [3] Latency: 33 msec for request: http://localhost:8080/xtf/search
+2014-03-24:09:44:21 [3] Latency: 18 msec for request: http://localhost:8080/xtf/search
+2014-03-24:11:23:59 [3] Latency: 7 msec for request: http://localhost:8080/xtf/search
+Mar 27, 2014 4:28:42 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Mar 27, 2014 4:28:43 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Mar 27, 2014 4:28:45 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/host-manager] appears to have started a thread named [Poller SunPKCS11-Darwin] but has failed to stop it. This is very likely to create a memory leak.
+Mar 27, 2014 4:28:45 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
