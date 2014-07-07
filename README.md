@@ -60,8 +60,8 @@ http://datashare-ingest.ucsf.edu
 
 To the link to your institution's DataIngest instance in the following files:
 
-resultFormatter.xsl
-searchForms.xsl
-docFormatter.xsl
-errorGen.xsl
+* resultFormatter.xsl
+* searchForms.xsl
+* docFormatter.xsl
+* errorGen.xsl
 
